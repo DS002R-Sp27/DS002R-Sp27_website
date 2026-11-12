@@ -1,0 +1,12 @@
+name: week1_r_demo_interactive2
+title: Week1_R_Demo_Interactive
+username: tylermcdaniel
+account: tylermcdaniel
+server: connect.posit.cloud
+hostUrl: https://api.connect.posit.cloud/v1
+appId: 019d36e9-b5d3-7437-f3b6-a785c9820dac
+bundleId:
+url: https://connect.posit.cloud/tylermcdaniel/content/019d36e9-b5d3-7437-f3b6-a785c9820dac
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

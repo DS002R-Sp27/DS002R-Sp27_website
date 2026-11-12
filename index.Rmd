@@ -1,0 +1,335 @@
+--- 
+title: "Introduction to Computational Social Science"
+author: "Instructor: Tyler McDaniel, PhD Candidate, Sociology | TA: Yao Xu, PhD Candidate, Sociology"
+date: "Spring 2026 |
+       Monday/Wednesday 10:30am-11:50am |
+       Littlefield 103"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: rstudio/soc10
+description: "This will serve as a course reader for SOC 10, Spring 2026."
+---
+
+# Syllabus {-}
+
+**Course Website:** [https://019c932f-6501-a8d5-bac5-df7f6ede5a76.share.connect.posit.cloud/](https://019c932f-6501-a8d5-bac5-df7f6ede5a76.share.connect.posit.cloud/)
+
+**Office Hours:** 
+
+Fridays, 1:30pm-3:00pm, McClatchy 120 B057 (Tyler)
+
+Tuesdays, 10:30am-12:00pm, McClatchy 120 S62 (Yao)
+
+
+
+**Course Description:**
+Data science has rapidly gained recognition within the social sciences because it offers powerful new ways to ask questions about social systems and problems. This course will cover _sociological_ approaches and applications of these data science tools. We will examine what cutting edge data analysis can tell us about human populations, urbanization, and social stratification; and how social forces shape the data that we have. This is a hands-on, interactive course. Students will follow along with workshop-style lectures by using and modifying the provided code in real time to analyze data and visualize results. Students will gain experience performing text analysis, working with spatial data, performing network analysis, and using machine learning to make predictions. The course will culminate in a computational social science project designed by the student or a team of up to four students. 
+
+**Who is this course for?**
+This course is primarily designed for people with no or very little exposure to programming for social science. While this course may be useful for programmers and computer scientists seeking social applications for their skills, the materials will mostly be introductory. This course is also for students who seek to develop a project related to data science and society. Over the course of ten weeks, students will have opportunities to pose questions and ideas, receive feedback, and collaborate with others on building out a complete research project. There are no prerequisites, other than a willingness to learn! 
+
+**Learning Goals:** 
+At the end of the course, students will have experience using data science tools to address some major questions related to society. We will learn what questions can be addressed by data science and consider how we can effectively convey this information with the tools that we have. We will also think critically about power, inequality, and our role as data scientists in the twenty-first century. 
+
+**Classroom policies:**
+Please arrive on time and having completed the assigned materials.  Being prepared to discuss the readings/videos/audio will enrich the learning experience of the entire class.  Completing the assigned materials by Monday of each week will also allow students to identify areas of interest and consider possible research questions for problem sets or for the final project. 
+
+* Monday Class: __Theory__.
+This class will be (mostly) _technology free_! Why? Data science has existed long before the modern era of computing capabilities. In fact, to refine their methodological approach, researchers in the modern age often practice on small data. So we will do the same. 
+
+* Wednesday Class: __Laboratory__.
+This class will focus on _coding_. Drawing from what we learned in the theory class, we will take out our laptops and devices, and try to do some (modern) data analysis ourselves. This class will be geared toward learning how to code in R. As with learning to code in any language, you can expect some amount of roadbumps/frustration. But we will work through this together!
+
+
+**Textbooks**
+We will mostly use two textbooks for this course. The good news? Both are free, and online! (Though you are welcome to purchase either or both if you wish). For the rest of the Syllabus, I'll refer to these by their titles alone. 
+
+[ Matthew J. Salganik. 2017. Princeton University Press. Bit By Bit: Social Research in the Digital Age.](https://www.bitbybitbook.com/en/1st-ed/preface/)
+This is probably the most complete book out there on doing data science for sociology (and other social sciences). The sections on data generation and research ethics are especially insightful, in my opinion. 
+
+[Healy, Kieran. 2018. Princeton University Press. Data Visualization: A Practical Introduction.](https://socviz.co)
+This is an excellent guide to working with data. It is complete with exercises and data to use in R, and it provides a welcome reminder to think seriously about the aesthetic elements of data science. 
+
+**Software**
+This class will primarily be taught in R. Why? R is free, open access, built for and by data scientists, and has many wonderful and current packages for social scientists. You can download R [here](https://www.r-project.org). We will use R Studio as an interface, which can be downloaded for free [here](https://posit.co/downloads/). This being said, programming languages evolve and sometimes become defunct. The theoretical concepts that we cover in this class should be applicable to a range of data science programming tools. If you wish to use an alternative software, such as [Python](https://www.python.org) or [Julia](https://julialang.org), or an alternative interface, such as [Jupyter Notebook](https://jupyter.org), I completely encourage this! 
+
+
+**Assignments**
+
+* Week 1 Problem Set \hfill _Due: April 5 at 11:59pm_
+* Week 2 Problem Set \hfill  _Due: April 12 at 11:59pm_
+* Week 3 Problem Set  \hfill _Due: April 19 at 11:59pm_
+* Final Project Proposal  \hfill _Due: April 26 at 11:59pm_ 
+* Week 4 Problem Set  \hfill _Due: April 26 at 11:59pm_ 
+* Week 5 Problem Set \hfill  _Due: May 3 at 11:59pm_ 
+* Week 6 Problem Set \hfill _Due: May 12 at 11:59pm_
+* Week 7 Problem Set  \hfill   _Due: May 19 at 11:59pm_ 
+* Week 8 Problem Set \hfill  _Due: May 26 at 11:59pm_ 
+* Week 9 Problem Set \hfill _Due: June 2 at 11:59pm_
+* Final Presentation \hfill _Due: June 2 at 11:59pm_ 
+* Final Project \hfill _Due: June 7 at 11:59pm_ 
+
+
+**Grading**
+
+Final grades will be determined as follows:
+
+* Participation: 20%
+* Problem Sets: 50%
+* Final Project: 30%
+
+
+Participation
+
+Coming to class prepared (having done any readings or assignments) is vital for participation. 
+In class, students can participate in many ways. Engaging in class activities, working well with peers and in groups, and asking relevant questions during class are all valid forms of participation. 
+
+Problem Sets
+
+There will be nine problem sets over the course of the quarter. Students are expected to complete each of these on time and turn in assignments on Canvas. Most of the assignments should be turned in as .PDF files generated by R Markdown or an alternative. Students can fork assignments and update their progress using GitHub (which serves as a useful tool for collaboration and a way to assess effort). 
+
+Part of each Wednesday class will be devoted to answering questions about the problem set that is due the following Sunday Students with further questions, code bugs, and any other problems should come to office hours or schedule an appointment at another time. 
+
+Final Project, Proposal, and Presentation
+
+The final project is intended to be an opportunity for students to apply some of the skills that we learn in this class toward a pressing and important issue. Much of this class is very introductory - we will go broad, but not deep - however, in the final project you can go deeper into one specific method or topic area. 
+
+Students can work in groups of up to *four* for the final projects. Individual projects are also fine - but I encourage you to collaborate if you have the capacity! Much of the best science is now done in teams, so this type of work is an important skill to practice. As is the norm in science, teams should write details on specifically who contributed what to the project. 
+
+The quarter goes by quickly, so students should begin thinking about potential final projects early. The project proposal is due at the same time as Problem Set 4, leaving roughly four more weeks for students to complete the project. The project proposal should include a potential research question, data source, and method. It is likely that you will want to use one or more methods that we haven't covered yet in week 4 - this is ok! Provide as much detail as you can in your proposal. I will then provide comments on how to proceed. 
+
+**Class Schedule and Reading List**
+
+Readings should be completed before class.  
+
+
+[Week 1: What is Computational Social Science?]{.underline} 
+
+We begin by exploring the meaning of "Computational Social Science," and how it relates to data science, and social science more broadly. This field has changed tremendously in the last few decades, so we'll try to orient ourselves to its history and current directions. We will load R and R Studio onto our computers and start to explore these tools. 
+
+Monday Reading (3/30):
+
+* [Bit By Bit. 1: Introduction.](https://www.bitbybitbook.com/en/1st-ed/introduction/)
+
+* [Lazer, David; Pentland, Alex; Adamic, Lada; et al. 2009. Science. Computational Social Science.](https://www.science.org/doi/10.1126/science.1167742)
+
+* _Optional:_ [Edelmann, Achim; Wolff, Tom; Montagne, Danielle; Bail, Christopher A. 2020. Annual Review of Sociology. Computational Social Science and Sociology.](https://www.annualreviews.org/content/journals/10.1146/annurev-soc-121919-054621)
+
+Wednesday Reading (4/1):
+
+* No readings, but consider viewing [Installing R and RStudio](https://sicss.io/overview/installing-r-and-rstudio)
+
+
+[Week 2: "Gitting" Started: Code, Version Controls and Collaboration]{.underline}
+
+In our second week, we'll start coding together, with purpose. For our first foray into data gathering, we will use online text. We will also gather data from sources such as social media platforms and Google Trends. 
+
+Monday Reading (4/6):
+
+* [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159v2/)
+
+* [Bit By Bit: Social Research in the Digital Age. Observing Behavior.](https://www.bitbybitbook.com/en/1st-ed/observing-behavior/)
+
+* _Optional_: [How Pew Research Center uses git and GitHub for version control](https://www.pewresearch.org/decoded/2022/08/01/how-pew-research-center-uses-git-and-github-for-version-control/)
+
+Wednesday Reading (4/8):
+
+* [Bit By Bit: Social Research in the Digital Age. Creating Mass Collaboration.](https://www.bitbybitbook.com/en/1st-ed/creating-mass-collaboration/)
+
+* _Optional_: [Data Visualization: A Practical Introduction. Preface.](https://socviz.co/)
+
+* _Optional:_ [Data Visualization: A Practical Introduction. 1: Look at Data.](https://socviz.co/01-look-at-data.html)
+
+* _Optional:_ [Data Visualization: A Practical Introduction. 2: Get Started.](https://socviz.co/02-intro.html)
+
+* _Optional_: [A layman’s introduction to Git](https://webtuu.com/blog/04/a-laymans-introduction-to-git)
+
+[Week 3: Data Visualization Techniques]{.underline}
+
+Data visualization is an important, and sometimes overlooked, aspect of social science. This week, we go back to the visualization techniques of Du Bois, which remind us that data science long predates the current era of "big data." 
+
+Monday Reading (4/13):
+
+
+* [Data Visualization: A Practical Introduction. 3: Make a Plot.](https://socviz.co/03-ggplot-basics.html)
+
+* [Battle-Baptiste, Whitney; Rusert, Britt. 2018. Princeton Architectural Press. W. E. B. du Bois's Data Portraits : Visualizing Black America.](https://ebookcentral.proquest.com/lib/stanford-ebooks/detail.action?docID=5515147)
+
+* _Optional:_ [Tackett, Maria; Çetinkaya-Rundel, Mine. 2023. Chance. Analyzing and Recreating Data Visualizations of W.E.B. Du Bois.](https://www-tandfonline-com.stanford.idm.oclc.org/doi/full/10.1080/09332480.2023.2179279#references-Section)
+
+* _Optional:_ Try the [Education Opportunity Explorer](https://edopportunity.org/opportunity/explorer/)
+
+Wednesday Reading (4/15):
+
+* [Data Visualization: A Practical Introduction. 4: Show the Right Numbers.](https://socviz.co/04-group-facet-transform.html)
+
+* [Data Visualization: A Practical Introduction. 5: Graph Tables, Add Labels, Make Notes.](https://socviz.co/05-more-on-geoms.html)
+
+
+
+[Week 4: Gathering and Modeling Data]{.underline}
+
+Up to this point, we have mostly focused on _describing_ our data. What if we want to say more about the _processes_ unfolding? In this week, we look at data modelling. We will examine linear and non-linear models, their benefits, and some potential drawbacks. 
+
+__Monday Readings:__
+
+* [Bit by Bit: Social Research in the Digital Age. Asking Questions](https://www.bitbybitbook.com/en/1st-ed/asking-questions/)
+
+* _Optional:_ [Hwang, Jackelyn; Sampson, Robert. 2014. American Sociological Review. Divergent Pathways of Gentrification: Racial Inequality and the Social Order of Renewal in Chicago Neighborhoods.](https://journals.sagepub.com/doi/abs/10.1177/0003122414535774)
+
+* _Optional:_ [Sugie, Naomie. 2016. Sociological Research & Methods. Utilizing Smartphones to Study Disadvantaged and Hard-to-Reach Groups.](https://journals.sagepub.com/doi/full/10.1177/0049124115626176)
+
+__Wednesday Readings:__
+
+* [Data Visualization: A Practical Introduction. 6: Work With Models.](https://socviz.co/06-modeling.html)
+
+* _Optional:_ [Gelman, Andrew; Hill, Jennifer; Vehtari, Aki. 2020. Regression and Other Stories.](https://users.aalto.fi/~ave/ROS.pdf)
+
+* _Optional:_ [Gelman, Andrew. 2011. American Journal of Sociology. Causality and Statistical Learning.](https://sites.stat.columbia.edu/gelman/research/published/causalreview4.pdf)
+
+
+[Week 5: Maps and Spatial Data]{.underline}
+
+All data are located somewhere. In this week, we consider how to work with geographical information systems (GIS) and ways to communicate the spatial dimensions of our data. We will explore some tools for interactive spatial displays. 
+
+Monday Reading (4/27):
+
+* [Data Visualization: A Practical Introduction. 7: Draw Maps.](https://socviz.co/07-maps.html)
+
+* _Optional:_ [Nilforoshan, Hamed; Looi, Wenli; Pierson, Emma; et al. 2023. Nature. Human mobility networks reveal increased segregation in large cities.](https://www.nature.com/articles/s41586-023-06757-3)
+
+* _Optional:_ Explore the [Racial Covenant Map](https://reglab.github.io/racialcovenants/static/maps/dotmap.html)
+
+Wednesday Reading (4/29):
+
+* [Data Visualization: A Practical Introduction. 8: Refine Your Plots.](https://socviz.co/08-polishing.html)
+
+
+[Week 6: Networks]{.underline} 
+
+Sometimes, we wish to measure or display how observations are linked to each other. For instance, we might want to analyze a web of social interactions, or migration flows between many entities. In these times, network analysis is what we need. We will look at some applications of networks in sociology, and cover basic ways to visualize and analyze network data. 
+
+Monday Reading (5/4):
+
+* _Optional:_ [Network Structure in Small Groups and Survival in Disasters](https://doi.org/10.1093/sf/soab036)
+
+Wednesday Reading (5/6):
+
+* [Wimmer, Andreas; Lewis, Kevin. 2010. American Journal of Sociology. Beyond and Below Racial Homophily: ERG Models of a Friendship Network Documented on Facebook.](https://www.journals.uchicago.edu/doi/10.1086/653658)
+
+* _Optional_: [Corbera, Esteve;, Calvet-Mir, Laura; Hughes, Hannah; Paterson, Matthew. 2016. Nature Climate Change. Patterns of authorship in the IPCC Working Group III report.](https://www.nature.com/articles/nclimate2782)
+
+
+[Week 7: Prediction and Machine Learning]{.underline}
+
+It's easy to understand things that have already happened, but what about future events? A new "school" of data science, which has gained popularity in recent years, seeks not just to model relationships, but to _predict_ outcomes. We'll look at what this means for the social sciences. 
+
+Monday Reading (5/11):
+
+* [Breiman, Leo. 2001. Statistical Science. The Two Cultures of Statistics.](https://www2.math.uu.se/~thulin/mm/breiman.pdf)
+
+* [Molina, Mario; Garip, Feliz. 2019. Annual Review of Sociology. Machine Learning for Sociology.](https://www.annualreviews.org/content/journals/10.1146/annurev-soc-073117-041106)
+
+* _Optional:_ [Surani, Faiz; Suzgun, Mirac; Raman, Vayoma; et al. 2025. AI for Scaling Legal Reform: Mapping and Redacting Racial Covenants in Santa Clara County.](https://dho.stanford.edu/wp-content/uploads/Covenants.pdf)
+
+* _Optional:_ [Johnson, Rebecca A.; Zhang, Simone. 2015. Sociological Science. Predictive Algorithms and Perceptions of Fairness: Parent Attitudes Toward Algorithmic Resource Allocation in K-12 Education.](https://sociologicalscience.com/articles-v12-15-322/)
+
+Wednesday Reading (5/13):
+
+* _Optional_: [Jean, Neal; Burke, Marshall; Xie, Michaelk; et al. 2016. Science. Combining satellite imagery and machine learning to predict poverty.](https://www.science.org/doi/10.1126/science.aaf7894)
+
+* _Optional:_ [Bit by Bit: Social Research in the Digital Age. Running Experiments](https://www.bitbybitbook.com/en/1st-ed/running-experiments/)
+
+[Week 8: Text Analysis Tools: Text Mining, Sentiment Analysis]{.underline}
+
+Text data contains multitudes of information, and can be leveraged to do some powerful things in these times. To gear up for an expidition into text analysis, we will learn about text mining, sentiment analysis, and topic modeling.
+
+Monday Reading (5/18):
+
+* _Optional:_ [Van Loon, Austin. 2023. Social Science Research.The Three Families of Automated Text Analysis.](https://www.sciencedirect.com/science/article/pii/S0049089X22001090)
+
+* _Optional:_ [Canales, Kristine L.; Pope, JoEllen V.; Maestas, Cherie D. 2019. Social Science Quarterly. Tweeting Blame in a Federalist System: Attributions for Disaster Response in Social Media Following Hurricane Sandy.](https://onlinelibrary.wiley.com/doi/full/10.1111/ssqu.12669)
+
+Wednesday Reading (5/20):
+
+* _Optional_: [Text Mining in R: A Tidy Format. Chapter 1. The Tidy Text Format.](https://www.tidytextmining.com/tidytext)
+
+* _Optional:_ [Baker, Dominique J., Karly Ford, Samantha Viano, and Marc Johnson-Guerrero. Racial Category Usage in Education Research: Examining the Publications from AERA Journals](https://www.edworkingpapers.com/sites/default/files/ai22-596.pdf)
+
+[Week 9: Large Language Models and the Future of Computational Social Science]{.underline} 
+
+What lies ahead? Last but not least, we will be ready to discuss large language models (LLMs) and what they mean for computational social science. We will aslo explore novel approaches to sociological research and surveying (and how AI is or is not changing these).
+
+Monday Reading (5/25):
+
+* [Engzell, Per; Wilmers, Nathan. 2026. The Paper Factory.](https://osf.io/preprints/socarxiv/24xfq_v1)
+
+* [Alvero, A.J.; Lee, J.; Regla-Vargas, A. et al. 2024. Journal of Big Data. Large language models, social demography, and hegemony: comparing authorship in human and synthetic text.](https://journalofbigdata.springeropen.com/articles/10.1186/s40537-024-00986-7)
+
+* _Optional_: [Hanna, Alex; Bender, Emily M. 2026. Tech Policy Press. The Myth of AGI.](https://www.techpolicy.press/the-myth-of-agi/)
+
+Wednesday Reading (5/27):
+
+* _Optional:_ [Manning, Benjamin; Zhu, Kehang; Horton, John. 2025. Automated Social Science: Language Models as Scientist and Subjects.](https://benjaminmanning.io/files/rs.pdf)
+
+* _Optional:_ [Athey, Susan; Brunborg, Herman; Du, Tianyu; Kanodia, Ayush; Vafa, Keyon. 2025. LABOR-LLM: Language-Based Occupational Representations with Large Language Models.](https://arxiv.org/abs/2406.17972)
+
+* _Optional:_ [Broska, David; Howes, Michael; van Loon, Austin. 2025. The Mixed Subjects Design: Treating Large Language Models as Potentially Informative Observations.](https://journals.sagepub.com/doi/full/10.1177/00491241251326865)
+
+* _Optional:_ [Messeri, Lisa; Crockett, M.J. 2024. Nature. Artificial intelligence and illusions of understanding in scientific research.](https://www.nature.com/articles/s41586-024-07146-0)
+
+* _Optional:_ [Glautenberg, Claudine; et al. 2026. Oranizational Management. More Versus Better: Artificial Intelligence, Incentives, and the Emerging Crisis in Peer Review.](https://pubsonline.informs.org/doi/10.1287/orsc.2026.ed.v37.n3)
+
+
+[Week 10:  Final presentations]{.underline} 
+
+* No readings this week! Just work on your projects and come prepared to watch your classmates present! 
+
+**A note on accessibility:**
+I want you to come to class. If you use a name or gender that is different from what is on the registrar, let me know and I will use what you prefer. If you may need academic accommodations based on the impact of a disability, you must initiate the request with the Office of Accessible Education (OAE). Professional staff will evaluate the request, review appropriate medical documentation, recommend reasonable accommodations, and prepare an Accommodation Letter for faculty.  The letter will indicate how long it is to be in effect.  Students should contact the OAE as soon as possible since timely notice is needed to coordinate accommodations.  Students should also send your accommodation letter to instructors as soon as possible.  The OAE is located at 563 Salvatierra Walk (phone:  723-1066, URL: http://oae.stanford.edu).
+
+**A note on late assignments:**
+I recognize that unexpected events come up, and despite our best efforts, we sometimes miss deadlines. While it is important to keep up with the class assignments, it is possible to catch up with some additional effort. 
+
+Therefore, everyone is granted *2 late assignments, no questions asked*. These can be turned in up to __one week__ after the initial deadline with no penalty. Afterwards, or for the third late assignment, students will lose 30% of the maximum grade.
+
+The purpose of this policy is to respect your privacy. You don't need to disclose to me _why_ an assignment is late, if you don't want to. But in order for this policy to work well, it is vital that you only use these late assignments when you really need them. I highly, highly, encourage you to submit everything on time if you are able to. 
+
+If you have any questions, or if a situation comes up where you foresee needing more than 2 late assignments, please come to office hours or reach out.
+
+**A note on re-grade requests: ** 
+Students may request re-grades for assignments or questions. If the student requests a re-grade, instructors can examine the assignment in its entirety, and may make additions/subtractions that were not noticed during the first round of grading.
+
+**A note on Generative AI:**
+The latest versions of some generative AI software have capabilities to provide human-like intuition and reasoning, and to answer novel problems in interesting ways. These tools might *supplement* our learning, but they should never *replace* our learning. 
+
+This class requires a lot of coding, problem-posing, and data interpreting. We might want to ask AI a question like, "how do you read a csv into R?" or "how can I add spaces to my R markdown document?" from time to time. I recommend going to sources like [stackoverflow](https://stackoverflow.com/) as well as - in some cases - generative AI tools.
+
+Why the caution? AI is rapidly-developing and it is difficult for us to know how it will change data science. Early research suggests that it can be beneficial for higher-level tasks, but usage might limit learning of lower-level concepts. For example, [one study](https://www.science.org/doi/10.1126/science.adz9311?utm_source=sfmc&utm_medium=email&utm_content=alert&utm_campaign=SCIeToc&et_rid=623440394&et_cid=5882484) finds that "Although entry-level developers used generative AI the most, it did not appear to benefit them." [Another study](https://www.pnas.org/doi/10.1073/pnas.2422633122) notes that AI can reduce skill acquisition in math learning. For these reasons, I believe there are substantial benefits to focusing on conceptual learning, especially at the introductory level. 
+
+Therefore, there are cases where usage of AI is not acceptable. Importantly, *it is never acceptable to simply plug in a homework question from this class and let AI come up with an answer*. I consider this a violation of Stanford's Fundamental Standard. Your written work should always be your own, and [reliance on AI can catch up to you](https://techcrunch.com/2025/05/17/mit-disavows-doctoral-students-paper-on-ai-productivity-benefits/).
+
+For each assignment (starting with the second), students will upload three files: (1) a markdown file, (2) a pdf, and (3) a link to their github file showing edits over time. With each of these, the teaching team will evaluate not only the finished assignment, but how the assignment was revised and changed over time. We will reward - and provide feedback on - your effort.  
+
+**A note on online teaching:**
+While I plan for a smooth and seamless quarter, it is possible that there will be some disruptions to our ability to attend class together, either individually or at the collective level. To accommodate these, we may switch to a hybrid or online format for some classes. 
+
+If you are sick and do not wish to get your classmates sick, that is great. I understand that conflicts will come up and there may be classes that you are unable to attend. It is possible that a hybrid option will be available, but I cannot guarantee this. Therefore, you are responsible for catching up on the work that you miss. 
+
+If we move to an entirely online schedule for some classes, we will have to re-establish norms and policies for the Monday and Wednesday classes. If this is the case, assume that all deadlines will remain the same. 
+
+
+**Additional Resources**
+
+[R for Data Science, Hadley Wickham \& Garrett Grolemund](https://r4ds.had.co.nz/index.html) This book is an excellent guide to using R for data science, written by the same person (Hadley Wickham) who wrote `dplyr` and many of the R functions that you will use in this class. 
+
+[SICSS Learning Materials](https://sicss.io/overview) 
+This is a wonderful trove of materials geared toward graduate students in the social sciences seeking to learn (or improve upon) their data skills. It is organized by Matthew Salganik (from Bit By Bit) and Chris Bail. 
+
+Slides from classes are available as follows: [Week 1](https://rpubs.com/tylermcdaniel/soc10week1) [Week 2](https://rpubs.com/tylermcdaniel/soc10week2) [Week 3](https://rpubs.com/tylermcdaniel/soc10week3) [Week 4](https://rpubs.com/tylermcdaniel/soc10week4) [Week 5](https://rpubs.com/tylermcdaniel/soc10week5) [Week 6](https://rpubs.com/tylermcdaniel/soc10week6) [Week 7](https://rpubs.com/tylermcdaniel/soc10week7)
+
+

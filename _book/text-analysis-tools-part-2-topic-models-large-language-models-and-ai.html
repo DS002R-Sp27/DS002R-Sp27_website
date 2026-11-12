@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>9 Text Analysis Tools, Part 2: Topic Models, Large Language Models, and AI | Introduction to Computational Social Science</title>
+  <meta name="description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="9 Text Analysis Tools, Part 2: Topic Models, Large Language Models, and AI | Introduction to Computational Social Science" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  <meta name="github-repo" content="rstudio/soc10" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="9 Text Analysis Tools, Part 2: Topic Models, Large Language Models, and AI | Introduction to Computational Social Science" />
+  
+  <meta name="twitter:description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  
+
+<meta name="author" content="Instructor: Tyler McDaniel, PhD Candidate, Sociology | TA: Yao Xu, PhD Candidate, Sociology" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Syllabus</a></li>
+<li class="chapter" data-level="1" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html"><i class="fa fa-check"></i><b>1</b> What is Computational Social Science?</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#some-definitions"><i class="fa fa-check"></i><b>1.1</b> Some Definitions</a></li>
+<li class="chapter" data-level="1.2" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#getting-started-with-r-or-python"><i class="fa fa-check"></i><b>1.2</b> Getting Started with R (or Python)</a></li>
+<li class="chapter" data-level="1.3" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#working-in-base-r"><i class="fa fa-check"></i><b>1.3</b> Working in Base R</a></li>
+<li class="chapter" data-level="1.4" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#opening-rstudio"><i class="fa fa-check"></i><b>1.4</b> Opening RStudio</a></li>
+<li class="chapter" data-level="1.5" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#packages"><i class="fa fa-check"></i><b>1.5</b> Packages</a></li>
+<li class="chapter" data-level="1.6" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#r-markdown"><i class="fa fa-check"></i><b>1.6</b> R Markdown</a></li>
+<li class="chapter" data-level="1.7" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#problem-set-1"><i class="fa fa-check"></i><b>1.7</b> Problem Set 1</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html"><i class="fa fa-check"></i><b>2</b> Let’s “Git” Going: Code, Collaboration, and Version Controls</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#collecting-social-science-data"><i class="fa fa-check"></i><b>2.1</b> Collecting Social Science Data</a></li>
+<li class="chapter" data-level="2.2" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#collaborative-social-science"><i class="fa fa-check"></i><b>2.2</b> Collaborative Social Science</a></li>
+<li class="chapter" data-level="2.3" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#version-controls"><i class="fa fa-check"></i><b>2.3</b> Version Controls</a></li>
+<li class="chapter" data-level="2.4" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#in-class-exercise"><i class="fa fa-check"></i><b>2.4</b> In Class Exercise</a></li>
+<li class="chapter" data-level="2.5" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#gitting-started"><i class="fa fa-check"></i><b>2.5</b> Gitting Started</a></li>
+<li class="chapter" data-level="2.6" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#gathering-online-data"><i class="fa fa-check"></i><b>2.6</b> Gathering Online Data</a></li>
+<li class="chapter" data-level="2.7" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#problem-set-2"><i class="fa fa-check"></i><b>2.7</b> Problem Set 2</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html"><i class="fa fa-check"></i><b>3</b> Data Visualization Techniques</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#why-visualization"><i class="fa fa-check"></i><b>3.1</b> Why Visualization?</a></li>
+<li class="chapter" data-level="3.2" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#data-science-by-hand"><i class="fa fa-check"></i><b>3.2</b> Data Science By Hand?</a></li>
+<li class="chapter" data-level="3.3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#elements-of-visualization"><i class="fa fa-check"></i><b>3.3</b> Elements of Visualization</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#color"><i class="fa fa-check"></i><b>3.3.1</b> Color</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#scale"><i class="fa fa-check"></i><b>3.3.2</b> Scale</a></li>
+<li class="chapter" data-level="3.3.3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#labels"><i class="fa fa-check"></i><b>3.3.3</b> Labels</a></li>
+<li class="chapter" data-level="3.3.4" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#comparisons"><i class="fa fa-check"></i><b>3.3.4</b> Comparisons</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#the-grammar-of-graphics"><i class="fa fa-check"></i><b>3.4</b> The Grammar of Graphics</a></li>
+<li class="chapter" data-level="3.5" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#preparing-data-for-visualization"><i class="fa fa-check"></i><b>3.5</b> Preparing Data for Visualization</a></li>
+<li class="chapter" data-level="3.6" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#plotting-exercise"><i class="fa fa-check"></i><b>3.6</b> Plotting Exercise</a></li>
+<li class="chapter" data-level="3.7" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#problem-set-3"><i class="fa fa-check"></i><b>3.7</b> Problem Set 3</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html"><i class="fa fa-check"></i><b>4</b> Gathering and Modeling Data</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#new-ways-of-gathering-data"><i class="fa fa-check"></i><b>4.1</b> New Ways of Gathering Data</a></li>
+<li class="chapter" data-level="4.2" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#application-programming-interfaces-apis"><i class="fa fa-check"></i><b>4.2</b> Application Programming Interfaces (APIs)</a></li>
+<li class="chapter" data-level="4.3" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#web-scraping"><i class="fa fa-check"></i><b>4.3</b> Web Scraping</a></li>
+<li class="chapter" data-level="4.4" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#models"><i class="fa fa-check"></i><b>4.4</b> Models</a></li>
+<li class="chapter" data-level="4.5" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#building-a-model"><i class="fa fa-check"></i><b>4.5</b> Building a Model</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#splitting-the-data"><i class="fa fa-check"></i><b>4.5.1</b> Splitting the Data</a></li>
+<li class="chapter" data-level="4.5.2" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#fitting-a-model"><i class="fa fa-check"></i><b>4.5.2</b> Fitting a Model</a></li>
+<li class="chapter" data-level="4.5.3" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#making-predictions"><i class="fa fa-check"></i><b>4.5.3</b> Making Predictions</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#final-project-proposal"><i class="fa fa-check"></i><b>4.6</b> Final Project Proposal</a></li>
+<li class="chapter" data-level="4.7" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#problem-set-4"><i class="fa fa-check"></i><b>4.7</b> Problem Set 4</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html"><i class="fa fa-check"></i><b>5</b> Maps and Spatial Data</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#what-is-spatial-data"><i class="fa fa-check"></i><b>5.1</b> What is Spatial Data?</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#the-modifiable-areal-unit-problem"><i class="fa fa-check"></i><b>5.1.1</b> The Modifiable Areal Unit Problem</a></li>
+<li class="chapter" data-level="5.1.2" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#environmental-hazards-and-spatial-data"><i class="fa fa-check"></i><b>5.1.2</b> Environmental Hazards and Spatial Data</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-simple-features-in-r"><i class="fa fa-check"></i><b>5.2</b> Using Simple Features in R</a></li>
+<li class="chapter" data-level="5.3" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#mapping-polygons-with-tidycensus"><i class="fa fa-check"></i><b>5.3</b> Mapping Polygons with tidycensus</a></li>
+<li class="chapter" data-level="5.4" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-tigris-to-gather-shapefiles"><i class="fa fa-check"></i><b>5.4</b> Using Tigris to Gather Shapefiles</a></li>
+<li class="chapter" data-level="5.5" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#spatially-joining-data"><i class="fa fa-check"></i><b>5.5</b> Spatially Joining Data</a></li>
+<li class="chapter" data-level="5.6" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-leaflet-and-r-shiny-for-interactive-maps"><i class="fa fa-check"></i><b>5.6</b> Using Leaflet and R Shiny for Interactive Maps</a></li>
+<li class="chapter" data-level="5.7" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#problem-set-5"><i class="fa fa-check"></i><b>5.7</b> Problem Set 5</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="networks.html"><a href="networks.html"><i class="fa fa-check"></i><b>6</b> Networks</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="networks.html"><a href="networks.html#what-are-networks"><i class="fa fa-check"></i><b>6.1</b> What Are Networks?</a></li>
+<li class="chapter" data-level="6.2" data-path="networks.html"><a href="networks.html#building-and-visualizing-networks"><i class="fa fa-check"></i><b>6.2</b> Building And Visualizing Networks</a></li>
+<li class="chapter" data-level="6.3" data-path="networks.html"><a href="networks.html#measures-of-centrality"><i class="fa fa-check"></i><b>6.3</b> Measures of Centrality</a></li>
+<li class="chapter" data-level="6.4" data-path="networks.html"><a href="networks.html#co-authorship-patterns"><i class="fa fa-check"></i><b>6.4</b> Co-Authorship Patterns</a></li>
+<li class="chapter" data-level="6.5" data-path="networks.html"><a href="networks.html#interactive-network-visualizations"><i class="fa fa-check"></i><b>6.5</b> Interactive Network Visualizations</a></li>
+<li class="chapter" data-level="6.6" data-path="networks.html"><a href="networks.html#migration-flows"><i class="fa fa-check"></i><b>6.6</b> Migration Flows</a></li>
+<li class="chapter" data-level="6.7" data-path="networks.html"><a href="networks.html#problem-set-6"><i class="fa fa-check"></i><b>6.7</b> Problem Set 6</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html"><i class="fa fa-check"></i><b>7</b> Prediction and Machine Learning</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#data-models-and-algorithmic-models"><i class="fa fa-check"></i><b>7.1</b> Data Models and Algorithmic Models</a></li>
+<li class="chapter" data-level="7.2" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#splitting-your-data-setting-up-your-models"><i class="fa fa-check"></i><b>7.2</b> Splitting Your Data, Setting Up Your Models</a></li>
+<li class="chapter" data-level="7.3" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#unsupervised-machine-learning-with-k-means-clustering"><i class="fa fa-check"></i><b>7.3</b> Unsupervised Machine Learning with K-Means Clustering</a></li>
+<li class="chapter" data-level="7.4" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#supervised-machine-learning-with-random-forests"><i class="fa fa-check"></i><b>7.4</b> Supervised Machine Learning with Random Forests</a></li>
+<li class="chapter" data-level="7.5" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#re-sample-your-data-with-cross-validation"><i class="fa fa-check"></i><b>7.5</b> Re-Sample Your Data with Cross Validation</a></li>
+<li class="chapter" data-level="7.6" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#predictions-bias-and-social-implications"><i class="fa fa-check"></i><b>7.6</b> Predictions, Bias, and Social Implications</a></li>
+<li class="chapter" data-level="7.7" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#problem-set-7"><i class="fa fa-check"></i><b>7.7</b> Problem Set 7</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><i class="fa fa-check"></i><b>8</b> Text Analysis Tools, Part I: Text Mining, Sentiment Analysis</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#text-as-data"><i class="fa fa-check"></i><b>8.1</b> Text As Data</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#families-of-text-analysis"><i class="fa fa-check"></i><b>8.1.1</b> “Families” of Text Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#newspapers-books"><i class="fa fa-check"></i><b>8.2</b> Newspapers &amp; Books</a></li>
+<li class="chapter" data-level="8.3" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#using-apis-to-gather-text-data"><i class="fa fa-check"></i><b>8.3</b> Using APIs to Gather Text Data</a></li>
+<li class="chapter" data-level="8.4" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#working-with-text-data-in-r"><i class="fa fa-check"></i><b>8.4</b> Working with Text Data in R</a></li>
+<li class="chapter" data-level="8.5" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#comparing-word-and-document-frequencies"><i class="fa fa-check"></i><b>8.5</b> Comparing Word and Document Frequencies</a></li>
+<li class="chapter" data-level="8.6" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#sentiment-analysis"><i class="fa fa-check"></i><b>8.6</b> Sentiment Analysis</a></li>
+<li class="chapter" data-level="8.7" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#problem-set-8"><i class="fa fa-check"></i><b>8.7</b> Problem Set 8</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><i class="fa fa-check"></i><b>9</b> Text Analysis Tools, Part 2: Topic Models, Large Language Models, and AI</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#topic-models"><i class="fa fa-check"></i><b>9.1</b> Topic Models</a></li>
+<li class="chapter" data-level="9.2" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#documents-as-mixtures-of-topics"><i class="fa fa-check"></i><b>9.2</b> Documents as Mixtures of Topics</a></li>
+<li class="chapter" data-level="9.3" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#choosing-k-values"><i class="fa fa-check"></i><b>9.3</b> Choosing <span class="math inline">\(k\)</span> Values</a></li>
+<li class="chapter" data-level="9.4" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#large-language-models"><i class="fa fa-check"></i><b>9.4</b> Large Language Models</a></li>
+<li class="chapter" data-level="9.5" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#problem-set-9"><i class="fa fa-check"></i><b>9.5</b> Problem Set 9</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Computational Social Science</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="text-analysis-tools-part-2-topic-models-large-language-models-and-ai" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">9</span> Text Analysis Tools, Part 2: Topic Models, Large Language Models, and AI<a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#text-analysis-tools-part-2-topic-models-large-language-models-and-ai" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Last but not least, we will discuss topic models, large language models (LLMs), and the future of computational social science.</p>
+<p><strong>Monday Readings:</strong></p>
+<ul>
+<li><p><a href="https://osf.io/preprints/socarxiv/24xfq_v1">Engzell, Per; Wilmers, Nathan. 2026. The Paper Factory.</a></p></li>
+<li><p><a href="https://journalofbigdata.springeropen.com/articles/10.1186/s40537-024-00986-7">Alvero, A.J.; Lee, J.; Regla-Vargas, A. et al. 2024. Journal of Big Data. Large language models, social demography, and hegemony: comparing authorship in human and synthetic text.</a></p></li>
+<li><p><em>Optional</em>: <a href="https://www.techpolicy.press/the-myth-of-agi/">Hanna, Alex; Bender, Emily M. 2026. Tech Policy Press. The Myth of AGI.</a></p></li>
+</ul>
+<p><strong>Wednesday Readings:</strong></p>
+<ul>
+<li><p><em>Optional:</em> <a href="https://benjaminmanning.io/files/rs.pdf">Manning, Benjamin; Zhu, Kehang; Horton, John. 2025. Automated Social Science: Language Models as Scientist and Subjects.</a></p></li>
+<li><p><em>Optional:</em> <a href="https://arxiv.org/abs/2406.17972">Athey, Susan; Brunborg, Herman; Du, Tianyu; Kanodia, Ayush; Vafa, Keyon. 2025. LABOR-LLM: Language-Based Occupational Representations with Large Language Models.</a></p></li>
+<li><p><em>Optional:</em> <a href="https://journals.sagepub.com/doi/full/10.1177/00491241251326865">Broska, David; Howes, Michael; van Loon, Austin. 2025. Social Science Methods and Research. The Mixed Subjects Design: Treating Large Language Models as Potentially Informative Observations.</a></p></li>
+<li><p><em>Optional:</em> <a href="https://www.nature.com/articles/s41586-024-07146-0">Messeri, Lisa; Crockett, M.J. 2024. Nature. Artificial intelligence and illusions of understanding in scientific research.</a></p></li>
+<li><p><em>Optional:</em> <a href="https://pubsonline.informs.org/doi/10.1287/orsc.2026.ed.v37.n3">Glautenberg, Claudine; et al. 2026. Oranizational Management. More Versus Better: Artificial Intelligence, Incentives, and the Emerging Crisis in Peer Review.</a></p></li>
+</ul>
+<div id="topic-models" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Topic Models<a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#topic-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We might be interested in the topics that are discussed within a virtual discussion space. For instance, recalling our Reddit data tools from last week, we might be interested in Reddits that discuss topics like “data centers.” Let’s find some of these subreddits.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb1-1" tabindex="-1"></a><span class="fu">library</span>(RedditExtractoR)</span>
+<span id="cb1-2"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb1-2" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb1-3" tabindex="-1"></a><span class="co"># extract comments from these pages</span></span>
+<span id="cb1-4"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb1-4" tabindex="-1"></a>dc_subreddits <span class="ot">&lt;-</span> <span class="fu">find_subreddits</span>(<span class="st">&quot;data center&quot;</span>)</span></code></pre></div>
+<p>We see a subreddit called “DataCenterDebate.” Before moving on, it’s helpful (and I would argue, necessary!) to do a detailed reading of some of your data. When we dig into the urls, we see examples like “Lake of the Ozarks residents protest a data center,” “data center tracking map,” and “does anyone live near a data center?” These seem like roughly what we are interested in. Using the <code>url</code> field, we can go to links <a href="https://www.reddit.com/r/DataCenterDebate/comments/1tfxeep/do_we_actually_need_all_of_these_new_data_centers/">like this one</a> and do a bit of reading the posts and comments, which might help us form or adjust our hypotheses. We will go ahead and extract the comments and threads from “DataCenterDebate.”</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb2-1" tabindex="-1"></a><span class="co"># we can get urls of the data center subreddit</span></span>
+<span id="cb2-2"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb2-2" tabindex="-1"></a>dc_urls <span class="ot">&lt;-</span> <span class="fu">find_thread_urls</span>(<span class="at">keywords =</span> <span class="st">&quot;data center&quot;</span>,</span>
+<span id="cb2-3"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb2-3" tabindex="-1"></a>                                 <span class="at">period =</span> <span class="st">&quot;week&quot;</span>)</span>
+<span id="cb2-4"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb2-4" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb2-5" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb2-6" tabindex="-1"></a><span class="co"># extract comments from these pages</span></span>
+<span id="cb2-7"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb2-7" tabindex="-1"></a>dc_comments <span class="ot">&lt;-</span> <span class="fu">get_thread_content</span>(dc_urls<span class="sc">$</span>url)</span>
+<span id="cb2-8"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb2-8" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb2-9" tabindex="-1"></a><span class="co"># look at comments</span></span>
+<span id="cb2-10"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb2-10" tabindex="-1"></a>dc_comments<span class="sc">$</span>comments</span>
+<span id="cb2-11"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb2-11" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb2-12" tabindex="-1"></a><span class="co"># look at threads</span></span>
+<span id="cb2-13"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb2-13" tabindex="-1"></a>dc_comments<span class="sc">$</span>threads</span></code></pre></div>
+<p>Great! We can now make our data <code>tidytext</code>, by reshaping it so that each row is just one word. We’ll do this for both comments and threads separately.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb3-1" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-2"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb3-2" tabindex="-1"></a><span class="fu">library</span>(tidytext)</span>
+<span id="cb3-3"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb3-3" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb3-4" tabindex="-1"></a><span class="co"># create a tidytext dataset</span></span>
+<span id="cb3-5"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb3-5" tabindex="-1"></a>tidy_comments <span class="ot">&lt;-</span> dc_comments<span class="sc">$</span>comments <span class="sc">%&gt;%</span></span>
+<span id="cb3-6"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb3-6" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(word, comment) <span class="sc">%&gt;%</span></span>
+<span id="cb3-7"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb3-7" tabindex="-1"></a>  <span class="fu">anti_join</span>(stop_words)</span>
+<span id="cb3-8"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb3-8" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb3-9" tabindex="-1"></a>tidy_threads <span class="ot">&lt;-</span> dc_comments<span class="sc">$</span>threads <span class="sc">%&gt;%</span></span>
+<span id="cb3-10"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb3-10" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(word, text) <span class="sc">%&gt;%</span></span>
+<span id="cb3-11"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb3-11" tabindex="-1"></a>  <span class="fu">anti_join</span>(stop_words)</span>
+<span id="cb3-12"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb3-12" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb3-13" tabindex="-1"></a>tidy_threadtitles <span class="ot">&lt;-</span> dc_comments<span class="sc">$</span>threads <span class="sc">%&gt;%</span></span>
+<span id="cb3-14"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb3-14" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(word, title) <span class="sc">%&gt;%</span></span>
+<span id="cb3-15"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb3-15" tabindex="-1"></a>  <span class="fu">anti_join</span>(stop_words)</span></code></pre></div>
+<p>We will now count the words in each Reddit post separately. Including <code>url</code> inside the <code>count()</code> parentheses does this.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-1" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb4-2"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-2" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-3" tabindex="-1"></a><span class="co"># create counts of each word - we will include id in the count() </span></span>
+<span id="cb4-4"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-4" tabindex="-1"></a><span class="co"># function to also get n values for words in each article</span></span>
+<span id="cb4-5"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-5" tabindex="-1"></a>tidy_comments_counts <span class="ot">&lt;-</span> tidy_comments <span class="sc">%&gt;%</span></span>
+<span id="cb4-6"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-6" tabindex="-1"></a>  <span class="fu">count</span>(url, word, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-7"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-7" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-8" tabindex="-1"></a>tidy_threads_counts <span class="ot">&lt;-</span> tidy_threads <span class="sc">%&gt;%</span></span>
+<span id="cb4-9"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-9" tabindex="-1"></a>  <span class="fu">count</span>(url, word, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-10"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-10" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-11" tabindex="-1"></a>tidy_threadtitles_counts <span class="ot">&lt;-</span> tidy_threadtitles <span class="sc">%&gt;%</span></span>
+<span id="cb4-12"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-12" tabindex="-1"></a>  <span class="fu">count</span>(url, word, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-13"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-13" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-14" tabindex="-1"></a><span class="co"># combine</span></span>
+<span id="cb4-15"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-15" tabindex="-1"></a>tidy_counts <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(tidy_comments_counts,</span>
+<span id="cb4-16"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-16" tabindex="-1"></a>                         tidy_threads_counts,</span>
+<span id="cb4-17"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-17" tabindex="-1"></a>                         tidy_threadtitles_counts)</span>
+<span id="cb4-18"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-18" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-19" tabindex="-1"></a><span class="co"># remove NA values</span></span>
+<span id="cb4-20"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-20" tabindex="-1"></a>tidy_counts <span class="sc">%&lt;&gt;%</span></span>
+<span id="cb4-21"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb4-21" tabindex="-1"></a>  <span class="fu">na.omit</span>()</span></code></pre></div>
+<p>Great! Now, to run topic models on our data, we need to put it into a <em>Document-Term Matrix</em> (DTM). The DTM is similar to other <code>tidytext</code> data that we have used, but there are some characteristics that make the DTM unique. <a href="https://www.tidytextmining.com/dtm.html">Silge and Robinson</a> note that in the DTM:</p>
+<ul>
+<li>Each row represents a document.</li>
+<li>Each variable represents a term.</li>
+<li>Each value contains the number of appearances of the term.</li>
+</ul>
+<p>We might intuit that when we create a DTM with many documents and many terms, there will be a large number of 0’s (terms that do not appear in specific documents). This is especially the case when terms are specific and documents are relatively short (for example, we might have songs with different lyrics in each, and many words would appear rarely). When a dataframe or matrix has a low frequency of non-zero values, we call it <em>sparse</em>.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb5-1" tabindex="-1"></a><span class="co"># recast as dtm</span></span>
+<span id="cb5-2"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb5-2" tabindex="-1"></a>dc_dtm <span class="ot">&lt;-</span> tidy_counts <span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb5-3" tabindex="-1"></a>  <span class="fu">cast_dtm</span>(url, word, n)</span></code></pre></div>
+<p>Perfect! Now we have a DTM object that is essentially a matrix with the value of appearances for each word in each document (0’s for most entries).</p>
+<p>The method of topic modelling that we will use is called “Latent Dirichlet Allocation,” or LDA. It is the most common form of topic modelling. <a href="https://ai.stanford.edu/~ang/papers/jair03-lda.pdf">LDA</a> treats documents as “mixtures” of topics, and topics as “mixtures” of words. Importantly, each of these can be overlapping, such that words can appear in multiple topics and topics can appear in multiple documents.</p>
+<p>We can calculate LDA in R using the following code. Importantly, we need to specify the <em>number of topics</em> that we want to use. We’ll start here with two topics, but it’s wise to try different numbers and look at the results under each scenario. Since this is unsupervised learning, remember that there is no “correct” answer, but that some will be better than others. We will also use the <code>control</code> argument to set a seed equal to 1, so that we get the same result every time (otherwise, it could give us a slightly different LDA).</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb6-1" tabindex="-1"></a><span class="fu">library</span>(topicmodels)</span>
+<span id="cb6-2"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb6-3" tabindex="-1"></a><span class="co"># lda </span></span>
+<span id="cb6-4"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb6-4" tabindex="-1"></a>dc_lda <span class="ot">&lt;-</span> <span class="fu">LDA</span>(dc_dtm, <span class="dv">2</span>, <span class="at">control =</span> <span class="fu">list</span>(<span class="at">seed =</span> <span class="dv">1</span>))</span></code></pre></div>
+<p>Great! Now that we have a topic model for our data, we just need to get it into a format that we can work with. The <code>tidy()</code> function, as its name suggests, gives us a tidy dataframe. When we input an LDA object into the <code>tidy()</code> function, it gives us <span class="math inline">\(\beta\)</span> values, which represent the probability that a given word will fall into a given topic. You may need to install the package <code>reshape2</code> for this code to work:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb7-1" tabindex="-1"></a><span class="co"># colorado topics</span></span>
+<span id="cb7-2"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb7-2" tabindex="-1"></a>dc_topics <span class="ot">&lt;-</span> <span class="fu">tidy</span>(dc_lda, <span class="at">matrix =</span> <span class="st">&quot;beta&quot;</span>)</span></code></pre></div>
+<p>Now that our data are in a tidy dataframe, we’ll just clean it up a little more so that we can plot it. We will keep the top ten words in each topic, and sort them by their <span class="math inline">\(\beta\)</span> values.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb8-1" tabindex="-1"></a><span class="co"># format for plot</span></span>
+<span id="cb8-2"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb8-2" tabindex="-1"></a>dc_top_terms <span class="ot">&lt;-</span> dc_topics <span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb8-3" tabindex="-1"></a>  <span class="fu">group_by</span>(topic) <span class="sc">%&gt;%</span></span>
+<span id="cb8-4"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb8-4" tabindex="-1"></a>  <span class="fu">slice_max</span>(beta, <span class="at">n =</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-5"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb8-5" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb8-6"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb8-6" tabindex="-1"></a>  <span class="fu">arrange</span>(topic, <span class="sc">-</span>beta) <span class="sc">%&gt;%</span></span>
+<span id="cb8-7"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb8-7" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">term =</span> <span class="fu">reorder_within</span>(term, beta, topic))</span></code></pre></div>
+<p>And lastly, we will plot the topics.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb9-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb9-2"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb9-2" tabindex="-1"></a><span class="co"># plot our topics!</span></span>
+<span id="cb9-3"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb9-3" tabindex="-1"></a><span class="fu">ggplot</span>(dc_top_terms, <span class="fu">aes</span>(beta, term, <span class="at">fill =</span> <span class="fu">factor</span>(topic))) <span class="sc">+</span></span>
+<span id="cb9-4"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb9-4" tabindex="-1"></a><span class="fu">geom_col</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb9-5"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb9-5" tabindex="-1"></a><span class="fu">facet_wrap</span>(<span class="sc">~</span> topic, <span class="at">scales =</span> <span class="st">&quot;free&quot;</span>) <span class="sc">+</span></span>
+<span id="cb9-6"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb9-6" tabindex="-1"></a><span class="fu">scale_y_reordered</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/plot%20topicmodels-1.png" width="672" /></p>
+<p>If we were to label these topics, what we we call them?</p>
+<p>Alternatively, we could try plotting the topics in relation to each other. That is, we can take <span class="math inline">\(log\bigg(\frac{\beta_2}{\beta_1}\bigg)\)</span> to compare the <span class="math inline">\(\beta\)</span> values for the same word in two different topics. Then we can look at the ten words that are relatively most common in each topic. We will also filter our data to only include words that have <span class="math inline">\(\beta\)</span> values above 0.001 in at least one topic.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb10-1" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb10-2"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb10-2" tabindex="-1"></a>beta_wide <span class="ot">&lt;-</span> dc_topics <span class="sc">%&gt;%</span></span>
+<span id="cb10-3"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb10-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">topic =</span> <span class="fu">paste0</span>(<span class="st">&quot;topic&quot;</span>, topic)) <span class="sc">%&gt;%</span></span>
+<span id="cb10-4"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb10-4" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> topic, <span class="at">values_from =</span> beta) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-5"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb10-5" tabindex="-1"></a>  <span class="fu">filter</span>(topic1 <span class="sc">&gt;</span> .<span class="dv">001</span> <span class="sc">|</span> topic2 <span class="sc">&gt;</span> .<span class="dv">001</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb10-6"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb10-6" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">log_ratio =</span> <span class="fu">log2</span>(topic2 <span class="sc">/</span> topic1))</span></code></pre></div>
+<p>For plotting purposes, we will limit our data to the 10 largest and smallest log ratio values. We will do this by re-assigning <code>beta_wide</code> using the <code>bind_rows()</code> function with two arguments: <code>beta_wide</code> limited to the largest 10 values, and <code>beta_wide</code> limited to the smallest ten values. For each dataframe, we will add a variable called “topic,” which we will call “topic1” for the smallest values (since these are most likely to appear in topic 1) and “topic2” for the largest values (since these are more likely to appear in topic 2).</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb11-1" tabindex="-1"></a><span class="co"># limit to 10 largest and smallest log ratios</span></span>
+<span id="cb11-2"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb11-2" tabindex="-1"></a>beta_wide <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(</span>
+<span id="cb11-3"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb11-3" tabindex="-1"></a>  beta_wide <span class="sc">%&gt;%</span> </span>
+<span id="cb11-4"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb11-4" tabindex="-1"></a>    <span class="fu">slice_min</span>(log_ratio, <span class="at">n =</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb11-5"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb11-5" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">topic =</span> <span class="st">&quot;topic1&quot;</span>),</span>
+<span id="cb11-6"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb11-6" tabindex="-1"></a>  beta_wide <span class="sc">%&gt;%</span></span>
+<span id="cb11-7"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb11-7" tabindex="-1"></a>    <span class="fu">slice_max</span>(log_ratio, <span class="at">n =</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb11-8"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb11-8" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">topic =</span> <span class="st">&quot;topic2&quot;</span>)</span>
+<span id="cb11-9"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb11-9" tabindex="-1"></a>)</span></code></pre></div>
+<p>Now we can plot our result!</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb12-1" tabindex="-1"></a><span class="co"># plot results!</span></span>
+<span id="cb12-2"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb12-2" tabindex="-1"></a><span class="fu">ggplot</span>(beta_wide, <span class="fu">aes</span>(<span class="at">x =</span> log_ratio, <span class="at">y =</span> term))<span class="sc">+</span></span>
+<span id="cb12-3"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb12-3" tabindex="-1"></a>  <span class="fu">geom_col</span>()<span class="sc">+</span></span>
+<span id="cb12-4"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb12-4" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">rows =</span> <span class="fu">vars</span>(topic), <span class="at">scales =</span> <span class="st">&quot;free_y&quot;</span>)<span class="sc">+</span></span>
+<span id="cb12-5"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb12-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Log Ratio&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Term&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/topicmodels3-1.png" width="672" /></p>
+<p>Great! From here, we can think more about the divide between Topic 1 and Topic 2. We could even label our topics: for example, “research” and “products.” These labels are far from perfect, but they begin to describe the sets of words that appear in each broad category.</p>
+</div>
+<div id="documents-as-mixtures-of-topics" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Documents as Mixtures of Topics<a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#documents-as-mixtures-of-topics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Until now, we have mostly been examining topics as mixtures of words. It makes sense to do this as an initial step: we want to see that our topics can be understood as broad categories and that the words classified under these topics have something in common. But we could also move up a level, examining documents as mixtures of topics.</p>
+<p>Here, we are asking what topics our documents - in this case, Reddit comments and threads - are comprised of. We can do this by calculating the <span class="math inline">\(\gamma\)</span> for the LDA.<span class="math inline">\(\gamma\)</span> can be interpreted as the “per-document-per-topic probabilities,” which add to 1 for each document. We can think of these as the proportion of each topic within a document.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb13-1" tabindex="-1"></a><span class="co"># calculate gamma for all documents</span></span>
+<span id="cb13-2"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb13-2" tabindex="-1"></a>dc_documents <span class="ot">&lt;-</span> <span class="fu">tidy</span>(dc_lda, <span class="at">matrix =</span> <span class="st">&quot;gamma&quot;</span>)</span>
+<span id="cb13-3"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb13-4" tabindex="-1"></a><span class="co"># view documents</span></span>
+<span id="cb13-5"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb13-5" tabindex="-1"></a><span class="fu">head</span>(dc_documents)</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 3
+##   document                                                         topic   gamma
+##   &lt;chr&gt;                                                            &lt;int&gt;   &lt;dbl&gt;
+## 1 https://www.reddit.com/r/DataCenterDebate/comments/1nd3wze/loca…     1 1.00e+0
+## 2 https://www.reddit.com/r/DataCenterDebate/comments/1tfxeep/do_w…     1 1.38e-4
+## 3 https://www.reddit.com/r/DataCenterDebate/comments/1ovb4nt/stud…     1 3.56e-4
+## 4 https://www.reddit.com/r/DataCenterDebate/comments/1tbhdtx/im_c…     1 1.72e-4
+## 5 https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_y…     1 2.22e-4
+## 6 https://www.reddit.com/r/DataCenterDebate/comments/1puopiz/trio…     1 2.87e-4</code></pre>
+<p>Within <code>co_documents</code>, we can search for specific articles and find the topics that they are comprised of. For example:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb15-1" tabindex="-1"></a><span class="co"># examine one article</span></span>
+<span id="cb15-2"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb15-2" tabindex="-1"></a>dc_documents <span class="sc">%&gt;%</span></span>
+<span id="cb15-3"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb15-3" tabindex="-1"></a>  <span class="fu">filter</span>(document <span class="sc">==</span> <span class="st">&quot;https://www.reddit.com/r/DataCenterDebate/comments/1nd3wze/local_research_collab_western_pa_pittsburgh/&quot;</span>) </span></code></pre></div>
+<pre><code>## # A tibble: 2 × 3
+##   document                                                         topic   gamma
+##   &lt;chr&gt;                                                            &lt;int&gt;   &lt;dbl&gt;
+## 1 https://www.reddit.com/r/DataCenterDebate/comments/1nd3wze/loca…     1 1.00e+0
+## 2 https://www.reddit.com/r/DataCenterDebate/comments/1nd3wze/loca…     2 1.52e-4</code></pre>
+<p>We see that this article is comprised almost entirely of topic 1. If we look at the post, we can see that it is about Pittsburg’s campaign to be the “AI Capital of the World.”</p>
+<p>We can look at other articles that strongly align with just one topic. Specifically, we’ll look at articles that have probabilities of greater than 95% for one topic.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb17-1" tabindex="-1"></a><span class="co"># examine documents that are most aligned with just one topic</span></span>
+<span id="cb17-2"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb17-2" tabindex="-1"></a>dc_documents <span class="sc">%&gt;%</span></span>
+<span id="cb17-3"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb17-3" tabindex="-1"></a>  <span class="fu">filter</span>(gamma <span class="sc">&gt;</span> <span class="fl">0.95</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 92 × 3
+##    document                                                          topic gamma
+##    &lt;chr&gt;                                                             &lt;int&gt; &lt;dbl&gt;
+##  1 https://www.reddit.com/r/DataCenterDebate/comments/1nd3wze/local…     1 1.00 
+##  2 https://www.reddit.com/r/DataCenterDebate/comments/1rpwxti/oracl…     1 0.999
+##  3 https://www.reddit.com/r/DataCenterDebate/comments/1rrsezn/seawa…     1 0.999
+##  4 https://www.reddit.com/r/DataCenterDebate/comments/1t52n5e/what_…     1 0.999
+##  5 https://www.reddit.com/r/DataCenterDebate/comments/1neukud/does_…     1 1.00 
+##  6 https://www.reddit.com/r/DataCenterDebate/comments/1ntfw2v/the_d…     1 1.00 
+##  7 https://www.reddit.com/r/DataCenterDebate/comments/1rle69u/resea…     1 0.999
+##  8 https://www.reddit.com/r/DataCenterDebate/comments/1rzvevk/can_d…     1 0.998
+##  9 https://www.reddit.com/r/DataCenterDebate/comments/1ncyygw/how_t…     1 1.00 
+## 10 https://www.reddit.com/r/DataCenterDebate/comments/1sjj88d/data_…     1 0.997
+## # ℹ 82 more rows</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb19-1" tabindex="-1"></a><span class="co"># within this set, we can examine which articles are about topic 1 vs 2</span></span>
+<span id="cb19-2"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb19-2" tabindex="-1"></a>dc_documents <span class="sc">%&gt;%</span></span>
+<span id="cb19-3"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb19-3" tabindex="-1"></a>  <span class="fu">filter</span>(gamma <span class="sc">&gt;</span> <span class="fl">0.95</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb19-4"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb19-4" tabindex="-1"></a>  <span class="fu">select</span>(topic) <span class="sc">%&gt;%</span></span>
+<span id="cb19-5"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb19-5" tabindex="-1"></a>  <span class="fu">table</span>()</span></code></pre></div>
+<pre><code>## topic
+##  1  2 
+## 38 54</code></pre>
+<p>We see that 38 posts are more related to topic 1, while 54 posts are more closely related to topic 2.</p>
+</div>
+<div id="choosing-k-values" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Choosing <span class="math inline">\(k\)</span> Values<a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#choosing-k-values" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Perhaps the most important decision we can make in topic modelling is the <span class="math inline">\(k\)</span> value for our model. If <span class="math inline">\(k\)</span> is too large, we’ll end up with a lot of topics that don’t make any sense, and if <span class="math inline">\(k\)</span> is too small, we’ll end up with lots of different themes in the same topics. While one can inductively explore various options, there are also formalized ways to search for optimal <span class="math inline">\(k\)</span> values.</p>
+<p>Regardless of our method for choosing <span class="math inline">\(k\)</span>, we should always make sure that our models align with our human validation of what topics make sense. That is, we shouldn’t rely solely on our output metrics to make decisions about our data, we should also incorporate the knowledge that we have about our sources and our goals.</p>
+<p>There are a few ways that we can search for optimal <span class="math inline">\(k\)</span> values. We’ll start by looking at the <code>FindTopicsNumber</code> function from the <code>ldatuning</code> package. We’ll try searching for topics within the range of 2-20, and using two methods - (Cao &amp; Juan, 2009) and (Devaud, 2014). The package includes two other methods - (Griffiths, 2004) and (arun, 2010) - which you may want to inspect as well, especially if there is uncertainty between the first two.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb21-1" tabindex="-1"></a><span class="co">#library(ldatuning)</span></span>
+<span id="cb21-2"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb21-2" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb21-3" tabindex="-1"></a><span class="co"># create models with different number of topics</span></span>
+<span id="cb21-4"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb21-4" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">FindTopicsNumber</span>(</span>
+<span id="cb21-5"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb21-5" tabindex="-1"></a>  dc_dtm,</span>
+<span id="cb21-6"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb21-6" tabindex="-1"></a>  <span class="at">topics =</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">2</span>, <span class="at">to =</span> <span class="dv">20</span>, <span class="at">by =</span> <span class="dv">1</span>),</span>
+<span id="cb21-7"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb21-7" tabindex="-1"></a>  <span class="at">metrics =</span> <span class="fu">c</span>(<span class="st">&quot;CaoJuan2009&quot;</span>,  <span class="st">&quot;Deveaud2014&quot;</span>),</span>
+<span id="cb21-8"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb21-8" tabindex="-1"></a>  <span class="at">method =</span> <span class="st">&quot;Gibbs&quot;</span>,</span>
+<span id="cb21-9"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb21-9" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">list</span>(<span class="at">seed =</span> <span class="dv">3</span>),</span>
+<span id="cb21-10"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb21-10" tabindex="-1"></a>  <span class="at">verbose =</span> <span class="cn">TRUE</span></span>
+<span id="cb21-11"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb21-11" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## fit models... done.
+## calculate metrics:
+##   CaoJuan2009... done.
+##   Deveaud2014... done.</code></pre>
+<p>The <code>ldatuning</code> package also includes a function for visualizing the results:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb23-1" tabindex="-1"></a><span class="co"># plot results</span></span>
+<span id="cb23-2"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#cb23-2" tabindex="-1"></a><span class="fu">FindTopicsNumber_plot</span>(result)</span></code></pre></div>
+<p><img src="_main_files/figure-html/ldatuningviz-1.png" width="672" /></p>
+<p>As noted in the above figure, we want to minimize the (Cao, Juan 2009) estimator while maximizing the (Deveaud, 2014) estimator. Therefore, we might want to explore running our models with 5 topics. From this point, we would want to re-run our topic models at this values and manually inspect the results. In the Problem Set, you’ll have a chance to try 5 topics.</p>
+<p>Lastly, I want to note that <em>Structural Topic Models</em> are an alternative to LDA, which incorporate article-level metadata in their topic modelling. The <code>stm</code> R package has many wonderful features for text processing, finding topics, and creating visualizations. I recommend exploring <a href="https://cran.r-project.org/web/packages/stm/vignettes/stmVignette.pdf">this vignette</a> if you wish to deepen your understanding of topic models!</p>
+</div>
+<div id="large-language-models" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Large Language Models<a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#large-language-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Large Language Models, or LLMs use large text datasets and deep learning (or other algorithm models) to <em>generate</em> text based on predictions. It is important to note that the text output from LLMs are based on these predictive models, which are generally opaque and do not use logic or reasoning (as we covered in <a href="prediction-and-machine-learning.html#prediction-and-machine-learning">Prediction and Machine Learning</a>. As Hanna and Bender <a href="https://www.techpolicy.press/ai-hurts-consumers-and-workers-and-isnt-intelligent/">write</a>:</p>
+<blockquote>
+<p>“these systems do not understand anything. Rather, they turn technology meant for classification inside out: instead of indicating whether an image contains a face or accurately transcribing speech, generative AI tools use these models to generate media. They may create text which appears to human eyes like the result of thinking, reasoning, or understanding, but it is in fact anything but.”</p>
+</blockquote>
+<p>Similarly, <a href="https://shiny.posit.co/blog/posts/shiny-side-of-llms-part-1/">Veerle Eeftink and Van Leemput</a> note, LLMs are not “thinking” or using logic in the way that humans do. Instead, they are <em>predicting</em> words based on very large databases of prior written language. This can lead to “hallucinations” where LLMs give incorrect information. There is no way to totally fix this problem, although researchers can build checks and safeguards into their LLM usage.</p>
+<p>People use LLMs for a range of writing tasks, coding tasks, and other creative endeavors. As LLMs have gained traction in society, people have used them for an increasingly wide range of tasks. Recently, sociologists <a href="https://osf.io/preprints/socarxiv/24xfq_v1">Engzell and Wilmers</a> even used LLM prompts to write entire sociology papers. While a single LLM is unlikely to be able to write a coherent research paper, Engzell and Wilmers find that a multi-agent approach, in which some “agents” (or LLMS) take on tasks like coding and data analysis while others take on tasks like robustness checks and writing, is able to do a much better job. The multi-agent workflow also helps minimize issues like hallucinations.</p>
+<div class="figure"><span style="display:block;" id="fig:paperfactory"></span>
+<img src="paperfactory.png" alt="Source: Engzell and Wilmers, 2026" width="100%" />
+<p class="caption">
+Figure 9.1: Source: Engzell and Wilmers, 2026
+</p>
+</div>
+<p>So, how good are the papers that can be generated by this process? The authors note that “none are publishable as-is.” However, they also say that there are some they would send out for peer-review. All of the papers generated clean code and detailed documents explaining decisions (even if the decisions are not always what the authors would do). The papers struggle with framing and engaging deeply with specific literatures while also making arguments of broad interest. The papers also struggle with “coherence:” the data and methods sections, in the authors’ view, were often difficult to follow.</p>
+<p>The authors note that “review processes” (i.e. some agents reviewing the work of others) would help to improve papers, these reviews sometimes degraded paper quality. Agents sometimes over-interpreted robustness checks or created larger problems by trying to address a smaller issue. In future workflows, it is possible that human checkpoints could help to mitigate some of these concerns.</p>
+<p>In the end, this demonstration of LLM-generated sociology papers might lead to more questions than answers. Could LLMs provide tools to expand our analyses, make them more reproducible, and to generate locality-specific conclusions of our findings? In the process of instructing LLMs to write papers, will we codify the research process more clearly than has been done before, potentially helping to de-mystify academia? How will these tools influence inequality between researchers and between institutions?</p>
+<p>LLMs also have implication for social biases and inequalities. To explore how LLMs might reflect certain populations more than others, researchers have asked <em>who</em> LLMs sound like. In <a href="https://link.springer.com/article/10.1186/s40537-024-00986-7">one study</a>, researchers test LLMs in college application prompts and compare these to actual college application essays from real high schoolers. The researchers find that LLMs tend to take on the speech patterns of “males with higher levels of social privilege.”</p>
+<p>Another implication that is clear is that the amount of papers produced by researchers is likely to increase. <a href="https://osf.io/preprints/socarxiv">SocArxiv</a>, a hosting site for sociology working papers, has been inundated with new submissions in recent years, including “a large volume of AI-generated slop papers.” The editors decided to impose a <a href="https://socopen.org/category/announcements/">90 day moritorium</a> on all new AI-topic submissions in November 2025. <a href="https://pubsonline.informs.org/doi/10.1287/orsc.2026.ed.v37.n3">Gartenberg and colleagues</a>, the editors at <em>Organizational Science</em>, found that writing quality (at least, measured via the Flesch Reading Ease score) in submitted papers has declined sharply since the popularization of ChatGPT. It is possible that this deluge of mediocre (or worse) AI-generated papers will force the discipline to make other changes in the peer review process, and broadly, in how we value outputs like papers.</p>
+<p><img src="llm_writingquality.png" width="100%" /></p>
+</div>
+<div id="problem-set-9" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Problem Set 9<a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#problem-set-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recommended Resources:</p>
+<p><a href="https://www.tidytextmining.com/topicmodeling">Text Mining in R: A Tidy Approach. Chapter 6: Topic Modeling</a></p>
+<ol style="list-style-type: decimal">
+<li><p>Start a new document, problemset9.Rmd, in your soc10problemsets repository. (You can download a template <a href="https://github.com/Soc10Spring2026/soc10problemsets_templates">here</a>, but be sure to save it in your own soc10problemsets repo). <code>RedditExtractoR</code> to download Reddit comments and threads on data centers. Create a topic model from the subreddit “DataCenterDebate” using <span class="math inline">\(k\)</span> = 5, and show a figure with the 10 relative most common words in each topic. <strong>Commit your changes</strong>.</p></li>
+<li><p>Describe the topics that you found in question 1. How do these compare to the topics in the <span class="math inline">\(k\)</span> = 2 case (in section <a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#topic-models">9.1</a>), and how well do these describe your data? <strong>Commit your changes</strong>.</p></li>
+<li><p>Create an account in <a href="https://claude.com/product/overview">Claude</a> or <a href="https://chatgpt.com/">ChatGPT</a> (or both). The free versions are sufficient! Ask your LLM to write R code that downloads Reddit data, models topics (any number) and describes these topics. List the prompts that you used, your impressions of the results, and how these differed (or didn’t differ) from your responses to questions 1 and 2. <strong>Commit your changes</strong>.</p></li>
+<li><p>Considering Engzell and Wilmers’ multi-agent workflow, try to improve your Claude modelling process (you might not be able to set up a true multi-agent workflow in the free versions, but you could simulate this by giving your LLM instructions to review or improve the existing output in specific ways, having ChatGPT review the Claude code or vice versa, etc.). Explain what you tried (including additional prompts), how your results changed (or didn’t change), and whether this improved your understanding of the data or not. <strong>Commit your changes</strong>.</p></li>
+<li><p>Consider how LLMs (specifically, their ability to write large amount of text and code with a single prompt) will change the social sciences. Will this technology free up researchers to pursue bigger ideas, or will it lead to “mediocrity at scale?” What do you see as the most important opportunities and challenges related to LLMs in the social sciences? (Please refrain from using your LLM to write your answer - I want to know your thoughts!). <strong>Commit your changes</strong>.</p></li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

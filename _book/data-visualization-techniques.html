@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Data Visualization Techniques | Introduction to Computational Social Science</title>
+  <meta name="description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Data Visualization Techniques | Introduction to Computational Social Science" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  <meta name="github-repo" content="rstudio/soc10" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Data Visualization Techniques | Introduction to Computational Social Science" />
+  
+  <meta name="twitter:description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  
+
+<meta name="author" content="Instructor: Tyler McDaniel, PhD Candidate, Sociology | TA: Yao Xu, PhD Candidate, Sociology" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="lets-git-going-code-collaboration-and-version-controls.html"/>
+<link rel="next" href="gathering-and-modeling-data.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Syllabus</a></li>
+<li class="chapter" data-level="1" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html"><i class="fa fa-check"></i><b>1</b> What is Computational Social Science?</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#some-definitions"><i class="fa fa-check"></i><b>1.1</b> Some Definitions</a></li>
+<li class="chapter" data-level="1.2" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#getting-started-with-r-or-python"><i class="fa fa-check"></i><b>1.2</b> Getting Started with R (or Python)</a></li>
+<li class="chapter" data-level="1.3" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#working-in-base-r"><i class="fa fa-check"></i><b>1.3</b> Working in Base R</a></li>
+<li class="chapter" data-level="1.4" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#opening-rstudio"><i class="fa fa-check"></i><b>1.4</b> Opening RStudio</a></li>
+<li class="chapter" data-level="1.5" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#packages"><i class="fa fa-check"></i><b>1.5</b> Packages</a></li>
+<li class="chapter" data-level="1.6" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#r-markdown"><i class="fa fa-check"></i><b>1.6</b> R Markdown</a></li>
+<li class="chapter" data-level="1.7" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#problem-set-1"><i class="fa fa-check"></i><b>1.7</b> Problem Set 1</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html"><i class="fa fa-check"></i><b>2</b> Let’s “Git” Going: Code, Collaboration, and Version Controls</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#collecting-social-science-data"><i class="fa fa-check"></i><b>2.1</b> Collecting Social Science Data</a></li>
+<li class="chapter" data-level="2.2" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#collaborative-social-science"><i class="fa fa-check"></i><b>2.2</b> Collaborative Social Science</a></li>
+<li class="chapter" data-level="2.3" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#version-controls"><i class="fa fa-check"></i><b>2.3</b> Version Controls</a></li>
+<li class="chapter" data-level="2.4" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#in-class-exercise"><i class="fa fa-check"></i><b>2.4</b> In Class Exercise</a></li>
+<li class="chapter" data-level="2.5" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#gitting-started"><i class="fa fa-check"></i><b>2.5</b> Gitting Started</a></li>
+<li class="chapter" data-level="2.6" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#gathering-online-data"><i class="fa fa-check"></i><b>2.6</b> Gathering Online Data</a></li>
+<li class="chapter" data-level="2.7" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#problem-set-2"><i class="fa fa-check"></i><b>2.7</b> Problem Set 2</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html"><i class="fa fa-check"></i><b>3</b> Data Visualization Techniques</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#why-visualization"><i class="fa fa-check"></i><b>3.1</b> Why Visualization?</a></li>
+<li class="chapter" data-level="3.2" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#data-science-by-hand"><i class="fa fa-check"></i><b>3.2</b> Data Science By Hand?</a></li>
+<li class="chapter" data-level="3.3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#elements-of-visualization"><i class="fa fa-check"></i><b>3.3</b> Elements of Visualization</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#color"><i class="fa fa-check"></i><b>3.3.1</b> Color</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#scale"><i class="fa fa-check"></i><b>3.3.2</b> Scale</a></li>
+<li class="chapter" data-level="3.3.3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#labels"><i class="fa fa-check"></i><b>3.3.3</b> Labels</a></li>
+<li class="chapter" data-level="3.3.4" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#comparisons"><i class="fa fa-check"></i><b>3.3.4</b> Comparisons</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#the-grammar-of-graphics"><i class="fa fa-check"></i><b>3.4</b> The Grammar of Graphics</a></li>
+<li class="chapter" data-level="3.5" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#preparing-data-for-visualization"><i class="fa fa-check"></i><b>3.5</b> Preparing Data for Visualization</a></li>
+<li class="chapter" data-level="3.6" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#plotting-exercise"><i class="fa fa-check"></i><b>3.6</b> Plotting Exercise</a></li>
+<li class="chapter" data-level="3.7" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#problem-set-3"><i class="fa fa-check"></i><b>3.7</b> Problem Set 3</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html"><i class="fa fa-check"></i><b>4</b> Gathering and Modeling Data</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#new-ways-of-gathering-data"><i class="fa fa-check"></i><b>4.1</b> New Ways of Gathering Data</a></li>
+<li class="chapter" data-level="4.2" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#application-programming-interfaces-apis"><i class="fa fa-check"></i><b>4.2</b> Application Programming Interfaces (APIs)</a></li>
+<li class="chapter" data-level="4.3" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#web-scraping"><i class="fa fa-check"></i><b>4.3</b> Web Scraping</a></li>
+<li class="chapter" data-level="4.4" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#models"><i class="fa fa-check"></i><b>4.4</b> Models</a></li>
+<li class="chapter" data-level="4.5" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#building-a-model"><i class="fa fa-check"></i><b>4.5</b> Building a Model</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#splitting-the-data"><i class="fa fa-check"></i><b>4.5.1</b> Splitting the Data</a></li>
+<li class="chapter" data-level="4.5.2" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#fitting-a-model"><i class="fa fa-check"></i><b>4.5.2</b> Fitting a Model</a></li>
+<li class="chapter" data-level="4.5.3" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#making-predictions"><i class="fa fa-check"></i><b>4.5.3</b> Making Predictions</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#final-project-proposal"><i class="fa fa-check"></i><b>4.6</b> Final Project Proposal</a></li>
+<li class="chapter" data-level="4.7" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#problem-set-4"><i class="fa fa-check"></i><b>4.7</b> Problem Set 4</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html"><i class="fa fa-check"></i><b>5</b> Maps and Spatial Data</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#what-is-spatial-data"><i class="fa fa-check"></i><b>5.1</b> What is Spatial Data?</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#the-modifiable-areal-unit-problem"><i class="fa fa-check"></i><b>5.1.1</b> The Modifiable Areal Unit Problem</a></li>
+<li class="chapter" data-level="5.1.2" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#environmental-hazards-and-spatial-data"><i class="fa fa-check"></i><b>5.1.2</b> Environmental Hazards and Spatial Data</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-simple-features-in-r"><i class="fa fa-check"></i><b>5.2</b> Using Simple Features in R</a></li>
+<li class="chapter" data-level="5.3" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#mapping-polygons-with-tidycensus"><i class="fa fa-check"></i><b>5.3</b> Mapping Polygons with tidycensus</a></li>
+<li class="chapter" data-level="5.4" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-tigris-to-gather-shapefiles"><i class="fa fa-check"></i><b>5.4</b> Using Tigris to Gather Shapefiles</a></li>
+<li class="chapter" data-level="5.5" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#spatially-joining-data"><i class="fa fa-check"></i><b>5.5</b> Spatially Joining Data</a></li>
+<li class="chapter" data-level="5.6" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-leaflet-and-r-shiny-for-interactive-maps"><i class="fa fa-check"></i><b>5.6</b> Using Leaflet and R Shiny for Interactive Maps</a></li>
+<li class="chapter" data-level="5.7" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#problem-set-5"><i class="fa fa-check"></i><b>5.7</b> Problem Set 5</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="networks.html"><a href="networks.html"><i class="fa fa-check"></i><b>6</b> Networks</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="networks.html"><a href="networks.html#what-are-networks"><i class="fa fa-check"></i><b>6.1</b> What Are Networks?</a></li>
+<li class="chapter" data-level="6.2" data-path="networks.html"><a href="networks.html#building-and-visualizing-networks"><i class="fa fa-check"></i><b>6.2</b> Building And Visualizing Networks</a></li>
+<li class="chapter" data-level="6.3" data-path="networks.html"><a href="networks.html#measures-of-centrality"><i class="fa fa-check"></i><b>6.3</b> Measures of Centrality</a></li>
+<li class="chapter" data-level="6.4" data-path="networks.html"><a href="networks.html#co-authorship-patterns"><i class="fa fa-check"></i><b>6.4</b> Co-Authorship Patterns</a></li>
+<li class="chapter" data-level="6.5" data-path="networks.html"><a href="networks.html#interactive-network-visualizations"><i class="fa fa-check"></i><b>6.5</b> Interactive Network Visualizations</a></li>
+<li class="chapter" data-level="6.6" data-path="networks.html"><a href="networks.html#migration-flows"><i class="fa fa-check"></i><b>6.6</b> Migration Flows</a></li>
+<li class="chapter" data-level="6.7" data-path="networks.html"><a href="networks.html#problem-set-6"><i class="fa fa-check"></i><b>6.7</b> Problem Set 6</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html"><i class="fa fa-check"></i><b>7</b> Prediction and Machine Learning</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#data-models-and-algorithmic-models"><i class="fa fa-check"></i><b>7.1</b> Data Models and Algorithmic Models</a></li>
+<li class="chapter" data-level="7.2" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#splitting-your-data-setting-up-your-models"><i class="fa fa-check"></i><b>7.2</b> Splitting Your Data, Setting Up Your Models</a></li>
+<li class="chapter" data-level="7.3" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#unsupervised-machine-learning-with-k-means-clustering"><i class="fa fa-check"></i><b>7.3</b> Unsupervised Machine Learning with K-Means Clustering</a></li>
+<li class="chapter" data-level="7.4" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#supervised-machine-learning-with-random-forests"><i class="fa fa-check"></i><b>7.4</b> Supervised Machine Learning with Random Forests</a></li>
+<li class="chapter" data-level="7.5" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#re-sample-your-data-with-cross-validation"><i class="fa fa-check"></i><b>7.5</b> Re-Sample Your Data with Cross Validation</a></li>
+<li class="chapter" data-level="7.6" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#predictions-bias-and-social-implications"><i class="fa fa-check"></i><b>7.6</b> Predictions, Bias, and Social Implications</a></li>
+<li class="chapter" data-level="7.7" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#problem-set-7"><i class="fa fa-check"></i><b>7.7</b> Problem Set 7</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><i class="fa fa-check"></i><b>8</b> Text Analysis Tools, Part I: Text Mining, Sentiment Analysis</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#text-as-data"><i class="fa fa-check"></i><b>8.1</b> Text As Data</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#families-of-text-analysis"><i class="fa fa-check"></i><b>8.1.1</b> “Families” of Text Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#newspapers-books"><i class="fa fa-check"></i><b>8.2</b> Newspapers &amp; Books</a></li>
+<li class="chapter" data-level="8.3" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#using-apis-to-gather-text-data"><i class="fa fa-check"></i><b>8.3</b> Using APIs to Gather Text Data</a></li>
+<li class="chapter" data-level="8.4" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#working-with-text-data-in-r"><i class="fa fa-check"></i><b>8.4</b> Working with Text Data in R</a></li>
+<li class="chapter" data-level="8.5" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#comparing-word-and-document-frequencies"><i class="fa fa-check"></i><b>8.5</b> Comparing Word and Document Frequencies</a></li>
+<li class="chapter" data-level="8.6" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#sentiment-analysis"><i class="fa fa-check"></i><b>8.6</b> Sentiment Analysis</a></li>
+<li class="chapter" data-level="8.7" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#problem-set-8"><i class="fa fa-check"></i><b>8.7</b> Problem Set 8</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><i class="fa fa-check"></i><b>9</b> Text Analysis Tools, Part 2: Topic Models, Large Language Models, and AI</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#topic-models"><i class="fa fa-check"></i><b>9.1</b> Topic Models</a></li>
+<li class="chapter" data-level="9.2" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#documents-as-mixtures-of-topics"><i class="fa fa-check"></i><b>9.2</b> Documents as Mixtures of Topics</a></li>
+<li class="chapter" data-level="9.3" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#choosing-k-values"><i class="fa fa-check"></i><b>9.3</b> Choosing <span class="math inline">\(k\)</span> Values</a></li>
+<li class="chapter" data-level="9.4" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#large-language-models"><i class="fa fa-check"></i><b>9.4</b> Large Language Models</a></li>
+<li class="chapter" data-level="9.5" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#problem-set-9"><i class="fa fa-check"></i><b>9.5</b> Problem Set 9</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Computational Social Science</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-visualization-techniques" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> Data Visualization Techniques<a href="data-visualization-techniques.html#data-visualization-techniques" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Data visualization is an important, and sometimes overlooked, aspect of social science. This week, we go back to the visualization techniques of Du Bois, which remind us that data science long predates the current era of ``big data.”</p>
+<p><strong>Monday Readings:</strong></p>
+<ul>
+<li><p><a href="https://socviz.co/03-ggplot-basics.html">Data Visualization: A Practical Introduction. 3: Make a Plot.</a></p></li>
+<li><p><a href="https://ebookcentral.proquest.com/lib/stanford-ebooks/detail.action?docID=5515147">Battle-Baptiste, Whitney; Rusert, Britt. 2018. Princeton Architectural Press. W. E. B. du Bois’s Data Portraits : Visualizing Black America.</a></p></li>
+<li><p><em>Optional:</em> <a href="https://www-tandfonline-com.stanford.idm.oclc.org/doi/full/10.1080/09332480.2023.2179279#references-Section">Tackett, Maria; Çetinkaya-Rundel, Mine. 2023. Chance. Analyzing and Recreating Data Visualizations of W.E.B. Du Bois.</a></p></li>
+<li><p><em>Optional:</em> Try the <a href="https://edopportunity.org/opportunity/explorer/">Education Opportunity Explorer</a></p></li>
+</ul>
+<p><strong>Wednesday Readings:</strong></p>
+<ul>
+<li><p><a href="https://socviz.co/04-group-facet-transform.html">Data Visualization: A Practical Introduction. 4: Show the Right Numbers.</a></p></li>
+<li><p><a href="https://socviz.co/05-more-on-geoms.html">Data Visualization: A Practical Introduction. 5: Graph Tables, Add Labels, Make Notes.</a></p></li>
+</ul>
+<div id="why-visualization" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Why Visualization?<a href="data-visualization-techniques.html#why-visualization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We look at data for a reason. A well-designed visualization can make it easy to see important patterns and trends that might not pop out in tables. Visualization is also a good way to explore our data, or to look for potential issues or mistakes.</p>
+<p>W.E.B. Du Bois is credited with some of the most famous visualizations in the field of sociology. With researchers at Atlanta University, Du Bois communicated the state of Black Americans to the world at the 1900 Paris Exhibition through a series of graphs documenting racial the economic, social, and demographic conditions of Black citizens. The purpose behind these plots made them impactful. But the artistic elements make them unforgettable.</p>
+</div>
+<div id="data-science-by-hand" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Data Science By Hand?<a href="data-visualization-techniques.html#data-science-by-hand" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To be a computational social scientist, one must learn to <em>think</em> like a data scientist and a social scientist. This means considering what your data represent, and what you want to communicate with these data. The data can be millions and millions of observations, or just a few. They might be digital traces, survey results, or hand-written notes. Our goal is simply to look for the truth in our data, and to communicate this as clearly as possible.</p>
+<p>We begin with a classic example from statistics and epidemiology. John Snow, a London doctor, investigated an outbreak of cholera in London’s Soho district in 1854. By analyzing where deaths were occurring in relation to the town’s water sources, he was able to pinpoint the source of epidemic, and help the city end it. Below is a map of the city’s water sources at the time. A fuller map can be viewed <a href="https://www.arcgis.com/apps/mapviewer/index.html?webmap=16a719ed81524ef2ad86b57f6918712f">here</a>, and more information on the cholera outbreak can be found <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7150208/">here</a>.</p>
+<p><img src="snow_cholera.gif" /><!-- --></p>
+<p>We next turn to another classic example of data visualization. The following graphic is a representation of Napoleon’s “March on Moscow” from 1812-1813. It was created in 1869 by Charles Minard, and it is one of the most popular data visualizations out there, even being called “<a href="https://www.datavis.ca/papers/jebs.pdf">the best graphic ever produced</a>” (you can decide whether you agree or not). <a href="https://www.edwardtufte.com/tufte/books_vdqi">Tufte</a> interprets the chart as an anti-war message, as it clearly shows the massive loss of lives during this campaign.</p>
+<p><img src="minard_lg.gif" /><!-- --></p>
+<p>Next, we consider a couple examples the sociologist W.E.B. Du Bois. The 1900 Paris Exhibition was a world fair that showcased humanity’s progress, challenges and possibilities at the turn of the millennium. A building was dedicated to issues of “social economy.” Du Bois described his goal at this exhibition as follows:</p>
+<blockquote>
+<p>“In this exhibit there are, of course, the usual paraphenalia for catching the eye — photographs, models, industrial work, and pictures. But it does not stop here; beneath all this is a carefully thought-out plan, according to which the exhibitors have tried to show: (a) The history of the American Negro. (b) His present condition. (c) His education. (d) His literature.”</p>
+</blockquote>
+<p><font size = 2> – The American Negro at Paris. American Monthly Review of Reviews 22:5 (November 1900): 576. </font></p>
+<p>In the first, the geography of residence by race and class is shown for a McIntosh County in Georgia. This highlights the social station of Black residents outside the town of Daren, as well as their proximity to White residents. We can compare this to <a href="https://all-of-us.benschmidt.org/">demographic dot maps</a> from recent years.</p>
+<p><img src="dubois_mcintosh.jpg" width="512" /></p>
+<p>The second image shows taxable property for Black Americans in an exceptionally creative way. This shows growth in assets between 1875-1890, with little change afterward.</p>
+<p><img src="dubois_taxable.jpg" width="408" /></p>
+<p>Considering all these examples together, we notice that each data scientist had a distinct <strong>purpose</strong>. Snow sought to convey the relationship between water service and cholera deaths. Minard showed the casualties of war. Du Bois illustrated the conditions of Black Americans in the U.S. to the rest of the world. It’s useful to remember, no matter how complicated your data are, the best data scientists are often able to reduce this information to a simple message.</p>
+</div>
+<div id="elements-of-visualization" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Elements of Visualization<a href="data-visualization-techniques.html#elements-of-visualization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As we can see from the preceding charts, data visualization is as much an art form as it is a science. In other words, <em>there is no single formula for a good graphic, but some are better than others</em>. So what exactly makes some stand out, while others fade away?</p>
+<div id="color" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Color<a href="data-visualization-techniques.html#color" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>One element to consider is color. How is color used? Sometimes color alone can tell a story, as is the case in the following example of Air Quality data:</p>
+<div class="figure"><span style="display:block;" id="fig:aqi"></span>
+<img src="pm25losangeles.png" alt="Source: EPA" width="75%" />
+<p class="caption">
+Figure 3.1: Source: EPA
+</p>
+</div>
+<p>As a side note, what do you think is happening with the red line down the middle?</p>
+<p>On the other hand, sometimes color scales are less clear. What do you think of the following example?</p>
+<div class="figure"><span style="display:block;" id="fig:costofliving"></span>
+<img src="color_scale.png" alt="Source: The Economist" width="75%" />
+<p class="caption">
+Figure 3.2: Source: The Economist
+</p>
+</div>
+</div>
+<div id="scale" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Scale<a href="data-visualization-techniques.html#scale" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Scale is going to matter a lot in your charts. Scale doesn’t have to be <em>boring</em>: Think about Minard’s example above, and how it demonstrates the size of Napoleon’s army at different points in their campaign. Think of how DuBois’ work also demonstrates scale. In the chart below, DuBois draws readers in using a spiral design. Rather than showing a simple bar chart, the work invites the reader to explore comparisons and come to their own conclusions.</p>
+<p><img src="dubois6.jpg.webp" width="50%" /></p>
+<p>A more deceptive chart might try to <em>obscure</em> differences in scale across units. What do you think about the axes on the chart below?</p>
+<div class="figure"><span style="display:block;" id="fig:axes"></span>
+<img src="axes.png" alt="Source: Federal Reserve Bank of St. Louis" width="75%" />
+<p class="caption">
+Figure 3.3: Source: Federal Reserve Bank of St. Louis
+</p>
+</div>
+</div>
+<div id="labels" class="section level3 hasAnchor" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> Labels<a href="data-visualization-techniques.html#labels" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Labeling can be overlooked, but having clear and efficient labels is a great way to capture readers’ attention. Here, Brookings uses simple but effective labels to highlight differences in search interest across various AI coding agents:</p>
+<div class="figure"><span style="display:block;" id="fig:brookings"></span>
+<img src="brookingsai.png" alt="Source: Brookings, 2026" width="75%" />
+<p class="caption">
+Figure 3.4: Source: Brookings, 2026
+</p>
+</div>
+<p>For a less-captivating example, see the following chart (used as an example in <a href="https://socviz.co/01-look-at-data.html">Healy, 2017</a>).</p>
+<div class="figure"><span style="display:block;" id="fig:labelling"></span>
+<img src="ch-01-chartjunk-life-expectancy.png" alt="Source: Healy, 2017" width="75%" />
+<p class="caption">
+Figure 3.5: Source: Healy, 2017
+</p>
+</div>
+</div>
+<div id="comparisons" class="section level3 hasAnchor" number="3.3.4">
+<h3><span class="header-section-number">3.3.4</span> Comparisons<a href="data-visualization-techniques.html#comparisons" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>At the end of the day, colors, scale, and labels are all tools to clue readers into making certain <strong>comparisons</strong> in your data. In the above examples, these elements both <em>elucidated</em> and <em>obscured</em> key comparisons. Sometimes a combination of these elements makes comparisons especially easy or difficult. For example, the figure below shows centers the reader’s attention on differences in vocabulary across language learner levels <em>and</em> across native and non-native speakers.</p>
+<div class="figure"><span style="display:block;" id="fig:comparisons0"></span>
+<img src="language_learners.png" alt="Source: " width="75%" />
+<p class="caption">
+Figure 3.6: Source:
+</p>
+</div>
+<p>On the other hand, in the following chart, the combination of colors, size, and the way that they are stacked on top of each other make it very difficult to compare units.</p>
+<div class="figure"><span style="display:block;" id="fig:comparisons"></span>
+<img src="ch-01-preception-data-1.png" alt="Source: Healy, 2017" width="75%" />
+<p class="caption">
+Figure 3.7: Source: Healy, 2017
+</p>
+</div>
+</div>
+</div>
+<div id="the-grammar-of-graphics" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> The Grammar of Graphics<a href="data-visualization-techniques.html#the-grammar-of-graphics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We have dipped our toes in some plotting techniques in <code>R</code> already (we used <code>plot()</code> and <code>ggplot()</code> in the first week, and last week we plotted <code>gtrends</code> data). But now we’ll dive in headfirst. What are the different ways to plot in R, and how should we use them?</p>
+<p>We’ll begin with our most basic plotting function, <code>plot()</code>. The first week, we explored how we could plot something like two vectors.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="data-visualization-techniques.html#cb1-1" tabindex="-1"></a><span class="co"># create points</span></span>
+<span id="cb1-2"><a href="data-visualization-techniques.html#cb1-2" tabindex="-1"></a>x_points <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</span>
+<span id="cb1-3"><a href="data-visualization-techniques.html#cb1-3" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="data-visualization-techniques.html#cb1-4" tabindex="-1"></a>y_points <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">4</span>)</span>
+<span id="cb1-5"><a href="data-visualization-techniques.html#cb1-5" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="data-visualization-techniques.html#cb1-6" tabindex="-1"></a><span class="co"># plot the x and y coordinates</span></span>
+<span id="cb1-7"><a href="data-visualization-techniques.html#cb1-7" tabindex="-1"></a><span class="fu">plot</span>(x_points, y_points)</span></code></pre></div>
+<p><img src="_main_files/figure-html/plot-1.png" width="672" /></p>
+<p>There are many ways to make this chart look better. For instance, we can add colors, and change labels:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="data-visualization-techniques.html#cb2-1" tabindex="-1"></a><span class="co"># plot the x and y coordinates</span></span>
+<span id="cb2-2"><a href="data-visualization-techniques.html#cb2-2" tabindex="-1"></a><span class="fu">plot</span>(x_points, y_points, </span>
+<span id="cb2-3"><a href="data-visualization-techniques.html#cb2-3" tabindex="-1"></a>     <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;green&quot;</span>),</span>
+<span id="cb2-4"><a href="data-visualization-techniques.html#cb2-4" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;X&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Y&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/plot2-1.png" width="672" /></p>
+<p>There is much more we could do with the basic plot function, and I encourage you to explore these options if they interest you. However, most R users prefer a different method of plotting, using <code>ggplot2</code>. The “gg” in “ggplot2” or “ggplot” stands for <em>grammar of graphics</em>. <a href="https://link.springer.com/book/10.1007/0-387-28695-0">This book</a> is useful if you want to learn more about the philosophy of the grammar of graphics. The authors note that graphics are more than charts, and that <em>object oriented design</em>, or a system of rules through which objects communicate with each other within a programming language (like R), is used to create beautiful graphics. Using <code>ggplot</code>, we can easily add and remove layers of information, to make sleek and scientific plots. We can start with a blank canvas by running <code>ggplot()</code>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="data-visualization-techniques.html#cb3-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-2"><a href="data-visualization-techniques.html#cb3-2" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="data-visualization-techniques.html#cb3-3" tabindex="-1"></a><span class="fu">ggplot</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/ggplot-1.png" width="672" /></p>
+<p>Then, we can add the points above, and more features. <code>ggplot</code> expects data in a dataframe, so we first create a dataframe for our observations. We will also add a third variable, since in social science research we would often have multiple variables of interest.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="data-visualization-techniques.html#cb4-1" tabindex="-1"></a><span class="co"># create a dataframe for our points</span></span>
+<span id="cb4-2"><a href="data-visualization-techniques.html#cb4-2" tabindex="-1"></a>df <span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="st">&quot;x&quot;</span> <span class="ot">=</span> x_points,</span>
+<span id="cb4-3"><a href="data-visualization-techniques.html#cb4-3" tabindex="-1"></a>                <span class="st">&quot;y&quot;</span> <span class="ot">=</span> y_points, </span>
+<span id="cb4-4"><a href="data-visualization-techniques.html#cb4-4" tabindex="-1"></a>                <span class="st">&quot;value&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;first&quot;</span>, <span class="st">&quot;second&quot;</span>, <span class="st">&quot;third&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="data-visualization-techniques.html#cb5-1" tabindex="-1"></a><span class="co"># plot the data</span></span>
+<span id="cb5-2"><a href="data-visualization-techniques.html#cb5-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> df, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y))<span class="sc">+</span></span>
+<span id="cb5-3"><a href="data-visualization-techniques.html#cb5-3" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">col =</span> value))</span></code></pre></div>
+<p><img src="_main_files/figure-html/ggplot3-1.png" width="672" /></p>
+<p>Now that we’ve learned a little bit about ggplot2, let’s try it with some real data. We can use the <code>gapminder</code> data by running the following commands (you may also need to install the <code>gapminder</code> package):</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="data-visualization-techniques.html#cb6-1" tabindex="-1"></a><span class="fu">library</span>(gapminder)</span>
+<span id="cb6-2"><a href="data-visualization-techniques.html#cb6-2" tabindex="-1"></a>gapminder</span></code></pre></div>
+<pre><code>## # A tibble: 1,704 × 6
+##    country     continent  year lifeExp      pop gdpPercap
+##    &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1 Afghanistan Asia       1952    28.8  8425333      779.
+##  2 Afghanistan Asia       1957    30.3  9240934      821.
+##  3 Afghanistan Asia       1962    32.0 10267083      853.
+##  4 Afghanistan Asia       1967    34.0 11537966      836.
+##  5 Afghanistan Asia       1972    36.1 13079460      740.
+##  6 Afghanistan Asia       1977    38.4 14880372      786.
+##  7 Afghanistan Asia       1982    39.9 12881816      978.
+##  8 Afghanistan Asia       1987    40.8 13867957      852.
+##  9 Afghanistan Asia       1992    41.7 16317921      649.
+## 10 Afghanistan Asia       1997    41.8 22227415      635.
+## # ℹ 1,694 more rows</code></pre>
+<p>Then, let’s plot it with <code>ggplot</code>!</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="data-visualization-techniques.html#cb8-1" tabindex="-1"></a><span class="co"># create the plot</span></span>
+<span id="cb8-2"><a href="data-visualization-techniques.html#cb8-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder,</span>
+<span id="cb8-3"><a href="data-visualization-techniques.html#cb8-3" tabindex="-1"></a>            <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap, <span class="at">y =</span> lifeExp))<span class="sc">+</span></span>
+<span id="cb8-4"><a href="data-visualization-techniques.html#cb8-4" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/gapminder2-1.png" width="672" /></p>
+<p>We could make the same plot slightly differently (as explained in <a href="https://socviz.co/02-intro.html">Healy, 2017</a>): we could <em>assign</em> our <code>ggplot</code> object to <code>p</code> (or any label), and then add layers (or information about the aesthetics). Often in R, there are multiple ways to get to the same result. In different circumstances, some could make more sense than others. For example, if we wanted to reuse <code>p</code> below, in a lot of different plots, then we wouldn’t have to type it out each time.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="data-visualization-techniques.html#cb9-1" tabindex="-1"></a><span class="co"># create the plot</span></span>
+<span id="cb9-2"><a href="data-visualization-techniques.html#cb9-2" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> gapminder,</span>
+<span id="cb9-3"><a href="data-visualization-techniques.html#cb9-3" tabindex="-1"></a>            <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap, <span class="at">y =</span> lifeExp))</span>
+<span id="cb9-4"><a href="data-visualization-techniques.html#cb9-4" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="data-visualization-techniques.html#cb9-5" tabindex="-1"></a><span class="co"># plot it</span></span>
+<span id="cb9-6"><a href="data-visualization-techniques.html#cb9-6" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
+<p>In <code>ggplot</code>, the name for features like colors, x and y coordinates, sizes, and more is <em>aesthetic mappings, or aesthetics</em>. Let’s explore these. First, we can manually specify these features within each layer, as we do in <code>geom_point</code> below:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="data-visualization-techniques.html#cb10-1" tabindex="-1"></a><span class="co"># create the plot</span></span>
+<span id="cb10-2"><a href="data-visualization-techniques.html#cb10-2" tabindex="-1"></a><span class="fu">ggplot</span>()<span class="sc">+</span></span>
+<span id="cb10-3"><a href="data-visualization-techniques.html#cb10-3" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> gapminder,</span>
+<span id="cb10-4"><a href="data-visualization-techniques.html#cb10-4" tabindex="-1"></a>        <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap, <span class="at">y =</span> lifeExp),</span>
+<span id="cb10-5"><a href="data-visualization-techniques.html#cb10-5" tabindex="-1"></a>        <span class="at">col =</span> <span class="st">&quot;purple&quot;</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/gapminder4-1.png" width="672" /></p>
+<p>Alternatively, we could specify our aesthetics in the <code>ggplot()</code> (base) layer, and have the other layers pull from these data. Try running the code below. What happens?</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="data-visualization-techniques.html#cb11-1" tabindex="-1"></a><span class="co"># create the plot</span></span>
+<span id="cb11-2"><a href="data-visualization-techniques.html#cb11-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder,</span>
+<span id="cb11-3"><a href="data-visualization-techniques.html#cb11-3" tabindex="-1"></a>        <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap, <span class="at">y =</span> lifeExp,</span>
+<span id="cb11-4"><a href="data-visualization-techniques.html#cb11-4" tabindex="-1"></a>        <span class="at">col =</span> <span class="st">&quot;purple&quot;</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>))<span class="sc">+</span></span>
+<span id="cb11-5"><a href="data-visualization-techniques.html#cb11-5" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p>When we specify settings within the <code>aes</code> command, these need to correspond to variables. We can try this again, with color varying across continents and size varying across populations.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="data-visualization-techniques.html#cb12-1" tabindex="-1"></a><span class="co"># create the plot</span></span>
+<span id="cb12-2"><a href="data-visualization-techniques.html#cb12-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder,</span>
+<span id="cb12-3"><a href="data-visualization-techniques.html#cb12-3" tabindex="-1"></a>        <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap, <span class="at">y =</span> lifeExp,</span>
+<span id="cb12-4"><a href="data-visualization-techniques.html#cb12-4" tabindex="-1"></a>        <span class="at">col =</span> continent, <span class="at">size =</span> pop))<span class="sc">+</span></span>
+<span id="cb12-5"><a href="data-visualization-techniques.html#cb12-5" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/gapminder6-1.png" width="672" /></p>
+<p>Try experimenting with these settings on your own. Which are better to add within <code>aes</code>, and which are better to set within <code>geom_point</code>?</p>
+<p>We can set color scales using arguments that begin with <code>scale_color_ ...</code> (and similar arguments for other aesthetics like <code>fill</code>, <code>alpha</code>, or <code>size</code>). Let’s try scaling some of these on our own:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="data-visualization-techniques.html#cb13-1" tabindex="-1"></a><span class="co"># create the plot</span></span>
+<span id="cb13-2"><a href="data-visualization-techniques.html#cb13-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder,</span>
+<span id="cb13-3"><a href="data-visualization-techniques.html#cb13-3" tabindex="-1"></a>        <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap, <span class="at">y =</span> lifeExp,</span>
+<span id="cb13-4"><a href="data-visualization-techniques.html#cb13-4" tabindex="-1"></a>        <span class="at">col =</span> continent, <span class="at">size =</span> pop))<span class="sc">+</span></span>
+<span id="cb13-5"><a href="data-visualization-techniques.html#cb13-5" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb13-6"><a href="data-visualization-techniques.html#cb13-6" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red2&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;green4&quot;</span>, <span class="st">&quot;turquoise3&quot;</span>, </span>
+<span id="cb13-7"><a href="data-visualization-techniques.html#cb13-7" tabindex="-1"></a>                                <span class="st">&quot;beige&quot;</span>, <span class="st">&quot;lavender&quot;</span>, <span class="st">&quot;purple4&quot;</span>))<span class="sc">+</span></span>
+<span id="cb13-8"><a href="data-visualization-techniques.html#cb13-8" tabindex="-1"></a>  <span class="fu">scale_size_continuous</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">6</span>))</span></code></pre></div>
+<p><img src="_main_files/figure-html/gapminder7-1.png" width="672" /></p>
+<p>We can set options like <code>theme_minimal()</code>, or <code>theme()</code> (with specifications inside) to further modify the plot. Try some of these on your own! And <code>facet</code> options allow us to specify multiple plots, for example, one per each year:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="data-visualization-techniques.html#cb14-1" tabindex="-1"></a><span class="co"># create the plot</span></span>
+<span id="cb14-2"><a href="data-visualization-techniques.html#cb14-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder,</span>
+<span id="cb14-3"><a href="data-visualization-techniques.html#cb14-3" tabindex="-1"></a>        <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap, <span class="at">y =</span> lifeExp,</span>
+<span id="cb14-4"><a href="data-visualization-techniques.html#cb14-4" tabindex="-1"></a>        <span class="at">col =</span> continent, <span class="at">size =</span> pop))<span class="sc">+</span></span>
+<span id="cb14-5"><a href="data-visualization-techniques.html#cb14-5" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb14-6"><a href="data-visualization-techniques.html#cb14-6" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red2&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;green4&quot;</span>, <span class="st">&quot;turquoise3&quot;</span>, </span>
+<span id="cb14-7"><a href="data-visualization-techniques.html#cb14-7" tabindex="-1"></a>                                <span class="st">&quot;beige&quot;</span>, <span class="st">&quot;lavender&quot;</span>, <span class="st">&quot;purple4&quot;</span>))<span class="sc">+</span></span>
+<span id="cb14-8"><a href="data-visualization-techniques.html#cb14-8" tabindex="-1"></a>  <span class="fu">scale_size_continuous</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">6</span>))<span class="sc">+</span></span>
+<span id="cb14-9"><a href="data-visualization-techniques.html#cb14-9" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb14-10"><a href="data-visualization-techniques.html#cb14-10" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>year)</span></code></pre></div>
+<p><img src="_main_files/figure-html/gapminder8-1.png" width="672" /></p>
+<p>Resources like <a href="https://rstudio.github.io/cheatsheets/data-visualization.pdf">this cheat sheet</a> and other <a href="https://ggplot2.tidyverse.org/index.html">ggplot2 docs</a> have lots of information on all the settings you can customize. Returning to some of the “by hand” data visualizations, there is often a way to create anything you want using ggplot! Don’t use standard settings just because they are pre-loaded. With these docs, we can clean up our visualization a bit more:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="data-visualization-techniques.html#cb15-1" tabindex="-1"></a><span class="co"># create the plot</span></span>
+<span id="cb15-2"><a href="data-visualization-techniques.html#cb15-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder,</span>
+<span id="cb15-3"><a href="data-visualization-techniques.html#cb15-3" tabindex="-1"></a>        <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> gdpPercap, <span class="at">y =</span> lifeExp,</span>
+<span id="cb15-4"><a href="data-visualization-techniques.html#cb15-4" tabindex="-1"></a>        <span class="at">col =</span> continent, <span class="at">size =</span> pop))<span class="sc">+</span></span>
+<span id="cb15-5"><a href="data-visualization-techniques.html#cb15-5" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb15-6"><a href="data-visualization-techniques.html#cb15-6" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red2&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;green4&quot;</span>, <span class="st">&quot;turquoise3&quot;</span>, </span>
+<span id="cb15-7"><a href="data-visualization-techniques.html#cb15-7" tabindex="-1"></a>                                <span class="st">&quot;beige&quot;</span>, <span class="st">&quot;lavender&quot;</span>, <span class="st">&quot;purple4&quot;</span>))<span class="sc">+</span></span>
+<span id="cb15-8"><a href="data-visualization-techniques.html#cb15-8" tabindex="-1"></a>  <span class="fu">scale_size_continuous</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">6</span>))<span class="sc">+</span></span>
+<span id="cb15-9"><a href="data-visualization-techniques.html#cb15-9" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb15-10"><a href="data-visualization-techniques.html#cb15-10" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">size =</span> <span class="st">&quot;Population&quot;</span>, <span class="at">col =</span> <span class="st">&quot;Continent&quot;</span>, <span class="at">x =</span> <span class="st">&quot;GDP Per Capita&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Life Expectancy (Years)&quot;</span>)<span class="sc">+</span></span>
+<span id="cb15-11"><a href="data-visualization-techniques.html#cb15-11" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">30000</span>, <span class="dv">90000</span>))<span class="sc">+</span></span>
+<span id="cb15-12"><a href="data-visualization-techniques.html#cb15-12" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>year)</span></code></pre></div>
+<p><img src="_main_files/figure-html/gapminder9-1.png" width="672" /></p>
+</div>
+<div id="preparing-data-for-visualization" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Preparing Data for Visualization<a href="data-visualization-techniques.html#preparing-data-for-visualization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>While some data, like <code>gapminder</code> may come in forms that we can easily analyze, most of the data that we work with will need to be cleaned. To do so, it is necessary that we understand a bit more about how to work with data in R. Most of the time, we’ll be working with <em>dataframes</em>, which are <span class="math inline">\(m \cdot n\)</span> objects with <span class="math inline">\(m\)</span> rows (typically observations) and <span class="math inline">\(n\)</span> columns (typically variables). We’ll start by creating a simple dataframe. We’ll call our variables “year” and “pop,” although of course these are just fake population numbers.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="data-visualization-techniques.html#cb16-1" tabindex="-1"></a><span class="co"># create a dataframe (note that : returns a sequence between the numbers, by 1)</span></span>
+<span id="cb16-2"><a href="data-visualization-techniques.html#cb16-2" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">year =</span> <span class="dv">2000</span><span class="sc">:</span><span class="dv">2020</span>, <span class="at">pop =</span> <span class="dv">40</span><span class="sc">:</span><span class="dv">60</span>)</span>
+<span id="cb16-3"><a href="data-visualization-techniques.html#cb16-3" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="data-visualization-techniques.html#cb16-4" tabindex="-1"></a><span class="co"># look at the first 6 rows</span></span>
+<span id="cb16-5"><a href="data-visualization-techniques.html#cb16-5" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div>
+<pre><code>##   year pop
+## 1 2000  40
+## 2 2001  41
+## 3 2002  42
+## 4 2003  43
+## 5 2004  44
+## 6 2005  45</code></pre>
+<p>Great! Let’s say, however, that our populations are in millions, and we want them in numbers of people. We can write a function to do this, and implement it in our dataframe.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="data-visualization-techniques.html#cb18-1" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-2"><a href="data-visualization-techniques.html#cb18-2" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="data-visualization-techniques.html#cb18-3" tabindex="-1"></a><span class="co"># function to get from millions to people</span></span>
+<span id="cb18-4"><a href="data-visualization-techniques.html#cb18-4" tabindex="-1"></a>millions_to_people <span class="ot">&lt;-</span> <span class="cf">function</span>(m){</span>
+<span id="cb18-5"><a href="data-visualization-techniques.html#cb18-5" tabindex="-1"></a>  p <span class="ot">&lt;-</span> m<span class="sc">/</span><span class="dv">1000000</span></span>
+<span id="cb18-6"><a href="data-visualization-techniques.html#cb18-6" tabindex="-1"></a>  <span class="fu">return</span>(p)</span>
+<span id="cb18-7"><a href="data-visualization-techniques.html#cb18-7" tabindex="-1"></a>}</span>
+<span id="cb18-8"><a href="data-visualization-techniques.html#cb18-8" tabindex="-1"></a></span>
+<span id="cb18-9"><a href="data-visualization-techniques.html#cb18-9" tabindex="-1"></a><span class="co"># run function to create new variable</span></span>
+<span id="cb18-10"><a href="data-visualization-techniques.html#cb18-10" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
+<span id="cb18-11"><a href="data-visualization-techniques.html#cb18-11" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pop_p =</span> <span class="fu">millions_to_people</span>(pop)) <span class="sc">%&gt;%</span></span>
+<span id="cb18-12"><a href="data-visualization-techniques.html#cb18-12" tabindex="-1"></a>  <span class="fu">head</span>() </span></code></pre></div>
+<pre><code>##   year pop   pop_p
+## 1 2000  40 4.0e-05
+## 2 2001  41 4.1e-05
+## 3 2002  42 4.2e-05
+## 4 2003  43 4.3e-05
+## 5 2004  44 4.4e-05
+## 6 2005  45 4.5e-05</code></pre>
+<p>There’s a lot going in there. First, <code>mutate()</code> is how one would normally create or modify variables within the <code>dplyr</code> framework in R. This is generally what we will use to do so.</p>
+<p>Second, <strong>what was going on with the %&gt;%?</strong> The code that we just ran is equivalent to <code>head(mutate(pop_p = millions_to_people(pop)))</code>. You can try running them both yourself. So why make it more complicated? For this small example, it doesn’t really matter. But, as we run more and more complicated code, we will probably want to run multiple functions on a dataframe (or vector, or something else) at once. It can get confusing to nest these within the function commands. For example:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="data-visualization-techniques.html#cb20-1" tabindex="-1"></a><span class="fu">fourth_function</span>(<span class="fu">third_function</span>(<span class="fu">second_function</span>(<span class="fu">first_function</span>(x))))</span></code></pre></div>
+<p>So instead, we opt for the <code>dplyr</code> method, which is written as follows:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="data-visualization-techniques.html#cb21-1" tabindex="-1"></a>x <span class="sc">%&gt;%</span></span>
+<span id="cb21-2"><a href="data-visualization-techniques.html#cb21-2" tabindex="-1"></a>  <span class="fu">first_function</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb21-3"><a href="data-visualization-techniques.html#cb21-3" tabindex="-1"></a>  <span class="fu">second_function</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb21-4"><a href="data-visualization-techniques.html#cb21-4" tabindex="-1"></a>  <span class="fu">third_function</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb21-5"><a href="data-visualization-techniques.html#cb21-5" tabindex="-1"></a>  <span class="fu">fourth_function</span>()</span></code></pre></div>
+<p>This approach is usually a bit easier for the reader to understand. That being said, dplyr is specific to R, so if you use other languages it may be important to learn other standards of communicating code. As always, remember that our code is language, and that there are multiple ways to communicate most statements, but that we want to make our code as easily interpretable as possible.</p>
+<p>Why <code>%&gt;%</code>? This is what is called a <strong>pipe</strong>. It pipes whatever is before the <code>%&gt;%</code> into the function that follows <code>%&gt;%</code>. This concept is vital to our coding, so let’s make sure that we understand how this is working.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="data-visualization-techniques.html#cb22-1" tabindex="-1"></a><span class="co"># first, let&#39;s write a simple function</span></span>
+<span id="cb22-2"><a href="data-visualization-techniques.html#cb22-2" tabindex="-1"></a>add_2 <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb22-3"><a href="data-visualization-techniques.html#cb22-3" tabindex="-1"></a>  <span class="fu">return</span>(x<span class="sc">+</span><span class="dv">2</span>)</span>
+<span id="cb22-4"><a href="data-visualization-techniques.html#cb22-4" tabindex="-1"></a>}</span>
+<span id="cb22-5"><a href="data-visualization-techniques.html#cb22-5" tabindex="-1"></a></span>
+<span id="cb22-6"><a href="data-visualization-techniques.html#cb22-6" tabindex="-1"></a><span class="co"># check that it is working</span></span>
+<span id="cb22-7"><a href="data-visualization-techniques.html#cb22-7" tabindex="-1"></a><span class="fu">add_2</span>(<span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] 7</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="data-visualization-techniques.html#cb24-1" tabindex="-1"></a><span class="co"># now try the pipe method</span></span>
+<span id="cb24-2"><a href="data-visualization-techniques.html#cb24-2" tabindex="-1"></a><span class="dv">5</span> <span class="sc">%&gt;%</span> <span class="fu">add_2</span>()</span></code></pre></div>
+<pre><code>## [1] 7</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="data-visualization-techniques.html#cb26-1" tabindex="-1"></a><span class="co"># try adding 2, twice</span></span>
+<span id="cb26-2"><a href="data-visualization-techniques.html#cb26-2" tabindex="-1"></a><span class="dv">5</span> <span class="sc">%&gt;%</span></span>
+<span id="cb26-3"><a href="data-visualization-techniques.html#cb26-3" tabindex="-1"></a>  <span class="fu">add_2</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb26-4"><a href="data-visualization-techniques.html#cb26-4" tabindex="-1"></a>  <span class="fu">add_2</span>()</span></code></pre></div>
+<pre><code>## [1] 9</code></pre>
+<p>Most of the time, we will be applying functions to vectors and dataframes, rather than individual numbers, as we did in the first example. So let’s go take another look at our dataframe.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="data-visualization-techniques.html#cb28-1" tabindex="-1"></a><span class="co"># take a look at the first 6 rows, again</span></span>
+<span id="cb28-2"><a href="data-visualization-techniques.html#cb28-2" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div>
+<pre><code>##   year pop
+## 1 2000  40
+## 2 2001  41
+## 3 2002  42
+## 4 2003  43
+## 5 2004  44
+## 6 2005  45</code></pre>
+<p>Oh no! The column we created, temp_f, has disappeared … what happened? When we ran the earlier function, we <em>temporarily</em> created a new variable within df, but we did not permanently change df. So how would we permanently change df? There are a couple ways.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="data-visualization-techniques.html#cb30-1" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb30-2"><a href="data-visualization-techniques.html#cb30-2" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="data-visualization-techniques.html#cb30-3" tabindex="-1"></a><span class="co"># first, we can assign the mutated dataframe to itself</span></span>
+<span id="cb30-4"><a href="data-visualization-techniques.html#cb30-4" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb30-5"><a href="data-visualization-techniques.html#cb30-5" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pop_p =</span> <span class="fu">millions_to_people</span>(pop))</span>
+<span id="cb30-6"><a href="data-visualization-techniques.html#cb30-6" tabindex="-1"></a></span>
+<span id="cb30-7"><a href="data-visualization-techniques.html#cb30-7" tabindex="-1"></a><span class="co"># second, we can use the magrittr pipe to do it all at once</span></span>
+<span id="cb30-8"><a href="data-visualization-techniques.html#cb30-8" tabindex="-1"></a>df <span class="sc">%&lt;&gt;%</span></span>
+<span id="cb30-9"><a href="data-visualization-techniques.html#cb30-9" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pop_p =</span> <span class="fu">millions_to_people</span>(pop))</span>
+<span id="cb30-10"><a href="data-visualization-techniques.html#cb30-10" tabindex="-1"></a></span>
+<span id="cb30-11"><a href="data-visualization-techniques.html#cb30-11" tabindex="-1"></a><span class="co"># check that either of these methods worked (we didn&#39;t really need to run them both)</span></span>
+<span id="cb30-12"><a href="data-visualization-techniques.html#cb30-12" tabindex="-1"></a><span class="fu">head</span>(df)</span></code></pre></div>
+<pre><code>##   year pop   pop_p
+## 1 2000  40 4.0e-05
+## 2 2001  41 4.1e-05
+## 3 2002  42 4.2e-05
+## 4 2003  43 4.3e-05
+## 5 2004  44 4.4e-05
+## 6 2005  45 4.5e-05</code></pre>
+<p>Notice the <strong>magrittr pipe</strong>, <code>%&lt;&gt;%</code>. This is generally what I will use when performing operations on a dataframe, and I recommend that you do so as well! As a side note, there is another pipe, <code>|&gt;</code>, which is another version of <code>%&gt;%</code>, and is mostly functionally equivalent. However, sometimes the magrittr pipe only works with <code>%&gt;%</code>! For this reason, we will mostly use <code>%&gt;%</code> and <code>%&lt;&gt;%</code> in this class, but you are free to try other things in your code. New versions of these operations are common, so there may be other ways to do this that I am unaware of! The goal is to stay flexible and understand the rationale behind these commands. I recommend trying all these out now to make sure you are comfortable with them.</p>
+</div>
+<div id="plotting-exercise" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Plotting Exercise<a href="data-visualization-techniques.html#plotting-exercise" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recall our discussions on collaborative data last week. One example of crow-sourced data (distributed data collection) is Wikipedia. Let’s say we wanted to gather some information from Wikipedia. Next week, we will gather these data with <em>web scraping</em>. For now, we can download the data using the following code:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="data-visualization-techniques.html#cb32-1" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb32-2"><a href="data-visualization-techniques.html#cb32-2" tabindex="-1"></a><span class="fu">library</span>(RCurl)</span>
+<span id="cb32-3"><a href="data-visualization-techniques.html#cb32-3" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="data-visualization-techniques.html#cb32-4" tabindex="-1"></a><span class="co"># input url from github</span></span>
+<span id="cb32-5"><a href="data-visualization-techniques.html#cb32-5" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="fu">getURL</span>(<span class="st">&quot;https://raw.githubusercontent.com/tylermcdaniel/css/main/Data/ca_dem_table.csv&quot;</span>)</span>
+<span id="cb32-6"><a href="data-visualization-techniques.html#cb32-6" tabindex="-1"></a></span>
+<span id="cb32-7"><a href="data-visualization-techniques.html#cb32-7" tabindex="-1"></a><span class="co"># download wikipedia data (from github)</span></span>
+<span id="cb32-8"><a href="data-visualization-techniques.html#cb32-8" tabindex="-1"></a>ca_dem_table <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(url)</span></code></pre></div>
+<p>Let’s plot our data!</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="data-visualization-techniques.html#cb33-1" tabindex="-1"></a><span class="co"># first, we can plot a histogram of disaster years</span></span>
+<span id="cb33-2"><a href="data-visualization-techniques.html#cb33-2" tabindex="-1"></a><span class="fu">ggplot</span>(ca_dem_table, <span class="fu">aes</span>(<span class="at">x =</span> Race, <span class="at">y =</span> <span class="st">`</span><span class="at">2000_num</span><span class="st">`</span>))<span class="sc">+</span></span>
+<span id="cb33-3"><a href="data-visualization-techniques.html#cb33-3" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>, <span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>,</span>
+<span id="cb33-4"><a href="data-visualization-techniques.html#cb33-4" tabindex="-1"></a>           <span class="fu">aes</span>(<span class="at">fill =</span> Race))<span class="sc">+</span></span>
+<span id="cb33-5"><a href="data-visualization-techniques.html#cb33-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;2020_num&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/yearcounts-1.png" width="672" /></p>
+<p>We notice that the labels are a bit messy. We could turn these off using <code>axis.ticks.x = element_blank()</code>.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="data-visualization-techniques.html#cb34-1" tabindex="-1"></a><span class="co"># first, we can plot a histogram of disaster years</span></span>
+<span id="cb34-2"><a href="data-visualization-techniques.html#cb34-2" tabindex="-1"></a><span class="fu">ggplot</span>(ca_dem_table, <span class="fu">aes</span>(<span class="at">x =</span> Race, <span class="at">y =</span>  <span class="st">`</span><span class="at">2000_num</span><span class="st">`</span>))<span class="sc">+</span></span>
+<span id="cb34-3"><a href="data-visualization-techniques.html#cb34-3" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>, <span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>,</span>
+<span id="cb34-4"><a href="data-visualization-techniques.html#cb34-4" tabindex="-1"></a>           <span class="fu">aes</span>(<span class="at">fill =</span> Race))<span class="sc">+</span></span>
+<span id="cb34-5"><a href="data-visualization-techniques.html#cb34-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Population&quot;</span>)<span class="sc">+</span></span>
+<span id="cb34-6"><a href="data-visualization-techniques.html#cb34-6" tabindex="-1"></a>  <span class="fu">theme_linedraw</span>()<span class="sc">+</span></span>
+<span id="cb34-7"><a href="data-visualization-techniques.html#cb34-7" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb34-8"><a href="data-visualization-techniques.html#cb34-8" tabindex="-1"></a>        <span class="at">axis.ticks.x =</span> <span class="fu">element_blank</span>())</span></code></pre></div>
+<p><img src="_main_files/figure-html/yearcounts2-1.png" width="672" /></p>
+<p>Our data are currently in <strong>wide</strong> format, meaning <em>our units of analysis (races/ethnicities) have just one observation each</em>. All of our variables are columns.</p>
+<p>For plotting with <code>ggplot2</code>, it is often useful if our data are in <strong>long</strong> format, meaning we want <em>just one column (variable) for each of our dimensions of variation (such as year, number/percent)</em>.</p>
+<p>Let’s try to make our data long format. We can use the <code>magrittr</code> pipe, <code>%&lt;&gt;%</code>, to permanently modify our data. For instance, we can use the <code>magrittr</code> pipe and <code>pivot_longer</code> as follows:</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="data-visualization-techniques.html#cb35-1" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb35-2"><a href="data-visualization-techniques.html#cb35-2" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="data-visualization-techniques.html#cb35-3" tabindex="-1"></a><span class="co"># pivot longer</span></span>
+<span id="cb35-4"><a href="data-visualization-techniques.html#cb35-4" tabindex="-1"></a>ca_dem_table <span class="sc">%&lt;&gt;%</span></span>
+<span id="cb35-5"><a href="data-visualization-techniques.html#cb35-5" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span><span class="fu">c</span>(Race),</span>
+<span id="cb35-6"><a href="data-visualization-techniques.html#cb35-6" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">&quot;Name&quot;</span>,</span>
+<span id="cb35-7"><a href="data-visualization-techniques.html#cb35-7" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">&quot;Value&quot;</span>)</span></code></pre></div>
+<p>Now we can make a plot like the following. Do you notice any redundancies?</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="data-visualization-techniques.html#cb36-1" tabindex="-1"></a><span class="co"># now try with long data</span></span>
+<span id="cb36-2"><a href="data-visualization-techniques.html#cb36-2" tabindex="-1"></a><span class="fu">ggplot</span>(ca_dem_table, <span class="fu">aes</span>(<span class="at">x =</span> Race, <span class="at">y =</span>  Value))<span class="sc">+</span></span>
+<span id="cb36-3"><a href="data-visualization-techniques.html#cb36-3" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>, <span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>,</span>
+<span id="cb36-4"><a href="data-visualization-techniques.html#cb36-4" tabindex="-1"></a>           <span class="fu">aes</span>(<span class="at">fill =</span> Race))<span class="sc">+</span></span>
+<span id="cb36-5"><a href="data-visualization-techniques.html#cb36-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Population&quot;</span>)<span class="sc">+</span></span>
+<span id="cb36-6"><a href="data-visualization-techniques.html#cb36-6" tabindex="-1"></a>  <span class="fu">theme_linedraw</span>()<span class="sc">+</span></span>
+<span id="cb36-7"><a href="data-visualization-techniques.html#cb36-7" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb36-8"><a href="data-visualization-techniques.html#cb36-8" tabindex="-1"></a>        <span class="at">axis.ticks.x =</span> <span class="fu">element_blank</span>())<span class="sc">+</span></span>
+<span id="cb36-9"><a href="data-visualization-techniques.html#cb36-9" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Name, <span class="at">scales =</span> <span class="st">&quot;free&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/longplot-1.png" width="672" /></p>
+<p>We could use the <code>filter</code> function to reduce our dataset to specific variables of interest. For example, maybe we just want to look at Native American/Alasakan Native and Native Hawaiian/Pacific Islander populations over time.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="data-visualization-techniques.html#cb37-1" tabindex="-1"></a><span class="co"># reduce our data to only population estimates (not percentages)</span></span>
+<span id="cb37-2"><a href="data-visualization-techniques.html#cb37-2" tabindex="-1"></a>ca_dem_table <span class="sc">%&lt;&gt;%</span></span>
+<span id="cb37-3"><a href="data-visualization-techniques.html#cb37-3" tabindex="-1"></a>  <span class="fu">filter</span>(Name <span class="sc">==</span> <span class="st">&quot;2000_num&quot;</span> <span class="sc">|</span> Name <span class="sc">==</span> <span class="st">&quot;2010_num&quot;</span> <span class="sc">|</span> Name <span class="sc">==</span> <span class="st">&quot;2020_num&quot;</span>)</span>
+<span id="cb37-4"><a href="data-visualization-techniques.html#cb37-4" tabindex="-1"></a></span>
+<span id="cb37-5"><a href="data-visualization-techniques.html#cb37-5" tabindex="-1"></a><span class="co"># now let&#39;s reduce to Native American / Hawaiian/PI groups</span></span>
+<span id="cb37-6"><a href="data-visualization-techniques.html#cb37-6" tabindex="-1"></a>ca_dem_table <span class="sc">%&lt;&gt;%</span></span>
+<span id="cb37-7"><a href="data-visualization-techniques.html#cb37-7" tabindex="-1"></a>  <span class="fu">filter</span>(Race <span class="sc">==</span> <span class="st">&quot;Native American or Alaska Native alone (NH)&quot;</span> <span class="sc">|</span> </span>
+<span id="cb37-8"><a href="data-visualization-techniques.html#cb37-8" tabindex="-1"></a>           Race <span class="sc">==</span> <span class="st">&quot;Native Hawaiian or Pacific Islander alone (NH)&quot;</span>)</span>
+<span id="cb37-9"><a href="data-visualization-techniques.html#cb37-9" tabindex="-1"></a></span>
+<span id="cb37-10"><a href="data-visualization-techniques.html#cb37-10" tabindex="-1"></a></span>
+<span id="cb37-11"><a href="data-visualization-techniques.html#cb37-11" tabindex="-1"></a><span class="co"># now try with long data</span></span>
+<span id="cb37-12"><a href="data-visualization-techniques.html#cb37-12" tabindex="-1"></a><span class="fu">ggplot</span>(ca_dem_table, <span class="fu">aes</span>(<span class="at">x =</span> Race, <span class="at">y =</span>  Value))<span class="sc">+</span></span>
+<span id="cb37-13"><a href="data-visualization-techniques.html#cb37-13" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>, <span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>,</span>
+<span id="cb37-14"><a href="data-visualization-techniques.html#cb37-14" tabindex="-1"></a>           <span class="fu">aes</span>(<span class="at">fill =</span> Race))<span class="sc">+</span></span>
+<span id="cb37-15"><a href="data-visualization-techniques.html#cb37-15" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Population&quot;</span>)<span class="sc">+</span></span>
+<span id="cb37-16"><a href="data-visualization-techniques.html#cb37-16" tabindex="-1"></a>  <span class="fu">theme_linedraw</span>()<span class="sc">+</span></span>
+<span id="cb37-17"><a href="data-visualization-techniques.html#cb37-17" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb37-18"><a href="data-visualization-techniques.html#cb37-18" tabindex="-1"></a>        <span class="at">axis.ticks.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb37-19"><a href="data-visualization-techniques.html#cb37-19" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">&quot;bottom&quot;</span>)<span class="sc">+</span></span>
+<span id="cb37-20"><a href="data-visualization-techniques.html#cb37-20" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;lightblue&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>))<span class="sc">+</span></span>
+<span id="cb37-21"><a href="data-visualization-techniques.html#cb37-21" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Name)</span></code></pre></div>
+<p><img src="_main_files/figure-html/longplot2-1.png" width="672" /></p>
+<p>Notice certain changes, like moving the legend to the bottom and keeping the y axis constant across all three frames. How did these happen? From this chart, we learn from this plot that one of these groups (Native American/Alaskan Native) is experiencing a declining population in California, whereas the other (Native Hawaiian/Pacific Islander) is growing. We might consider how the social and economic conditions in California facilitate in- or out-migration for different groups. These trends have implications for racial/ethnic justice efforts in California and more broadly. Could we produce DuBois-style visualizations of the state of California for various ethnic/racial groups? In the problem set, we will explore questions like this.</p>
+</div>
+<div id="problem-set-3" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Problem Set 3<a href="data-visualization-techniques.html#problem-set-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recommended Resources: <a href="https://r-graph-gallery.com/">The ggplot2 graph gallery</a>.</p>
+<ol style="list-style-type: decimal">
+<li><p>Start a new document, problemset3.Rmd, in your soc10problemsets repository. (You can download a template <a href="https://github.com/Soc10Spring2026/soc10problemsets_templates">here</a>, but be sure to save it in your own soc10problemsets repo). Change your name in the header. Load the <code>gapminder</code> data using <code>library(gapminder)</code>. Create a simple plot with two of the variables. <strong>Commit</strong> your changes.</p></li>
+<li><p>Now, modify your plot! For each change that you make, explain your decision, in terms of the visual elements. <strong>Commit</strong> your changes.</p></li>
+<li><p>Use the code provided to load data on racial compositions in California. Then create your own visualization! Try to make it different than what is done above. Is there anything that you want to change, but are unable to? Describe what you want to communicate with these data. <strong>Commit</strong> your changes.</p></li>
+<li><p>Return to a dataset you have worked with in this class already (for example, hand-collected data, data using the <code>data()</code> function. The <code>gtrendsR</code> data could also work but may need some cleaning/manipulation). Use <code>ggplot()</code> to plot this data in a new way. Describe whether the viewer learns anything new from seeing the data in this way. <strong>Commit</strong> your changes.</p></li>
+<li><p>Find a data visualization in the wild! It could be in the news, from an academic article, or somewhere else. Include an image of it using the <code>knitr::include_graphics("")</code> function. Describe its positive and negative aspects. <strong>Commit</strong> your changes.</p></li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lets-git-going-code-collaboration-and-version-controls.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="gathering-and-modeling-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 Prediction and Machine Learning | Introduction to Computational Social Science</title>
+  <meta name="description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 Prediction and Machine Learning | Introduction to Computational Social Science" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  <meta name="github-repo" content="rstudio/soc10" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 Prediction and Machine Learning | Introduction to Computational Social Science" />
+  
+  <meta name="twitter:description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  
+
+<meta name="author" content="Instructor: Tyler McDaniel, PhD Candidate, Sociology | TA: Yao Xu, PhD Candidate, Sociology" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="networks.html"/>
+<link rel="next" href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Syllabus</a></li>
+<li class="chapter" data-level="1" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html"><i class="fa fa-check"></i><b>1</b> What is Computational Social Science?</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#some-definitions"><i class="fa fa-check"></i><b>1.1</b> Some Definitions</a></li>
+<li class="chapter" data-level="1.2" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#getting-started-with-r-or-python"><i class="fa fa-check"></i><b>1.2</b> Getting Started with R (or Python)</a></li>
+<li class="chapter" data-level="1.3" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#working-in-base-r"><i class="fa fa-check"></i><b>1.3</b> Working in Base R</a></li>
+<li class="chapter" data-level="1.4" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#opening-rstudio"><i class="fa fa-check"></i><b>1.4</b> Opening RStudio</a></li>
+<li class="chapter" data-level="1.5" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#packages"><i class="fa fa-check"></i><b>1.5</b> Packages</a></li>
+<li class="chapter" data-level="1.6" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#r-markdown"><i class="fa fa-check"></i><b>1.6</b> R Markdown</a></li>
+<li class="chapter" data-level="1.7" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#problem-set-1"><i class="fa fa-check"></i><b>1.7</b> Problem Set 1</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html"><i class="fa fa-check"></i><b>2</b> Let’s “Git” Going: Code, Collaboration, and Version Controls</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#collecting-social-science-data"><i class="fa fa-check"></i><b>2.1</b> Collecting Social Science Data</a></li>
+<li class="chapter" data-level="2.2" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#collaborative-social-science"><i class="fa fa-check"></i><b>2.2</b> Collaborative Social Science</a></li>
+<li class="chapter" data-level="2.3" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#version-controls"><i class="fa fa-check"></i><b>2.3</b> Version Controls</a></li>
+<li class="chapter" data-level="2.4" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#in-class-exercise"><i class="fa fa-check"></i><b>2.4</b> In Class Exercise</a></li>
+<li class="chapter" data-level="2.5" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#gitting-started"><i class="fa fa-check"></i><b>2.5</b> Gitting Started</a></li>
+<li class="chapter" data-level="2.6" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#gathering-online-data"><i class="fa fa-check"></i><b>2.6</b> Gathering Online Data</a></li>
+<li class="chapter" data-level="2.7" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#problem-set-2"><i class="fa fa-check"></i><b>2.7</b> Problem Set 2</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html"><i class="fa fa-check"></i><b>3</b> Data Visualization Techniques</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#why-visualization"><i class="fa fa-check"></i><b>3.1</b> Why Visualization?</a></li>
+<li class="chapter" data-level="3.2" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#data-science-by-hand"><i class="fa fa-check"></i><b>3.2</b> Data Science By Hand?</a></li>
+<li class="chapter" data-level="3.3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#elements-of-visualization"><i class="fa fa-check"></i><b>3.3</b> Elements of Visualization</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#color"><i class="fa fa-check"></i><b>3.3.1</b> Color</a></li>
+<li class="chapter" data-level="3.3.2" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#scale"><i class="fa fa-check"></i><b>3.3.2</b> Scale</a></li>
+<li class="chapter" data-level="3.3.3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#labels"><i class="fa fa-check"></i><b>3.3.3</b> Labels</a></li>
+<li class="chapter" data-level="3.3.4" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#comparisons"><i class="fa fa-check"></i><b>3.3.4</b> Comparisons</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#the-grammar-of-graphics"><i class="fa fa-check"></i><b>3.4</b> The Grammar of Graphics</a></li>
+<li class="chapter" data-level="3.5" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#preparing-data-for-visualization"><i class="fa fa-check"></i><b>3.5</b> Preparing Data for Visualization</a></li>
+<li class="chapter" data-level="3.6" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#plotting-exercise"><i class="fa fa-check"></i><b>3.6</b> Plotting Exercise</a></li>
+<li class="chapter" data-level="3.7" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#problem-set-3"><i class="fa fa-check"></i><b>3.7</b> Problem Set 3</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html"><i class="fa fa-check"></i><b>4</b> Gathering and Modeling Data</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#new-ways-of-gathering-data"><i class="fa fa-check"></i><b>4.1</b> New Ways of Gathering Data</a></li>
+<li class="chapter" data-level="4.2" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#application-programming-interfaces-apis"><i class="fa fa-check"></i><b>4.2</b> Application Programming Interfaces (APIs)</a></li>
+<li class="chapter" data-level="4.3" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#web-scraping"><i class="fa fa-check"></i><b>4.3</b> Web Scraping</a></li>
+<li class="chapter" data-level="4.4" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#models"><i class="fa fa-check"></i><b>4.4</b> Models</a></li>
+<li class="chapter" data-level="4.5" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#building-a-model"><i class="fa fa-check"></i><b>4.5</b> Building a Model</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#splitting-the-data"><i class="fa fa-check"></i><b>4.5.1</b> Splitting the Data</a></li>
+<li class="chapter" data-level="4.5.2" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#fitting-a-model"><i class="fa fa-check"></i><b>4.5.2</b> Fitting a Model</a></li>
+<li class="chapter" data-level="4.5.3" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#making-predictions"><i class="fa fa-check"></i><b>4.5.3</b> Making Predictions</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#final-project-proposal"><i class="fa fa-check"></i><b>4.6</b> Final Project Proposal</a></li>
+<li class="chapter" data-level="4.7" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#problem-set-4"><i class="fa fa-check"></i><b>4.7</b> Problem Set 4</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html"><i class="fa fa-check"></i><b>5</b> Maps and Spatial Data</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#what-is-spatial-data"><i class="fa fa-check"></i><b>5.1</b> What is Spatial Data?</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#the-modifiable-areal-unit-problem"><i class="fa fa-check"></i><b>5.1.1</b> The Modifiable Areal Unit Problem</a></li>
+<li class="chapter" data-level="5.1.2" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#environmental-hazards-and-spatial-data"><i class="fa fa-check"></i><b>5.1.2</b> Environmental Hazards and Spatial Data</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-simple-features-in-r"><i class="fa fa-check"></i><b>5.2</b> Using Simple Features in R</a></li>
+<li class="chapter" data-level="5.3" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#mapping-polygons-with-tidycensus"><i class="fa fa-check"></i><b>5.3</b> Mapping Polygons with tidycensus</a></li>
+<li class="chapter" data-level="5.4" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-tigris-to-gather-shapefiles"><i class="fa fa-check"></i><b>5.4</b> Using Tigris to Gather Shapefiles</a></li>
+<li class="chapter" data-level="5.5" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#spatially-joining-data"><i class="fa fa-check"></i><b>5.5</b> Spatially Joining Data</a></li>
+<li class="chapter" data-level="5.6" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-leaflet-and-r-shiny-for-interactive-maps"><i class="fa fa-check"></i><b>5.6</b> Using Leaflet and R Shiny for Interactive Maps</a></li>
+<li class="chapter" data-level="5.7" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#problem-set-5"><i class="fa fa-check"></i><b>5.7</b> Problem Set 5</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="networks.html"><a href="networks.html"><i class="fa fa-check"></i><b>6</b> Networks</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="networks.html"><a href="networks.html#what-are-networks"><i class="fa fa-check"></i><b>6.1</b> What Are Networks?</a></li>
+<li class="chapter" data-level="6.2" data-path="networks.html"><a href="networks.html#building-and-visualizing-networks"><i class="fa fa-check"></i><b>6.2</b> Building And Visualizing Networks</a></li>
+<li class="chapter" data-level="6.3" data-path="networks.html"><a href="networks.html#measures-of-centrality"><i class="fa fa-check"></i><b>6.3</b> Measures of Centrality</a></li>
+<li class="chapter" data-level="6.4" data-path="networks.html"><a href="networks.html#co-authorship-patterns"><i class="fa fa-check"></i><b>6.4</b> Co-Authorship Patterns</a></li>
+<li class="chapter" data-level="6.5" data-path="networks.html"><a href="networks.html#interactive-network-visualizations"><i class="fa fa-check"></i><b>6.5</b> Interactive Network Visualizations</a></li>
+<li class="chapter" data-level="6.6" data-path="networks.html"><a href="networks.html#migration-flows"><i class="fa fa-check"></i><b>6.6</b> Migration Flows</a></li>
+<li class="chapter" data-level="6.7" data-path="networks.html"><a href="networks.html#problem-set-6"><i class="fa fa-check"></i><b>6.7</b> Problem Set 6</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html"><i class="fa fa-check"></i><b>7</b> Prediction and Machine Learning</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#data-models-and-algorithmic-models"><i class="fa fa-check"></i><b>7.1</b> Data Models and Algorithmic Models</a></li>
+<li class="chapter" data-level="7.2" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#splitting-your-data-setting-up-your-models"><i class="fa fa-check"></i><b>7.2</b> Splitting Your Data, Setting Up Your Models</a></li>
+<li class="chapter" data-level="7.3" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#unsupervised-machine-learning-with-k-means-clustering"><i class="fa fa-check"></i><b>7.3</b> Unsupervised Machine Learning with K-Means Clustering</a></li>
+<li class="chapter" data-level="7.4" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#supervised-machine-learning-with-random-forests"><i class="fa fa-check"></i><b>7.4</b> Supervised Machine Learning with Random Forests</a></li>
+<li class="chapter" data-level="7.5" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#re-sample-your-data-with-cross-validation"><i class="fa fa-check"></i><b>7.5</b> Re-Sample Your Data with Cross Validation</a></li>
+<li class="chapter" data-level="7.6" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#predictions-bias-and-social-implications"><i class="fa fa-check"></i><b>7.6</b> Predictions, Bias, and Social Implications</a></li>
+<li class="chapter" data-level="7.7" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#problem-set-7"><i class="fa fa-check"></i><b>7.7</b> Problem Set 7</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><i class="fa fa-check"></i><b>8</b> Text Analysis Tools, Part I: Text Mining, Sentiment Analysis</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#text-as-data"><i class="fa fa-check"></i><b>8.1</b> Text As Data</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#families-of-text-analysis"><i class="fa fa-check"></i><b>8.1.1</b> “Families” of Text Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#newspapers-books"><i class="fa fa-check"></i><b>8.2</b> Newspapers &amp; Books</a></li>
+<li class="chapter" data-level="8.3" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#using-apis-to-gather-text-data"><i class="fa fa-check"></i><b>8.3</b> Using APIs to Gather Text Data</a></li>
+<li class="chapter" data-level="8.4" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#working-with-text-data-in-r"><i class="fa fa-check"></i><b>8.4</b> Working with Text Data in R</a></li>
+<li class="chapter" data-level="8.5" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#comparing-word-and-document-frequencies"><i class="fa fa-check"></i><b>8.5</b> Comparing Word and Document Frequencies</a></li>
+<li class="chapter" data-level="8.6" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#sentiment-analysis"><i class="fa fa-check"></i><b>8.6</b> Sentiment Analysis</a></li>
+<li class="chapter" data-level="8.7" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#problem-set-8"><i class="fa fa-check"></i><b>8.7</b> Problem Set 8</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><i class="fa fa-check"></i><b>9</b> Text Analysis Tools, Part 2: Topic Models, Large Language Models, and AI</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#topic-models"><i class="fa fa-check"></i><b>9.1</b> Topic Models</a></li>
+<li class="chapter" data-level="9.2" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#documents-as-mixtures-of-topics"><i class="fa fa-check"></i><b>9.2</b> Documents as Mixtures of Topics</a></li>
+<li class="chapter" data-level="9.3" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#choosing-k-values"><i class="fa fa-check"></i><b>9.3</b> Choosing <span class="math inline">\(k\)</span> Values</a></li>
+<li class="chapter" data-level="9.4" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#large-language-models"><i class="fa fa-check"></i><b>9.4</b> Large Language Models</a></li>
+<li class="chapter" data-level="9.5" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#problem-set-9"><i class="fa fa-check"></i><b>9.5</b> Problem Set 9</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Computational Social Science</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="prediction-and-machine-learning" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">7</span> Prediction and Machine Learning<a href="prediction-and-machine-learning.html#prediction-and-machine-learning" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>It’s easy to understand things that have already happened, but what about future events? A new “school” of data science, which has gained popularity in recent years, seeks not just to model relationships, but to <em>predict</em> outcomes. We’ll look at what this means for the social sciences.</p>
+<p><strong>Monday Readings:</strong></p>
+<ul>
+<li><p><a href="https://www2.math.uu.se/~thulin/mm/breiman.pdf">Breiman, Leo. 2001. Statistical Science. The Two Cultures of Statistics.</a></p></li>
+<li><p><a href="https://www.annualreviews.org/content/journals/10.1146/annurev-soc-073117-041106">Molina, Mario; Garip, Feliz. 2019. Annual Review of Sociology. Machine Learning for Sociology.</a></p></li>
+<li><p><em>Optional:</em> <a href="https://dho.stanford.edu/wp-content/uploads/Covenants.pdf">Surani, Faiz; Suzgun, Mirac; Raman, Vayoma; et al. 2025. AI for Scaling Legal Reform: Mapping and Redacting Racial Covenants in Santa Clara County.</a></p></li>
+<li><p><em>Optional:</em> <a href="https://sociologicalscience.com/articles-v12-15-322/">Johnson, Rebecca A.; Zhang, Simone. 2015. Sociological Science. Predictive Algorithms and Perceptions of Fairness: Parent Attitudes Toward Algorithmic Resource Allocation in K-12 Education.</a></p></li>
+</ul>
+<p><strong>Wednesday Readings:</strong></p>
+<ul>
+<li><p><em>Optional</em>: <a href="https://www.science.org/doi/10.1126/science.aaf7894">Jean, Neal; Burke, Marshall; Xie, Michaelk; et al. 2016. Science. Combining satellite imagery and machine learning to predict poverty.</a></p></li>
+<li><p><em>Optional:</em> <a href="https://www.bitbybitbook.com/en/1st-ed/running-experiments/">Bit by Bit: Social Research in the Digital Age. Running Experiments</a></p></li>
+<li><p><em>Optional:</em> <a href="https://www.econstor.eu/bitstream/10419/223110/1/Econsoc-NL-21-1-05.pdf">Kiviat, Barbara. 2019. Credit Scoring in the United States.</a></p></li>
+</ul>
+<div id="data-models-and-algorithmic-models" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Data Models and Algorithmic Models<a href="prediction-and-machine-learning.html#data-models-and-algorithmic-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We’ve now spent some time understanding how to create and work with data, how to perform descriptive statistics, visualizations and maps, and how to model outcomes.
+In <a href="https://www2.math.uu.se/~thulin/mm/breiman.pdf">Statistical Modeling: The Two Cultures</a>, Breiman argues that there is a distinct division between researchers who use <em>data models</em> and those who use <em>algorithmic models</em>. We can also think about this as a division between information/explanation and prediction.</p>
+<p>To begin, let’s think about a process of interest. As social scientists, we might be interested in a sequence of events, like <em>what causes job loss</em>? (The <a href="https://ffcws.princeton.edu/news/fragile-families-challenge-mass-collaboration-paper-published">Fragile Families Challenge</a> asked this, and other questions in a large competition - but more on this later!). We could even map out some kind of diagram, like Breiman does, where <span class="math inline">\(x\)</span> is represents our input variables: maybe a range of employee and employer characteristics, market features, policies and local laws, economic factors, and spatial characteristics of a place. <span class="math inline">\(y\)</span> represents whether someone lost their job or not.</p>
+<div class="figure"><span style="display:block;" id="fig:nature"></span>
+<img src="breiman_nature.png" alt="Source: Breiman, 2002" width="100%" />
+<p class="caption">
+Figure 7.1: Source: Breiman, 2002
+</p>
+</div>
+<p>Traditionally, social scientists have tried to explain these processes using what Breiman calls <em>data models</em>. In other words, the social scientist might run a linear regression with all our <span class="math inline">\(x\)</span> variables (employee education, type of occupation, whether there is a recession, etc.) and use these to <em>explain</em> why a person lost (or didn’t lose) their job. For instance, such a model might tell us that, on average, having a high school diploma lowers the probability of job loss by 4%, working in agriculture increases the probability of job loss by 10%, and a recession increases everyone’s probability of job loss by 5%. For any individual, we can add all of these factors and arrive at a predicted probability.</p>
+<div class="figure"><span style="display:block;" id="fig:models"></span>
+<img src="breiman_models.png" alt="Source: Breiman, 2002" width="100%" />
+<p class="caption">
+Figure 7.2: Source: Breiman, 2002
+</p>
+</div>
+<p>Other examples, noted by Breiman, include logistic regression and Cox models (used in survival analysis). For all of these models, there is a direct, transparent relationship between the inputs (<span class="math inline">\(x\)</span>) and the output (<span class="math inline">\(y\)</span>).</p>
+<p><em>Algorithmic models</em> operate differently. Rather than assuming that we can explain job loss with a linear combination of variables, the algorithmic approach assumes that there is some unknown process that predicts job loss. Maybe many things have to occur at once (recession, specific industries, specific skill levels), or maybe there are certain cutoff points that are not be obvious to researchers (for example, maybe completing 2 years of college has no effect on job loss but having 3 years lowers the probability). The process by which <span class="math inline">\(y\)</span> is predicted could be so complicated that it is nearly impossible to know why the model predicted it (as is the case in neural networks). The <em>algorithmic modeler</em> doesn’t necessarily care why all of these features (or combinations of features) are important - they just care that these can make better predictions than a data model.</p>
+<div class="figure"><span style="display:block;" id="fig:algorithm"></span>
+<img src="breiman_algorithm.png" alt="Source: Breiman, 2002" width="100%" />
+<p class="caption">
+Figure 7.3: Source: Breiman, 2002
+</p>
+</div>
+<p>Why does this matter? The distinctions between these two cultures - data models and algorithmic models - have grown in recent years as social scientists think about not just explaining social processes, but predicting them, and data scientists think about not just making predictions, but explaining them. We might think that in the age of AI, we could predict lots of social outcomes with ease. But we’d be wrong. The <a href="https://ffcws.princeton.edu/news/fragile-families-challenge-mass-collaboration-paper-published">Fragile Families Challenge</a> used an <strong>open call</strong> (recall these from <a href="lets-git-going-code-collaboration-and-version-controls.html#lets-git-going-code-collaboration-and-version-controls">Let’s “Git” Going: Code, Collaboration, and Version Controls</a>) to see how well social scientists could predict individuals’ GPA, high school graduation, grit, job training, and experience with eviction and job loss by age 15. They had a trove of data from surveys over these individuals’ lives, with information on schooling, health, family members and economics, and more. However, overall, they were not able to predict these outcomes much better than data models (or random chance for that matter). This highlights some of the challenges that face social scientists: explaining processes, making accurate predictions, and finding truth in a world of big data.</p>
+</div>
+<div id="splitting-your-data-setting-up-your-models" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Splitting Your Data, Setting Up Your Models<a href="prediction-and-machine-learning.html#splitting-your-data-setting-up-your-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When making predictions (or evaluating any model), researchers often <strong>split</strong> their data into different sets. Let’s think about how this would work in a real dataset. The Fragile Families challenge included data on children from birth to age 9, all of which was already available to researchers. What wasn’t yet available to researchers (as of 2017), was data for these children at age 15. So the challenge split this data into three parts: <em>training data</em> for teams to modify their models, <em>leaderboard data</em> to evaluate teams’ predictions in real time, and finally, a <em>holdout set</em> to perform a final evaluation of the best models.</p>
+<p><img src="pnas.1915006117fig02.jpg" width="1017" /></p>
+<p>The data split raises an important question about the modeling process: how do researchers actually create their models? If you read a social science article, you might believe that researchers carefully ajudicate between all potential decisions <em>prior</em> to running their models, and then select the best one and present the results. This is <em>rarely</em> the case. New developments in social science research, such as pre-registration, are designed to prevent researchers from trying many possible models and only sharing the best ones (sometimes called p-hacking).</p>
+<p>In <a href="https://www.tmwr.org/software-modeling">Tidy Modeling With R</a>, Kuhn and Silge recommend the following workflow for social scientists. It starts with importing data, and includes tidying (or cleaning) the data, then an interative loop between transforming, visualizing, and modeling the data resulting in some gained understanding. Finally, the research team communicates their findings.</p>
+<div class="figure"><span style="display:block;" id="fig:datasciencemodel"></span>
+<img src="data-science-model.svg" alt="A tidy modeling process."  />
+<p class="caption">
+Figure 7.4: A tidy modeling process.
+</p>
+</div>
+<p>Kuhn and Silge offer a second visualization for how the modeling process may look. In the figure below, the research team conducts exploratory analysis, initially “engineers features” or sets their model parameters, and then evaluates possible models, before refining them and trying the adjusted models. Ultimately, the team comes up with a “final model.”</p>
+<div class="figure"><span style="display:block;" id="fig:modelingprocess"></span>
+<img src="modeling-process.svg" alt="An example modeling process."  />
+<p class="caption">
+Figure 7.5: An example modeling process.
+</p>
+</div>
+<p>The modeling process may look different for every research team. In most cases, there are bound to be more decisions, and more challenges, than the researchers initially anticipate. This is ok! However, because of all these decisions, researchers sometimes (intentionally or unintentionally) present only the results that look the best for their research agenda. Some have called this problem <a href="https://sites.stat.columbia.edu/gelman/research/unpublished/p_hacking.pdf">the garden of forking paths</a>.</p>
+<p>The “holdout” set in the Fragile Families Challenge helps to avoid issues like this. If you want to work with the Fragile Families Challenge data, you can find it <a href="https://www.icpsr.umich.edu/web/DSDR/studies/31622/publications#">here</a>!</p>
+</div>
+<div id="unsupervised-machine-learning-with-k-means-clustering" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Unsupervised Machine Learning with K-Means Clustering<a href="prediction-and-machine-learning.html#unsupervised-machine-learning-with-k-means-clustering" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We’ll begin with the first part of Figure <a href="prediction-and-machine-learning.html#fig:modelingprocess">7.5</a>, Exploratory Data Analysis (EDA). We’ve done some exploratory data analysis already, through plotting and visualization. But what if we want to do some more advanced categorization of our data? For example, we might want to define categories like neighborhoods, which are based more on social histories than rigid boundaries.</p>
+<p>To model with some real data, we return to the <code>tidymodels</code> package. Librarying <code>tidymodels</code> will automatically load datasets like the <code>ames</code> housing data, which describes houses in Ames, Iowa. We can load the data into our environment with <code>data(ames)</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="prediction-and-machine-learning.html#cb1-1" tabindex="-1"></a><span class="co"># load tidymodels</span></span>
+<span id="cb1-2"><a href="prediction-and-machine-learning.html#cb1-2" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span></code></pre></div>
+<p>The astute observer might notice that the <code>ames</code> data has <code>Longitude</code> and <code>Latitude</code> columns. Recall that we can use <code>st_as_sf()</code> to make this data spatial! We will need to specify the coordinates using <code>coords</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="prediction-and-machine-learning.html#cb2-1" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb2-2"><a href="prediction-and-machine-learning.html#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="prediction-and-machine-learning.html#cb2-3" tabindex="-1"></a>ames_spatial <span class="ot">&lt;-</span> ames <span class="sc">%&gt;%</span></span>
+<span id="cb2-4"><a href="prediction-and-machine-learning.html#cb2-4" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(<span class="at">coords =</span> <span class="fu">c</span>(<span class="st">&quot;Longitude&quot;</span>, <span class="st">&quot;Latitude&quot;</span>))</span></code></pre></div>
+<p>Now that we’ve created a spatial dataset, we can plot it! Without any additional information, how would you describe the neighborhoods?</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="prediction-and-machine-learning.html#cb3-1" tabindex="-1"></a><span class="fu">ggplot</span>(ames_spatial) <span class="sc">+</span> </span>
+<span id="cb3-2"><a href="prediction-and-machine-learning.html#cb3-2" tabindex="-1"></a>  <span class="fu">geom_sf</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/ames3-1.png" width="672" /></p>
+<p>We’re going to use <strong>k-means clustering</strong> to try to identify potential neighborhoods. K-means is an <em>unsupervised</em> machine learning algorithm, meaning it identifies clusters from unlabeled data. We can contrast this with <em>supervised</em> learning, which attempts to label data correctly (for exmaple, if we had “ground truth” neighborhood labels and wanted to predict these - but more on that later!).</p>
+<p>The basic steps to <em>k-means</em> are as follows:</p>
+<ol style="list-style-type: decimal">
+<li>Pick <em>k</em> points (centroids) at random</li>
+<li>Assign all data points to closest centroid</li>
+<li>Re-calculate centroids, based on points in group</li>
+<li>Re-assign points to nearest centroid</li>
+<li>Repeat 3-4 until no points switch groups</li>
+</ol>
+<p>These are represented much more elegently in the following illustration by <a href="https://allisonhorst.com/k-means-clustering">Allison Horst</a>:</p>
+<p><img src="kmeans.gif" width="100%" /></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="prediction-and-machine-learning.html#cb4-1" tabindex="-1"></a>kclust <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(ames <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a href="prediction-and-machine-learning.html#cb4-2" tabindex="-1"></a>                   <span class="fu">select</span>(Longitude, Latitude), <span class="at">centers =</span> <span class="dv">3</span>)</span></code></pre></div>
+<p>Now let’s look at our clusters! We will use <code>mutate</code> to add a cluster column to the <code>ames_spatial</code> dataset, and then we will plot it again. What do you notice?</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="prediction-and-machine-learning.html#cb5-1" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb5-2"><a href="prediction-and-machine-learning.html#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="prediction-and-machine-learning.html#cb5-3" tabindex="-1"></a><span class="co"># add clusters</span></span>
+<span id="cb5-4"><a href="prediction-and-machine-learning.html#cb5-4" tabindex="-1"></a>ames_spatial <span class="sc">%&lt;&gt;%</span> </span>
+<span id="cb5-5"><a href="prediction-and-machine-learning.html#cb5-5" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">cluster =</span> <span class="fu">as.character</span>(kclust<span class="sc">$</span>cluster))</span>
+<span id="cb5-6"><a href="prediction-and-machine-learning.html#cb5-6" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="prediction-and-machine-learning.html#cb5-7" tabindex="-1"></a><span class="fu">ggplot</span>(ames_spatial) <span class="sc">+</span> </span>
+<span id="cb5-8"><a href="prediction-and-machine-learning.html#cb5-8" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">col =</span> cluster))</span></code></pre></div>
+<p><img src="_main_files/figure-html/ames5-1.png" width="672" /></p>
+<p>Our model is working, but it’s not perfect. That means we can jump into the next step of modeling, or <em>feature engineering</em>! We will try modifying our settings and see if we can come up with a better clustering algorithm. For example, maybe we want to try 6 cluster centers.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="prediction-and-machine-learning.html#cb6-1" tabindex="-1"></a>kclust <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(ames <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a href="prediction-and-machine-learning.html#cb6-2" tabindex="-1"></a>                   <span class="fu">select</span>(Longitude, Latitude), <span class="at">centers =</span> <span class="dv">6</span>)</span>
+<span id="cb6-3"><a href="prediction-and-machine-learning.html#cb6-3" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="prediction-and-machine-learning.html#cb6-4" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="prediction-and-machine-learning.html#cb6-5" tabindex="-1"></a><span class="co"># add clusters</span></span>
+<span id="cb6-6"><a href="prediction-and-machine-learning.html#cb6-6" tabindex="-1"></a>ames_spatial <span class="sc">%&lt;&gt;%</span> </span>
+<span id="cb6-7"><a href="prediction-and-machine-learning.html#cb6-7" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">cluster =</span> <span class="fu">as.character</span>(kclust<span class="sc">$</span>cluster))</span>
+<span id="cb6-8"><a href="prediction-and-machine-learning.html#cb6-8" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="prediction-and-machine-learning.html#cb6-9" tabindex="-1"></a><span class="fu">ggplot</span>(ames_spatial) <span class="sc">+</span> </span>
+<span id="cb6-10"><a href="prediction-and-machine-learning.html#cb6-10" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">col =</span> cluster))</span></code></pre></div>
+<p><img src="_main_files/figure-html/ames6-1.png" width="672" /></p>
+<p>Looking a bit better! We are still far from the neighborhoods identified in the ames data:</p>
+<div class="figure"><span style="display:block;" id="fig:amesfigure"></span>
+<img src="ames.png" alt="Neighborhood identifiers in Ames data." width="1230" />
+<p class="caption">
+Figure 7.6: Neighborhood identifiers in Ames data.
+</p>
+</div>
+<p>However, by adding more features to the data, and trying different <span class="math inline">\(k\)</span> values, we might be able to get closer to the “true” neighborhoods.</p>
+</div>
+<div id="supervised-machine-learning-with-random-forests" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Supervised Machine Learning with Random Forests<a href="prediction-and-machine-learning.html#supervised-machine-learning-with-random-forests" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We might be interested in creating a model that can <em>predict</em> housing characteristics, such as sales price. Using <code>ggplot2</code>, we can begin to explore the data - for example, by looking at descriptive statistics on home sale prices:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="prediction-and-machine-learning.html#cb7-1" tabindex="-1"></a><span class="co"># examine ames housing data</span></span>
+<span id="cb7-2"><a href="prediction-and-machine-learning.html#cb7-2" tabindex="-1"></a><span class="fu">ggplot</span>(ames, <span class="fu">aes</span>(<span class="at">x =</span> Sale_Price)) <span class="sc">+</span> </span>
+<span id="cb7-3"><a href="prediction-and-machine-learning.html#cb7-3" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">50</span>, <span class="at">col=</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/exploreames-1.png" width="672" /></p>
+<p>Because this is a prediction task, we begin by splitting our data so that we can evaluate training and test sets. We might be concerned about some portions of the data not being represented well in our training or test data. For example, in the figure above, we can see that housing price data is skewed with a “long tail,” meaning that while most houses sell within the $50,000-$400,000 range, there are several houses that sell for much much higher values. To make sure both our training and test sets are representative among neighborhoods, we include <code>strata = Sale_Price</code> below.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="prediction-and-machine-learning.html#cb8-1" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb8-2"><a href="prediction-and-machine-learning.html#cb8-2" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="prediction-and-machine-learning.html#cb8-3" tabindex="-1"></a>ames_split <span class="ot">&lt;-</span> <span class="fu">initial_split</span>(ames, <span class="at">prop =</span> <span class="fl">0.80</span>, <span class="at">strata =</span> Sale_Price)</span>
+<span id="cb8-4"><a href="prediction-and-machine-learning.html#cb8-4" tabindex="-1"></a>ames_train <span class="ot">&lt;-</span> <span class="fu">training</span>(ames_split)</span>
+<span id="cb8-5"><a href="prediction-and-machine-learning.html#cb8-5" tabindex="-1"></a>ames_test  <span class="ot">&lt;-</span>  <span class="fu">testing</span>(ames_split)</span></code></pre></div>
+<p>We’ve used <code>tidymodels</code> to create linear models (in <a href="gathering-and-modeling-data.html#gathering-and-modeling-data">Gathering and Modeling Data</a>), but now we will try creating a common machine learning algorithm: the “random forest” model. To do so, we will first define our models and parameters. We will begin with a simple decision tree. Notice the parameters, such as the number of trees and minimum n value.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="prediction-and-machine-learning.html#cb9-1" tabindex="-1"></a><span class="co"># create a decision tree</span></span>
+<span id="cb9-2"><a href="prediction-and-machine-learning.html#cb9-2" tabindex="-1"></a>tree_model <span class="ot">&lt;-</span> </span>
+<span id="cb9-3"><a href="prediction-and-machine-learning.html#cb9-3" tabindex="-1"></a>  <span class="fu">decision_tree</span>(<span class="at">min_n =</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-4"><a href="prediction-and-machine-learning.html#cb9-4" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">&quot;rpart&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-5"><a href="prediction-and-machine-learning.html#cb9-5" tabindex="-1"></a>  <span class="fu">set_mode</span>(<span class="st">&quot;regression&quot;</span>)</span>
+<span id="cb9-6"><a href="prediction-and-machine-learning.html#cb9-6" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="prediction-and-machine-learning.html#cb9-7" tabindex="-1"></a><span class="co"># define the tree&#39;s model fit</span></span>
+<span id="cb9-8"><a href="prediction-and-machine-learning.html#cb9-8" tabindex="-1"></a>tree_fit <span class="ot">&lt;-</span> </span>
+<span id="cb9-9"><a href="prediction-and-machine-learning.html#cb9-9" tabindex="-1"></a>  tree_model <span class="sc">%&gt;%</span> </span>
+<span id="cb9-10"><a href="prediction-and-machine-learning.html#cb9-10" tabindex="-1"></a>  <span class="fu">fit</span>(Sale_Price <span class="sc">~</span> Longitude <span class="sc">+</span> Latitude <span class="sc">+</span> Neighborhood, </span>
+<span id="cb9-11"><a href="prediction-and-machine-learning.html#cb9-11" tabindex="-1"></a>      <span class="at">data =</span> ames_train)</span>
+<span id="cb9-12"><a href="prediction-and-machine-learning.html#cb9-12" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="prediction-and-machine-learning.html#cb9-13" tabindex="-1"></a>ames_test_small <span class="ot">&lt;-</span> ames_test <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb9-14"><a href="prediction-and-machine-learning.html#cb9-14" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="prediction-and-machine-learning.html#cb9-15" tabindex="-1"></a><span class="co"># combine predictions with our data</span></span>
+<span id="cb9-16"><a href="prediction-and-machine-learning.html#cb9-16" tabindex="-1"></a>ames_test_small <span class="sc">%&gt;%</span> </span>
+<span id="cb9-17"><a href="prediction-and-machine-learning.html#cb9-17" tabindex="-1"></a>  <span class="fu">select</span>(Sale_Price) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-18"><a href="prediction-and-machine-learning.html#cb9-18" tabindex="-1"></a>  <span class="fu">bind_cols</span>(<span class="fu">predict</span>(tree_fit, ames_test_small))</span></code></pre></div>
+<pre><code>## # A tibble: 10 × 2
+##    Sale_Price   .pred
+##         &lt;int&gt;   &lt;dbl&gt;
+##  1     213500 232824.
+##  2     149900 145585.
+##  3     105500 121608.
+##  4     127500 145585.
+##  5     120000 145585.
+##  6     290941 310761.
+##  7     199500 194015.
+##  8     160000 194015.
+##  9     216500 194015.
+## 10     180000 194015.</code></pre>
+<p>Our estimates are close, in some cases! Is there anything that you notice about the <code>.pred</code> values? There are a few repeated values, likely for houses that follow the same decision point logic. This is probably not ideal - with more trees, we might be able to use more information to differentiate these houses. We will now move on to the forest. Below, we create the random forest model, define its “workflow” (this is a modeling strategy within <code>tidymodels</code>), and then fit the model.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="prediction-and-machine-learning.html#cb11-1" tabindex="-1"></a><span class="co"># create a random forest</span></span>
+<span id="cb11-2"><a href="prediction-and-machine-learning.html#cb11-2" tabindex="-1"></a>rf_model <span class="ot">&lt;-</span> </span>
+<span id="cb11-3"><a href="prediction-and-machine-learning.html#cb11-3" tabindex="-1"></a>  <span class="fu">rand_forest</span>(<span class="at">trees =</span> <span class="dv">1000</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-4"><a href="prediction-and-machine-learning.html#cb11-4" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">&quot;ranger&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-5"><a href="prediction-and-machine-learning.html#cb11-5" tabindex="-1"></a>  <span class="fu">set_mode</span>(<span class="st">&quot;regression&quot;</span>)</span>
+<span id="cb11-6"><a href="prediction-and-machine-learning.html#cb11-6" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="prediction-and-machine-learning.html#cb11-7" tabindex="-1"></a><span class="co"># define the random forest workflow</span></span>
+<span id="cb11-8"><a href="prediction-and-machine-learning.html#cb11-8" tabindex="-1"></a>rf_wflow <span class="ot">&lt;-</span> </span>
+<span id="cb11-9"><a href="prediction-and-machine-learning.html#cb11-9" tabindex="-1"></a>  <span class="fu">workflow</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb11-10"><a href="prediction-and-machine-learning.html#cb11-10" tabindex="-1"></a>  <span class="fu">add_formula</span>(</span>
+<span id="cb11-11"><a href="prediction-and-machine-learning.html#cb11-11" tabindex="-1"></a>    Sale_Price <span class="sc">~</span> Gr_Liv_Area <span class="sc">+</span> Year_Built <span class="sc">+</span> Bldg_Type <span class="sc">+</span> Neighborhood <span class="sc">+</span> </span>
+<span id="cb11-12"><a href="prediction-and-machine-learning.html#cb11-12" tabindex="-1"></a>      Latitude <span class="sc">+</span> Longitude) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-13"><a href="prediction-and-machine-learning.html#cb11-13" tabindex="-1"></a>  <span class="fu">add_model</span>(rf_model) </span>
+<span id="cb11-14"><a href="prediction-and-machine-learning.html#cb11-14" tabindex="-1"></a></span>
+<span id="cb11-15"><a href="prediction-and-machine-learning.html#cb11-15" tabindex="-1"></a><span class="co"># fit the random forest model</span></span>
+<span id="cb11-16"><a href="prediction-and-machine-learning.html#cb11-16" tabindex="-1"></a>rf_fit <span class="ot">&lt;-</span> rf_wflow <span class="sc">%&gt;%</span> <span class="fu">fit</span>(<span class="at">data =</span> ames_train)</span></code></pre></div>
+<p>We can now estimate the <em>performance</em> of our models! The following function takes in a <code>model</code> and <code>dat</code> (or data), and returns an output with performance metrics.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="prediction-and-machine-learning.html#cb12-1" tabindex="-1"></a>estimate_perf <span class="ot">&lt;-</span> <span class="cf">function</span>(model, dat) {</span>
+<span id="cb12-2"><a href="prediction-and-machine-learning.html#cb12-2" tabindex="-1"></a>  <span class="co"># Capture the names of the `model` and `dat` objects</span></span>
+<span id="cb12-3"><a href="prediction-and-machine-learning.html#cb12-3" tabindex="-1"></a>  cl <span class="ot">&lt;-</span> <span class="fu">match.call</span>()</span>
+<span id="cb12-4"><a href="prediction-and-machine-learning.html#cb12-4" tabindex="-1"></a>  obj_name <span class="ot">&lt;-</span> <span class="fu">as.character</span>(cl<span class="sc">$</span>model)</span>
+<span id="cb12-5"><a href="prediction-and-machine-learning.html#cb12-5" tabindex="-1"></a>  data_name <span class="ot">&lt;-</span> <span class="fu">as.character</span>(cl<span class="sc">$</span>dat)</span>
+<span id="cb12-6"><a href="prediction-and-machine-learning.html#cb12-6" tabindex="-1"></a>  data_name <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;ames_&quot;</span>, <span class="st">&quot;&quot;</span>, data_name)</span>
+<span id="cb12-7"><a href="prediction-and-machine-learning.html#cb12-7" tabindex="-1"></a>  </span>
+<span id="cb12-8"><a href="prediction-and-machine-learning.html#cb12-8" tabindex="-1"></a>  <span class="co"># Estimate these metrics:</span></span>
+<span id="cb12-9"><a href="prediction-and-machine-learning.html#cb12-9" tabindex="-1"></a>  reg_metrics <span class="ot">&lt;-</span> <span class="fu">metric_set</span>(rmse, rsq)</span>
+<span id="cb12-10"><a href="prediction-and-machine-learning.html#cb12-10" tabindex="-1"></a>  </span>
+<span id="cb12-11"><a href="prediction-and-machine-learning.html#cb12-11" tabindex="-1"></a>  <span class="co"># output our model</span></span>
+<span id="cb12-12"><a href="prediction-and-machine-learning.html#cb12-12" tabindex="-1"></a>  output <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span></span>
+<span id="cb12-13"><a href="prediction-and-machine-learning.html#cb12-13" tabindex="-1"></a>    <span class="fu">predict</span>(dat) <span class="sc">%&gt;%</span></span>
+<span id="cb12-14"><a href="prediction-and-machine-learning.html#cb12-14" tabindex="-1"></a>    <span class="fu">bind_cols</span>(dat <span class="sc">%&gt;%</span> <span class="fu">select</span>(Sale_Price)) <span class="sc">%&gt;%</span></span>
+<span id="cb12-15"><a href="prediction-and-machine-learning.html#cb12-15" tabindex="-1"></a>    <span class="fu">reg_metrics</span>(Sale_Price, .pred) <span class="sc">%&gt;%</span></span>
+<span id="cb12-16"><a href="prediction-and-machine-learning.html#cb12-16" tabindex="-1"></a>    <span class="fu">select</span>(<span class="sc">-</span>.estimator) <span class="sc">%&gt;%</span></span>
+<span id="cb12-17"><a href="prediction-and-machine-learning.html#cb12-17" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">object =</span> obj_name, <span class="at">data =</span> data_name)</span>
+<span id="cb12-18"><a href="prediction-and-machine-learning.html#cb12-18" tabindex="-1"></a>  </span>
+<span id="cb12-19"><a href="prediction-and-machine-learning.html#cb12-19" tabindex="-1"></a>  <span class="fu">return</span>(output)</span>
+<span id="cb12-20"><a href="prediction-and-machine-learning.html#cb12-20" tabindex="-1"></a>}</span></code></pre></div>
+<p>We can evaluate the performance of both the <code>tree_fit</code> and <code>rf_fit</code>. The performance metrics include “rmse” or root mean squared error (where a higher value indicates more errors) and “rsq” or <span class="math inline">\(R^2\)</span> where a value closer to 1 indicates a better model fit. What do you notice, comparing our two models?</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="prediction-and-machine-learning.html#cb13-1" tabindex="-1"></a><span class="co"># first examine tree performance</span></span>
+<span id="cb13-2"><a href="prediction-and-machine-learning.html#cb13-2" tabindex="-1"></a><span class="fu">estimate_perf</span>(tree_fit, ames_train)</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 4
+##   .metric .estimate object   data 
+##   &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;
+## 1 rmse    47857.    tree_fit train
+## 2 rsq         0.640 tree_fit train</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="prediction-and-machine-learning.html#cb15-1" tabindex="-1"></a><span class="co"># now examine random forest performance</span></span>
+<span id="cb15-2"><a href="prediction-and-machine-learning.html#cb15-2" tabindex="-1"></a><span class="fu">estimate_perf</span>(rf_fit, ames_train)</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 4
+##   .metric .estimate object data 
+##   &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;
+## 1 rmse    15359.    rf_fit train
+## 2 rsq         0.966 rf_fit train</code></pre>
+<p>Now, we can evaluate the predictions on the test set. What do you notice, comparing these to the training set performance above?</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="prediction-and-machine-learning.html#cb17-1" tabindex="-1"></a><span class="co"># final rf model</span></span>
+<span id="cb17-2"><a href="prediction-and-machine-learning.html#cb17-2" tabindex="-1"></a>final_rf_res <span class="ot">&lt;-</span> <span class="fu">last_fit</span>(rf_wflow, ames_split)</span>
+<span id="cb17-3"><a href="prediction-and-machine-learning.html#cb17-3" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="prediction-and-machine-learning.html#cb17-4" tabindex="-1"></a><span class="co"># get model metrics</span></span>
+<span id="cb17-5"><a href="prediction-and-machine-learning.html#cb17-5" tabindex="-1"></a><span class="fu">collect_metrics</span>(final_rf_res)</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 4
+##   .metric .estimator .estimate .config        
+##   &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;          
+## 1 rmse    standard   30713.    pre0_mod0_post0
+## 2 rsq     standard       0.862 pre0_mod0_post0</code></pre>
+<p>The models perform worse on the test set because the data may have been <em>overfitted</em> to the training data. In other words, by relying on patterns in the training data, we may have become overconfident in our models ability to make predictions. So how can we use the training data without overfitting? One approach is to split the training data and repeatedly re-sample within the training data. This is known as <strong>cross validation</strong>.</p>
+</div>
+<div id="re-sample-your-data-with-cross-validation" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Re-Sample Your Data with Cross Validation<a href="prediction-and-machine-learning.html#re-sample-your-data-with-cross-validation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>With algorithmic approaches, we’ve seen some of the benefits of splitting our data to find patterns that might generalize to other parts of our data. However, what if within our training set, we were also able to fine-tune our models by looking at different slices of data? This is how <strong>cross validation</strong> works. In the figure below, we see 30 data points split into three different colors. In each of three <em>folds</em> (one in each column), the researcher splits the data into one section used to fit their model and one to evaluate the model’s performance. (Does this remind us of anything, like the initial split?) Then, the researcher can see what model performs well <em>across</em> folds, which may help us guess which models will perform well in other settings too.</p>
+<div class="figure"><span style="display:block;" id="fig:cvfigure"></span>
+<img src="three-CV-iter.svg" alt="Cross validation. Source: Kuhn and Silge, 2023."  />
+<p class="caption">
+Figure 7.7: Cross validation. Source: Kuhn and Silge, 2023.
+</p>
+</div>
+<p>To set up cross validation, we can use the <code>vfold_cv</code> command. We will need to a pick a number of folds, <span class="math inline">\(v\)</span>, for how many times we want our data to be cross-validated. The standard choice is 10: if a model performs well across 10 subsamples, it will probably generalize to other data too.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="prediction-and-machine-learning.html#cb19-1" tabindex="-1"></a><span class="co"># set up cross validation</span></span>
+<span id="cb19-2"><a href="prediction-and-machine-learning.html#cb19-2" tabindex="-1"></a>ames_folds <span class="ot">&lt;-</span> <span class="fu">vfold_cv</span>(ames_train, <span class="at">v =</span> <span class="dv">10</span>)</span>
+<span id="cb19-3"><a href="prediction-and-machine-learning.html#cb19-3" tabindex="-1"></a>ames_folds</span></code></pre></div>
+<pre><code>## #  10-fold cross-validation 
+## # A tibble: 10 × 2
+##    splits             id    
+##    &lt;list&gt;             &lt;chr&gt; 
+##  1 &lt;split [2107/235]&gt; Fold01
+##  2 &lt;split [2107/235]&gt; Fold02
+##  3 &lt;split [2108/234]&gt; Fold03
+##  4 &lt;split [2108/234]&gt; Fold04
+##  5 &lt;split [2108/234]&gt; Fold05
+##  6 &lt;split [2108/234]&gt; Fold06
+##  7 &lt;split [2108/234]&gt; Fold07
+##  8 &lt;split [2108/234]&gt; Fold08
+##  9 &lt;split [2108/234]&gt; Fold09
+## 10 &lt;split [2108/234]&gt; Fold10</code></pre>
+<p>Now that we have our cross validation object set up, we will create a resample object with <code>rf_wflow</code> from before.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="prediction-and-machine-learning.html#cb21-1" tabindex="-1"></a>keep_pred <span class="ot">&lt;-</span> <span class="fu">control_resamples</span>(<span class="at">save_pred =</span> <span class="cn">TRUE</span>, <span class="at">save_workflow =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb21-2"><a href="prediction-and-machine-learning.html#cb21-2" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="prediction-and-machine-learning.html#cb21-3" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="prediction-and-machine-learning.html#cb21-4" tabindex="-1"></a><span class="co"># create resample object</span></span>
+<span id="cb21-5"><a href="prediction-and-machine-learning.html#cb21-5" tabindex="-1"></a>rf_res <span class="ot">&lt;-</span> </span>
+<span id="cb21-6"><a href="prediction-and-machine-learning.html#cb21-6" tabindex="-1"></a>  rf_wflow <span class="sc">%&gt;%</span> </span>
+<span id="cb21-7"><a href="prediction-and-machine-learning.html#cb21-7" tabindex="-1"></a>  <span class="fu">fit_resamples</span>(<span class="at">resamples =</span> ames_folds, <span class="at">control =</span> keep_pred)</span>
+<span id="cb21-8"><a href="prediction-and-machine-learning.html#cb21-8" tabindex="-1"></a></span>
+<span id="cb21-9"><a href="prediction-and-machine-learning.html#cb21-9" tabindex="-1"></a></span>
+<span id="cb21-10"><a href="prediction-and-machine-learning.html#cb21-10" tabindex="-1"></a><span class="co"># look at resample object</span></span>
+<span id="cb21-11"><a href="prediction-and-machine-learning.html#cb21-11" tabindex="-1"></a>rf_res</span></code></pre></div>
+<pre><code>## # Resampling results
+## # 10-fold cross-validation 
+## # A tibble: 10 × 5
+##    splits             id     .metrics         .notes           .predictions
+##    &lt;list&gt;             &lt;chr&gt;  &lt;list&gt;           &lt;list&gt;           &lt;list&gt;      
+##  1 &lt;split [2107/235]&gt; Fold01 &lt;tibble [2 × 4]&gt; &lt;tibble [0 × 4]&gt; &lt;tibble&gt;    
+##  2 &lt;split [2107/235]&gt; Fold02 &lt;tibble [2 × 4]&gt; &lt;tibble [0 × 4]&gt; &lt;tibble&gt;    
+##  3 &lt;split [2108/234]&gt; Fold03 &lt;tibble [2 × 4]&gt; &lt;tibble [0 × 4]&gt; &lt;tibble&gt;    
+##  4 &lt;split [2108/234]&gt; Fold04 &lt;tibble [2 × 4]&gt; &lt;tibble [0 × 4]&gt; &lt;tibble&gt;    
+##  5 &lt;split [2108/234]&gt; Fold05 &lt;tibble [2 × 4]&gt; &lt;tibble [0 × 4]&gt; &lt;tibble&gt;    
+##  6 &lt;split [2108/234]&gt; Fold06 &lt;tibble [2 × 4]&gt; &lt;tibble [0 × 4]&gt; &lt;tibble&gt;    
+##  7 &lt;split [2108/234]&gt; Fold07 &lt;tibble [2 × 4]&gt; &lt;tibble [0 × 4]&gt; &lt;tibble&gt;    
+##  8 &lt;split [2108/234]&gt; Fold08 &lt;tibble [2 × 4]&gt; &lt;tibble [0 × 4]&gt; &lt;tibble&gt;    
+##  9 &lt;split [2108/234]&gt; Fold09 &lt;tibble [2 × 4]&gt; &lt;tibble [0 × 4]&gt; &lt;tibble&gt;    
+## 10 &lt;split [2108/234]&gt; Fold10 &lt;tibble [2 × 4]&gt; &lt;tibble [0 × 4]&gt; &lt;tibble&gt;</code></pre>
+<p>Finally, we can measure how our model performs across the 10 folds.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="prediction-and-machine-learning.html#cb23-1" tabindex="-1"></a><span class="co"># examine model metrics</span></span>
+<span id="cb23-2"><a href="prediction-and-machine-learning.html#cb23-2" tabindex="-1"></a><span class="fu">collect_metrics</span>(rf_res)</span></code></pre></div>
+<pre><code>## # A tibble: 2 × 6
+##   .metric .estimator      mean     n   std_err .config        
+##   &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt; &lt;int&gt;     &lt;dbl&gt; &lt;chr&gt;          
+## 1 rmse    standard   30651.       10 864.      pre0_mod0_post0
+## 2 rsq     standard       0.856    10   0.00700 pre0_mod0_post0</code></pre>
+<p>We find that on average, our model performs similarly <em>within the training sample</em> during cross validation as it did <em>in the test set</em> earlier.</p>
+</div>
+<div id="predictions-bias-and-social-implications" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> Predictions, Bias, and Social Implications<a href="prediction-and-machine-learning.html#predictions-bias-and-social-implications" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We’ve seen how algorithms can make predictions by finding hidden patterns in data. We’ve also seen that algorithms can be <em>biased</em>, and are sometimes intentionally biased, in order to increase accuracy. This is due to the bias-variance tradeoff: accuracy is a combination of bias and variance; to achieve better accuracy, machine learning models can sometimes trade in a little bias for large decreases in variance. By bias, I mean bias in the statistical sense (an average prediction that is different from the true estimand over time, even under perfect conditions). But that bias can also be true in the social sense: algorithms can be biased against certain groups or places.</p>
+<p>For example, credit scores are often based on opaque algorithms that take in a huge amount of consumer data and translate it into an output with ramifications for stratification and inequality. <a href="https://www.econstor.eu/bitstream/10419/223110/1/Econsoc-NL-21-1-05.pdf">Kiviat (2019)</a> calls credit scoring the “paradigmatic example of algorithmic governance.” Thinking back to <a href="">Breiman’s</a> distinction between data models and algorithmic models, it is clear that credit scores fall into the second camp: there is no explainable process by which credit scores are generated, instead, they are the combination of many different slices and pieces of data, engineered to find patterns and make predictions at scale.</p>
+<p>Social scientists have highlighted inequalities in how algorithms like credit scores operate. For example, credit scores have been reported to use features like gender and neighborhood to make predictions, which could entrench discrimination or inequalities along these lines. Removing these inequities from the way algorithms operate, however, may be challenging. <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-soc-073117-041106#right-ref-B86">Molia and Garip</a> note that if researchers remove a feature like gender from credit score prediction data, the algorithms could still use other data as proxies for gender. If the researcher specifies that genders must have equal credit scores, on average, the algorithm might begin to discriminate on another variable. If the researcher specifies that hypothetical individuals of different genders must have the same opportunity to accrue good credit, this could be more fair. In short, the question of algorithmic fairness depends not just on the specifications of the algorithm, but also on our conceptions of fairness.</p>
+</div>
+<div id="problem-set-7" class="section level2 hasAnchor" number="7.7">
+<h2><span class="header-section-number">7.7</span> Problem Set 7<a href="prediction-and-machine-learning.html#problem-set-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recommended Resources:</p>
+<p><a href="https://www.tidymodels.org/learn/statistics/k-means/">K-means clustering with tidy data principles</a></p>
+<p><a href="https://www.tmwr.org/">Tidy Modeling With R</a></p>
+<ol style="list-style-type: decimal">
+<li><p>Start a new document, problemset7.Rmd, in your soc10problemsets repository. (You can download a template <a href="https://github.com/Soc10Spring2026/soc10problemsets_templates">here</a>, but be sure to save it in your own soc10problemsets repo). Create a map of the <code>ames</code> data, but change the cluster specifications to try to get closer to the “true” neighborhoods shown in Figure <a href="prediction-and-machine-learning.html#fig:amesfigure">7.6</a>. Describe the benefits and limitations of your approach. <strong>Commit</strong> your changes.</p></li>
+<li><p>Using the <code>tigris</code> package, download roads data for the county of Story, IA. Add roads to your plot. <strong>Commit</strong> your changes.</p></li>
+<li><p>Try to train an algorithm to predict housing sales prices. Create a random forest to predict the sales price, using some new or different variables than the model above. Create a model that <em>better</em> predicts sales price, and explain why it is better. <strong>Commit</strong> your changes.</p></li>
+<li><p>Perhaps the model could be better trained using Cross Validation. Set up a 10-fold cross validation model, and predict sales prices again. Compare these results to your prior results. Are they similar or different, and what does this mean? <strong>Commit</strong> your changes.</p></li>
+<li><p>If a real estate company used algorithms to determine home values, could this have any societal implications? Walk the reader through why the data could induce biases and how you might try to resolve these potential problems. <strong>Commit</strong> your changes.</p></li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="networks.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
