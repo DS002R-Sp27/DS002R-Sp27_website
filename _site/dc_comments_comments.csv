@@ -1,0 +1,247 @@
+url,author,date,timestamp,score,upvotes,downvotes,golds,comment,comment_id
+https://www.reddit.com/r/DataCenterDebate/comments/1rzvevk/can_data_centers_protect_coastal_cities_from/,Thoughts_For_Food_,2026-03-22,1774162909,1,1,0,0,lol,1
+https://www.reddit.com/r/DataCenterDebate/comments/1rzvevk/can_data_centers_protect_coastal_cities_from/,saras998,2026-03-31,1774970765,1,1,0,0,Oceans aren't rising and data centers use fresh water. They are destroying drinking water quality and use vast amounts of energy. ,2
+https://www.reddit.com/r/DataCenterDebate/comments/1rzvevk/can_data_centers_protect_coastal_cities_from/,Etech326,2026-04-15,1776284301,1,1,0,0,"Salt water would corrode the cooling equipment, among other problems with this theory. Also, see: Law of Conservation of Mass. ",3
+https://www.reddit.com/r/DataCenterDebate/comments/1ncyygw/how_to_get_involved/,brainscraps,2025-09-10,1757476886,2,2,0,0,"Western PA :  
+I live near this proposed datacenter site:  
+[https://assets.ctfassets.net/o03ihmgd94o7/7t30aIjWtDJ2phdGVjjzr/79dc0ef83ebfe255b7a1b52091f9e96a/Western\_PA\_Data\_Center\_Sites.pdf](https://assets.ctfassets.net/o03ihmgd94o7/7t30aIjWtDJ2phdGVjjzr/79dc0ef83ebfe255b7a1b52091f9e96a/Western_PA_Data_Center_Sites.pdf)
+
+Don't love the constant fracking drilling all around my community and now more burning of natural gas to power a datacenter.
+
+Also folks who think that we can just put a bunch of water-heating behemoths along the Ohio River like there's no externalities... it's giving ""just throw the trash into the sea, it's so vast that it could never end poorly""",1
+https://www.reddit.com/r/DataCenterDebate/comments/1ntfw2v/the_data_center_water_mystery_why_nobody_knows/,Jazzlike-Stranger927,2025-12-27,1766840182,2,2,0,0,"Lots of information here, thanks! 
+I am trying to find information on the moratorium for water and energy usage for AI data centers in US. It was proposed as part of the one big beautiful bill that AI data centers in the US would have a 10year moratorium where they do not have to report and cannot be questioned about how much water and energy they use. The moratorium was not passed this summer. But Trump has re-introduced this just this month. 
+This is scary stuff. US residents are the ones footing the bill for these as they destroy our natural resources and raise our energy bills.",1
+https://www.reddit.com/r/DataCenterDebate/comments/1ntfw2v/the_data_center_water_mystery_why_nobody_knows/,Ok_Thanks_7727,2025-09-30,1759231395,1,1,0,0,great article and hugely important,2
+https://www.reddit.com/r/DataCenterDebate/comments/1tfxeep/do_we_actually_need_all_of_these_new_data_centers/,IHeartFraccing,2026-05-17,1779043491,5,5,0,0,"There is a financing hype cycle going on right now. Declaring need for more compute is driving the cycle. 
+
+Tech co: My company needs more compute -&gt; Investors and institutional finance: wow they must be doing really well. We dont want to miss out. Lets give them money. -&gt; Tech co: we should get more money. -&gt; tech co: my company needs more compute
+
+This cycle is out-pacing technological innovation, so that means more data centers (with some efficiency gains here and there) rather than adding all that compute to existing data centers.
+
+3 problem with this: 
+
+1. Its starting to look like
+A bubble (Fermi America receiving billions in financing with no a hot tenants, no construction, no experience& just political posturing).
+
+2. You can outpace the tech gains but you cant outpace the power availability. Its hard to build power projects in the US and these data center projects need massive amounts of power. Even scaling down estimates like ERCOT does, the pace of growth the tech companies are saying is coming to get this financing is likely totally unrealistic from our ability to power data centers alone. Unless of course consumer and residential electricity becomes second place to data center power which is kind of starting to happen in some markets. 
+
+3. The user adoption isnt there. All the companies that are supposed to adopt AI and displace workers are& not seeing the efficiency gains. AI companies are now partnering with consulting firms and positioning their workers as in-house architects to try and drive AI use. It reeks of yes this is a helpful tool. No its not the world changing technology were being told it is
+",1
+https://www.reddit.com/r/DataCenterDebate/comments/1tfxeep/do_we_actually_need_all_of_these_new_data_centers/,jakesteeley,2026-05-18,1779105031,1,1,0,0,"Good points here, thanks - especially #3.  This is the one that seems to hit home, where people see it with their own eyes.
+
+The power/water availability one is whats gonna cost us dearly in the future.",1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1tfxeep/do_we_actually_need_all_of_these_new_data_centers/,IHeartFraccing,2026-05-18,1779108198,2,2,0,0,"We have simply put too many barriers up to build large things (housing, infrastructure projects, etc.) for us to meet even the near-term demand being predicted by the AI evangelists. We're talking about 1.5x the generation capacity of most electric regions of the US in the next 5 years. Even in Texas, the least regulated, most generation-build friendly market, that's dubious at best. Never mind the transmission to go with it... estimated need of 5,000 NEW miles of transmission line per year. We're an entire order of magnitude away from building that now. 
+
+Then you have the climate considerations... all of this ""needs"" to be firm, dispatchable power. Tech companies are talking about building entire natural gas plants just to power individual data centers. 
+
+In my useless opinion, look at who stands to profit from the AI boom (big tech). Ask yourself if that's an industry that has conducted itself with the welfare of users in mind (it has not). Then ask who will be left holding the bag if this doesn't work out (the electricity consumer). We're not at a proof of concept yet, in my mind, for those interests to balance out.",1_1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1tfxeep/do_we_actually_need_all_of_these_new_data_centers/,jakesteeley,2026-05-18,1779140424,1,1,0,0,"I sometimes question the management of data itself.  Do we need (and should local taxes pay for) private organizations to store Ring photos from 5 years ago, or songs/videos/really anything that is more than X?
+
+Sure, AI is here - but can we clean out the house and try to audit/reuse/redistribute/optimize the actual data being housed?
+
+Of course this is just typing about these things in such a simple manner, but at the same time I dont think the public should be on the hook to save little johnnys baby pictures from 10 years ago either.
+
+Thats what a home data backup drive is for.",1_1_1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1tfxeep/do_we_actually_need_all_of_these_new_data_centers/,IHeartFraccing,2026-05-19,1779158986,2,2,0,0,"No. They dont do it for us. They do it to monetize you, the consumer. ",1_1_1_1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1tfxeep/do_we_actually_need_all_of_these_new_data_centers/,libsaway,2026-05-18,1779125683,3,3,0,0,Do you think billionaires are in the habit of giving away billions to construction workers and chip companies out of charity or vibes?,2
+https://www.reddit.com/r/DataCenterDebate/comments/1tfxeep/do_we_actually_need_all_of_these_new_data_centers/,BurdenOfProof814,2026-05-18,1779110763,1,1,0,0,"Everything we do online, every web search, every account we've ever made, all of the photos stored in your iCloud account, every email sent or received, every website, Amazon's catalog of items for sale, every piece of work that an employee has saved in their company laptop... Bitcoin mining, hospital records, banking, security camera storage, etc.
+
+Everything digital is stored online, so while we do need data centers, who knows if these new ones all have clients ooundi their door down to sign a contract or not. But they are a necessity due to all of the Internet usage &amp; online activies people perform daily.",3
+https://www.reddit.com/r/DataCenterDebate/comments/1tfxeep/do_we_actually_need_all_of_these_new_data_centers/,jakesteeley,2026-05-18,1779139809,1,1,0,0,"Im sure banks, hospitals, security companies, Amazon, bitcoin etc.. also have their own database backups/sources.
+
+Still, if it is the case of these both public and private companies - private companies in particular, then why is the government/local taxes paying for it?",3_1
+https://www.reddit.com/r/DataCenterDebate/comments/1tfxeep/do_we_actually_need_all_of_these_new_data_centers/,BurdenOfProof814,2026-05-18,1779143477,1,1,0,0,"I can't speak for any others, but the campuses are being built by companies &amp; they market their 99.999% uptime to potential customers. The government didn't pay for the one I'm at. The government ones may be paying for their own centers for flock cameras, etc lol ",3_1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1t9uetc/get_kevin_removed_from_shark_tank_for_utah_data/,Ok_Sentence_273,2026-05-11,1778481228,2,2,0,0,This is terrifying.   I dont understand how it got approved.  ,1
+https://www.reddit.com/r/DataCenterDebate/comments/1t9uetc/get_kevin_removed_from_shark_tank_for_utah_data/,longwaybroadband,2026-05-15,1778860207,1,1,0,0,"he's great on the Shark Tank show. Your politics unfortunately clearly drive your buying decisions. I'm not that blindly partisan as I don't care what the entertainers politics are...they are either funny, intriguing, or captivating or I turn the channel.  But he's a businessman and his business is being courted by many states and counties for those data center jobs and taxes. ",2
+https://www.reddit.com/r/DataCenterDebate/comments/1pf5zol/amazon_data_center_linked_to_rare_cancers_and/,MeowMeowCollyer,2025-12-06,1765001799,1,1,0,0,Project mayhem all data centers,1
+https://www.reddit.com/r/DataCenterDebate/comments/1oewdlh/clarification_request_only_debating_environmental/,Necessary-Zone-3726,2025-11-11,1762880223,2,2,0,0,"I don't see anything in the community guidelines against it, and there typically is an intersection of those things. I'd think it's okay as long as it doesn't violate the guidelines....at least how I'd operate.",1
+https://www.reddit.com/r/DataCenterDebate/comments/1oewdlh/clarification_request_only_debating_environmental/,JonathanCookPodcast,2025-11-11,1762881228,1,1,0,0,Thank you!,1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1nd3wze/local_research_collab_western_pa_pittsburgh/,[deleted],2025-09-10,1757510518,3,3,0,0,[deleted],1
+https://www.reddit.com/r/DataCenterDebate/comments/1nd3wze/local_research_collab_western_pa_pittsburgh/,brainscraps,2025-09-10,1757511946,2,2,0,0,"Very confused about coal -&gt; hydrogen and it sounds awful   
+[https://www.hydrogennewsletter.com/hydrogen-production-from-coal-gasification/](https://www.hydrogennewsletter.com/hydrogen-production-from-coal-gasification/)",1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1nd3wze/local_research_collab_western_pa_pittsburgh/,brainscraps,2025-09-10,1757475990,1,1,0,0,"[Have Recent Wins Positioned Pittsburgh as Next U.S. Tech Hub?](https://www.govtech.com/products/have-recent-wins-positioned-pittsburgh-as-next-u-s-tech-hub)
+
+Interesting bits:   
+\- Pennsylvania is water-rich, according to the state's website. And the state consistently is the top exporter of electricity, according to the U.S. Energy Information Administration. Pennsylvania also sits atop the Marcellus Shale formation, the largest deposit of natural gas in the country.
+
+\- ""The data center companies aren't going to come here because they love our flat topography  because it doesn't exist,"" said Dan Adamski, managing director of Jones Lang LaSalle, or JLL, a Downtown-based commercial real estate investor. Instead, Mr. Adamski said companies come for cheaper energy, which the natural gas trove Pennsylvania sits upon should eventually provide.
+
+\- Columbus, Ohio, has 117 data centers; 185 miles east, the Pittsburgh region has 35, according to the Data Center Map database.
+
+\- JLL manages more than 250 data centers globally, and has a $315 billion footprint in data center ""global capital transactions"" working with ""hyperscalers"" such as Meta, Microsoft, Google, Amazon, Oracle and EQT.",2
+https://www.reddit.com/r/DataCenterDebate/comments/1nd3wze/local_research_collab_western_pa_pittsburgh/,brainscraps,2025-09-10,1757476205,1,1,0,0,"[AI Strike Team Executive Director Discusses Need to Build More Generators](https://youtu.be/gqd3_ypaOI8?si=gTvEthvm0qI8P3Ul&amp;t=1591)
+
+\- She asserts that datacenters will actually bring so much electrical generation capacity that costs to consumers will decrease. Ok, cool story.",3
+https://www.reddit.com/r/DataCenterDebate/comments/1nd3wze/local_research_collab_western_pa_pittsburgh/,brainscraps,2025-09-10,1757476648,1,1,0,0,"[Aliquippa PA Data Center - with onsite nat gas generation](https://aliquippapa.gov/wp-content/uploads/2025/02/doc07611720250225144324.pdf)
+
+The mayor discussing (very non-specifically) with a radio dj on youtube: [https://www.youtube.com/watch?v=6Ctx5W9aFrs](https://www.youtube.com/watch?v=6Ctx5W9aFrs) 
+
+Plans for the datacenter:   
+[https://assets.ctfassets.net/o03ihmgd94o7/7t30aIjWtDJ2phdGVjjzr/79dc0ef83ebfe255b7a1b52091f9e96a/Western\_PA\_Data\_Center\_Sites.pdf](https://assets.ctfassets.net/o03ihmgd94o7/7t30aIjWtDJ2phdGVjjzr/79dc0ef83ebfe255b7a1b52091f9e96a/Western_PA_Data_Center_Sites.pdf)",4
+https://www.reddit.com/r/DataCenterDebate/comments/1nd3wze/local_research_collab_western_pa_pittsburgh/,brainscraps,2025-09-10,1757477076,1,1,0,0,"[The risk and reward of having data centers as utility customers](https://www.post-gazette.com/business/powersource/2025/09/08/data-centers-utilities-natural-gas-water-electricity/stories/202509050061) 
+
+\- It started with a wider acceptance of natural gas, which Mr. Adamski noticed after the last presidential election. Some of the users we spoke with \[before November\] viewed natural gas as a bridge to the grid, \[as in\] Ok, well pinch our nose and go with gas until we get to the grid,  Mr. Adamski said. Now theyve changed their posture. Water and gas companies are clearly taking notice.
+
+\- An average size water-cooled data center can use 16 million gallons of water in July, with a maximum day demand of up to 3 million gallons, Tony Nokovich, vice president of engineering for Pennsylvania American Water, said during a Pennsylvania Senate Majority Policy Committee hearing in August. That same data center may only use 24,000 gallons of water in the month of January.",5
+https://www.reddit.com/r/DataCenterDebate/comments/1sy41ac/potential_data_center_coming_to_lake_of_ozarks/,wiebolwobble,2026-05-07,1778189165,1,1,0,0,Why confidential??  Cant be good! By the people for the people right?,1
+https://www.reddit.com/r/DataCenterDebate/comments/1sy41ac/potential_data_center_coming_to_lake_of_ozarks/,PureHeat5677,2026-05-12,1778552499,1,1,0,0,I think they sold us off a long time ago! ==-,1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1rhwdsd/stop_data_centers_in_west_virginia/,Theoriginallking,2026-03-18,1773833235,2,2,0,0,I love how people use data centers to say how much they hate data centers.,1
+https://www.reddit.com/r/DataCenterDebate/comments/1nx4pom/business_insider_data_center_map/,Bake-Desperate,2025-10-06,1759794972,3,3,0,0,Is there a copy outside of the paywall?,1
+https://www.reddit.com/r/DataCenterDebate/comments/1nx4pom/business_insider_data_center_map/,Necessary-Zone-3726,2025-11-07,1762530827,1,1,0,0,I haven't found it yet. I just did a trial to see and then canceled.,1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1nx4pom/business_insider_data_center_map/,Necessary-Zone-3726,2025-11-11,1762892629,1,1,0,0,Found a second source for mapping [https://www.datacentermap.com/usa/](https://www.datacentermap.com/usa/),1_2
+https://www.reddit.com/r/DataCenterDebate/comments/1sjj88d/data_centers_are_draining_tiny_texas_towns_rural/,nikbunt,2026-04-12,1776013970,1,1,0,0,Here in Florida we get a data center or a new housing development of 350 homes. Which uses more water and electric?  Homes!,1
+https://www.reddit.com/r/DataCenterDebate/comments/1ovb4nt/study_analyzes_potential_locations_for_data/,D-C-Guy,2025-11-12,1762981688,3,3,0,0,"The Wired article mostly focuses on power generation from a renewable standpoint.  It doesnt address a whole bunch of things that go into the decision process, including latency, the need to be close to your customer for faster service.  Virginia, Texas, Atlanta, Silicon Valley.  It doesnt address that Data Centers are being proposed wherever there is excess or stranded power capacity.  It doesnt address current reserve power capacity especially in relation to capacity factor - the ratio of actual energy produced by a power source over a specific period to the maximum possible energy it could have produced if it operated at continuous full power.  Grids dependent on renewables have long periods where energy capacity is reduced.  Wind capacity factor (35%), Solar capacity factor (25%) only generating power at 25% or 35% of their maximum power potential.    Data Centers require continuous power and like a base load that has a high-capacity factor (Nuclear  90%+).  Data Centers also require good fiber access which cut out large parts of North and South Dakota, Nebraska, Wyoming, and Montana. ",1
+https://www.reddit.com/r/DataCenterDebate/comments/1ovb4nt/study_analyzes_potential_locations_for_data/,brainscraps,2025-11-12,1762967842,1,1,0,0,Also it'd be rad if [u/Glad\_Syrup9252](https://www.reddit.com/user/Glad_Syrup9252/) could do a reaction / breakdown of the study video for the socials.,2
+https://www.reddit.com/r/DataCenterDebate/comments/1tjaxh9/theyre_building_the_data_centers_as_fast_as_they/,PhDCyberResearch,2026-05-21,1779401464,1,1,0,0,"Sharing this nationwide survey on datacenter impacts
+
+https://www.surveymonkey.com/r/T2KJHN2
+",1
+https://www.reddit.com/r/DataCenterDebate/comments/1t2lmtd/data_center_impact_study_opportunity/,Original-Afternoon20,2026-05-04,1777897178,3,3,0,0,"Just submitted. I cant see now that I filled out,  but what was contact info for wanting findings? Going to share with my local community in this battle right now now. Im helping lead local resistance. ",1
+https://www.reddit.com/r/DataCenterDebate/comments/1t2lmtd/data_center_impact_study_opportunity/,PhDCyberResearch,2026-05-05,1778015911,1,1,0,0,Dr Lingelbach Kembley.Lingelbach@mga.edu,1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1t2lmtd/data_center_impact_study_opportunity/,PhDCyberResearch,2026-05-19,1779222464,1,1,0,0,We have a group in Twiggs Co Ga on fb. Please share! Thank you!,1_2
+https://www.reddit.com/r/DataCenterDebate/comments/1r0h4gm/looking_for_national_perspective_and_realworld/,iamafigmentofyou2,2026-02-10,1770754931,2,2,0,0,You should look up Perfect Union and their data center series about people living next to data centers. Not a lot of positive things though. And sounds similar to how it went down with other communities.,1
+https://www.reddit.com/r/DataCenterDebate/comments/1r0h4gm/looking_for_national_perspective_and_realworld/,JunkMale975,2026-03-04,1772665600,2,2,0,0,"Just discovered two days ago that our mayor and aldermen approved a hush-hush data center in my town. Radius wise Im 1.2 miles across the interstate where it being put. Many, many residents (including myself) are up in arms that theyve shoved this through with zero info to the residents. News has gotten ahold of the story and it came out a few minutes ago that the quitclaim deed is to Amazon. A lot of us are still researching the pros and cons and coming up with way too many cons and we are not happy. Honestly Im pissed at the appearance of shady shenanigans by our council. They are now putting out vague feel good memos to try and stem the flood of complaints theyre getting. But it sounds like its a done deal. ",2
+https://www.reddit.com/r/DataCenterDebate/comments/1r0h4gm/looking_for_national_perspective_and_realworld/,Pinkylindel,2026-03-05,1772714711,1,1,0,0,"They probably got their $$ and spent it too, so how could they turn around the deal..",2_1
+https://www.reddit.com/r/DataCenterDebate/comments/1r0h4gm/looking_for_national_perspective_and_realworld/,Excellent-Finance251,2026-02-23,1771819077,1,1,0,0,"Were being told that theyre data centers, are they? I think its more nefarious.",3
+https://www.reddit.com/r/DataCenterDebate/comments/1qc8jir/allen_park_residents_our_city_is_considering/,Wild-Associate-4373,2026-01-14,1768359533,1,1,0,0,"So, like what is your plan for the resources instead?",1
+https://www.reddit.com/r/DataCenterDebate/comments/1qc8jir/allen_park_residents_our_city_is_considering/,Previous_Platform718,2026-01-14,1768411352,1,1,0,0,"&gt;These data centers need 10-100 acres of land, continuous high electricity loads, and billions of gallons of water for cooling.
+
+Saying ""10-100 acres"" is not helpful. The actual size of the proposed site is at 7500 Enterprise, Allen Drive. That plot is 11 acres (500,000sq/ft). It's a small data center, only 26MW.
+
+Saying ""billions of gallons of water"" is also not true. The data centers proposed are using closed-loop cooling. One time fill. Not billions of gallons. [https://solstice-data.com/sustainability/](https://solstice-data.com/sustainability/)",2
+https://www.reddit.com/r/DataCenterDebate/comments/1neukud/does_anyone_see_whats_happening_in_albania/,Glitch0racle,2025-09-17,1758139179,2,2,0,0,"My gut reaction here is this is a terrible idea lol. However, there are ALOT of details that aren't really explained (or at least i haven't seen them), and I wouldn't want to make any sort of actual determination until they release the implementation details. 
+
+iirc they are requiring a human to sign off on everything, so thats good in a way. Buuuuut if you or you're family are from the balkans and know how things work over there (like me - no shade meant on albania) then *cough cough* it may not work as intended",1
+https://www.reddit.com/r/DataCenterDebate/comments/1neukud/does_anyone_see_whats_happening_in_albania/,Solid_Assumption_581,2025-09-18,1758223323,3,3,0,0,"My family is, and I think this looks like a way to pass off blame and fabricate trust in the system where it shouldnt exist. 
+
+I also think there are Albanian nationals all over the AI industry (OpenAI former CTO and current owner of Thinking Machines) 
+This therefore, is also is investment maybe Albania wants, but with all the wrong potentials. I worry about what Albanian ExPats might do not understanding the scale of their influence nor the full details of the political and economic field theyre playing in.",1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1neukud/does_anyone_see_whats_happening_in_albania/,Glitch0racle,2025-09-18,1758225067,1,1,0,0,"""this looks like a way to pass off blame and fabricate trust in the system where it shouldnt exist."" 
+
+excellent take, I could definitely see this happening. I'm going to be keeping up on this story for sure. let's hope its an honest try to change things, and done properly",1_1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1neukud/does_anyone_see_whats_happening_in_albania/,Solid_Assumption_581,2025-10-15,1760499364,1,1,0,0,"Same. If you see anything feel free to make a post, or potential issues with the implementation. I am watching myself but would welcome any takes on as this unfolds.",1_1_1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1t9xtw6/the_us_is_spending_more_on_data_centers_than_on/,rodw,2026-05-13,1778631383,1,1,0,0,"I'm not sure how to interpret this graph.
+
+1. It's comparing construction costs, but data centers are substantially more expensive to build than offices (2x or more per square foot) and many include significant infrastructure costs (additional power and water lines) that a conventional office building being built in an existiting downtown or office park probably don't.
+
+2. In the US office buildings are currently sitting at something like 18% to 21% vacant. That's either slightly down year-over-year or a record high (depending on the source) but either way it's still well above the pre-COVID (pre-2020) rate.
+
+I'm not suggesting that we're not building out hyperscale data centers at a reckless and maybe irrational pace - nor that this chart isn't evidence of that fact - but at the same time I'm not sure whether or not it's surprising that we're spending more on the expensive, newish thing that there's a (real or anticipated) massive spike in demand for compared to the established market for which there's decreasing demand.
+
+We've been building office buildings for 100 years and many of them in the 30-50 year old range are still quite usable. We've been earnestly building data centers for around 25 years and this specific variety of data center for maybe 5-7 years at most.
+
+ETA: to be fair looking at the graph again it's suggestive that the increase in the data center line starting around 2023 is nearly perfectly matched by a decrease in the office building line, so it does seem like the one is replacing the other.
+
+But this is only an ~2 year trend. Is that a directional shift or just the way that commercial construction trends work? What does this look like when you add retail and housing construction into the mix?",1
+https://www.reddit.com/r/DataCenterDebate/comments/1shlbhp/using_data_centers_to_clean_water/,nikbunt,2026-04-10,1775840659,1,1,0,0,Not a matter of building a data center on a piece of land. Its a matter of a data center or 300 homes. Which takes more water?   The homes by far. ,1
+https://www.reddit.com/r/DataCenterDebate/comments/1shlbhp/using_data_centers_to_clean_water/,Acceptable-Okra-1494,2026-04-10,1775842586,1,1,0,0,"Well they should do whatever is needed to reduce harm Elon just said recently in relation to water recycling that he promised Memphis,  that he needs to focus on making sure Colusses2 is good before he cares about water recycling..going to never get said water recycling ",2
+https://www.reddit.com/r/DataCenterDebate/comments/1rle69u/research_project_about_ai_data_centers/,PutInternational6238,2026-03-12,1773276647,1,1,0,0,"Hello, while I do not have any current experience, my local city is looking to develop one. Would love to see any research I could borrow about this topic if you have any resources it would be greatly appreciated in our efforts!",1
+https://www.reddit.com/r/DataCenterDebate/comments/1rle69u/research_project_about_ai_data_centers/,Kooky_Text8299,2026-03-12,1773312843,1,1,0,0,"Hello! How interesting. Im curious to know which city you refer to? And do you position yourself positively or negatively towards the development of this data center? 
+
+I am currently working on this research project so I will share insights with you:)",1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1rle69u/research_project_about_ai_data_centers/,PutInternational6238,2026-03-12,1773318242,1,1,0,0,"Negatively, Ive heard of its effects on local water sources, the unregulated development of AI in total I am also against. The City is in South Bend IN. Plans dont seem super final yet but Im looking to organize and get ahead of it",1_1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1rle69u/research_project_about_ai_data_centers/,PutInternational6238,2026-03-12,1773318262,1,1,0,0,Thank you for being willing to share it with me too!,1_1_2
+https://www.reddit.com/r/DataCenterDebate/comments/1rle69u/research_project_about_ai_data_centers/,nikbunt,2026-04-05,1775382488,1,1,0,0,Im thinking heat is a commodity. Arent there customers for heat? Couldnt an office building use the heat? ,2
+https://www.reddit.com/r/DataCenterDebate/comments/1puopiz/trio_of_michigan_senate_democrats_introduce/,MorRobots,2025-12-29,1766974352,1,1,0,0,"If youre going to oppose a data center project, dont lead with water use.
+
+Yes, some facilities rely on evaporative cooling and that can be a serious draw on local water supplies. But water is also the easiest talking point for developers to dodge. Theyll say, Were air-cooled, everyone relaxes, and the conversation moves on. And once approvals are in place, the details can shift unless the permits clearly lock them down.
+
+Instead, focus on issues that dont evaporate the moment a lobbyist clears their throat.
+
+Talk about e-waste. These hyperscale builds churn through equipment fast. By the time one phase is finished, earlier gear is already headed for replacement. That creates a steady stream of discarded hardware, and your community ends up dealing with the disposal burden.
+
+Talk about diesel generators. Many projects lean heavily on on-site backup power, and the regulatory landscape around testing and emissions is full of gaps. Even when they follow the rules, the practical impact can still be more local air pollution and more risk concentrated near homes, schools, and businesses.
+
+Talk about noise. These facilities run loud: fans, chillers, transformers, generator tests, truck traffic. Within limits can still mean a constant industrial hum that changes what it feels like to live nearby.
+
+Talk about the grid. Data centers arent just another building. They can require major upgrades, new substations, and expensive transmission work. Too often, residents end up paying for that through higher rates or infrastructure charges while the benefits flow elsewhere.
+
+And talk about financial risk. A lot of these projects are built on aggressive deal structures and fast-moving capital. If the financing shifts or the market changes, your town can be left with a half-finished site or a massive, mostly empty shell. That becomes a long-term land-use problem, not the developers problem.
+
+If you mention water, keep it in proportion. Dont let it be the centerpiece. The goal is to keep the discussion on impacts your community cant be talked out of in one sentence.",1
+https://www.reddit.com/r/DataCenterDebate/comments/1ncx3vm/just_joined_then_fb_shows_me_this/,Glad_Syrup9252,2025-09-09,1757461181,3,3,0,0,"What's the WUE? I do love me some Alt National Park Service but would love some primary sources &amp; metrics- with no scale or real details it's hard to say. Some water usage is irreducible (eg, bathrooms, kitchen sink) while some is egregious. How does this compare to the industry standard, and what do they mean by ""consume""?",1
+https://www.reddit.com/r/DataCenterDebate/comments/1ncx3vm/just_joined_then_fb_shows_me_this/,brainscraps,2025-09-10,1757499793,1,1,0,0,"The closest thing I could find to a primary source
+https://www.menomonie-wi.gov/527/Potential-Data-Center-FAQ?fbclid=IwdGRzaAMuMIdjbGNrAxsFiGV4dG4DYWVtAjExAAEet16jBrytj9G_mP7zIOMRIIBk3WdRzFVYEMUPlAGjAD7o4b8A5_e4tYU_Oa0_aem_9OE85b_LaHcX_Zl5gzOnXA",1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_you_live_near_an_ai_data_center_whats_the/,Previous_Platform718,2026-05-19,1779224013,4,4,0,0,"I work in the industry. They are extremely quiet, to the point where you can use a regular tone of voice within feet of the building. You won't really be able to get recordings of the ""droning"" or ""humming"" because you'd have to get on the property to actually hear that. 
+
+They are not actually loud. [Here's a video of a guy having a normal level conversation standing between two of them on the same street.](https://youtu.be/xu2DTsFg1sc?t=134)
+
+You always see the same 2-3 videos shared on Reddit of extremely loud ones but there's usually something else going on - like people on Reddit always post that night time clip of Vantage VA-2 which is temporarily running on a loud gas turbine. Scummy behavior to be sure, but not indicative of what a regular data center sounds like.",1
+https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_you_live_near_an_ai_data_center_whats_the/,One-Huckleberry-9807,2026-05-21,1779379883,1,1,0,0,"You fail to mention the effects of Infrasound that the data centers put out. This can even cause people to have seizures at worst and to feel uneasy at best. The sound is an issue at all levels, even a continuous humm can drive people crazy.",1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_you_live_near_an_ai_data_center_whats_the/,One-Huckleberry-9807,2026-05-21,1779380953,1,1,0,0,"Actually, after watching that YouTube video you recommended makes me hate them even more. Idk what you meant by saying you work in the industry, what do you do?",1_2
+https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_you_live_near_an_ai_data_center_whats_the/,[deleted],2026-05-19,1779217158,1,1,0,0,[deleted],2
+https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_you_live_near_an_ai_data_center_whats_the/,No_Landscape_9255,2026-05-19,1779217662,1,1,0,0,"Thank you. I was particularly interested in getting touch with folks who have actual audio recording from nearby their homes.
+
+There are quite a few on reddit but I was hoping to find out a bit more what it's like living with it, if it's 24/7 or at certain times, and more.
+
+",2_1
+https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_you_live_near_an_ai_data_center_whats_the/,Previous_Platform718,2026-05-19,1779223924,0,0,0,0,This is an extremely motivated video. Absolutely not a good starting point. ,2_2
+https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_you_live_near_an_ai_data_center_whats_the/,rodw,2026-05-19,1779217284,1,1,0,0,"Depending on what criteria you are using there are  between ~800 - 4500 data centers in the US, including one in every state: https://dcmap.us/
+
+If you live in the US there might be one close by",3
+https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_you_live_near_an_ai_data_center_whats_the/,No_Landscape_9255,2026-05-19,1779217742,1,1,0,0,"That's a brilliant resource, thank you.",3_1
+https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_you_live_near_an_ai_data_center_whats_the/,rodw,2026-05-19,1779217872,1,1,0,0,Make sure you distinguish existing vs planned. There are a lot planned.,3_1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_you_live_near_an_ai_data_center_whats_the/,No_Landscape_9255,2026-05-19,1779218235,1,1,0,0,"Good call, see the key. Thanks.
+
+  
+ps. I'm trying to get in touch with people living nearby current AI data centers to try and get first hand recordings of the droning / humming sounds. Any recommends how to find those people? 
+
+Currently digging through news stories.",3_1_1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_you_live_near_an_ai_data_center_whats_the/,rodw,2026-05-19,1779219228,1,1,0,0,If you want to play the numbers reach out to the NOVA (Northern Virginia) subreddit ,3_1_1_1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_you_live_near_an_ai_data_center_whats_the/,No_Landscape_9255,2026-05-19,1779219437,1,1,0,0,Thanks again.,3_1_1_1_1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_you_live_near_an_ai_data_center_whats_the/,Powerful_Put5667,2026-05-19,1779228983,1,1,0,0,"There are many groups trying to get data centers to control their sound levels. We were told that it would sound like the volume a 8 lane freeway makes at rush hour traffic by the developer prebuild when questioned about noise level. 
+  Have you pulled up groups that have been created by people who live next to them? I know that there has been many noise complaints made about Microsofts noise level in Mt Pleasant WI from neighbors. ",4
+https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_you_live_near_an_ai_data_center_whats_the/,No_Landscape_9255,2026-05-19,1779232034,0,0,0,0,that's really helpful thank you. no i wasn't aware of those i will look into it. if anyone has any contacts or links be much appreciated. thanks again.,4_1
+https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_you_live_near_an_ai_data_center_whats_the/,One-Huckleberry-9807,2026-05-20,1779320526,1,1,0,0,This would be a great video to watch. People that live near them are having health issues and they are loud. You can't hear birds anymore and they shake houses. https://youtu.be/t-8TDOFqkQA?si=HeshN6k1KqVoHVfl,5
+https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_you_live_near_an_ai_data_center_whats_the/,venusianoperator,2026-05-21,1779384268,1,1,0,0,this is going to have a terrible imapct on the birds ,5_1
+https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_you_live_near_an_ai_data_center_whats_the/,One-Huckleberry-9807,2026-05-21,1779393843,1,1,0,0,"All living things, unfortunately. To bad they don't care.",5_1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1tbhdtx/im_concerned_about_data_centers/,HELLCAT6203,2026-05-13,1778681565,1,1,0,0,"I wouldn't be to worried, there already is a movement now that is taken the AI in data centers and moving it back to onsite. Companies are now starting to see the security issues of using the cloud and want it in house now. Also we will start to see the data centers start scaling back in the next few years because of this and also people getting home units. Nvidia has been buying up all the chip companies that are making small more power efficient AI specific chips. There running out of time and know it is why. just like bitcoin it's not much longer till someone makes a chip that is 1000 times faster and more efficient then Nvidia GPU's. so the DATA Centers going in now alot will be not what they are later. Right now is the cash grab phase. There also hitting road blocks in the software that still has to be ironed out. ",1
+https://www.reddit.com/r/DataCenterDebate/comments/1tbhdtx/im_concerned_about_data_centers/,skyblaze2012,2026-05-15,1778808611,1,1,0,0,"This is good to know. My understanding is its like the land rush AI competing with other tech giants and other countries to utilize AGI.  I am hoping like what you said ,companies will scale back this size.  I have taken a real interest in AI just in the last 3 months, some of this is I realize the impact. I was there when home computers came into our lives, I love technology. Ai is something different though. I love nature and I thought dumbly that our country was becoming more environmentally conscious, now I dont see this. Bladerunner-I have always liked that movie. And when the actual time the movie took was supposed to take place-2019? When that year came and went I was like oh good, our world didnt become that dismal. And hopefully it wont. ",1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1tbhdtx/im_concerned_about_data_centers/,HELLCAT6203,2026-05-15,1778845210,1,1,0,0,"I hear you the bubble will bust but when and how long from now I don't know. I even work in the AI industry and design complex networks racks for them. and even I can not tell when it going to burst. but where starting to see issues. Like one is the competition is getting to many and not enough money to go around. We are also starting to see issues where the consumers of AI data don't have the system to use it because we are taken away from there supply which is cannibalizing our own sales. Then you have new tech that is being worked on that going to knock Nvidia off top charts chips that are dedicated to AI and designed with architecture of how minds think. Nvidia is like a sledge hammer trying to hit this issue, the next gen will be more like delicate and precise scalple, but There still just prototype stage and some have been bought out by Nvidia already so the can maintain there foot print. I see alot of tech grow to from the day when they claimed we would only ever need 1gb to we will only need 10gb networking till now where we have 1tb networking and even that is hitting its end. but like all tech it hits a road block it can't solve and it goes stale for awhile. Until either the next big thing or someone makes something better, bit coin prime example of this they hit a wall where people could mine all day with gpus and make coins everyone was making money then out of no where asic came and GPU's couldn't keep up. ",1_1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1tbhdtx/im_concerned_about_data_centers/,skyblaze2012,2026-05-16,1778894170,1,1,0,0,I considered myself fairly intelligent and work in a higher tech field but this stuff is beyond my understanding. But I want to learn more. I guess I have learned to see the forest instead of just the trees. Humans are intelligent beings. Its enough for me. Humanity is creating something that already exists. Im not saying dont create it Im saying if the cost of it all is planet earth is it worth it? Thank you so much for sharing. ,1_1_1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1tbhdtx/im_concerned_about_data_centers/,Thoughts_For_Food_,2026-05-13,1778636660,1,1,0,0,"People say the same thing every time there is something new at scale. Heck, when going from 4G to 5G people where still going out there protesting the ""new"" antennas.",2
+https://www.reddit.com/r/DataCenterDebate/comments/1t6kfnq/meta_data_center/,Necessary-Zone-3726,2026-05-11,1778505235,1,1,0,0,"Not to be rude, but I think you're in the wrong subreddit. This is a community tracking the environmental impact of data centers and efforts to halt their construction.....",1
+https://www.reddit.com/r/DataCenterDebate/comments/1t6kfnq/meta_data_center/,munkey-socks,2026-05-14,1778725800,1,1,0,0,Have you tried r/datacenters ? ,2
+https://www.reddit.com/r/DataCenterDebate/comments/1t5q5sp/i_built_network_where_strangers_can_work_together/,Previous_Platform718,2026-05-06,1778102901,4,4,0,0,"""Recently, we've seen communities protesting data centers""
+
+So you built an app with AI running in a data center.
+
+Which is an online app, meaning it's hosted in a data center. 
+
+Posting about it on Reddit, a site hosted in data centers.
+
+With AI generated text, also from a data center.",1
+https://www.reddit.com/r/DataCenterDebate/comments/1t5q5sp/i_built_network_where_strangers_can_work_together/,AdagioEmpty8579,2026-05-06,1778103926,2,2,0,0,Correct,1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1t5q5sp/i_built_network_where_strangers_can_work_together/,AdagioEmpty8579,2026-05-06,1778104615,2,2,0,0,"I should clarify, I am not claiming something is good or bad. I'm just playing the game with the cards we are dealt. ",1_2
+https://www.reddit.com/r/DataCenterDebate/comments/1rpwxti/oracle_is_building_yesterdays_data_centers_with/,AmputatorBot,2026-03-10,1773149346,1,1,0,0,"It looks like OP posted an AMP link. These should load faster, but AMP is controversial because of [concerns over privacy and the Open Web](https://www.reddit.com/r/AmputatorBot/comments/ehrq3z/why_did_i_build_amputatorbot).
+
+Maybe check out **the canonical page** instead: **[https://www.cnbc.com/2026/03/09/oracle-is-building-yesterdays-data-centers-with-tomorrows-debt.html](https://www.cnbc.com/2026/03/09/oracle-is-building-yesterdays-data-centers-with-tomorrows-debt.html)**
+
+*****
+
+ ^(I'm a bot | )[^(Why &amp; About)](https://www.reddit.com/r/AmputatorBot/comments/ehrq3z/why_did_i_build_amputatorbot)^( | )[^(Summon: u/AmputatorBot)](https://www.reddit.com/r/AmputatorBot/comments/cchly3/you_can_now_summon_amputatorbot/)",1
+https://www.reddit.com/r/DataCenterDebate/comments/1o90mrc/googleadanis_ai_data_center_in_vizag_india_tech/,robert6691,2025-10-17,1760710425,1,1,0,0,concern: land sale are already being discussed before any EIA assessment,1
+https://www.reddit.com/r/DataCenterDebate/comments/1t60vl0/infraestructura_uplink_10gbps/,Edogmad,2026-05-07,1778173303,2,2,0,0,/r/lostredditors,1
+https://www.reddit.com/r/DataCenterDebate/comments/1t5usqi/kevin_oleary_says_opponents_of_his_utah_data/,longwaybroadband,2026-05-07,1778165424,0,0,0,0,"very true Mr. Wonderful...these crazy people against progress, science, and technology as they just are an echo chamber of lies, exaggeration, and misinformation in regards to data centers, AI, and 5G!!",1
+https://www.reddit.com/r/DataCenterDebate/comments/1t52n5e/what_is_going_on/,Previous_Platform718,2026-05-06,1778074957,2,2,0,0,"Some data centers use cooling systems where water is evaporated into the atmosphere.
+
+When AI was getting big, a lot of those data center providers built or repurposed data centers using thta type of cooling to support the AI workload.
+
+But then data center providers saw how much power AI would use, and realized that building more of those evaporative cooling systems would be really inefficient.
+
+So they're basically all switching to (or have already switched to) the closed-loop system that is wasteless.",1
+https://www.reddit.com/r/DataCenterDebate/comments/1t52n5e/what_is_going_on/,ParoSparrow79,2026-05-06,1778080087,1,1,0,0,Thank you for explaining that,1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1symgpk/tsmc_north_phoenix_environmental_question/,Previous_Platform718,2026-05-02,1777700623,2,2,0,0,This is not for a data center. TSMC does chip fabrication. Those are different things. ,1
+https://www.reddit.com/r/DataCenterDebate/comments/1smscbg/public_comments_on_ai_dc/,Necessary-Zone-3726,2026-04-20,1776693216,2,2,0,0,"I'd ask if they are getting some kind of credit or premier pricing on electricity, and how will their electrical load affect your utility bill. Also, ask some similar on water usage, if there is a shortage in your area would the data center be the first to reduce their usage, or would the onus be on the community",1
+https://www.reddit.com/r/DataCenterDebate/comments/1smscbg/public_comments_on_ai_dc/,Xfactor1210,2026-04-20,1776703389,1,1,0,0,Great stuff. Exactly what I was asking/hoping for. I greatly appreciate it.,1_1
+https://www.reddit.com/r/DataCenterDebate/comments/1rx70nc/sustainability/,dinglebarry66595,2026-03-18,1773853974,1,1,0,0,I posted this in r/engineering they pointed out part of it is made with chat GPT all I did was copy paste my notes and ask it to put it in bullet points make it presentation ready it was all clumped together it was all written with no spaces no nothing no AI words were used they were my words my notes chat gpt's bullet points charge gpt's spacing for the paragraph that's it I was up all night brainstorming this whole idea I just wanted to post it and go to sleep,1
+https://www.reddit.com/r/DataCenterDebate/comments/1rrsezn/seawater/,Wild-Associate-4373,2026-03-13,1773373037,3,3,0,0,"Its a lot to clean, and very corrosive. ",1
+https://www.reddit.com/r/DataCenterDebate/comments/1rrsezn/seawater/,ThunderbirdRider,2026-03-12,1773327697,2,2,0,0,"Yes it can. I think the biggest problem with data centers however is the cost of doing that versus getting subsidized electricity is the issue. Especially since companies like Blackrock own both data centers AND utility companies, so they have little to no incentive to move their data centers offshore where they could get seawater cooling.
+
+Force those companies to divest their utility holdings, and make the data centers pay for ALL the electric they use and we might see this change.",2
+https://www.reddit.com/r/DataCenterDebate/comments/1rrsezn/seawater/,ThunderbirdRider,2026-03-12,1773327712,1,1,0,0,Also: [https://www.sciencedirect.com/science/article/abs/pii/S2213138821005397](https://www.sciencedirect.com/science/article/abs/pii/S2213138821005397) ,2_1
+https://www.reddit.com/r/DataCenterDebate/comments/1rrsezn/seawater/,Wolvercote,2026-03-12,1773327965,1,1,0,0,Thanks,2_2
+https://www.reddit.com/r/DataCenterDebate/comments/1rrsezn/seawater/,Previous_Platform718,2026-03-12,1773342900,1,1,0,0,"You're probably asking this in the context of ""data centers use a lot of water"" which is a problem better solved by just using a closed-loop cooling system.",3
+https://www.reddit.com/r/DataCenterDebate/comments/1rrsezn/seawater/,Wolvercote,2026-03-12,1773342968,1,1,0,0,Yep...you're right on why I asked. ,3_1
+https://www.reddit.com/r/DataCenterDebate/comments/1r0ysn7/who_are_the_major_cooling_companies/,deadplant5,2026-04-02,1775151144,1,1,0,0,"Vertiv, Schneider, Mitsubishi, Stulz, ",1

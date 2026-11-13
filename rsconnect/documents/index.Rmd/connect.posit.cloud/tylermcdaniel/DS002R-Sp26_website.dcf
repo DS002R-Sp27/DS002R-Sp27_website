@@ -1,0 +1,10 @@
+name: DS002R-Sp26_website
+title:
+username: tylermcdaniel
+account: tylermcdaniel
+server: connect.posit.cloud
+hostUrl: https://api.connect.posit.cloud/v1
+appId: 01a1d204-15c4-e0ca-225f-d6663656d2e5
+bundleId:
+url: https://connect.posit.cloud/tylermcdaniel/content/01a1d204-15c4-e0ca-225f-d6663656d2e5
+version: 1

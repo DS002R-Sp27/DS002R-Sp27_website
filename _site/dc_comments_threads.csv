@@ -1,0 +1,576 @@
+url,author,date,timestamp,title,text,subreddit,score,upvotes,downvotes,up_ratio,total_awards_received,golds,cross_posts,comments
+https://www.reddit.com/r/DataCenterDebate/comments/1rzvevk/can_data_centers_protect_coastal_cities_from/,omfalos,2026-03-21,1774109543,Can data centers protect coastal cities from rising sea levels by drinking up the ocean and permanently deleting water from existence?,,DataCenterDebate,0,0,0,0.33,0,0,0,3
+https://www.reddit.com/r/DataCenterDebate/comments/1ncyygw/how_to_get_involved/,Glad_Syrup9252,2025-09-09,1757461496,How To Get Involved,"There are a few key ways to get involved:
+- Link pending data center projects - use as many primary sources as possible - what was submitted to the planning department? News articles often obscure the real details here.
+- Link existing data centers folks are mad about, and details about their utilities and sustainability metrics you can find
+- Help us figure out *who owns the identified-bad datacenters*
+- Help us figure out *who leases space in the identified-bad datacenters*
+- Help find sources for secondary sources that didn't include them
+- Do the Math- compare data centers, calculate costs relative to the region, and help people understand the relative scale- compare numbers to commonly practiced consumer activities, like toilet flushes. 
+- FOIA as much as you can about anything you can - dig into who planned them, what their power consumption usage numbers are, what got reported on, who approved what, get real details",DataCenterDebate,21,21,0,1,0,0,0,2
+https://www.reddit.com/r/DataCenterDebate/comments/1nctafm/define_environmentally_friendly/,Glad_Syrup9252,2025-09-09,1757447802,"Define ""Environmentally Friendly""","Let's establish a shared truth about what we are evaluating these data centers on. 
+Which data centers are doing it right and which data centers are doing it obviously wrong? The industry isn't totally new to this. They actually have employed literally thousands of individuals who keep track of this stuff. Many of those people are environmental scientists. Many of those scientists got into this line of work to make this problem better. 
+
+Here's what the industry currently reports on: 
+
+**Standard Carbon and Water Tracking Measures**
+
+**Carbon Metrics:**
+- **PUE (Power Usage Effectiveness)**: Ratio of total facility energy to IT equipment energy. Industry average is 1.56; best-in-class achieve 1.09-1.15
+- **CUE (Carbon Usage Effectiveness)**: Total CO‚ emissions per kWh of IT energy consumed  
+- **REF (Renewable Energy Factor)**: Percentage of renewable energy used
+
+**Water Metrics:**
+- **WUE (Water Usage Effectiveness)**: Liters of water per kWh of IT energy
+  - Industry average: 1.8 L/kWh
+  - Best performers: 0.15-0.20 L/kWh (AWS, Meta)
+  - Air-cooled only: 0 L/kWh
+
+**EU Regulatory Requirements (As of 2024-2025):**
+
+**Energy Efficiency Directive (EED) Requirements**
+
+All data centers e500kW must report annually by May 15th:
+- Floor area and installed power
+- Annual data traffic and storage volumes  
+- Energy consumption metrics (PUE)
+- Temperature set points
+- Waste heat utilization
+- Water usage (WUE)
+- Renewable energy usage
+
+Starting September 15, 2024, reporting is mandatory to a central European database, with data publicly available in aggregated form. Individual server-level reporting isn't required - metrics are facility-wide.
+
+**Corporate Sustainability Reporting Directive (CSRD)**
+
+Large companies must report 2024 data in 2025, including greenhouse gas emissions goals. This applies at the corporate level, not individual facilities.
+
+**  Best Practices - Responsible Data Centers:** 
+
+**Water Conservation:**
+- Using recycled/reclaimed water (Switch in Reno)
+- Air-cooled systems in water-stressed areas
+- Microsoft committed to 95% reduction in evaporative cooling by 2024
+- Closed-loop systems preventing evaporation
+
+**Location Strategy:**
+- Avoiding drought-prone areas
+- Locating near renewable energy sources
+- Considering local climate for cooling efficiency
+
+**Transparency:**
+- Publishing detailed WUE and PUE metrics quarterly
+- Site-specific reporting (not just company-wide averages)
+- Distinguishing between water sources (potable vs. recycled)
+
+**Questions to Ask About Any Data Center:**
+
+1. **Water Source**: Potable, recycled, or alternative sources?
+2. **Local Context**: Is it in a water-stressed region? (Check drought.gov data)
+3. **Actual vs. Promised**: Compare operational metrics to initial promises
+4. **Community Benefit**: Jobs created vs. resources consumed ratio
+5. **Transparency Level**: Do they publish facility-specific metrics?
+
+
+- [EU Commission - EU-wide scheme for rating sustainability of data centres](https://energy.ec.europa.eu/news/commission-adopts-eu-wide-scheme-rating-sustainability-data-centres-2024-03-15_en) (March 15, 2024)
+- [Google Data Centers - Power usage effectiveness](https://datacenters.google/efficiency/)
+- [AWS Sustainability - Data Centers](https://aws.amazon.com/sustainability/data-centers/)",DataCenterDebate,17,17,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1ntfw2v/the_data_center_water_mystery_why_nobody_knows/,Apprehensive-Ad3538,2025-09-29,1759146671,The Data Center Water Mystery: Why Nobody Knows How Much Big Tech Actually Uses,"**TL;DR**: European data centers must report water usage, US ones don't. The industry keeps citing 9-year-old studies. Climate explains most efficiency differences, not corporate practices. Major violations go unpunished.
+
+# The US vs EU: A Tale of Two Approaches
+
+**United States**: No federal requirements. Companies report what they want, when they want.
+
+**European Union**: Mandatory reporting for all data centers over 500kW since 2023. Companies must disclose total water input, potable water usage, and efficiency metrics annually.
+
+The numbers tell the story: fewer than one-third of US data center operators track water consumption - ([Global Investigative Journalism Network](https://gijn.org/stories/researching-water-consumption-data-centers/)), while the EU's framework covers 50,000 companies ([European Comission](https://green-forum.ec.europa.eu/news/policy-paper-synergies-between-eco-management-and-audit-scheme-emas-and-corporate-sustainability-2024-04-08_en)) Singapore has specific efficiency targets, Australia mandates energy ratingsand the US has... voluntary guidelines.
+
+Even where US states try to step up, industry lobbying waters down the requirements (pun intended). California's recent water transparency bills passed only after being ""substantially weakened"" by tech industry opposition.
+
+# When States Try (And Fail) To Get Answers
+
+Texas is projecting data center water use could hit **399 billion gallons annually by 2030**that's 6.6% of the entire state's water supply. [Austin Chronicle](https://www.austinchronicle.com/news/2025-07-25/texas-is-still-in-drought-and-ai-data-centers-are-quietly-guzzling-up-water/) Their response? Send out surveys. The result? Only one-third of data centers bothered to respond. [Texas Tribune](https://www.texastribune.org/2025/09/25/texas-data-center-water-use/)
+
+Virginia's legislative study ([JLARC report](https://jlarc.virginia.gov/landing-2024-data-centers-in-virginia.asp)) found data centers used 2.1 billion gallons in 2023, but the state has ""no systematic oversight"" of water impacts.
+
+California tried to require basic water disclosure in Assembly Bill 93, but tech lobbying from groups like the Data Center Coalition successfully ""gutted"" stronger provisions ([CalMatters analysis](https://calmatters.org/environment/2025/09/data-centers-california-electricity-rates/)).
+
+The pattern is clear: states identify the problem, propose solutions, industry pushes back, and we end up with toothless requirements.
+
+# Big Tech's Selective Transparency Game
+
+All the major playersAmazon, Google, Microsoft, Metapromise to be ""water positive"" by 2030, meaning they'll give back more water than they use. Sounds great, but their reporting tells only part of the story.
+
+Here's what we actually know:
+
+* **Amazon**: 0.15 L/kWh efficiency, won't say total consumption ([AWS sustainability reports](https://sustainability.aboutamazon.com/products-services/aws-cloud))
+* **Microsoft**: 0.30 L/kWh average, 39% improvement since 2021 ([company blog](https://www.microsoft.com/en-us/microsoft-cloud/blog/2024/12/09/sustainable-by-design-next-generation-datacenters-consume-zero-water-for-cooling/))
+* **Google**: 8.1 billion gallons total in 2024, detailed facility data, but no efficiency metrics ([Environmental Report 2025](https://sustainability.google/reports/2025-google-water-stewardship-project-portfolio/))
+* **Meta**: 0.20 L/kWh for new facilities ([sustainability reports](https://dgtlinfra.com/data-center-water-usage/))
+
+The weirdest part? Google operates major facilities in the EU where efficiency reporting is **mandatory**, yet they still don't publish WUE numbers globally. They'll tell you Council Bluffs, Iowa used 1 billion gallons in 2024, but not how efficiently.
+
+Meanwhile, the dirty secret is that cooling water is just the tip of the iceberg. Lawrence Berkeley Lab estimates that **indirect water consumption from electricity generation is 12 times higher** than direct cooling use. [Global Investigative Journalism](https://gijn.org/stories/researching-water-consumption-data-centers/)
+
+# Climate factors dominate water efficiency variance over operational practices
+
+Technical research conclusively demonstrates that **climate factors drive WUE variance far more than operational negligence**, challenging assumptions about facility management effectiveness. Academic studies document 100% WUE variance depending on cooling technology and climate conditions, compared to 20-30% improvements possible through operational optimization.
+
+A foundational study by Lei and Masanet (2022) in *Resources, Conservation and Recycling* provides the most comprehensive quantitative analysis. Using a hybrid physical-statistical approach validated across **10 data center archetypes in 15 U.S. climate zones**, researchers documented **WUE values with relative differences of up to 100%** depending on cooling technologies, efficiencies, and locations. [ScienceDirect ](https://www.sciencedirect.com/science/article/abs/pii/S0921344922001719) The study found that climate effects are strongest for airside economizers with adiabatic or water-cooled chiller systems, [ResearchGate ](https://www.researchgate.net/publication/359723826_Climate-_and_technology-specific_PUE_and_WUE_estimations_for_US_data_centers_using_a_hybrid_statistical_and_thermodynamics-based_approach) establishing the scientific basis for climate dominance over operational factors. [ScienceDirect ](https://www.sciencedirect.com/science/article/abs/pii/S0921344922001719)
+
+# We're Still Using 2016 Data in 2025
+
+The most frequently cited study on data center water use? A 2016 Lawrence Berkeley National Laboratory report that's nearly a decade old. This matters because:
+
+1. **Pre-AI era**: The study predates widespread AI workloads that have completely different power and cooling patterns
+2. **Different geography**: Data centers have shifted toward warmer climates since then
+3. **Old cooling tech**: Modern efficiency improvements aren't captured
+4. **Methodology issues**: May include hydroelectric reservoir evaporation that happens regardless of power generation ([Construction Physics analysis](https://www.construction-physics.com/p/i-was-wrong-about-data-center-water))
+
+Yet policymakers, researchers, and journalists still cite this 9-year-old data as current industry reality. We're making decisions about a rapidly evolving industry based on ancient history.
+
+Congressional Research Service reports and GAO studies ([GAO AI environmental analysis](https://www.gao.gov/products/gao-25-107172)) continue referencing this outdated baseline, showing how data gaps cascade through policy development.
+
+# When Violations Happen, Nothing Really Happens
+
+xAI's Memphis facility is the poster child for weak enforcement. Elon Musk's AI company:
+
+* Runs **35 unpermitted gas turbines** for over a year
+* Consumes up to **1 million gallons daily** without proper water permits
+* Operates in a historically Black neighborhood already suffering environmental injustice
+* Gets slapped on the wrist, keeps operating
+
+This isn't unique to xAI. EPA enforcement data shows **no specific data center water enforcement actions in 2024** despite documented violations across the country.
+
+The Moms Clean Air Force and Tennessee Bar Association ([environmental groups](https://www.momscleanairforce.org/xai-in-memphis/)) have filed federal complaints, but the facility continues operating. Meanwhile, CNBC reports ([investigation](https://www.cnbc.com/2024/08/28/musk-xai-accused-of-worsening-memphis-smog-with-unauthorized-turbines.html)) that air quality monitors show increased pollution levels since operations began.
+
+The message is clear: violate environmental rules, face minimal consequences, keep operating.
+
+# Why This All Matters Now
+
+AI training vs. inference creates wildly different water demands, but our regulations treat them the same. Training GPT-3 used 5+ million liters once; inference uses 16.9 milliliters per query, but with billions of daily queries.
+
+Current measurement approaches are fundamentally broken:
+
+* No credit for using recycled water vs. drinking water
+* Can't distinguish water withdrawal vs. actual consumption
+* Ignore that most ""water use"" is actually electricity generation
+* One-size-fits-all metrics for completely different workloads
+
+Academic researchers are calling for new frameworks ([water consumption research](https://www.sciencedirect.com/science/article/abs/pii/S0921344925001892)), but industry standards development is moving slowly while AI explodes.
+
+Meanwhile, investigative reporting from The Conversation and SourceMaterial ([water investigation](https://theconversation.com/data-centers-consume-massive-amounts-of-water-companies-rarely-tell-the-public-exactly-how-much-262901)) shows that companies ""rarely tell the public exactly how much"" water they use, even as demand skyrockets.
+
+# The Bottom Line
+
+We're flying blind on one of the fastest-growing sources of water consumption. The EU figured this out and mandated transparency. US policymakers are still debating whether companies should even have to tell us what they're using.
+
+Without mandatory, standardized reporting, we can't tell good actors from bad ones, efficient facilities from water wasters, or real progress from greenwashing. As AI drives unprecedented growth, that's a problem we can't afford to ignore much longer.",DataCenterDebate,17,17,0,1,0,0,0,2
+https://www.reddit.com/r/DataCenterDebate/comments/1tfxeep/do_we_actually_need_all_of_these_new_data_centers/,jakesteeley,2026-05-17,1779042124,Do we actually need all of these new data centers?,"What is the reasoning behind it? Do we have enough already? Cant we improve the efficiency of what we already have?
+
+Seems like the big boys are simply building more for bragging rights than anything else.",DataCenterDebate,13,13,0,1,0,0,0,9
+https://www.reddit.com/r/DataCenterDebate/comments/1t9uetc/get_kevin_removed_from_shark_tank_for_utah_data/,88370,2026-05-11,1778478943,Get Kevin Removed from Shark Tank for Utah Data Center,"You can submit complaints to ABC here (Click on ""Submit Programming Feedback"" and choose Shark Tank: [https://support.abc.com/hc/en-us?return\_to=%2Fhc%2Frequests](https://support.abc.com/hc/en-us?return_to=%2Fhc%2Frequests)
+
+I highly recommend that we all submit requests and boycott ABC until he is either removed or halts his data center. I want to continue living in Utah. But he may force me out when the lake dries.",DataCenterDebate,12,12,0,0.93,0,0,0,2
+https://www.reddit.com/r/DataCenterDebate/comments/1njnclf/cooling_strategies_used_by_data_centers_expanding/,Glitch0racle,2025-09-17,1758138610,Cooling strategies used by data centers (Expanding on the 'Env Friendly' thread),"This is to supplement the Define ""Environmentally Friendly"" thread with a bit of extra information.
+
+**Cooling methods:**
+
+# 1. Closed-loop / zero-water liquid cooling
+
+* **Description:** Water circulates thru sealed pipes or on chip-level systems. Excess heat is removed via dry coolers or refrigerant loops. Therefore, there is no evaporative loss.
+* **Examples:** Microsofts new zero-water builds; some advanced HPC clusters
+* **Impact:** ***No potable water draw for cooling.*** This is the current gold standard for efficient data-centers (with respect to water usage) and is being spearheaded by MS
+
+# 2. Alternative-source cooling (seawater, recycled wastewater)
+
+* **Description:** Uses non-potable water (treated municipal wastewater, seawater, industrial gray water)
+* **Examples:** Googles Hamina seawater facility in Finland. AWSs U.S. data centers are shifting to reclaimed municipal water, as well as Google &amp; Meta in some U.S. metro areas.
+* **Impact:** ***Low*** ***impact on potable water*** but it depends on a steady reclaimed supply.
+
+# 3. Air-cooled / hybrid systems
+
+* **Description:** Relies on outside air + mechanical chillers. In humid or hot zones, sometimes paired with evaporative assist.
+* **Examples:** Meta and Google use this in temperate climates; some AWS inland builds.
+* **Impact:** ***Moderate***\*\*.\*\* it uses less water than full towers, but chillers need more power (so there's a carbon-water tradeoff).
+
+# 4. High-efficiency evaporative towers
+
+* **Description:** The evolution of traditional evaporative cooling. It's tuned for efficiency (water use per kWh - kilowatt hour - is minimized), this may or may not include condensate recovery from HVAC.
+* **Examples:** Metas WUE \~0.20 L/kWh in 2023 (# needs confirmation)
+* **Impact:** ***MediumHigh***\*\*.\*\* Still consumes potable water, unless it's paired with some type of reclamation system.
+
+# 5. Standard evaporative cooling towers
+
+* **Description:** Sprays water into towers; evaporation removes heat. Requires constant makeup water.
+* **Examples:** Legacy facilities, especially inland without reclaimed hookups.
+* **Impact:** ***Highest***\*\*.\*\* This strategy uses millions of gallons per year/per site. For sure it's unsustainable in water stressed areas.
+
+# 
+
+Other interesting factors to expand on:
+
+* Waste heat reuse - ex the excess heat is used to heat the building
+* Power usage Effectiveness/Efficacy
+
+Note: I'm a computer scientist but am certainly no expert on data centers. I compiled this info both on my own and by using AI (running on my own energy efficient cluster ;) ). So, review this info and if you see a mistake, or if I missed something please comment and I will happily edit the list.",DataCenterDebate,11,11,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1nfc75u/bessemer_al_project_marvel_bessemer_hyperscale/,earth-sound,2025-09-12,1757704818,"Bessemer, AL - Project Marvel - Bessemer Hyperscale Data Center","In Bessemer, AL, there is a proposed $14.4 billion, 1,200 megawatt data center project on 700 acres of property which would include 18 buildings (each slightly larger than a Walmart Supercenter) totaling 4.5 million square feet. 
+
+The property is currently owned by Valley Creek Land &amp; Timber of Jackson, MS. The project was proposed by Logistics Land Investment LLC (incorporated in DE in 2023) which used an address belonging to TPA Group (commercial real estate firm in Atlanta, GA) in filings with the city. 
+
+Logistics Land Investment, LLC also filed to build a data center in Venus, TX in 2024. 
+
+There isn't much publicly available documentation about the project. The city hasn't provided documents requested by media because Bessemer Mayor Kenneth Gulley, his chief of staff, and the city attorney have signed non-disclosure agreements related to the project. 
+
+It has been estimated it will need 2 million gallons of water per day for cooling, which the Warrior River Water Authority has said it could not provide without ""significant upgrades to the existing water system"". However, the exact cooling method that will be used (which determines the water usage estimates) is currently unknown because an end user has not been secured. 
+
+Brad Kaaber, a representative of Logistics Land Investments LLC., claimed the company had completed various studies for the location, and would provide the zoning commission with copies, but none have surfaced publicly. 
+
+The estimated 1,200 megawatts per year it would need is \~11.4% of the entire state of Alabama's current annual usage. The 2 million gallons of water per day is equivalent to the typical use of 6,700 households - about 2/3 of the entire Bessemer population. Alabama doesn't have a comprehensive state water management plan. 
+
+[https://www.bhamwiki.com/w/Bessemer\_Hyperscale\_Data\_Center](https://www.bhamwiki.com/w/Bessemer_Hyperscale_Data_Center)  
+[https://www.bizjournals.com/birmingham/news/2025/03/18/massive-data-center-proposed-for-bessemer.html](https://www.bizjournals.com/birmingham/news/2025/03/18/massive-data-center-proposed-for-bessemer.html)  
+[https://abc3340.com/news/abc-3340-news-iteam/bessemer-city-council-sends-data-center-proposal-back-to-planning-and-zoning-logistic-land-investments-jefferson-county-rock-mountain-lake-mccalla-proposal-environmental-concerns-public-opposition-information-city-council-meeting-follow-up](https://abc3340.com/news/abc-3340-news-iteam/bessemer-city-council-sends-data-center-proposal-back-to-planning-and-zoning-logistic-land-investments-jefferson-county-rock-mountain-lake-mccalla-proposal-environmental-concerns-public-opposition-information-city-council-meeting-follow-up)  
+[https://www.wbrc.com/2025/08/20/bessemer-city-council-sends-proposal-149b-data-center-planning-committee-neighbors-continue-express-concerns/](https://www.wbrc.com/2025/08/20/bessemer-city-council-sends-proposal-149b-data-center-planning-committee-neighbors-continue-express-concerns/)  
+[https://alabamareflector.com/2025/06/23/alabama-city-may-change-its-laws-to-allow-one-of-the-countrys-largest-data-centers/](https://alabamareflector.com/2025/06/23/alabama-city-may-change-its-laws-to-allow-one-of-the-countrys-largest-data-centers/)  
+[https://insideclimatenews.org/news/12072025/bessemer-alabama-water-utility-data-center-upgrades/](https://insideclimatenews.org/news/12072025/bessemer-alabama-water-utility-data-center-upgrades/)  
+[https://alabamareflector.com/2025/07/27/how-could-a-proposed-hyperscale-data-center-affect-bessemer/](https://alabamareflector.com/2025/07/27/how-could-a-proposed-hyperscale-data-center-affect-bessemer/)  
+",DataCenterDebate,9,9,0,0.92,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1pf5zol/amazon_data_center_linked_to_rare_cancers_and/,ThunderbirdRider,2025-12-05,1764967068,Amazon data center linked to rare cancers and miscarriages in Oregon,[https://www.techspot.com/news/110442-amazon-data-centers-linked-rare-cancers-miscarriages-oregon.html](https://www.techspot.com/news/110442-amazon-data-centers-linked-rare-cancers-miscarriages-oregon.html) ,DataCenterDebate,9,9,0,1,0,0,0,2
+https://www.reddit.com/r/DataCenterDebate/comments/1oewdlh/clarification_request_only_debating_environmental/,JonathanCookPodcast,2025-10-24,1761308862,Clarification Request: Only Debating Environmental Impacts Of Data Centers?,"I'm part of a community that's organizing in opposition to a data center that's been proposed in our area. I'm thankful to the people who have set up this subreddit to debate and learn about data centers.
+
+My question for participation here is whether discussion here is strictly limited to environmental issues. There are other issues with data centers to consider: Political, economic, human rights, etc. 
+
+I just want to be a good citizen here, and respect the boundaries. Thanks!",DataCenterDebate,9,9,0,0.91,0,0,0,2
+https://www.reddit.com/r/DataCenterDebate/comments/1nd3wze/local_research_collab_western_pa_pittsburgh/,brainscraps,2025-09-10,1757475733,[Local Research Collab] - Western PA / Pittsburgh,"**Pittsburgh has an initiative to become the ""AI Capital of the World""** and they want to build a lot of compute resources here, and seems like they have zero interest in matching compute with renewable / non-fossil energy sources.
+
+This is less about debate and more about bringing to light what we know about the future of our region taking shape, powered by more and more fracking and natural gas extraction. 
+
+I'll start by commenting with some sources that I know about and would love if folks could add to the knowledge base. 
+
+",DataCenterDebate,9,9,0,1,0,0,0,5
+https://www.reddit.com/r/DataCenterDebate/comments/1tdt605/the_most_bipartisan_issue_since_beer_opposition/,EchoOfOppenheimer,2026-05-15,1778843602,"The Most Bipartisan Issue Since Beer: Opposition to Data Centers - Americans have soured on data centers, polls show, and the sentiment is profoundly bipartisan. How will that change our politics?",,DataCenterDebate,8,8,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1r9ahh8/halt_the_implementation_and_expansion_of_data/,Practical_Papaya_315,2026-02-19,1771533100,Halt the implementation and expansion of data centers,Please sign. ,DataCenterDebate,6,6,0,0.88,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1sy41ac/potential_data_center_coming_to_lake_of_ozarks/,emmotchi,2026-04-28,1777388705,Potential Data Center coming to Lake of Ozarks (Camden County)?,,DataCenterDebate,6,6,0,1,0,0,0,2
+https://www.reddit.com/r/DataCenterDebate/comments/1rhwdsd/stop_data_centers_in_west_virginia/,aubshill,2026-03-01,1772369052,Stop data centers in West Virginia,"Big Tech companies are moving into West Virginia to build massive data centersand our state law is letting them bypass local control and drain our water. A $4 billion facility just got announced for Berkeley County, and another gas turbine-powered data center is already proposed in Tucker County.
+
+Here's what's at stake: West Virginia already has the highest rate of drinking water violations in the U.S. These data centers can consume up to 5 million gallons of water \*per day\*. They dump warm water that destroys cold-water fisheries, pump out nitrogen dioxide and diesel pollution, and meanwhile House Bill 2014 lets them skip local zoning rules and strip counties of millions in property tax revenue. Schools and communities lose funding while corporations profit.
+
+We started a petition asking our state legislators and Governor to eliminate HB 2014 and stop these data centers before they drain our resources, poison our air, and take away our say in what happens to our own communities. If you live in WV or care about what's happening here, this is worth a look. Anyone else frustrated that corporations get to make these decisions for us? If this matters to you too, consider signing and sharing.",DataCenterDebate,6,6,0,1,0,0,0,1
+https://www.reddit.com/r/DataCenterDebate/comments/1nx4pom/business_insider_data_center_map/,Necessary-Zone-3726,2025-10-03,1759510715,Business Insider Data Center Map,"Looks like business insider has an interactive map of the Data Centers and approximate usage for water and power in the US.  
+[https://www.businessinsider.com/data-center-locations-us-map-ai-boom-2025-9](https://www.businessinsider.com/data-center-locations-us-map-ai-boom-2025-9)",DataCenterDebate,6,6,0,0.88,0,0,0,3
+https://www.reddit.com/r/DataCenterDebate/comments/1tcy3gy/houston_neighborhood_may_soon_hear_nonstop_hum_of/,Ill-Championship-117,2026-05-14,1778765017,Houston neighborhood may soon hear nonstop hum of a massive data center,,DataCenterDebate,5,5,0,0.86,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1sjj88d/data_centers_are_draining_tiny_texas_towns_rural/,Pleasant_Air_3052,2026-04-12,1776011488,Data centers are draining tiny Texas towns. Rural Texans are fighting back.,,DataCenterDebate,5,5,0,1,0,0,0,1
+https://www.reddit.com/r/DataCenterDebate/comments/1ovb4nt/study_analyzes_potential_locations_for_data/,brainscraps,2025-11-12,1762967739,Study analyzes potential locations for data centers in the US,"Here's [a Wired article](https://www.wired.com/story/heres-where-to-build-data-centers-to-keep-emissions-down/) \- which is probably paywalled.   
+  
+But the study [is found here](https://www.nature.com/articles/s41893-025-01681-y)   
+Conclusions:   
+
+
+&gt; The best locations for a data center over the next few years in the US are states that strike a balance between these two inputs: Texas, Montana, Nebraska, and South Dakota, the analysis finds, are optimal candidates for AI server installations.",DataCenterDebate,5,5,0,1,0,0,0,2
+https://www.reddit.com/r/DataCenterDebate/comments/1o8gwkw/exposing_the_dark_side_of_americas_ai_data_center/,Daflehrer1,2025-10-16,1760645543,Exposing The Dark Side of America's AI Data Center Explosion,"I watched this video. It documents how data centers affect individuals, communities, and entire regions. I believe it's worthy of careful consideration. It may also fill in gaps in one's knowledge about data centers. ",DataCenterDebate,6,6,0,0.99,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1tjaxh9/theyre_building_the_data_centers_as_fast_as_they/,EchoOfOppenheimer,2026-05-21,1779341604,"They're building the data centers as fast as they can because once the people wake up to what they really are, it will be shutdown immediately. - The data centers aren't for storing your cute pictures of cats, they're being built for complete control of human beings.",,DataCenterDebate,5,5,0,1,0,0,0,1
+https://www.reddit.com/r/DataCenterDebate/comments/1tc2uij/tiny_texas_county_fights_back_against/,Pleasant_Air_3052,2026-05-13,1778685770,Tiny Texas county fights back against billion-dollar data center rush,,DataCenterDebate,3,3,0,0.81,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1t8pejy/organizing/,alice_apathy,2026-05-09,1778366527,Organizing,"Curious to know if there are any groups or communities that are against the anti-democratic construction of these massive AI data centers? Like a discord thats less surveyed. 
+
+Purely for educational purposes. ",DataCenterDebate,4,4,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1t7gu8r/stop_the_construction_of_a_data_center_in/,Southern_Boat_4609,2026-05-08,1778265885,"Stop the construction of a data center in Inyokern, CA",Please take a moment to sign this petition for me. Thank you very much,DataCenterDebate,4,4,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1t2lmtd/data_center_impact_study_opportunity/,PhDCyberResearch,2026-05-03,1777815266,Data center Impact Study Opportunity,"Hi All,   
+We are conducting a pilot study on datacenter impacts. Please consider participating and share far and wide. This is a nationwide project. Thank you!
+
+https://www.surveymonkey.com/r/T2KJHN2",DataCenterDebate,4,4,0,1,0,0,2,3
+https://www.reddit.com/r/DataCenterDebate/comments/1rqewhi/city_imposes_water_restrictions_on_future_data/,IF_stone,2026-03-11,1773189282,City imposes water restrictions on future data centre in Nanaimo,,DataCenterDebate,4,4,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1r0h4gm/looking_for_national_perspective_and_realworld/,Wesleytyler,2026-02-09,1770672405,Looking for national perspective and real-world experience.,"
+Were a small rural county Marion SC facing a proposed **water-cooled data center** that was approved under an **NDA**, listed under a **code name (Project Liberty)**, and voted on while the area was under **rare winter storm / emergency conditions**. Many residents didnt know what was being approved until after the vote.
+
+Im trying to understand whether what were seeing matches patterns others have experienced elsewhere:
+
+"" Are NDAs common in data center deals, and do they often limit meaningful public input until after key votes?
+"" Have communities been told systems were closed loop, only to later find out there was significant **water loss, chemical treatment, or discharge**?
+"" Did promised benefits (jobs, infrastructure upgrades, broadband access) actually materialize once the facility was built?
+"" Were water use, power demand, noise, heat, or **property value impacts** understated early on?
+"" Has anyone dealt with **Eagle Myra, LLC**, **Stream Data Centers**, or similar single-purpose LLC structures?
+"" Is it common for approvals to happen during emergencies or periods when public attention is limited?
+
+Im especially interested in hearing from people who **live near a data center now** or whose town has already gone through this  both **positive and negative experiences**. Were genuinely trying to learn from communities that have already been there so we can make informed decisions instead of guesses.
+
+If youve lived with one, worked with one, regulated one, or opposed one, your insight would be extremely helpful.
+",DataCenterDebate,4,4,0,0.83,0,0,0,4
+https://www.reddit.com/r/DataCenterDebate/comments/1qc8jir/allen_park_residents_our_city_is_considering/,Carhop2020,2026-01-14,1768350637,Allen Park residents: Our city is considering massive AI data centers that could drain our resources,"Help protect Allen Park from AI data centers that could strain our power grid, drain millions of gallons of our water, and eliminate green spaces! These facilities demand enormous resources while potentially sticking us with higher energy costs and reduced public funding.
+
+I started a petition asking our city council to reject these proposals. These data centers need 10-100  acres of land, continuous high electricity loads, and billions of gallons of water for cooling. Meanwhile, they'll likely seek tax incentives that could pull money away from essential city services we actually need.
+
+Our resources should serve Allen Park residents first, not corporate interests that may not benefit our community.
+
+Anyone else think our city's being asked to sacrifice too much for these facilities? If this matters to you too, consider signing and sharing.
+
+https://www.change.org/p/allen-park-residents-only-rejection-of-ai-data-centers-in-allen-park-mi?utm_campaign=starter_dashboard&amp;utm_medium=reddit_post&amp;utm_source=share_petition&amp;utm_term=starter_dashboard&amp;recruiter=819536203
+
+For NON-ALLEN PARK RESIDENTS IN SOUTHGATE, TAYLOR, LINCOLN PARK AND DEARBORN-opposing the near by data center in Allen Park, MI, please sign the below petition:
+
+https://c.org/bsF2ZSKtJk
+",DataCenterDebate,3,3,0,0.81,0,0,0,2
+https://www.reddit.com/r/DataCenterDebate/comments/1neukud/does_anyone_see_whats_happening_in_albania/,Solid_Assumption_581,2025-09-12,1757653732,Does anyone see whats happening in Albania?,"What do we as a group think about the data center necessity impacts of AI and how this could affect the economic interests in Albania? Theres already a lot of corruption and Id generally argue against massive investment in building data centers for this use or any use when we know as little about the environmental or psychosocial impacts of AI. That being said, I need to bounce off someone on philosophy here and on what this even means for the nation of albanians if its here to stay.",DataCenterDebate,4,4,0,1,0,0,0,4
+https://www.reddit.com/r/DataCenterDebate/comments/1tfbipk/stratos_data_center_natural_gas_supplyusage/,MtnSkiBikeHike,2026-05-17,1778981405,Stratos Data Center - Natural Gas Supply/Usage,,DataCenterDebate,3,3,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1taxber/what_a_chart/,EchoOfOppenheimer,2026-05-12,1778581089,What a chart,,DataCenterDebate,3,3,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1t9xtw6/the_us_is_spending_more_on_data_centers_than_on/,EchoOfOppenheimer,2026-05-11,1778490598,The US is spending more on data centers than on offices. Building housing for the new workforce.,,DataCenterDebate,3,3,0,1,0,0,0,1
+https://www.reddit.com/r/DataCenterDebate/comments/1shlbhp/using_data_centers_to_clean_water/,Relevant_Spell2568,2026-04-10,1775824635,Using Data Centers to Clean Water.,I was reading into the Oregon data center settlement. From my understanding Amazons data center is concentrating the nitrates that are already existing in the ground water due to farming. I was thinking what if we require all these data centers to filter their waste water before dumping it? If they did that it would actually start reducing ground water contamination. I realize with continued farming its not going to clean the water but maybe off set new contamination? What are your thoughts?,DataCenterDebate,3,3,0,1,0,0,1,2
+https://www.reddit.com/r/DataCenterDebate/comments/1rle69u/research_project_about_ai_data_centers/,Kooky_Text8299,2026-03-05,1772706544,Research project about AI data centers,Hi! Im doing a research project for Stockholm University about the environmental impact of AI data centers and I am curious to know lived experiences related to AI data centers,DataCenterDebate,3,3,0,1,0,0,1,5
+https://www.reddit.com/r/DataCenterDebate/comments/1qfit21/wyoming_data_center_would_consume_5x_more_power/,ClimateResilient,2026-01-17,1768669947,Wyoming data center would consume 5x more power than all homes in the state.,"Wyoming is poised to become an artificial-intelligence powerhouse after [Laramie County commissioners](https://drive.google.com/file/d/1eO9Ud5fZhFaaFsGbcN0Vk27qT0sSm4le/view?usp=drive_link) last week unanimously voted to move forward with the construction of a 1.8 gigawatt data center designed to eventually scale up to 10 gigawatts, which would be the largest single AI campus in the U.S. 
+
+The AI campus is expected to open with a capacity of 1.8 gigawatts of electricity, over five times more than the roughly 238,000 homes in Wyoming currently use, with the potential to scale up to 10 gigawatts, pending state and county approvals. One gigawatt can power approximately 750,000 to one million average U.S. homes, according to the [U.S. Department of Energy.](https://www.energy.gov/cmei/articles/how-much-power-1-gigawatt) 
+
+[The Associated Press reported](https://apnews.com/article/ai-artificial-intelligence-data-center-electricity-wyoming-cheyenne-44da7974e2d942acd8bf003ebe2e855a) that electricity needed to power the first phase of the center is predicted to double the entire state of Wyomings current energy generation.",DataCenterDebate,3,3,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1puopiz/trio_of_michigan_senate_democrats_introduce/,NoKingsCoalition,2025-12-24,1766586784,Trio of Michigan Senate Democrats introduce policy to address data center water usage,,DataCenterDebate,3,3,0,0.8,0,0,0,1
+https://www.reddit.com/r/DataCenterDebate/comments/1pdnkx1/data_centers_are_poison/,Daflehrer1,2025-12-04,1764813817,Data Centers are poison,,DataCenterDebate,2,2,0,0.67,0,0,1,0
+https://www.reddit.com/r/DataCenterDebate/comments/1p898ym/sign_the_petition/,Beneficial-Ad-301,2025-11-27,1764267684,Sign the Petition,,DataCenterDebate,3,3,0,0.8,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1otipfr/hoodwinked_in_the_hothouse_reveals_new_chapter_on/,forgetme_naut,2025-11-10,1762792864,Hoodwinked in the Hothouse reveals new chapter on Artificial Intelligence for Climate False Solutions Guide,,DataCenterDebate,3,3,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1o0s8nx/customers_in_7_pjm_states_paid_44b_for_data/,brainscraps,2025-10-07,1759873388,Customers in 7 PJM states paid $4.4B for data center transmission lines in 2024,[https://www.utilitydive.com/news/pjm-data-center-transmission-costs-ratepayers/761579/](https://www.utilitydive.com/news/pjm-data-center-transmission-costs-ratepayers/761579/),DataCenterDebate,3,3,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1neddxa/tucson_project_blue_amazon/,badgerbouse,2025-09-11,1757608148,Tucson - Project Blue - Amazon,"Amazon data center in discussion in AZ:
+
+[https://www.tucsonaz.gov/Government/Office-of-the-City-Manager/Project-Blue-Information](https://www.tucsonaz.gov/Government/Office-of-the-City-Manager/Project-Blue-Information)",DataCenterDebate,3,3,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1ncx3vm/just_joined_then_fb_shows_me_this/,themealwormguy,2025-09-09,1757456748,"Just joined, then FB shows me this","[https://www.facebook.com/share/p/17BcC9JYWB/](https://www.facebook.com/share/p/17BcC9JYWB/)
+
+Is this one good or bad?",DataCenterDebate,3,3,0,1,0,0,0,2
+https://www.reddit.com/r/DataCenterDebate/comments/1thtw5q/do_you_live_near_an_ai_data_center_whats_the/,No_Landscape_9255,2026-05-19,1779211674,Do you live near an AI data center? Whats the noise like?,"Im an artist working on a project about the impact of AI data centers (for things like ChatGPT / Grok / Anthropic / LLMS etc)
+
+
+
+Particularly any noise that might affect folks that live nearby... is it loud, is it totally fine?
+
+
+
+Is that anyone here? 
+
+
+
+If so, Id love to ask you a couple of quick qs, and if possible get an audio recording of whats it like.",DataCenterDebate,2,2,0,0.75,0,0,0,16
+https://www.reddit.com/r/DataCenterDebate/comments/1tgrsz4/lessons_from_lowell_how_a_data_centers_expansion/,fmcrimson,2026-05-18,1779121691,Lessons From Lowell: How a Data Centers Expansion Has Choked a Small Town,"In Massachusetts, Governor Maura T. Healey made a promise to transform the state into a global leader in AI innovation. In 2024, she introduced the Mass Leads Act, a $100 million proposal to attract AI talent to the state by providing a tax exemption for data center construction, making it easier for future companies to break ground on new centers.
+
+From pharmaceutical companies to venture capital firms, Healeys efforts were lauded by companies in every corner of the state.
+
+But a data center in Lowell, Massachusetts encapsulates the local stakes of expansion.
+
+On March 10, Lowells city council was set to vote to pass a moratorium on the Markley groups expansion  a legislative tactic to push back against construction that has recently been employed by local residents across the country...
+
+Read the full story at the link!",DataCenterDebate,2,2,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1tdxrs0/stop_the_data_centers/,Captain_Lake_Babe,2026-05-15,1778854759,STOP THE DATA CENTERS!,,DataCenterDebate,2,2,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1tbhdtx/im_concerned_about_data_centers/,skyblaze2012,2026-05-12,1778626022,Im concerned about data centers,"Ive never in my lifetime seen anything like this on this scale. And Im concerned. For many reasons. Beyond the impact AI may have on our lives, Im seeing and reading about data centers coming into communities and quickly building. People in the communities are protesting and concerned but I keep seeing and reading over and over again, despite community concern, city officials allowed the data center to proceed with the build as if peoples concern are ignored.  This worries me. It feels like something extremely big is coming within this. Im not happy with the overall lack of environment safety put in place and just read another political leaders lifting requirements on environmental rules. I could keep going on and on. But if the farmland is being bought at large prices, where will crops be grown? The fallout to our environment is mind numbing. Climate change -I thought this should be a priority, from everything Im reading these data center are BAD for the environment. I thought our country had lots of problems before, but now Im not recognizing the United States anymore. When I wrote that the word United came to mind. How are we united ? In the context of so many things.  Ive never been a supporter of nuclear power because of all the hazards and I feel there was some regulation. Where is the regulation for these data centers?   One thing is clear: money talks. Money is driving these and people with power and politics is allowing it. ",DataCenterDebate,2,2,0,0.67,0,0,0,5
+https://www.reddit.com/r/DataCenterDebate/comments/1t7gvmg/stop_the_construction_of_a_data_center_in/,Southern_Boat_4609,2026-05-08,1778265961,"Stop the construction of a data center in Inyokern, CA",,DataCenterDebate,2,2,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1t6kfnq/meta_data_center/,Mysterious_Tax3617,2026-05-07,1778181359,Meta data center,"I work currently at a meta site as a contractor , I was offered a higher position and pay with another contractor at the same site , being that my current contractor fails to pay me on time , I have accepted that offer , now meta supposedly have a 6 month cool down period being I cant switch from my contractor to another for a 6 month period , but many people have gotten around this but Im wanting to know has anyone gone through this process with success and how ? Please I really need this job.  
+\#meta #metadatacenter",DataCenterDebate,2,2,0,1,0,0,1,2
+https://www.reddit.com/r/DataCenterDebate/comments/1t6iyiq/texas_republicans_have_a_data_center_problem/,Necessary-Zone-3726,2026-05-07,1778178265,Texas Republicans have a data center problem,[https://www.texastribune.org/2026/05/07/texas-republicans-data-centers-rural/](https://www.texastribune.org/2026/05/07/texas-republicans-data-centers-rural/),DataCenterDebate,2,2,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1t6f0gd/there_are_many_days_where_utah_has_the_worst_air/,CSpringsC7,2026-05-07,1778170060,There Are Many Days Where Utah Has The Worst Air Quality In The Entire World,,DataCenterDebate,2,2,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1t5q5sp/i_built_network_where_strangers_can_work_together/,AdagioEmpty8579,2026-05-06,1778102147,I built network where strangers can work together on missions,"Recently, we've seen communities protesting data centers, millions taking to the street in Iran, billions of Christians united in prayer. 
+
+Imagine what would happen if these people could collaborate on shared goals?
+
+I'm building The Substrate  a coordination network where anyone can post a goal and let the open source world bring it to life. 
+
+A shared environment for people with common dreams. 
+
+The science behind it is stigmergy and self-organizaiton  the same mechanism that lets ant colonies solve complex problems without a central brain. 
+
+It's a rough draft right now, so please share suggestions. I think it could help a lot of people if it works. 
+
+[https://substrate-teal.vercel.app/](https://substrate-teal.vercel.app/)
+
+Git: [https://github.com/drewski2step/substrate](https://github.com/drewski2step/substrate)
+
+",DataCenterDebate,2,2,0,1,0,0,1,3
+https://www.reddit.com/r/DataCenterDebate/comments/1sgahbc/journalist_grills_wv_governor_on_data_centers/,Former_Childhood_667,2026-04-09,1775694605,Journalist grills WV Governor on Data Centers,https://www.localnewslive.com/2026/04/08/west-virginia-data-center-boom-draws-criticism-over-costs-resources/,DataCenterDebate,2,2,0,1,0,0,1,0
+https://www.reddit.com/r/DataCenterDebate/comments/1rpwxti/oracle_is_building_yesterdays_data_centers_with/,swe129,2026-03-10,1773149333,Oracle is building yesterdays data centers with tomorrows debt,,DataCenterDebate,2,2,0,1,0,0,0,1
+https://www.reddit.com/r/DataCenterDebate/comments/1rflej4/are_we_subsidizing_ai_through_our_electric_bills/,energysage-official,2026-02-26,1772137713,Are we subsidizing AI through our electric bills?,,DataCenterDebate,2,2,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1rb2hav/just_launched_energy_empire_meet_the_people/,JigarShahDC,2026-02-21,1771707869,Just launched Energy Empire: meet the people behind Clean Energy Dominance,"Energy Empire is a video podcast about how scale actually happens.
+
+Each week, [Jamie Nolan](https://www.linkedin.com/in/jamiemnolan/) and I break down whats happening in our lives and sit down with the people whove built, financed, and governed energy systems  inside the real constraints of capital, policy, and infrastructure.
+
+When I started, we were alternative energy.
+
+Today, clean energy dominates new electricity generation  but we dont always act or feel dominant.
+
+That disconnect is where the opportunity lies.
+
+The defining wealth-creation story of this generation isnt software. Its infrastructure: energy, power, and the systems everything else depends on.
+
+**If you want to understand where the economy is headed, how energy shapes your daily life, and whos behind the billion-dollar decisions building the future  Energy Empire is your guide.**
+
+Watch the trailer: [https://www.energyempire.fm](https://www.energyempire.fm/)",DataCenterDebate,2,2,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1qxartt/6_acres_a_river_and_a_dream_can_i_build_a_data/,[deleted],2026-02-06,1770361367,"6 Acres, a River, and a Dream: Can I build a Data Center in rural Telangana?",,DataCenterDebate,2,2,0,0.75,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1qq1q43/data_center_company_thinks_this_terrifying_image/,CleanUpYrMess,2026-01-29,1769670546,Data center company thinks this terrifying image of data center multiplicity helps them,,DataCenterDebate,2,2,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1qpzk8x/top_7_upcoming_data_centers_in_arizona/,Unique_Bat_7794,2026-01-29,1769663589,Top 7 Upcoming Data Centers in Arizona,,DataCenterDebate,2,2,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1qknj27/will_data_centers_become_obsolete_a_detailed/,Unique_Bat_7794,2026-01-23,1769164780,Will Data Centers Become Obsolete? A Detailed Analysis,,DataCenterDebate,2,2,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1qhs18t/one_thing_youd_fix_in_indian_datacenters/,BharatDC_Manager,2026-01-20,1768885574,One thing youd fix in Indian datacenters?,"I work at an Indian datacenter and Im genuinely curious  if you could improve one thing about datacenters or hosting providers here, what would it be?
+
+Support, pricing, transparency, network quality, docs& anything.
+
+Honest feedback welcome.",DataCenterDebate,2,2,0,0.75,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1qepy2b/podcast_on_dc_sustainability/,rsodhi999,2026-01-16,1768592374,Podcast on DC sustainability,,DataCenterDebate,2,2,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1pzdis0/hyperscale_data_centers_a_detailed_analyisis/,Unique_Bat_7794,2025-12-30,1767085945,Hyperscale Data Centers: A Detailed Analyisis,,DataCenterDebate,2,2,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1pq6ij6/data_centers_hidden_toll/,snowtime_2024,2025-12-19,1766102790,Data Centers Hidden Toll,https://youtu.be/AjOFIuIJX98?si=1gpBFk8wO4aR5ttG,DataCenterDebate,2,2,0,0.75,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1o90mrc/googleadanis_ai_data_center_in_vizag_india_tech/,robert6691,2025-10-17,1760705963,"GoogleAdanis AI Data Center in Vizag, India: Tech miracle or another crisis waiting to happen?",,DataCenterDebate,2,2,0,1,0,0,0,1
+https://www.reddit.com/r/DataCenterDebate/comments/1tjsad9/a_proposal_for_a_data_center_is_popping_up_less/,GrittySchmiddy,2026-05-21,1779385874,A proposal for a data center is popping up less than a mile from my home. How do I fight it?,,DataCenterDebate,1,1,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1thabm3/blackstone_raises_175_billion_in_first_aiera_dc/,munkey-socks,2026-05-19,1779160036,Blackstone raises $1.75 billion in first AI-era DC REIT IPO,,DataCenterDebate,1,1,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1tgor2r/data_centers/,Ok-Prize5322,2026-05-18,1779115402,DATA CENTERS,"Your "" data centers"" are BTC and stable coin mining facilities. prove me wrong -  cashless city coming up. Don't want to hear about ""data harvesting"" as they've been doing that for years with 3rd party applications. And don't want to hear about FLOCK systems as they've also been doing that since TSA was implemented, hence why we also have front facing cameras. 
+
+GENIUS Act
+CLARITY Act 
+
+
+
+",DataCenterDebate,1,1,0,0.6,0,0,1,0
+https://www.reddit.com/r/DataCenterDebate/comments/1tdvibw/data_center_tracking_map/,Necessary-Zone-3726,2026-05-15,1778849628,Data center Tracking Map," New tracking map with all datacenters locations and pending community actions 
+
+[https://datacentertracker.org/](https://datacentertracker.org/)",DataCenterDebate,1,1,0,0.67,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1t7cjfj/what_part_of_the_data_center_they_want_to_build/,CSpringsC7,2026-05-08,1778256819,What part of the data center they want to build in Utah will be bitcoin mining?,,DataCenterDebate,1,1,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1t60vl0/infraestructura_uplink_10gbps/,ITingenieurs,2026-05-07,1778130514,Infraestructura / uplink 10Gbps,"Hola comunidad,
+
+Ayuda porfavor, alguien conoce opciones en CDMX/o  Villahermosa para realizar transferencia masiva de datos hacia AWS S3 (\~cientos de TB) y necesito referencias de proveedores serios que puedan ofrecer:  
+uplink dedicado real de 10Gbps  
+colocation o espacio temporal para NAS/storage  
+buena conectividad hacia AWS  
+SLA y estabilidad empresarial  
+He visto referencias de Equinix, KIO y algunos carriers, pero quisiera saber experiencias reales de ingenieros o empresas que hayan trabajado cargas pesadas de transferencia.  
+¿Qué proveedores recomendarían en México para este tipo de operación?  
+Gracias.",DataCenterDebate,1,1,0,0.99,0,0,2,1
+https://www.reddit.com/r/DataCenterDebate/comments/1t5usqi/kevin_oleary_says_opponents_of_his_utah_data/,coffeequeen0523,2026-05-07,1778113348,Kevin O'Leary says opponents of his Utah data center are 'professional protesters'  and some are powered by AI,,DataCenterDebate,1,1,0,1,0,0,0,1
+https://www.reddit.com/r/DataCenterDebate/comments/1t5m3nu/tldr_the_digital_independence_manifesto_executive/,EchoProfessional6996,2026-05-06,1778093456,"TL;DR: THE DIGITAL INDEPENDENCE MANIFESTO Executive Summary: This document outlines the exploitation of local resources and personal data by trillion-dollar AI companies and tech elites. It argues that personal autonomy is reclaimed through ""silence"" and a return to physical, manual labor. Re",,DataCenterDebate,1,1,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1t52n5e/what_is_going_on/,ParoSparrow79,2026-05-06,1778041944,WHAT IS GOING ON??????,,DataCenterDebate,1,1,0,0.66,0,0,0,2
+https://www.reddit.com/r/DataCenterDebate/comments/1t35hnj/ypsilanti_utility_board_halts_university_of/,Fluid-Tomatillo-4971,2026-05-04,1777863144,Ypsilanti utility board halts University of Michigan nuclear weapons data center,"The Ypsilanti Community Utilities Authority (YCUA) voted unanimously on April 22 to impose a 12-month moratorium on water and sewage services for new data centers, temporarily blocking a $1.25 billion facility proposed jointly by the University of Michigan and the Los Alamos National Laboratory (LANL)  the birthplace of the atomic bomb.
+
+The proposed complex would sit on 144 acres along the Huron River, drawing 100 megawatts of power and consuming up to one million gallons of fresh water per day  directly competing with the needs of local residents. A LANL official openly confirmed at a public meeting that the facility would be used for nuclear weapons simulation and classified national security research.
+
+The data center is part of a broader militarization of Michigan's economy, championed by Democratic Governor Gretchen Whitmer and the state's Democratic establishment  cynically sold to workers as a ""job creation"" initiative. Meanwhile, U-M has collaborated in the persecution of Chinese researchers, including the case of postdoctoral scholar Danhao Wang, who died by suicide the day after being interrogated by federal agents.
+
+The moratorium is a victory, but only a temporary one. The university and the National Nuclear Security Administration will use the next 12 months to regroup and force the project through. Stopping it permanently requires more than appeals to Democratic officials  it requires the independent mobilization of the working class.",DataCenterDebate,1,1,0,0.67,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1t07vkc/lake_of_the_ozarks_residents_protest_a_data/,emmotchi,2026-04-30,1777580583,Lake of the Ozarks Residents Protest a Data Center by KRCG 13,,DataCenterDebate,1,1,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1symgpk/tsmc_north_phoenix_environmental_question/,Loud-Squirrel-7752,2026-04-29,1777431321,TSMC north Phoenix environmental question,I read online that TSMC chip plant in north Phoenix will be allotted 17 millions gallons of water from the city of Phoenix per day once all three phases are completed. Can someone who understands closed loop systems explain to me how they would need that much water per day?,DataCenterDebate,1,1,0,1,0,0,0,1
+https://www.reddit.com/r/DataCenterDebate/comments/1smscbg/public_comments_on_ai_dc/,Xfactor1210,2026-04-16,1776310997,Public comments on AI DC,"I have an email accepting public comments on a proposed AI data center until May 1st.
+
+It's in Little Rock, Arkansas, and I was hoping for some suggestions on what I should ask if anyone has any insight.
+
+Thanks",DataCenterDebate,1,1,0,1,0,0,0,2
+https://www.reddit.com/r/DataCenterDebate/comments/1smgp7o/whats_the_furthest_youve_traveled_or_relocated/,VoltGridsJobs,2026-04-15,1776282293,Whats the furthest youve traveled or relocated for a data center project?,,DataCenterDebate,1,1,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1sitvi1/the_tradeoff_between_public_cloud_flexibility_and/,Logical-Hedgehog-368,2026-04-11,1775938998,The trade-off between Public Cloud flexibility and Private GPU Cluster stability for Enterprise AI.,,DataCenterDebate,1,1,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1sintjk/average_gasoline_prices_are_spiking_5gallon_could/,JigarShahDC,2026-04-11,1775925317,"Average Gasoline Prices Are Spiking, $5/gallon Could Be Here Soon",,DataCenterDebate,1,1,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1s78ehq/do_most_smes_need_99999_uptime/,RicknMorty26,2026-03-29,1774821670,Do most SMEs need 99.999% uptime?,,DataCenterDebate,1,1,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1rx70nc/sustainability/,dinglebarry66595,2026-03-18,1773847761,Sustainability,"We cannot rely on cooling systems that react after heat has already built.
+
+As compute density increases (especially in AI workloads), thermal behavior becomes more volatile:
+
+\- rapid spikes
+
+\- uneven heat distribution
+
+\- constant high load
+
+Traditional thermal interface materials werent designed for this. Over time, they degrade:
+
+\- particles clump
+
+\- materials separate
+
+\- performance drops
+
+So instead of improving cooling systems alone, I explored a different approach:
+
+What if the interface itself handled heat proactively?
+
+I put together a concept for a multi-scale thermal interface system that combines:
+
+\- high-speed conductive networks (graphene, CNTs, silver nanoparticles)
+
+\- stabilizing polymer matrices to prevent long-term degradation
+
+\- micro-encapsulated phase change materials to absorb spikes
+
+The goal:
+
+\- instant heat transfer
+
+\- stabilized thermal behavior
+
+\- consistent performance over years, not months
+
+This isnt about one breakthrough materialits about structuring known materials differently to solve the core limitations.
+
+I wrote out a full breakdown of the architecture and how each layer functions together.
+
+If youre working in data centers, hardware, or thermal systems, Id genuinely like feedback or to share the full write-up.",DataCenterDebate,1,1,0,1,0,0,0,1
+https://www.reddit.com/r/DataCenterDebate/comments/1rvq8g3/wheres_the_line_between_energy_development_and/,Consistent_Today4809,2026-03-16,1773704076,Wheres the line between energy development and real estate development for DCs?,,DataCenterDebate,1,1,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1rrsezn/seawater/,Wolvercote,2026-03-12,1773326085,Seawater?,"Can sea water be used for data center cooling? If so, was isnt this being done?",DataCenterDebate,1,1,0,1,0,0,0,6
+https://www.reddit.com/r/DataCenterDebate/comments/1rqs99r/data_center_qual_as_melhores_vagas/,Professional_Fan5238,2026-03-11,1773231721,"DATA Center , qual as melhores vagas ?",I am a technician training in Electrical Engineering and I am interested in working with electrical infrastructure in data centers. What certifications or experiences are most important to enter this field? I live in Fortaleza (CE),DataCenterDebate,1,1,0,0.99,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1rpwiy5/edge_server_node_heated_by_pool/,RicknMorty26,2026-03-10,1773148284,edge server node heated by pool&,,DataCenterDebate,1,1,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1rkwacp/question_for_ai_data_center_guys/,Shot_Callawannaba,2026-03-04,1772655467,Question for ai data center guys,,DataCenterDebate,1,1,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1r0ysn7/who_are_the_major_cooling_companies/,paiwacket,2026-02-10,1770724651,Who are the Major Cooling Companies,"Who are the major cooling manufacturers, such as Vertiv or Schneider? 
+
+Is there a pattern of behavior that can be attributed to any of these? How fast are these growing? ",DataCenterDebate,1,1,0,1,0,0,0,1
+https://www.reddit.com/r/DataCenterDebate/comments/1quyfx1/ces_2026_ai_data_center_discussion/,longwaybroadband,2026-02-03,1770140157,CES 2026 AI data center discussion,[https://www.reddit.com/r/AIColocation/comments/1quya2v/ces\_2026\_panel\_discusses\_ai\_infrastructure/](https://www.reddit.com/r/AIColocation/comments/1quya2v/ces_2026_panel_discusses_ai_infrastructure/),DataCenterDebate,1,1,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1qtr96c/ai_fundingspacex_and_nvidia_cluster/,PatriceFinger,2026-02-02,1770027282,AI funding/SpaceX and Nvidia cluster,"*Nvidias plan to participate in OpenAI funding rounds; reports of stalled funding and Nvidia stock responses as OpenAI funding trajectories shift.* The development could affect AI infrastructure funding and equity valuations, influencing how capital is deployed in the AI ecosystem and related space and hardware sectors.
+
+Markets and policymakers will watch for official confirmations, funding commitments, and market reactions that reflect sentiment about AI infrastructure, platform positioning, and competitive dynamics among cloud and hardware providers. The near term will be defined by disclosures, investor commentary, and regulatory considerations around open AI collaborations.
+
+Analysts highlight that funding trajectories can shape the pace of AI advance, the scale of computing capacity, and the economics of AI deployments. The story will hinge on concrete statements from involved parties and the subsequent reaction of capital markets.",DataCenterDebate,1,1,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1qqca30/wired_article_data_centers_are_driving_a_us_gas/,brainscraps,2026-01-29,1769701955,WIRED Article: Data Centers Are Driving a US Gas Boom,"link: [Data Centers Are Driving a US Gas Boom ](https://www.wired.com/story/data-centers-are-driving-a-us-gas-boom/)
+
+  
+""Data centers have helped to nearly triple the demand for gas-fired power in the US over the past two years. When Global Energy Monitor last released its tracker, in early 2024, it logged around 85 gigawatts of gas-fired power in the development pipeline in the US. Just over 4 gigawatts of that development were explicitly earmarked for data centers. But in 2025, more than 97 gigawatts of demand tracked were from projects that will be used to power data centersalmost 25 times higher than the 2024 figures. "" ",DataCenterDebate,1,1,0,0.67,0,0,1,1
+https://www.reddit.com/r/DataCenterDebate/comments/1qhwsic/top_5_upcoming_data_centers_in_india_202526/,Unique_Bat_7794,2026-01-20,1768902054,Top 5 Upcoming Data Centers in India (202526),,DataCenterDebate,1,1,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1pzbs35/data_center_and_solar_panels/,Initial-Proof-6972,2025-12-30,1767079589,Data Center and Solar Panels,,DataCenterDebate,1,1,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1pduf1f/top_10_hyperscale_data_center_companies_2025/,Unique_Bat_7794,2025-12-04,1764835354,Top 10 Hyperscale Data Center Companies 2025,,DataCenterDebate,1,1,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1oiyjfd/ive_completed_a_fiveyear_degree_in_the_us_and/,RabiyaHasan2004,2025-10-29,1761724637,Ive completed a five-year degree in the U.S. and recently started a new cloud services startup in Pakistan. Im now looking for a reliable data center here to host our infrastructure. Does anyone know trusted data center providers or colocation services in Pakistan?,,DataCenterDebate,1,1,0,1,0,0,1,1
+https://www.reddit.com/r/DataCenterDebate/comments/1ns1rk4/a_real_victory_or_pointless/,brainscraps,2025-09-27,1758995860,A real victory? Or pointless?,https://youtube.com/shorts/bhOHyNBPi_Q?si=Js7FaFDiOGvJYtiP,DataCenterDebate,1,1,0,1,0,0,0,0
+https://www.reddit.com/r/DataCenterDebate/comments/1t5lqx0/tldr_the_digital_independence_manifesto_executive/,EchoProfessional6996,2026-05-06,1778092708,"TL;DR: THE DIGITAL INDEPENDENCE MANIFESTO Executive Summary: This document outlines the exploitation of local resources and personal data by trillion-dollar AI companies and tech elites. It argues that personal autonomy is reclaimed through ""silence"" and a return to physical, manual labor. Re","""	Your Kitchen Sink is Cooling a Billionaires Brain\*\*
+
+""	
+
+""	Do you hear that? Its not the wind. Its the sound of 5 million gallons of \*\*your\*\* local water being sucked out of the ground today to cool a single building in the desert. While youre being told to ""conserve"" and your utility rates are jumping 20%, billionaires are using your towns lifeblood to keep a ""digital brain"" from melting.
+
+""	\*\*The truth:\*\* Your phone isn't a window; its a straw. And they are using it to drink your future dry.
+
+""	
+
+
+
+ You Are the Battery (And Youre Paying for the Privilege)\*\*
+
+
+
+""	Every scroll, every ""like,"" every 3D printing tip you share, and every photo you post of your granddaughter is \*\*free labor\*\*. You are the unpaid research department for AI companies worth trillions. They take your skills, your memories, and your ""old school"" wisdom, and they feed it into a machine designed to make you obsolete.
+
+""	\*\*The kicker:\*\* Youre paying $1,200 for the phone and $100 a month for the service just to give them your work for free. Its the greatest heist in human history.
+
+
+
+""	
+
+Two Classes, One Leash\*\*
+
+""	
+
+""	There are two sets of rules in 2026.
+
+""	 \* \*\*Class A:\*\* The people who own the ""engines of life."" They get fast-tracked permits to build data centers that bypass your local zoning laws. They pay ""wholesale"" for power while you pay ""retail.""
+
+""	 \* \*\*Class B:\*\* You. Youre kept in a ""maddening"" loop of digital noise, debt, and distraction so you don't notice the physical world being fenced off.
+
+""	They want you addicted to the screen so you don't look at the title of your home, the price of your water, or the laws being passed while you were busy watching a 15-second video.
+
+""	The Kill Switch is 1/4 Inch Thick\*\*
+
+""	The billionaires are terrified of one thing: \*\*Silence.\*\* Their entire empirethe stock prices, the AI ""gods,"" the social creditrelies on your data. If you disappear from their map, they go blind. If you stop feeding the engine, the engine starvesThe billionaires are terrified of one thing: \*\*Silence.\*\* Their entire empirethe stock prices, the AI ""gods,"" the social creditrelies on your data. If you disappear from their map, they go blind. If you stop feeding the engine, the engine starves.
+
+""	A man who can build a custom door, tune a banjo, and grow his own food without asking an app ""how-to"" is a man they cannot manage. When you put the phone down, you aren't ""missing out""you are becoming a \*\*ghost\*\* in their machine. You are reclaiming your ""solid and safe"" life.
+
+Throw the Leash in the Trash\*\*
+
+""	The rebellion doesn't start with a vote or a protest. It starts tomorrow morning when you wake up and \*\*don't touch it.\*\* \* \*\*Step 1:\*\* Leave the phone in a drawer.
+
+""	 \* \*\*Step 2:\*\* Walk outside. Use your hands. Build something real.
+
+""	 \* \*\*Step 3:\*\* Talk to a neighbor face-to-face. No ""likes,"" no ""shares,"" just human truth.
+
+""	The ""maddening"" sensation in your head? Thats the sound of the digital leash pulling tight. \*\*Snap it.\*\* The real world is still here, its still beautiful, and its waiting for you to come back.
+
+""	\*\*Will you be a consumer, or will you be a King? The choice is in the trash can.\*\*",DataCenterDebate,0,0,0,0.5,0,0,2,0
+https://www.reddit.com/r/DataCenterDebate/comments/1s7tnf9/kilby_project/,ree45314,2026-03-30,1774884232,Kilby Project,Does anyone know who will be buying AI data center services for the Kilby Project in west Texas?,DataCenterDebate,0,0,0,0.5,0,0,0,0
