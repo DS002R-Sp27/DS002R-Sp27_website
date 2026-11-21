@@ -1,28 +1,20 @@
-# Let's "Git" Going: Code, Collaboration, and Version Controls
+# "Gitting" Started: Code, Version Controls, and Reproducibility
 
 This week, we'll jump into a workflow for computational social science. We will first begin to explore some computational methods for gathering data. Before we dive into analyses, we'll think about some good practices for doing research. While these might seem cumbersome or clunky initially, they will help us collaborate with others, fix our own mistakes, and save us time and energy down the road. 
 
-__Monday Readings:__ 
+__Tuesday Readings:__ 
 
 * [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159v2/)
 
-* [Bit By Bit: Social Research in the Digital Age. Observing Behavior.](https://www.bitbybitbook.com/en/1st-ed/observing-behavior/)
-
 * _Optional_: [How Pew Research Center uses git and GitHub for version control](https://www.pewresearch.org/decoded/2022/08/01/how-pew-research-center-uses-git-and-github-for-version-control/)
-
-
-__Wednesday Readings:__ 
-
-* [Bit By Bit: Social Research in the Digital Age. Creating Mass Collaboration.](https://www.bitbybitbook.com/en/1st-ed/creating-mass-collaboration/)
-
-* _Optional_: [Data Visualization: A Practical Introduction. Preface.](https://socviz.co/)
-
-* _Optional:_ [Data Visualization: A Practical Introduction. 1: Look at Data.](https://socviz.co/01-look-at-data.html)
-
-* _Optional:_ [Data Visualization: A Practical Introduction. 2: Get Started.](https://socviz.co/02-intro.html)
 
 * _Optional_: [A layman’s introduction to Git](https://webtuu.com/blog/04/a-laymans-introduction-to-git)
 
+
+
+__Thursday Readings:__ 
+
+* [Bit By Bit: Social Research in the Digital Age. Observing Behavior.](https://www.bitbybitbook.com/en/1st-ed/observing-behavior/)
 
 
 ## Collecting Social Science Data

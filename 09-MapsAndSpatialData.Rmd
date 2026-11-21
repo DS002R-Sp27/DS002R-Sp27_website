@@ -3,18 +3,20 @@
 All data are located somewhere. In this week, we consider how to work with geographical information systems (GIS) and ways to communicate the spatial dimensions of our data. We will explore some tools for interactive spatial displays. 
 
 
-__Monday Readings:__
+__Tuesday Readings:__
+
+* [El Niño’s impact on aging California schools may be severe, experts warn](https://edsource.org/2026/el-nino-california-school-damage/767325?utm_source=EdSource&utm_campaign=9d38cd84be-EdSource+Newsletter+-+Sept.+28_COPY_01&utm_medium=email&utm_term=0_a54dc0b8a6-9d38cd84be-287282800)
 
 * [Data Visualization: A Practical Introduction. 7: Draw Maps.](https://socviz.co/07-maps.html)
+
+
+__Thursday Readings:__
+
+* [Data Visualization: A Practical Introduction. 8: Refine Your Plots.](https://socviz.co/08-polishing.html)
 
 * _Optional:_ [Nilforoshan, Hamed; Looi, Wenli; Pierson, Emma; et al. 2023. Nature. Human mobility networks reveal increased segregation in large cities.](https://www.nature.com/articles/s41586-023-06757-3)
 
 * _Optional:_ Explore the [Racial Covenant Map](https://reglab.github.io/racialcovenants/static/maps/dotmap.html)
-
-
-__Wednesday Readings:__
-
-* [Data Visualization: A Practical Introduction. 8: Refine Your Plots.](https://socviz.co/08-polishing.html)
 
 
 ## What is Spatial Data?

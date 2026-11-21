@@ -1,16 +1,18 @@
-# What is Computational Social Science?
+# What is Data Science? What is Computational Social Science?
 
 We begin by exploring the meaning of "Computational Social Science," and how it relates to data science, and social science more broadly. This field has changed tremendously in the last few decades, so we'll try to orient ourselves to its history and current directions. We will load R and R Studio onto our computers and start to explore these tools. 
 
-__Monday Readings:__
+__Tuesday Readings:__
 
-* [Bit By Bit. 1: Introduction.](https://www.bitbybitbook.com/en/1st-ed/introduction/)
+
+* [Bit By Bit. Introduction.](https://www.bitbybitbook.com/en/1st-ed/introduction/)
 
 * [Lazer, David; Pentland, Alex; Adamic, Lada; et al. 2009. Science. Computational Social Science.](https://www.science.org/doi/10.1126/science.1167742)
 
 * _Optional:_ [Edelmann, Achim; Wolff, Tom; Montagne, Danielle; Bail, Christopher A. 2020. Annual Review of Sociology. Computational Social Science and Sociology.](https://www.annualreviews.org/content/journals/10.1146/annurev-soc-121919-054621)
 
-__Wednesday Readings:__
+
+__Thursday Readings:__
 
 * No readings, but consider viewing [Installing R and RStudio](https://sicss.io/overview/installing-r-and-rstudio)
 

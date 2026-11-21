@@ -1,26 +1,15 @@
-# Text Analysis Tools, Part 2: Topic Models, Large Language Models, and AI
+# Topic Models
 
 Last but not least, we will discuss topic models, large language models (LLMs), and the future of computational social science.
 
-__Monday Readings:__
+__Tuesday Readings:__
 
-* [Engzell, Per; Wilmers, Nathan. 2026. The Paper Factory.](https://osf.io/preprints/socarxiv/24xfq_v1)
+* [As the Colorado River Shrinks, Washington Prepares to Spread the Pain](https://www.nytimes.com/2023/01/27/climate/colorado-river-biden-cuts.html)
 
-* [Alvero, A.J.; Lee, J.; Regla-Vargas, A. et al. 2024. Journal of Big Data. Large language models, social demography, and hegemony: comparing authorship in human and synthetic text.](https://journalofbigdata.springeropen.com/articles/10.1186/s40537-024-00986-7)
 
-* _Optional_: [Hanna, Alex; Bender, Emily M. 2026. Tech Policy Press. The Myth of AGI.](https://www.techpolicy.press/the-myth-of-agi/)
+__Thursday Readings:__
 
-__Wednesday Readings:__
-
-* _Optional:_ [Manning, Benjamin; Zhu, Kehang; Horton, John. 2025. Automated Social Science: Language Models as Scientist and Subjects.](https://benjaminmanning.io/files/rs.pdf)
-
-* _Optional:_ [Athey, Susan; Brunborg, Herman; Du, Tianyu; Kanodia, Ayush; Vafa, Keyon. 2025. LABOR-LLM: Language-Based Occupational Representations with Large Language Models.](https://arxiv.org/abs/2406.17972)
-
-* _Optional:_ [Broska, David; Howes, Michael; van Loon, Austin. 2025. Social Science Methods and Research. The Mixed Subjects Design: Treating Large Language Models as Potentially Informative Observations.](https://journals.sagepub.com/doi/full/10.1177/00491241251326865)
-
-* _Optional:_ [Messeri, Lisa; Crockett, M.J. 2024. Nature. Artificial intelligence and illusions of understanding in scientific research.](https://www.nature.com/articles/s41586-024-07146-0)
-
-* _Optional:_ [Glautenberg, Claudine; et al. 2026. Oranizational Management. More Versus Better: Artificial Intelligence, Incentives, and the Emerging Crisis in Peer Review.](https://pubsonline.informs.org/doi/10.1287/orsc.2026.ed.v37.n3)
+* [The Colorado River is Shrinking. See What's Using All the Water](https://www.nytimes.com/interactive/2023/05/22/climate/colorado-river-water.html)
 
 ## Topic Models
 

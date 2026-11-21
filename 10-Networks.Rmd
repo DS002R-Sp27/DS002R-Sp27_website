@@ -4,13 +4,14 @@ Sometimes, we wish to measure or display how observations are linked to each oth
 
 __Monday Readings:__
 
-* _Optional:_ [Network Structure in Small Groups and Survival in Disasters](https://doi.org/10.1093/sf/soab036)
+* [Network structure and influence of the climate change counter-movement](https://www.nature.com/articles/nclimate2875)
+
 
 __Wednesday Readings:__
 
-* [Wimmer, Andreas; Lewis, Kevin. 2010. American Journal of Sociology. Beyond and Below Racial Homophily: ERG Models of a Friendship Network Documented on Facebook.](https://www.journals.uchicago.edu/doi/10.1086/653658)
+* [Corbera, Esteve;, Calvet-Mir, Laura; Hughes, Hannah; Paterson, Matthew. 2016. Nature Climate Change. Patterns of authorship in the IPCC Working Group III report.](https://www.nature.com/articles/nclimate2782)
 
-* _Optional_: [Corbera, Esteve;, Calvet-Mir, Laura; Hughes, Hannah; Paterson, Matthew. 2016. Nature Climate Change. Patterns of authorship in the IPCC Working Group III report.](https://www.nature.com/articles/nclimate2782)
+* _Optional:_ [Network Structure in Small Groups and Survival in Disasters](https://doi.org/10.1093/sf/soab036)
 
 
 ## What Are Networks?

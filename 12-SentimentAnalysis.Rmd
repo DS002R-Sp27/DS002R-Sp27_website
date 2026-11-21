@@ -1,19 +1,19 @@
-# Text Analysis Tools, Part I: Text Mining, Sentiment Analysis
+# Sentiment Analysis
 
 Text data contains multitudes of information, and can be leveraged to do some powerful things in these times. To gear up for an expidition into text analysis, we will start by learning about text mining. 
 
 
-__Monday Readings:__
+__Tuesday Readings:__
 
-* _Optional:_ [Van Loon, Austin. 2023. Social Science Research.The Three Families of Automated Text Analysis.](https://www.sciencedirect.com/science/article/pii/S0049089X22001090)
+* [Want to Survive Climate Change? You'll Need a Good Community](https://www.wired.com/2016/10/klinenberg-transforming-communities-to-survive-climate-change/)
 
-* _Optional:_ [Canales, Kristine L.; Pope, JoEllen V.; Maestas, Cherie D. 2019. Social Science Quarterly. Tweeting Blame in a Federalist System: Attributions for Disaster Response in Social Media Following Hurricane Sandy.](https://onlinelibrary.wiley.com/doi/full/10.1111/ssqu.12669)
+* [Day Zero Cape Town](https://time.com/cape-town-south-africa-water-crisis/)
 
-__Wednesday Readings:__
 
-* _Optional_: [Text Mining in R: A Tidy Format. Chapter 1. The Tidy Text Format.](https://www.tidytextmining.com/tidytext)
 
-* _Optional:_ [Baker, Dominique J., Karly Ford, Samantha Viano, and Marc Johnson-Guerrero. Racial Category Usage in Education Research: Examining the Publications from AERA Journals](https://www.edworkingpapers.com/sites/default/files/ai22-596.pdf)
+__Thursday Readings:__
+
+* [Wetts, Rachel. 2022. PNAS. In climate news, statements from large businesses and opponents of climate action receive heightened visibility](https://www.pnas.org/doi/10.1073/pnas.1921526117)
 
 
 ## Text As Data

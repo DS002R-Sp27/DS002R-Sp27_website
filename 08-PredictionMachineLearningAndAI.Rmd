@@ -2,7 +2,7 @@
 
 It's easy to understand things that have already happened, but what about future events? A new "school" of data science, which has gained popularity in recent years, seeks not just to model relationships, but to _predict_ outcomes. We'll look at what this means for the social sciences. 
 
-__Monday Readings:__
+__Tuesday Readings:__
 
 * [Breiman, Leo. 2001. Statistical Science. The Two Cultures of Statistics.](https://www2.math.uu.se/~thulin/mm/breiman.pdf)
 
@@ -12,13 +12,14 @@ __Monday Readings:__
 
 * _Optional:_ [Johnson, Rebecca A.; Zhang, Simone. 2015. Sociological Science. Predictive Algorithms and Perceptions of Fairness: Parent Attitudes Toward Algorithmic Resource Allocation in K-12 Education.](https://sociologicalscience.com/articles-v12-15-322/)
 
-__Wednesday Readings:__
-
 * _Optional_: [Jean, Neal; Burke, Marshall; Xie, Michaelk; et al. 2016. Science. Combining satellite imagery and machine learning to predict poverty.](https://www.science.org/doi/10.1126/science.aaf7894)
 
-* _Optional:_ [Bit by Bit: Social Research in the Digital Age. Running Experiments](https://www.bitbybitbook.com/en/1st-ed/running-experiments/)
 
-* _Optional:_ [Kiviat, Barbara. 2019. Credit Scoring in the United States.](https://www.econstor.eu/bitstream/10419/223110/1/Econsoc-NL-21-1-05.pdf)
+__Wednesday Readings:__
+
+
+* [Bit by Bit: Social Research in the Digital Age. Running Experiments](https://www.bitbybitbook.com/en/1st-ed/running-experiments/)
+
 
 ## Data Models and Algorithmic Models
 

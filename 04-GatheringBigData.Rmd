@@ -1,23 +1,19 @@
-# Data Visualization Techniques
+# Gathering (Big) Data (wth SQL)
 
-Data visualization is an important, and sometimes overlooked, aspect of social science. This week, we go back to the visualization techniques of Du Bois, which remind us that data science long predates the current era of ``big data." 
+We've now gathered some data. But what if we want to go bigger? These require a database management system, which can be queried using unique commands and language. 
 
-__Monday Readings:__
+__Tuesday Readings:__
 
-* [Data Visualization: A Practical Introduction. 3: Make a Plot.](https://socviz.co/03-ggplot-basics.html)
+* [Bit by Bit: Social Research in the Digital Age. Asking Questions](https://www.bitbybitbook.com/en/1st-ed/asking-questions/)
 
-* [Battle-Baptiste, Whitney; Rusert, Britt. 2018. Princeton Architectural Press. W. E. B. du Bois's Data Portraits : Visualizing Black America.](https://ebookcentral.proquest.com/lib/stanford-ebooks/detail.action?docID=5515147)
+* _Optional:_ [Hwang, Jackelyn; Sampson, Robert. 2014. American Sociological Review. Divergent Pathways of Gentrification: Racial Inequality and the Social Order of Renewal in Chicago Neighborhoods.](https://journals.sagepub.com/doi/abs/10.1177/0003122414535774)
 
-* _Optional:_ [Tackett, Maria; Çetinkaya-Rundel, Mine. 2023. Chance. Analyzing and Recreating Data Visualizations of W.E.B. Du Bois.](https://www-tandfonline-com.stanford.idm.oclc.org/doi/full/10.1080/09332480.2023.2179279#references-Section)
-
-* _Optional:_ Try the [Education Opportunity Explorer](https://edopportunity.org/opportunity/explorer/)
+* _Optional:_ [Sugie, Naomie. 2016. Sociological Research & Methods. Utilizing Smartphones to Study Disadvantaged and Hard-to-Reach Groups.](https://journals.sagepub.com/doi/full/10.1177/0049124115626176)
 
 
-__Wednesday Readings:__
+__Thursday Readings:__
 
-* [Data Visualization: A Practical Introduction. 4: Show the Right Numbers.](https://socviz.co/04-group-facet-transform.html)
-
-* [Data Visualization: A Practical Introduction. 5: Graph Tables, Add Labels, Make Notes.](https://socviz.co/05-more-on-geoms.html)
+* [Bit By Bit: Social Research in the Digital Age. Creating Mass Collaboration.](https://www.bitbybitbook.com/en/1st-ed/creating-mass-collaboration/)
 
 
 ## Why Visualization?

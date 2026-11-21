@@ -2,17 +2,13 @@
 
 Up to this point, we have mostly focused on _describing_ our data. What if we want to say more about the _processes_ unfolding? In this week, we look at data gathering and modelling. We will first examine some data collection methods such as web scraping and APIs. We will then examine linear and non-linear models, their benefits, and some potential drawbacks. 
 
-__Monday Readings:__
+__Tuesday Readings:__
 
-* [Bit by Bit: Social Research in the Digital Age. Asking Questions](https://www.bitbybitbook.com/en/1st-ed/asking-questions/)
-
-* _Optional:_ [Hwang, Jackelyn; Sampson, Robert. 2014. American Sociological Review. Divergent Pathways of Gentrification: Racial Inequality and the Social Order of Renewal in Chicago Neighborhoods.](https://journals.sagepub.com/doi/abs/10.1177/0003122414535774)
-
-* _Optional:_ [Sugie, Naomie. 2016. Sociological Research & Methods. Utilizing Smartphones to Study Disadvantaged and Hard-to-Reach Groups.](https://journals.sagepub.com/doi/full/10.1177/0049124115626176)
-
-__Wednesday Readings:__
 
 * [Data Visualization: A Practical Introduction. 6: Work With Models.](https://socviz.co/06-modeling.html)
+
+
+__Thursday Readings:__
 
 * _Optional:_ [Gelman, Andrew; Hill, Jennifer; Vehtari, Aki. 2020. Regression and Other Stories.](https://users.aalto.fi/~ave/ROS.pdf)
 
@@ -199,7 +195,7 @@ Great, now that we have the Xpath copied we can use `rvest`'s `html_nodes()` fun
 
 # extract nodes of interest
 us_inc_table <- html_nodes(us_inc,
-                            xpath = '//*[@id="mw-content-text"]/div[2]/div[5]/table')
+                            xpath = '//*[@id="mw3A"]')
 
 ```
 

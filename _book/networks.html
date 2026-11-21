@@ -4,23 +4,23 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6 Networks | Introduction to Computational Social Science</title>
-  <meta name="description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  <title>10 Networks | Introduction to Data Science with R</title>
+  <meta name="description" content="This will serve as a course reader for DS002R, Spring 2027." />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6 Networks | Introduction to Computational Social Science" />
+  <meta property="og:title" content="10 Networks | Introduction to Data Science with R" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This will serve as a course reader for SOC 10, Spring 2026." />
-  <meta name="github-repo" content="rstudio/soc10" />
+  <meta property="og:description" content="This will serve as a course reader for DS002R, Spring 2027." />
+  <meta name="github-repo" content="DS002R-Spr26_website" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6 Networks | Introduction to Computational Social Science" />
+  <meta name="twitter:title" content="10 Networks | Introduction to Data Science with R" />
   
-  <meta name="twitter:description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  <meta name="twitter:description" content="This will serve as a course reader for DS002R, Spring 2027." />
   
 
-<meta name="author" content="Instructor: Tyler McDaniel, PhD Candidate, Sociology | TA: Yao Xu, PhD Candidate, Sociology" />
+<meta name="author" content="Instructor: Tyler McDaniel, Environmental Analysis" />
 
 
 
@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="maps-and-spatial-data.html"/>
-<link rel="next" href="prediction-and-machine-learning.html"/>
+<link rel="next" href="text-mining.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -144,111 +144,188 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Syllabus</a></li>
-<li class="chapter" data-level="1" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html"><i class="fa fa-check"></i><b>1</b> What is Computational Social Science?</a>
+<li class="chapter" data-level="1" data-path="what-is-data-science-what-is-computational-social-science.html"><a href="what-is-data-science-what-is-computational-social-science.html"><i class="fa fa-check"></i><b>1</b> What is Data Science? What is Computational Social Science?</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#some-definitions"><i class="fa fa-check"></i><b>1.1</b> Some Definitions</a></li>
-<li class="chapter" data-level="1.2" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#getting-started-with-r-or-python"><i class="fa fa-check"></i><b>1.2</b> Getting Started with R (or Python)</a></li>
-<li class="chapter" data-level="1.3" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#working-in-base-r"><i class="fa fa-check"></i><b>1.3</b> Working in Base R</a></li>
-<li class="chapter" data-level="1.4" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#opening-rstudio"><i class="fa fa-check"></i><b>1.4</b> Opening RStudio</a></li>
-<li class="chapter" data-level="1.5" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#packages"><i class="fa fa-check"></i><b>1.5</b> Packages</a></li>
-<li class="chapter" data-level="1.6" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#r-markdown"><i class="fa fa-check"></i><b>1.6</b> R Markdown</a></li>
-<li class="chapter" data-level="1.7" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#problem-set-1"><i class="fa fa-check"></i><b>1.7</b> Problem Set 1</a></li>
+<li class="chapter" data-level="1.1" data-path="what-is-data-science-what-is-computational-social-science.html"><a href="what-is-data-science-what-is-computational-social-science.html#some-definitions"><i class="fa fa-check"></i><b>1.1</b> Some Definitions</a></li>
+<li class="chapter" data-level="1.2" data-path="what-is-data-science-what-is-computational-social-science.html"><a href="what-is-data-science-what-is-computational-social-science.html#getting-started-with-r-or-python"><i class="fa fa-check"></i><b>1.2</b> Getting Started with R (or Python)</a></li>
+<li class="chapter" data-level="1.3" data-path="what-is-data-science-what-is-computational-social-science.html"><a href="what-is-data-science-what-is-computational-social-science.html#working-in-base-r"><i class="fa fa-check"></i><b>1.3</b> Working in Base R</a></li>
+<li class="chapter" data-level="1.4" data-path="what-is-data-science-what-is-computational-social-science.html"><a href="what-is-data-science-what-is-computational-social-science.html#opening-rstudio"><i class="fa fa-check"></i><b>1.4</b> Opening RStudio</a></li>
+<li class="chapter" data-level="1.5" data-path="what-is-data-science-what-is-computational-social-science.html"><a href="what-is-data-science-what-is-computational-social-science.html#packages"><i class="fa fa-check"></i><b>1.5</b> Packages</a></li>
+<li class="chapter" data-level="1.6" data-path="what-is-data-science-what-is-computational-social-science.html"><a href="what-is-data-science-what-is-computational-social-science.html#r-markdown"><i class="fa fa-check"></i><b>1.6</b> R Markdown</a></li>
+<li class="chapter" data-level="1.7" data-path="what-is-data-science-what-is-computational-social-science.html"><a href="what-is-data-science-what-is-computational-social-science.html#problem-set-1"><i class="fa fa-check"></i><b>1.7</b> Problem Set 1</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html"><i class="fa fa-check"></i><b>2</b> Let’s “Git” Going: Code, Collaboration, and Version Controls</a>
+<li class="chapter" data-level="2" data-path="gitting-started-code-version-controls-and-reproducibility.html"><a href="gitting-started-code-version-controls-and-reproducibility.html"><i class="fa fa-check"></i><b>2</b> “Gitting” Started: Code, Version Controls, and Reproducibility</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#collecting-social-science-data"><i class="fa fa-check"></i><b>2.1</b> Collecting Social Science Data</a></li>
-<li class="chapter" data-level="2.2" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#collaborative-social-science"><i class="fa fa-check"></i><b>2.2</b> Collaborative Social Science</a></li>
-<li class="chapter" data-level="2.3" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#version-controls"><i class="fa fa-check"></i><b>2.3</b> Version Controls</a></li>
-<li class="chapter" data-level="2.4" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#in-class-exercise"><i class="fa fa-check"></i><b>2.4</b> In Class Exercise</a></li>
-<li class="chapter" data-level="2.5" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#gitting-started"><i class="fa fa-check"></i><b>2.5</b> Gitting Started</a></li>
-<li class="chapter" data-level="2.6" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#gathering-online-data"><i class="fa fa-check"></i><b>2.6</b> Gathering Online Data</a></li>
-<li class="chapter" data-level="2.7" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#problem-set-2"><i class="fa fa-check"></i><b>2.7</b> Problem Set 2</a></li>
+<li class="chapter" data-level="2.1" data-path="gitting-started-code-version-controls-and-reproducibility.html"><a href="gitting-started-code-version-controls-and-reproducibility.html#collecting-social-science-data"><i class="fa fa-check"></i><b>2.1</b> Collecting Social Science Data</a></li>
+<li class="chapter" data-level="2.2" data-path="gitting-started-code-version-controls-and-reproducibility.html"><a href="gitting-started-code-version-controls-and-reproducibility.html#collaborative-social-science"><i class="fa fa-check"></i><b>2.2</b> Collaborative Social Science</a></li>
+<li class="chapter" data-level="2.3" data-path="gitting-started-code-version-controls-and-reproducibility.html"><a href="gitting-started-code-version-controls-and-reproducibility.html#version-controls"><i class="fa fa-check"></i><b>2.3</b> Version Controls</a></li>
+<li class="chapter" data-level="2.4" data-path="gitting-started-code-version-controls-and-reproducibility.html"><a href="gitting-started-code-version-controls-and-reproducibility.html#in-class-exercise"><i class="fa fa-check"></i><b>2.4</b> In Class Exercise</a></li>
+<li class="chapter" data-level="2.5" data-path="gitting-started-code-version-controls-and-reproducibility.html"><a href="gitting-started-code-version-controls-and-reproducibility.html#gitting-started"><i class="fa fa-check"></i><b>2.5</b> Gitting Started</a></li>
+<li class="chapter" data-level="2.6" data-path="gitting-started-code-version-controls-and-reproducibility.html"><a href="gitting-started-code-version-controls-and-reproducibility.html#gathering-online-data"><i class="fa fa-check"></i><b>2.6</b> Gathering Online Data</a></li>
+<li class="chapter" data-level="2.7" data-path="gitting-started-code-version-controls-and-reproducibility.html"><a href="gitting-started-code-version-controls-and-reproducibility.html#problem-set-2"><i class="fa fa-check"></i><b>2.7</b> Problem Set 2</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html"><i class="fa fa-check"></i><b>3</b> Data Visualization Techniques</a>
+<li class="chapter" data-level="3" data-path="gathering-data.html"><a href="gathering-data.html"><i class="fa fa-check"></i><b>3</b> Gathering Data</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#why-visualization"><i class="fa fa-check"></i><b>3.1</b> Why Visualization?</a></li>
-<li class="chapter" data-level="3.2" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#data-science-by-hand"><i class="fa fa-check"></i><b>3.2</b> Data Science By Hand?</a></li>
-<li class="chapter" data-level="3.3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#elements-of-visualization"><i class="fa fa-check"></i><b>3.3</b> Elements of Visualization</a>
+<li class="chapter" data-level="3.1" data-path="gathering-data.html"><a href="gathering-data.html#why-visualization"><i class="fa fa-check"></i><b>3.1</b> Why Visualization?</a></li>
+<li class="chapter" data-level="3.2" data-path="gathering-data.html"><a href="gathering-data.html#data-science-by-hand"><i class="fa fa-check"></i><b>3.2</b> Data Science By Hand?</a></li>
+<li class="chapter" data-level="3.3" data-path="gathering-data.html"><a href="gathering-data.html#elements-of-visualization"><i class="fa fa-check"></i><b>3.3</b> Elements of Visualization</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#color"><i class="fa fa-check"></i><b>3.3.1</b> Color</a></li>
-<li class="chapter" data-level="3.3.2" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#scale"><i class="fa fa-check"></i><b>3.3.2</b> Scale</a></li>
-<li class="chapter" data-level="3.3.3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#labels"><i class="fa fa-check"></i><b>3.3.3</b> Labels</a></li>
-<li class="chapter" data-level="3.3.4" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#comparisons"><i class="fa fa-check"></i><b>3.3.4</b> Comparisons</a></li>
+<li class="chapter" data-level="3.3.1" data-path="gathering-data.html"><a href="gathering-data.html#color"><i class="fa fa-check"></i><b>3.3.1</b> Color</a></li>
+<li class="chapter" data-level="3.3.2" data-path="gathering-data.html"><a href="gathering-data.html#scale"><i class="fa fa-check"></i><b>3.3.2</b> Scale</a></li>
+<li class="chapter" data-level="3.3.3" data-path="gathering-data.html"><a href="gathering-data.html#labels"><i class="fa fa-check"></i><b>3.3.3</b> Labels</a></li>
+<li class="chapter" data-level="3.3.4" data-path="gathering-data.html"><a href="gathering-data.html#comparisons"><i class="fa fa-check"></i><b>3.3.4</b> Comparisons</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#the-grammar-of-graphics"><i class="fa fa-check"></i><b>3.4</b> The Grammar of Graphics</a></li>
-<li class="chapter" data-level="3.5" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#preparing-data-for-visualization"><i class="fa fa-check"></i><b>3.5</b> Preparing Data for Visualization</a></li>
-<li class="chapter" data-level="3.6" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#plotting-exercise"><i class="fa fa-check"></i><b>3.6</b> Plotting Exercise</a></li>
-<li class="chapter" data-level="3.7" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#problem-set-3"><i class="fa fa-check"></i><b>3.7</b> Problem Set 3</a></li>
+<li class="chapter" data-level="3.4" data-path="gathering-data.html"><a href="gathering-data.html#the-grammar-of-graphics"><i class="fa fa-check"></i><b>3.4</b> The Grammar of Graphics</a></li>
+<li class="chapter" data-level="3.5" data-path="gathering-data.html"><a href="gathering-data.html#preparing-data-for-visualization"><i class="fa fa-check"></i><b>3.5</b> Preparing Data for Visualization</a></li>
+<li class="chapter" data-level="3.6" data-path="gathering-data.html"><a href="gathering-data.html#plotting-exercise"><i class="fa fa-check"></i><b>3.6</b> Plotting Exercise</a></li>
+<li class="chapter" data-level="3.7" data-path="gathering-data.html"><a href="gathering-data.html#problem-set-3"><i class="fa fa-check"></i><b>3.7</b> Problem Set 3</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html"><i class="fa fa-check"></i><b>4</b> Gathering and Modeling Data</a>
+<li class="chapter" data-level="4" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html"><i class="fa fa-check"></i><b>4</b> Gathering (Big) Data (wth SQL)</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#new-ways-of-gathering-data"><i class="fa fa-check"></i><b>4.1</b> New Ways of Gathering Data</a></li>
-<li class="chapter" data-level="4.2" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#application-programming-interfaces-apis"><i class="fa fa-check"></i><b>4.2</b> Application Programming Interfaces (APIs)</a></li>
-<li class="chapter" data-level="4.3" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#web-scraping"><i class="fa fa-check"></i><b>4.3</b> Web Scraping</a></li>
-<li class="chapter" data-level="4.4" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#models"><i class="fa fa-check"></i><b>4.4</b> Models</a></li>
-<li class="chapter" data-level="4.5" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#building-a-model"><i class="fa fa-check"></i><b>4.5</b> Building a Model</a>
+<li class="chapter" data-level="4.1" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#why-visualization-1"><i class="fa fa-check"></i><b>4.1</b> Why Visualization?</a></li>
+<li class="chapter" data-level="4.2" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#data-science-by-hand-1"><i class="fa fa-check"></i><b>4.2</b> Data Science By Hand?</a></li>
+<li class="chapter" data-level="4.3" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#elements-of-visualization-1"><i class="fa fa-check"></i><b>4.3</b> Elements of Visualization</a>
 <ul>
-<li class="chapter" data-level="4.5.1" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#splitting-the-data"><i class="fa fa-check"></i><b>4.5.1</b> Splitting the Data</a></li>
-<li class="chapter" data-level="4.5.2" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#fitting-a-model"><i class="fa fa-check"></i><b>4.5.2</b> Fitting a Model</a></li>
-<li class="chapter" data-level="4.5.3" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#making-predictions"><i class="fa fa-check"></i><b>4.5.3</b> Making Predictions</a></li>
+<li class="chapter" data-level="4.3.1" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#color-1"><i class="fa fa-check"></i><b>4.3.1</b> Color</a></li>
+<li class="chapter" data-level="4.3.2" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#scale-1"><i class="fa fa-check"></i><b>4.3.2</b> Scale</a></li>
+<li class="chapter" data-level="4.3.3" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#labels-1"><i class="fa fa-check"></i><b>4.3.3</b> Labels</a></li>
+<li class="chapter" data-level="4.3.4" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#comparisons-1"><i class="fa fa-check"></i><b>4.3.4</b> Comparisons</a></li>
 </ul></li>
-<li class="chapter" data-level="4.6" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#final-project-proposal"><i class="fa fa-check"></i><b>4.6</b> Final Project Proposal</a></li>
-<li class="chapter" data-level="4.7" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#problem-set-4"><i class="fa fa-check"></i><b>4.7</b> Problem Set 4</a></li>
+<li class="chapter" data-level="4.4" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#the-grammar-of-graphics-1"><i class="fa fa-check"></i><b>4.4</b> The Grammar of Graphics</a></li>
+<li class="chapter" data-level="4.5" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#preparing-data-for-visualization-1"><i class="fa fa-check"></i><b>4.5</b> Preparing Data for Visualization</a></li>
+<li class="chapter" data-level="4.6" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#plotting-exercise-1"><i class="fa fa-check"></i><b>4.6</b> Plotting Exercise</a></li>
+<li class="chapter" data-level="4.7" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#problem-set-3-1"><i class="fa fa-check"></i><b>4.7</b> Problem Set 3</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html"><i class="fa fa-check"></i><b>5</b> Maps and Spatial Data</a>
+<li class="chapter" data-level="5" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html"><i class="fa fa-check"></i><b>5</b> Looking at and Restructuring Data</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#what-is-spatial-data"><i class="fa fa-check"></i><b>5.1</b> What is Spatial Data?</a>
+<li class="chapter" data-level="5.1" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#why-visualization-2"><i class="fa fa-check"></i><b>5.1</b> Why Visualization?</a></li>
+<li class="chapter" data-level="5.2" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#data-science-by-hand-2"><i class="fa fa-check"></i><b>5.2</b> Data Science By Hand?</a></li>
+<li class="chapter" data-level="5.3" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#elements-of-visualization-2"><i class="fa fa-check"></i><b>5.3</b> Elements of Visualization</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#the-modifiable-areal-unit-problem"><i class="fa fa-check"></i><b>5.1.1</b> The Modifiable Areal Unit Problem</a></li>
-<li class="chapter" data-level="5.1.2" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#environmental-hazards-and-spatial-data"><i class="fa fa-check"></i><b>5.1.2</b> Environmental Hazards and Spatial Data</a></li>
+<li class="chapter" data-level="5.3.1" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#color-2"><i class="fa fa-check"></i><b>5.3.1</b> Color</a></li>
+<li class="chapter" data-level="5.3.2" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#scale-2"><i class="fa fa-check"></i><b>5.3.2</b> Scale</a></li>
+<li class="chapter" data-level="5.3.3" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#labels-2"><i class="fa fa-check"></i><b>5.3.3</b> Labels</a></li>
+<li class="chapter" data-level="5.3.4" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#comparisons-2"><i class="fa fa-check"></i><b>5.3.4</b> Comparisons</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-simple-features-in-r"><i class="fa fa-check"></i><b>5.2</b> Using Simple Features in R</a></li>
-<li class="chapter" data-level="5.3" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#mapping-polygons-with-tidycensus"><i class="fa fa-check"></i><b>5.3</b> Mapping Polygons with tidycensus</a></li>
-<li class="chapter" data-level="5.4" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-tigris-to-gather-shapefiles"><i class="fa fa-check"></i><b>5.4</b> Using Tigris to Gather Shapefiles</a></li>
-<li class="chapter" data-level="5.5" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#spatially-joining-data"><i class="fa fa-check"></i><b>5.5</b> Spatially Joining Data</a></li>
-<li class="chapter" data-level="5.6" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-leaflet-and-r-shiny-for-interactive-maps"><i class="fa fa-check"></i><b>5.6</b> Using Leaflet and R Shiny for Interactive Maps</a></li>
-<li class="chapter" data-level="5.7" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#problem-set-5"><i class="fa fa-check"></i><b>5.7</b> Problem Set 5</a></li>
+<li class="chapter" data-level="5.4" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#the-grammar-of-graphics-2"><i class="fa fa-check"></i><b>5.4</b> The Grammar of Graphics</a></li>
+<li class="chapter" data-level="5.5" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#preparing-data-for-visualization-2"><i class="fa fa-check"></i><b>5.5</b> Preparing Data for Visualization</a></li>
+<li class="chapter" data-level="5.6" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#plotting-exercise-2"><i class="fa fa-check"></i><b>5.6</b> Plotting Exercise</a></li>
+<li class="chapter" data-level="5.7" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#problem-set-3-2"><i class="fa fa-check"></i><b>5.7</b> Problem Set 3</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="networks.html"><a href="networks.html"><i class="fa fa-check"></i><b>6</b> Networks</a>
+<li class="chapter" data-level="6" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html"><i class="fa fa-check"></i><b>6</b> Data Visualization Techniques</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="networks.html"><a href="networks.html#what-are-networks"><i class="fa fa-check"></i><b>6.1</b> What Are Networks?</a></li>
-<li class="chapter" data-level="6.2" data-path="networks.html"><a href="networks.html#building-and-visualizing-networks"><i class="fa fa-check"></i><b>6.2</b> Building And Visualizing Networks</a></li>
-<li class="chapter" data-level="6.3" data-path="networks.html"><a href="networks.html#measures-of-centrality"><i class="fa fa-check"></i><b>6.3</b> Measures of Centrality</a></li>
-<li class="chapter" data-level="6.4" data-path="networks.html"><a href="networks.html#co-authorship-patterns"><i class="fa fa-check"></i><b>6.4</b> Co-Authorship Patterns</a></li>
-<li class="chapter" data-level="6.5" data-path="networks.html"><a href="networks.html#interactive-network-visualizations"><i class="fa fa-check"></i><b>6.5</b> Interactive Network Visualizations</a></li>
-<li class="chapter" data-level="6.6" data-path="networks.html"><a href="networks.html#migration-flows"><i class="fa fa-check"></i><b>6.6</b> Migration Flows</a></li>
-<li class="chapter" data-level="6.7" data-path="networks.html"><a href="networks.html#problem-set-6"><i class="fa fa-check"></i><b>6.7</b> Problem Set 6</a></li>
+<li class="chapter" data-level="6.1" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#why-visualization-3"><i class="fa fa-check"></i><b>6.1</b> Why Visualization?</a></li>
+<li class="chapter" data-level="6.2" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#data-science-by-hand-3"><i class="fa fa-check"></i><b>6.2</b> Data Science By Hand?</a></li>
+<li class="chapter" data-level="6.3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#elements-of-visualization-3"><i class="fa fa-check"></i><b>6.3</b> Elements of Visualization</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#color-3"><i class="fa fa-check"></i><b>6.3.1</b> Color</a></li>
+<li class="chapter" data-level="6.3.2" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#scale-3"><i class="fa fa-check"></i><b>6.3.2</b> Scale</a></li>
+<li class="chapter" data-level="6.3.3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#labels-3"><i class="fa fa-check"></i><b>6.3.3</b> Labels</a></li>
+<li class="chapter" data-level="6.3.4" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#comparisons-3"><i class="fa fa-check"></i><b>6.3.4</b> Comparisons</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html"><i class="fa fa-check"></i><b>7</b> Prediction and Machine Learning</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#data-models-and-algorithmic-models"><i class="fa fa-check"></i><b>7.1</b> Data Models and Algorithmic Models</a></li>
-<li class="chapter" data-level="7.2" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#splitting-your-data-setting-up-your-models"><i class="fa fa-check"></i><b>7.2</b> Splitting Your Data, Setting Up Your Models</a></li>
-<li class="chapter" data-level="7.3" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#unsupervised-machine-learning-with-k-means-clustering"><i class="fa fa-check"></i><b>7.3</b> Unsupervised Machine Learning with K-Means Clustering</a></li>
-<li class="chapter" data-level="7.4" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#supervised-machine-learning-with-random-forests"><i class="fa fa-check"></i><b>7.4</b> Supervised Machine Learning with Random Forests</a></li>
-<li class="chapter" data-level="7.5" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#re-sample-your-data-with-cross-validation"><i class="fa fa-check"></i><b>7.5</b> Re-Sample Your Data with Cross Validation</a></li>
-<li class="chapter" data-level="7.6" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#predictions-bias-and-social-implications"><i class="fa fa-check"></i><b>7.6</b> Predictions, Bias, and Social Implications</a></li>
-<li class="chapter" data-level="7.7" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#problem-set-7"><i class="fa fa-check"></i><b>7.7</b> Problem Set 7</a></li>
+<li class="chapter" data-level="6.4" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#the-grammar-of-graphics-3"><i class="fa fa-check"></i><b>6.4</b> The Grammar of Graphics</a></li>
+<li class="chapter" data-level="6.5" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#preparing-data-for-visualization-3"><i class="fa fa-check"></i><b>6.5</b> Preparing Data for Visualization</a></li>
+<li class="chapter" data-level="6.6" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#plotting-exercise-3"><i class="fa fa-check"></i><b>6.6</b> Plotting Exercise</a></li>
+<li class="chapter" data-level="6.7" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#problem-set-3-3"><i class="fa fa-check"></i><b>6.7</b> Problem Set 3</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><i class="fa fa-check"></i><b>8</b> Text Analysis Tools, Part I: Text Mining, Sentiment Analysis</a>
+<li class="chapter" data-level="7" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html"><i class="fa fa-check"></i><b>7</b> Gathering and Modeling Data</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#text-as-data"><i class="fa fa-check"></i><b>8.1</b> Text As Data</a>
+<li class="chapter" data-level="7.1" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#new-ways-of-gathering-data"><i class="fa fa-check"></i><b>7.1</b> New Ways of Gathering Data</a></li>
+<li class="chapter" data-level="7.2" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#application-programming-interfaces-apis"><i class="fa fa-check"></i><b>7.2</b> Application Programming Interfaces (APIs)</a></li>
+<li class="chapter" data-level="7.3" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#web-scraping"><i class="fa fa-check"></i><b>7.3</b> Web Scraping</a></li>
+<li class="chapter" data-level="7.4" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#models"><i class="fa fa-check"></i><b>7.4</b> Models</a></li>
+<li class="chapter" data-level="7.5" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#building-a-model"><i class="fa fa-check"></i><b>7.5</b> Building a Model</a>
 <ul>
-<li class="chapter" data-level="8.1.1" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#families-of-text-analysis"><i class="fa fa-check"></i><b>8.1.1</b> “Families” of Text Analysis</a></li>
+<li class="chapter" data-level="7.5.1" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#splitting-the-data"><i class="fa fa-check"></i><b>7.5.1</b> Splitting the Data</a></li>
+<li class="chapter" data-level="7.5.2" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#fitting-a-model"><i class="fa fa-check"></i><b>7.5.2</b> Fitting a Model</a></li>
+<li class="chapter" data-level="7.5.3" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#making-predictions"><i class="fa fa-check"></i><b>7.5.3</b> Making Predictions</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#newspapers-books"><i class="fa fa-check"></i><b>8.2</b> Newspapers &amp; Books</a></li>
-<li class="chapter" data-level="8.3" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#using-apis-to-gather-text-data"><i class="fa fa-check"></i><b>8.3</b> Using APIs to Gather Text Data</a></li>
-<li class="chapter" data-level="8.4" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#working-with-text-data-in-r"><i class="fa fa-check"></i><b>8.4</b> Working with Text Data in R</a></li>
-<li class="chapter" data-level="8.5" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#comparing-word-and-document-frequencies"><i class="fa fa-check"></i><b>8.5</b> Comparing Word and Document Frequencies</a></li>
-<li class="chapter" data-level="8.6" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#sentiment-analysis"><i class="fa fa-check"></i><b>8.6</b> Sentiment Analysis</a></li>
-<li class="chapter" data-level="8.7" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#problem-set-8"><i class="fa fa-check"></i><b>8.7</b> Problem Set 8</a></li>
+<li class="chapter" data-level="7.6" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#final-project-proposal"><i class="fa fa-check"></i><b>7.6</b> Final Project Proposal</a></li>
+<li class="chapter" data-level="7.7" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#problem-set-4"><i class="fa fa-check"></i><b>7.7</b> Problem Set 4</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><i class="fa fa-check"></i><b>9</b> Text Analysis Tools, Part 2: Topic Models, Large Language Models, and AI</a>
+<li class="chapter" data-level="8" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html"><i class="fa fa-check"></i><b>8</b> Prediction and Machine Learning</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#topic-models"><i class="fa fa-check"></i><b>9.1</b> Topic Models</a></li>
-<li class="chapter" data-level="9.2" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#documents-as-mixtures-of-topics"><i class="fa fa-check"></i><b>9.2</b> Documents as Mixtures of Topics</a></li>
-<li class="chapter" data-level="9.3" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#choosing-k-values"><i class="fa fa-check"></i><b>9.3</b> Choosing <span class="math inline">\(k\)</span> Values</a></li>
-<li class="chapter" data-level="9.4" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#large-language-models"><i class="fa fa-check"></i><b>9.4</b> Large Language Models</a></li>
-<li class="chapter" data-level="9.5" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#problem-set-9"><i class="fa fa-check"></i><b>9.5</b> Problem Set 9</a></li>
+<li class="chapter" data-level="8.1" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#data-models-and-algorithmic-models"><i class="fa fa-check"></i><b>8.1</b> Data Models and Algorithmic Models</a></li>
+<li class="chapter" data-level="8.2" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#splitting-your-data-setting-up-your-models"><i class="fa fa-check"></i><b>8.2</b> Splitting Your Data, Setting Up Your Models</a></li>
+<li class="chapter" data-level="8.3" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#unsupervised-machine-learning-with-k-means-clustering"><i class="fa fa-check"></i><b>8.3</b> Unsupervised Machine Learning with K-Means Clustering</a></li>
+<li class="chapter" data-level="8.4" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#supervised-machine-learning-with-random-forests"><i class="fa fa-check"></i><b>8.4</b> Supervised Machine Learning with Random Forests</a></li>
+<li class="chapter" data-level="8.5" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#re-sample-your-data-with-cross-validation"><i class="fa fa-check"></i><b>8.5</b> Re-Sample Your Data with Cross Validation</a></li>
+<li class="chapter" data-level="8.6" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#predictions-bias-and-social-implications"><i class="fa fa-check"></i><b>8.6</b> Predictions, Bias, and Social Implications</a></li>
+<li class="chapter" data-level="8.7" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#problem-set-7"><i class="fa fa-check"></i><b>8.7</b> Problem Set 7</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html"><i class="fa fa-check"></i><b>9</b> Maps and Spatial Data</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#what-is-spatial-data"><i class="fa fa-check"></i><b>9.1</b> What is Spatial Data?</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#the-modifiable-areal-unit-problem"><i class="fa fa-check"></i><b>9.1.1</b> The Modifiable Areal Unit Problem</a></li>
+<li class="chapter" data-level="9.1.2" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#environmental-hazards-and-spatial-data"><i class="fa fa-check"></i><b>9.1.2</b> Environmental Hazards and Spatial Data</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-simple-features-in-r"><i class="fa fa-check"></i><b>9.2</b> Using Simple Features in R</a></li>
+<li class="chapter" data-level="9.3" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#mapping-polygons-with-tidycensus"><i class="fa fa-check"></i><b>9.3</b> Mapping Polygons with tidycensus</a></li>
+<li class="chapter" data-level="9.4" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-tigris-to-gather-shapefiles"><i class="fa fa-check"></i><b>9.4</b> Using Tigris to Gather Shapefiles</a></li>
+<li class="chapter" data-level="9.5" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#spatially-joining-data"><i class="fa fa-check"></i><b>9.5</b> Spatially Joining Data</a></li>
+<li class="chapter" data-level="9.6" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-leaflet-and-r-shiny-for-interactive-maps"><i class="fa fa-check"></i><b>9.6</b> Using Leaflet and R Shiny for Interactive Maps</a></li>
+<li class="chapter" data-level="9.7" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#problem-set-5"><i class="fa fa-check"></i><b>9.7</b> Problem Set 5</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="networks.html"><a href="networks.html"><i class="fa fa-check"></i><b>10</b> Networks</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="networks.html"><a href="networks.html#what-are-networks"><i class="fa fa-check"></i><b>10.1</b> What Are Networks?</a></li>
+<li class="chapter" data-level="10.2" data-path="networks.html"><a href="networks.html#building-and-visualizing-networks"><i class="fa fa-check"></i><b>10.2</b> Building And Visualizing Networks</a></li>
+<li class="chapter" data-level="10.3" data-path="networks.html"><a href="networks.html#measures-of-centrality"><i class="fa fa-check"></i><b>10.3</b> Measures of Centrality</a></li>
+<li class="chapter" data-level="10.4" data-path="networks.html"><a href="networks.html#co-authorship-patterns"><i class="fa fa-check"></i><b>10.4</b> Co-Authorship Patterns</a></li>
+<li class="chapter" data-level="10.5" data-path="networks.html"><a href="networks.html#interactive-network-visualizations"><i class="fa fa-check"></i><b>10.5</b> Interactive Network Visualizations</a></li>
+<li class="chapter" data-level="10.6" data-path="networks.html"><a href="networks.html#migration-flows"><i class="fa fa-check"></i><b>10.6</b> Migration Flows</a></li>
+<li class="chapter" data-level="10.7" data-path="networks.html"><a href="networks.html#problem-set-6"><i class="fa fa-check"></i><b>10.7</b> Problem Set 6</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="text-mining.html"><a href="text-mining.html"><i class="fa fa-check"></i><b>11</b> Text Mining</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="text-mining.html"><a href="text-mining.html#text-as-data"><i class="fa fa-check"></i><b>11.1</b> Text As Data</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="text-mining.html"><a href="text-mining.html#families-of-text-analysis"><i class="fa fa-check"></i><b>11.1.1</b> “Families” of Text Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="text-mining.html"><a href="text-mining.html#newspapers-books"><i class="fa fa-check"></i><b>11.2</b> Newspapers &amp; Books</a></li>
+<li class="chapter" data-level="11.3" data-path="text-mining.html"><a href="text-mining.html#using-apis-to-gather-text-data"><i class="fa fa-check"></i><b>11.3</b> Using APIs to Gather Text Data</a></li>
+<li class="chapter" data-level="11.4" data-path="text-mining.html"><a href="text-mining.html#working-with-text-data-in-r"><i class="fa fa-check"></i><b>11.4</b> Working with Text Data in R</a></li>
+<li class="chapter" data-level="11.5" data-path="text-mining.html"><a href="text-mining.html#comparing-word-and-document-frequencies"><i class="fa fa-check"></i><b>11.5</b> Comparing Word and Document Frequencies</a></li>
+<li class="chapter" data-level="11.6" data-path="text-mining.html"><a href="text-mining.html#sentiment-analysis"><i class="fa fa-check"></i><b>11.6</b> Sentiment Analysis</a></li>
+<li class="chapter" data-level="11.7" data-path="text-mining.html"><a href="text-mining.html#problem-set-8"><i class="fa fa-check"></i><b>11.7</b> Problem Set 8</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="sentiment-analysis-1.html"><a href="sentiment-analysis-1.html"><i class="fa fa-check"></i><b>12</b> Sentiment Analysis</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="sentiment-analysis-1.html"><a href="sentiment-analysis-1.html#text-as-data-1"><i class="fa fa-check"></i><b>12.1</b> Text As Data</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="sentiment-analysis-1.html"><a href="sentiment-analysis-1.html#families-of-text-analysis-1"><i class="fa fa-check"></i><b>12.1.1</b> “Families” of Text Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="sentiment-analysis-1.html"><a href="sentiment-analysis-1.html#newspapers-books-1"><i class="fa fa-check"></i><b>12.2</b> Newspapers &amp; Books</a></li>
+<li class="chapter" data-level="12.3" data-path="sentiment-analysis-1.html"><a href="sentiment-analysis-1.html#using-apis-to-gather-text-data-1"><i class="fa fa-check"></i><b>12.3</b> Using APIs to Gather Text Data</a></li>
+<li class="chapter" data-level="12.4" data-path="sentiment-analysis-1.html"><a href="sentiment-analysis-1.html#working-with-text-data-in-r-1"><i class="fa fa-check"></i><b>12.4</b> Working with Text Data in R</a></li>
+<li class="chapter" data-level="12.5" data-path="sentiment-analysis-1.html"><a href="sentiment-analysis-1.html#comparing-word-and-document-frequencies-1"><i class="fa fa-check"></i><b>12.5</b> Comparing Word and Document Frequencies</a></li>
+<li class="chapter" data-level="12.6" data-path="sentiment-analysis-1.html"><a href="sentiment-analysis-1.html#sentiment-analysis-2"><i class="fa fa-check"></i><b>12.6</b> Sentiment Analysis</a></li>
+<li class="chapter" data-level="12.7" data-path="sentiment-analysis-1.html"><a href="sentiment-analysis-1.html#problem-set-8-1"><i class="fa fa-check"></i><b>12.7</b> Problem Set 8</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="topic-models.html"><a href="topic-models.html"><i class="fa fa-check"></i><b>13</b> Topic Models</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="topic-models.html"><a href="topic-models.html#topic-models-1"><i class="fa fa-check"></i><b>13.1</b> Topic Models</a></li>
+<li class="chapter" data-level="13.2" data-path="topic-models.html"><a href="topic-models.html#documents-as-mixtures-of-topics"><i class="fa fa-check"></i><b>13.2</b> Documents as Mixtures of Topics</a></li>
+<li class="chapter" data-level="13.3" data-path="topic-models.html"><a href="topic-models.html#choosing-k-values"><i class="fa fa-check"></i><b>13.3</b> Choosing <span class="math inline">\(k\)</span> Values</a></li>
+<li class="chapter" data-level="13.4" data-path="topic-models.html"><a href="topic-models.html#large-language-models"><i class="fa fa-check"></i><b>13.4</b> Large Language Models</a></li>
+<li class="chapter" data-level="13.5" data-path="topic-models.html"><a href="topic-models.html#problem-set-9"><i class="fa fa-check"></i><b>13.5</b> Problem Set 9</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="ai-in-social-and-environmental-data-science.html"><a href="ai-in-social-and-environmental-data-science.html"><i class="fa fa-check"></i><b>14</b> AI in Social and Environmental Data Science</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="ai-in-social-and-environmental-data-science.html"><a href="ai-in-social-and-environmental-data-science.html#topic-models-2"><i class="fa fa-check"></i><b>14.1</b> Topic Models</a></li>
+<li class="chapter" data-level="14.2" data-path="ai-in-social-and-environmental-data-science.html"><a href="ai-in-social-and-environmental-data-science.html#documents-as-mixtures-of-topics-1"><i class="fa fa-check"></i><b>14.2</b> Documents as Mixtures of Topics</a></li>
+<li class="chapter" data-level="14.3" data-path="ai-in-social-and-environmental-data-science.html"><a href="ai-in-social-and-environmental-data-science.html#choosing-k-values-1"><i class="fa fa-check"></i><b>14.3</b> Choosing <span class="math inline">\(k\)</span> Values</a></li>
+<li class="chapter" data-level="14.4" data-path="ai-in-social-and-environmental-data-science.html"><a href="ai-in-social-and-environmental-data-science.html#large-language-models-1"><i class="fa fa-check"></i><b>14.4</b> Large Language Models</a></li>
+<li class="chapter" data-level="14.5" data-path="ai-in-social-and-environmental-data-science.html"><a href="ai-in-social-and-environmental-data-science.html#problem-set-9-1"><i class="fa fa-check"></i><b>14.5</b> Problem Set 9</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="ethics-and-interpretations.html"><a href="ethics-and-interpretations.html"><i class="fa fa-check"></i><b>15</b> Ethics and Interpretations</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="ethics-and-interpretations.html"><a href="ethics-and-interpretations.html#topic-models-3"><i class="fa fa-check"></i><b>15.1</b> Topic Models</a></li>
+<li class="chapter" data-level="15.2" data-path="ethics-and-interpretations.html"><a href="ethics-and-interpretations.html#documents-as-mixtures-of-topics-2"><i class="fa fa-check"></i><b>15.2</b> Documents as Mixtures of Topics</a></li>
+<li class="chapter" data-level="15.3" data-path="ethics-and-interpretations.html"><a href="ethics-and-interpretations.html#choosing-k-values-2"><i class="fa fa-check"></i><b>15.3</b> Choosing <span class="math inline">\(k\)</span> Values</a></li>
+<li class="chapter" data-level="15.4" data-path="ethics-and-interpretations.html"><a href="ethics-and-interpretations.html#large-language-models-2"><i class="fa fa-check"></i><b>15.4</b> Large Language Models</a></li>
+<li class="chapter" data-level="15.5" data-path="ethics-and-interpretations.html"><a href="ethics-and-interpretations.html#problem-set-9-2"><i class="fa fa-check"></i><b>15.5</b> Problem Set 9</a></li>
 </ul></li>
 </ul>
 
@@ -259,7 +336,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Computational Social Science</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Data Science with R</a>
           </h1>
         </div>
 
@@ -267,45 +344,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="networks" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">6</span> Networks<a href="networks.html#networks" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="networks" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">10</span> Networks<a href="networks.html#networks" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Sometimes, we wish to measure or display how observations are linked to each other. For instance, we might want to analyze a web of social interactions, or migration flows between many entities. In these times, network analysis is what we need. We will look at some applications of networks in sociology, and cover basic ways to visualize and analyze network data.</p>
 <p><strong>Monday Readings:</strong></p>
 <ul>
-<li><em>Optional:</em> <a href="https://doi.org/10.1093/sf/soab036">Network Structure in Small Groups and Survival in Disasters</a></li>
+<li><a href="https://www.nature.com/articles/nclimate2875">Network structure and influence of the climate change counter-movement</a></li>
 </ul>
 <p><strong>Wednesday Readings:</strong></p>
 <ul>
-<li><p><a href="https://www.journals.uchicago.edu/doi/10.1086/653658">Wimmer, Andreas; Lewis, Kevin. 2010. American Journal of Sociology. Beyond and Below Racial Homophily: ERG Models of a Friendship Network Documented on Facebook.</a></p></li>
-<li><p><em>Optional</em>: <a href="https://www.nature.com/articles/nclimate2782">Corbera, Esteve;, Calvet-Mir, Laura; Hughes, Hannah; Paterson, Matthew. 2016. Nature Climate Change. Patterns of authorship in the IPCC Working Group III report.</a></p></li>
+<li><p><a href="https://www.nature.com/articles/nclimate2782">Corbera, Esteve;, Calvet-Mir, Laura; Hughes, Hannah; Paterson, Matthew. 2016. Nature Climate Change. Patterns of authorship in the IPCC Working Group III report.</a></p></li>
+<li><p><em>Optional:</em> <a href="https://doi.org/10.1093/sf/soab036">Network Structure in Small Groups and Survival in Disasters</a></p></li>
 </ul>
-<div id="what-are-networks" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> What Are Networks?<a href="networks.html#what-are-networks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-are-networks" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> What Are Networks?<a href="networks.html#what-are-networks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Networks have two elements: nodes and edges. <em>Nodes</em>, or vertices, are points, and <em>edges</em>, or links, are the connections between the nodes. We can illustrate these with a simple network graph:</p>
 <div class="figure"><span style="display:block;" id="fig:nodesedges"></span>
 <img src="nodes_edges.png" alt="Network example. From Nykamp DQ, An introduction to networks." width="210" />
 <p class="caption">
-Figure 6.1: Network example. From Nykamp DQ, An introduction to networks.
+Figure 10.1: Network example. From Nykamp DQ, An introduction to networks.
 </p>
 </div>
 <p>Importantly, a network’s edges can be directed or undirected. <em>Directed</em> edges constitute flows from one node to another; the order matters. These could be cash payments, academic citations, school transfers, social media follows, or anything else where the direction of the edge would matter. A directed network graph could look like the figure below. Notice how each edge is unidirectional, and that a pair of nodes can have two edges between them.</p>
 <div class="figure"><span style="display:block;" id="fig:directedundirected"></span>
 <img src="small_directed_network.png" alt="Directed Network. From Nykamp DQ, An introduction to networks." width="207" />
 <p class="caption">
-Figure 6.2: Directed Network. From Nykamp DQ, An introduction to networks.
+Figure 10.2: Directed Network. From Nykamp DQ, An introduction to networks.
 </p>
 </div>
 <p><em>Undirected</em> edges constitute bidirectional ties, in which the order does not matter. These could be friendships or romantic partnerships, classes that students have taken together, bills that congresspeople have written together, companies that share a board member, or anything else where the connection is the same for both parties. A possible undirected network is shown here:</p>
 <div class="figure"><span style="display:block;" id="fig:directedundirected2"></span>
 <img src="small_undirected_network.png" alt="Undirected Network. From Nykamp DQ, An introduction to networks." width="210" />
 <p class="caption">
-Figure 6.3: Undirected Network. From Nykamp DQ, An introduction to networks.
+Figure 10.3: Undirected Network. From Nykamp DQ, An introduction to networks.
 </p>
 </div>
 <p>For both directed and undirected networks, we may want to modify the edges according to characteristics of the ties (for example, are these strong or weak connections?), and we may want to modfiy the nodes according to their characteristics as well (for example, what group is each member from?). We can do this by changing the color, shape, line width, and so on of our network, as we might do for other types of visualization.</p>
 </div>
-<div id="building-and-visualizing-networks" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Building And Visualizing Networks<a href="networks.html#building-and-visualizing-networks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="building-and-visualizing-networks" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Building And Visualizing Networks<a href="networks.html#building-and-visualizing-networks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Let’s first create a network. We’ll make a dataframe where every row represents an edge, and the two variables represent from which node the edge goes to (and from). You’ll notice that the names can appear more than once - we can think about this as friendship ties, each person could have multiple friends, which would be represented as unique rows. We’ll need to put the data in matrix form in order for our later network functions to perform correctly. We’ll call this <code>el</code>, for “edge list.”</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="networks.html#cb1-1" tabindex="-1"></a>el <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">person_1 =</span> <span class="fu">c</span>(<span class="st">&quot;Lionel&quot;</span>, <span class="st">&quot;Frederica&quot;</span>, <span class="st">&quot;Garrett&quot;</span>, <span class="st">&quot;Lina&quot;</span>,</span>
 <span id="cb1-2"><a href="networks.html#cb1-2" tabindex="-1"></a>                               <span class="st">&quot;Sampson&quot;</span>, <span class="st">&quot;Garrett&quot;</span>, <span class="st">&quot;Frederica&quot;</span>, <span class="st">&quot;Lionel&quot;</span>,</span>
@@ -350,8 +427,8 @@ Figure 6.3: Undirected Network. From Nykamp DQ, An introduction to networks.
 <span id="cb5-9"><a href="networks.html#cb5-9" tabindex="-1"></a>     <span class="at">edge.color =</span> <span class="st">&quot;gray1&quot;</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/igraph3-1.png" width="672" /></p>
 </div>
-<div id="measures-of-centrality" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Measures of Centrality<a href="networks.html#measures-of-centrality" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="measures-of-centrality" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Measures of Centrality<a href="networks.html#measures-of-centrality" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We may be interested in measuring how central each node is to the entire network. We will focus on the following four measures of network centrality:</p>
 <ul>
 <li>Degree Centrality</li>
@@ -408,8 +485,8 @@ Figure 6.3: Undirected Network. From Nykamp DQ, An introduction to networks.
 <p><img src="_main_files/figure-html/comparecentralities-1.png" width="672" /></p>
 <p>There are other measures of centrality, such as Bonacich Centrality and Google’s Page Rank, which go beyond the scope of this course. <a href="https://bookdown.org/markhoff/social_network_analysis/centrality.html">Hoffman’s “Methods for Network Analysis” bookdown</a> has more information on these.</p>
 </div>
-<div id="co-authorship-patterns" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Co-Authorship Patterns<a href="networks.html#co-authorship-patterns" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="co-authorship-patterns" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Co-Authorship Patterns<a href="networks.html#co-authorship-patterns" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We’ll now turn to an example involving authors of the Intergovernmental Panel on Climate Change’s (IPCC) climate reports. The IPCC has written six assessment reports since 1990, each detailing the state of climate change and governmental actions which exacerbate or mitigate its effects. These reports garner much media attention and are influential in global plans to curtain the worst effects of the changing climate. In recent years, scholars have begun to examine geographic biases in representation in authorship of these reports, with most authors coming from the Global North.</p>
 <p>Here, we will work with the data from <a href="https://www.nature.com/articles/nclimate2782">this paper</a>, which analyzes networks of co-authorship in the <a href="https://www.ipcc.ch/assessment-report/ar5/">fifth assessment report (AR5)</a>. Specifically, the paper examines authorship on the third working group’s (WGIII) contribution to the report, which details mitigation of climate impacts. The authors of the study have calculated the number of co-authorships between the researchers on the WGIII (i.e. the number of times that these researchers published scientific papers together, outside of the AR5). I’ve added this data file to Canvas, but you can also download all the data from the paper in the <a href="https://www.nature.com/articles/nclimate2782#Sec8">Supplementary Information</a>.</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="networks.html#cb15-1" tabindex="-1"></a><span class="fu">library</span>(RCurl)</span>
@@ -427,7 +504,7 @@ Figure 6.3: Undirected Network. From Nykamp DQ, An introduction to networks.
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:1000px; overflow-x: scroll; width:100%; ">
 <table>
 <caption>
-<span id="tab:coauthor2">Table 6.1: </span><span id="tab:coauthor2">Table 6.2: </span>IPCC AR5 Co-Authors
+<span id="tab:coauthor2">Table 10.1: </span><span id="tab:coauthor2">Table 10.2: </span>IPCC AR5 Co-Authors
 </caption>
 <thead>
 <tr>
@@ -226342,7 +226419,7 @@ Zycliz
 <p>We see that there are several “central” authors. Still, it’s hard to see their names here. We can display the authors’ names, in descending order based on their betweenness scores, using the following code:</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="networks.html#cb24-1" tabindex="-1"></a><span class="co"># show authors in descending order</span></span>
 <span id="cb24-2"><a href="networks.html#cb24-2" tabindex="-1"></a><span class="fu">V</span>(ipcc_net)[<span class="fu">order</span>(<span class="fu">V</span>(ipcc_net)<span class="sc">$</span>betweenness, <span class="at">decreasing =</span> <span class="cn">TRUE</span>)]</span></code></pre></div>
-<pre><code>## + 148/148 vertices, named, from da14e1d:
+<pre><code>## + 148/148 vertices, named, from af04fed:
 ##   [1] Nakicenovic        Smith              Shukla            
 ##   [4] Price              Edenhofer          Schaeffer         
 ##   [7] Krey               Bosetti            Carraro           
@@ -226402,117 +226479,122 @@ Zycliz
 <span id="cb29-13"><a href="networks.html#cb29-13" tabindex="-1"></a>                               <span class="st">&quot;South Africa&quot;</span>) <span class="sc">~</span> <span class="st">&quot;steelblue&quot;</span>, </span>
 <span id="cb29-14"><a href="networks.html#cb29-14" tabindex="-1"></a>                             <span class="co"># Other countries will be gold</span></span>
 <span id="cb29-15"><a href="networks.html#cb29-15" tabindex="-1"></a>                             <span class="at">.default =</span> <span class="st">&quot;gold&quot;</span>))</span></code></pre></div>
+<pre><code>## Warning: There was 1 warning in `mutate()`.
+## ℹ In argument: `region = case_match(...)`.
+## Caused by warning:
+## ! `case_match()` was deprecated in dplyr 1.2.0.
+## ℹ Please use `recode_values()` instead.</code></pre>
 <p>Now let’s define a variable for our vertices named <code>region</code>:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="networks.html#cb30-1" tabindex="-1"></a><span class="co"># define country variable</span></span>
-<span id="cb30-2"><a href="networks.html#cb30-2" tabindex="-1"></a><span class="fu">V</span>(ipcc_net)<span class="sc">$</span>region <span class="ot">&lt;-</span> ipcc_cvs<span class="sc">$</span>region</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="networks.html#cb31-1" tabindex="-1"></a><span class="co"># define country variable</span></span>
+<span id="cb31-2"><a href="networks.html#cb31-2" tabindex="-1"></a><span class="fu">V</span>(ipcc_net)<span class="sc">$</span>region <span class="ot">&lt;-</span> ipcc_cvs<span class="sc">$</span>region</span></code></pre></div>
 <p>And let’s try plotting our network with the nodes colored according to country:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="networks.html#cb31-1" tabindex="-1"></a><span class="co"># plot network</span></span>
-<span id="cb31-2"><a href="networks.html#cb31-2" tabindex="-1"></a><span class="fu">plot</span>(ipcc_net, </span>
-<span id="cb31-3"><a href="networks.html#cb31-3" tabindex="-1"></a>   <span class="at">edge.width=</span>(<span class="fu">E</span>(ipcc_net)<span class="sc">$</span>weight)<span class="sc">/</span><span class="dv">5</span>,</span>
-<span id="cb31-4"><a href="networks.html#cb31-4" tabindex="-1"></a>    <span class="at">vertex.size =</span> <span class="fu">V</span>(ipcc_net)<span class="sc">$</span>betweenness<span class="sc">/</span><span class="fu">max</span>(<span class="fu">V</span>(ipcc_net)<span class="sc">$</span>betweenness) <span class="sc">*</span> <span class="dv">20</span>, </span>
-<span id="cb31-5"><a href="networks.html#cb31-5" tabindex="-1"></a>     <span class="at">vertex.color =</span> <span class="fu">V</span>(ipcc_net)<span class="sc">$</span>region, </span>
-<span id="cb31-6"><a href="networks.html#cb31-6" tabindex="-1"></a>     <span class="at">vertex.alpha =</span> <span class="fl">0.5</span>,</span>
-<span id="cb31-7"><a href="networks.html#cb31-7" tabindex="-1"></a>     <span class="at">vertex.frame.color =</span> <span class="cn">NA</span>, </span>
-<span id="cb31-8"><a href="networks.html#cb31-8" tabindex="-1"></a>     <span class="at">vertex.label.cex =</span> .<span class="dv">5</span>, </span>
-<span id="cb31-9"><a href="networks.html#cb31-9" tabindex="-1"></a>     <span class="at">edge.curved =</span> .<span class="dv">05</span>, </span>
-<span id="cb31-10"><a href="networks.html#cb31-10" tabindex="-1"></a>     <span class="at">edge.width =</span> .<span class="dv">1</span>, </span>
-<span id="cb31-11"><a href="networks.html#cb31-11" tabindex="-1"></a>     <span class="at">edge.color =</span> <span class="st">&quot;gray1&quot;</span>)</span>
-<span id="cb31-12"><a href="networks.html#cb31-12" tabindex="-1"></a></span>
-<span id="cb31-13"><a href="networks.html#cb31-13" tabindex="-1"></a><span class="co"># add legend</span></span>
-<span id="cb31-14"><a href="networks.html#cb31-14" tabindex="-1"></a><span class="fu">legend</span>(</span>
-<span id="cb31-15"><a href="networks.html#cb31-15" tabindex="-1"></a>  <span class="st">&quot;bottomright&quot;</span>,</span>
-<span id="cb31-16"><a href="networks.html#cb31-16" tabindex="-1"></a>  <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">&quot;Europe&quot;</span>, <span class="st">&quot;North America&quot;</span>, <span class="st">&quot;BRICS&quot;</span>, <span class="st">&quot;Other&quot;</span>),</span>
-<span id="cb31-17"><a href="networks.html#cb31-17" tabindex="-1"></a>  <span class="at">pt.bg  =</span> <span class="fu">c</span>(<span class="st">&quot;green4&quot;</span>, <span class="st">&quot;tomato&quot;</span>, <span class="st">&quot;steelblue&quot;</span>, <span class="st">&quot;gold&quot;</span>),</span>
-<span id="cb31-18"><a href="networks.html#cb31-18" tabindex="-1"></a>  <span class="at">pch    =</span> <span class="dv">21</span>,</span>
-<span id="cb31-19"><a href="networks.html#cb31-19" tabindex="-1"></a>  <span class="at">cex    =</span> <span class="dv">1</span>,</span>
-<span id="cb31-20"><a href="networks.html#cb31-20" tabindex="-1"></a>  <span class="at">title  =</span> <span class="st">&quot;Region&quot;</span></span>
-<span id="cb31-21"><a href="networks.html#cb31-21" tabindex="-1"></a>  )</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="networks.html#cb32-1" tabindex="-1"></a><span class="co"># plot network</span></span>
+<span id="cb32-2"><a href="networks.html#cb32-2" tabindex="-1"></a><span class="fu">plot</span>(ipcc_net, </span>
+<span id="cb32-3"><a href="networks.html#cb32-3" tabindex="-1"></a>   <span class="at">edge.width=</span>(<span class="fu">E</span>(ipcc_net)<span class="sc">$</span>weight)<span class="sc">/</span><span class="dv">5</span>,</span>
+<span id="cb32-4"><a href="networks.html#cb32-4" tabindex="-1"></a>    <span class="at">vertex.size =</span> <span class="fu">V</span>(ipcc_net)<span class="sc">$</span>betweenness<span class="sc">/</span><span class="fu">max</span>(<span class="fu">V</span>(ipcc_net)<span class="sc">$</span>betweenness) <span class="sc">*</span> <span class="dv">20</span>, </span>
+<span id="cb32-5"><a href="networks.html#cb32-5" tabindex="-1"></a>     <span class="at">vertex.color =</span> <span class="fu">V</span>(ipcc_net)<span class="sc">$</span>region, </span>
+<span id="cb32-6"><a href="networks.html#cb32-6" tabindex="-1"></a>     <span class="at">vertex.alpha =</span> <span class="fl">0.5</span>,</span>
+<span id="cb32-7"><a href="networks.html#cb32-7" tabindex="-1"></a>     <span class="at">vertex.frame.color =</span> <span class="cn">NA</span>, </span>
+<span id="cb32-8"><a href="networks.html#cb32-8" tabindex="-1"></a>     <span class="at">vertex.label.cex =</span> .<span class="dv">5</span>, </span>
+<span id="cb32-9"><a href="networks.html#cb32-9" tabindex="-1"></a>     <span class="at">edge.curved =</span> .<span class="dv">05</span>, </span>
+<span id="cb32-10"><a href="networks.html#cb32-10" tabindex="-1"></a>     <span class="at">edge.width =</span> .<span class="dv">1</span>, </span>
+<span id="cb32-11"><a href="networks.html#cb32-11" tabindex="-1"></a>     <span class="at">edge.color =</span> <span class="st">&quot;gray1&quot;</span>)</span>
+<span id="cb32-12"><a href="networks.html#cb32-12" tabindex="-1"></a></span>
+<span id="cb32-13"><a href="networks.html#cb32-13" tabindex="-1"></a><span class="co"># add legend</span></span>
+<span id="cb32-14"><a href="networks.html#cb32-14" tabindex="-1"></a><span class="fu">legend</span>(</span>
+<span id="cb32-15"><a href="networks.html#cb32-15" tabindex="-1"></a>  <span class="st">&quot;bottomright&quot;</span>,</span>
+<span id="cb32-16"><a href="networks.html#cb32-16" tabindex="-1"></a>  <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">&quot;Europe&quot;</span>, <span class="st">&quot;North America&quot;</span>, <span class="st">&quot;BRICS&quot;</span>, <span class="st">&quot;Other&quot;</span>),</span>
+<span id="cb32-17"><a href="networks.html#cb32-17" tabindex="-1"></a>  <span class="at">pt.bg  =</span> <span class="fu">c</span>(<span class="st">&quot;green4&quot;</span>, <span class="st">&quot;tomato&quot;</span>, <span class="st">&quot;steelblue&quot;</span>, <span class="st">&quot;gold&quot;</span>),</span>
+<span id="cb32-18"><a href="networks.html#cb32-18" tabindex="-1"></a>  <span class="at">pch    =</span> <span class="dv">21</span>,</span>
+<span id="cb32-19"><a href="networks.html#cb32-19" tabindex="-1"></a>  <span class="at">cex    =</span> <span class="dv">1</span>,</span>
+<span id="cb32-20"><a href="networks.html#cb32-20" tabindex="-1"></a>  <span class="at">title  =</span> <span class="st">&quot;Region&quot;</span></span>
+<span id="cb32-21"><a href="networks.html#cb32-21" tabindex="-1"></a>  )</span></code></pre></div>
 <p><img src="_main_files/figure-html/weighted%20edges2-1.png" width="672" /></p>
 </div>
-<div id="interactive-network-visualizations" class="section level2 hasAnchor" number="6.5">
-<h2><span class="header-section-number">6.5</span> Interactive Network Visualizations<a href="networks.html#interactive-network-visualizations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="interactive-network-visualizations" class="section level2 hasAnchor" number="10.5">
+<h2><span class="header-section-number">10.5</span> Interactive Network Visualizations<a href="networks.html#interactive-network-visualizations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>You might notice that in the previous graphs, it’s still hard to read any names! If only there were a way to create an interactive chart, where one could zoom in on different parts of the network … Here, we will use the <code>networkD3</code> package to create such an interactive visualization. The package has a <code>igraph_to_networkD3</code> function which allows us to transform our network into an object that the package can handle. We will specify the vertex feature <code>region</code> as our grouping variable, as we will want to color the nodes by this variable later (but if we were ok with the nodes all being the same color, then we wouldn’t need the group argument).</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="networks.html#cb32-1" tabindex="-1"></a><span class="fu">library</span>(networkD3)</span>
-<span id="cb32-2"><a href="networks.html#cb32-2" tabindex="-1"></a></span>
-<span id="cb32-3"><a href="networks.html#cb32-3" tabindex="-1"></a><span class="co"># create dataframe for networkD3</span></span>
-<span id="cb32-4"><a href="networks.html#cb32-4" tabindex="-1"></a>ipcc_d3 <span class="ot">&lt;-</span> <span class="fu">igraph_to_networkD3</span>(ipcc_net, <span class="at">group =</span> <span class="fu">V</span>(ipcc_net)<span class="sc">$</span>region)</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="networks.html#cb33-1" tabindex="-1"></a><span class="fu">library</span>(networkD3)</span>
+<span id="cb33-2"><a href="networks.html#cb33-2" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="networks.html#cb33-3" tabindex="-1"></a><span class="co"># create dataframe for networkD3</span></span>
+<span id="cb33-4"><a href="networks.html#cb33-4" tabindex="-1"></a>ipcc_d3 <span class="ot">&lt;-</span> <span class="fu">igraph_to_networkD3</span>(ipcc_net, <span class="at">group =</span> <span class="fu">V</span>(ipcc_net)<span class="sc">$</span>region)</span></code></pre></div>
 <p>Great. Next, we’ll set a color scale for our visualization. part of this code draws from JavaScript, so it looks a bit different from what we’ve done so far. For more information, see <a href="https://github.com/d3/d3/blob/main/API.md#ordinal-scales">here</a>.</p>
 <p>If you want to set different colors, just change the hex values in the range row. For a hex color finder, you can see <a href="https://g.co/kgs/TsukWN">here</a>. You can also label the domain row values however you like (just make sure that the number of items matches that in the range row).</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="networks.html#cb33-1" tabindex="-1"></a><span class="co"># set color scale</span></span>
-<span id="cb33-2"><a href="networks.html#cb33-2" tabindex="-1"></a>ColourScale <span class="ot">&lt;-</span> <span class="st">&#39;d3.scaleOrdinal()</span></span>
-<span id="cb33-3"><a href="networks.html#cb33-3" tabindex="-1"></a><span class="st">            .domain([&quot;Europe&quot;, &quot;North America&quot;, &quot;BRICS&quot;, &quot;Other&quot;])</span></span>
-<span id="cb33-4"><a href="networks.html#cb33-4" tabindex="-1"></a><span class="st">           .range([&quot;#07C343&quot;, &quot;#D2140C&quot;, &quot;#0C4AD2&quot;, &quot;#C7D20C&quot;]);&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="networks.html#cb34-1" tabindex="-1"></a><span class="co"># set color scale</span></span>
+<span id="cb34-2"><a href="networks.html#cb34-2" tabindex="-1"></a>ColourScale <span class="ot">&lt;-</span> <span class="st">&#39;d3.scaleOrdinal()</span></span>
+<span id="cb34-3"><a href="networks.html#cb34-3" tabindex="-1"></a><span class="st">            .domain([&quot;Europe&quot;, &quot;North America&quot;, &quot;BRICS&quot;, &quot;Other&quot;])</span></span>
+<span id="cb34-4"><a href="networks.html#cb34-4" tabindex="-1"></a><span class="st">           .range([&quot;#07C343&quot;, &quot;#D2140C&quot;, &quot;#0C4AD2&quot;, &quot;#C7D20C&quot;]);&#39;</span></span></code></pre></div>
 <p>Now we can make our interactive network. We’ll specify the nodes and links from our <code>ipcc_d3</code> object (this is easy since we have already converted it to <code>networkD3</code> format). we will also note our <code>nodeID</code>, “name” and our <code>Group</code>, “group.” We’ll make the font a bit larger than the default so we can read names, we’ll add our color scale (which will be applied to the groups), and we’ll set <code>zoom=TRUE</code> to enable this feature.</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="networks.html#cb34-1" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">forceNetwork</span>(<span class="at">Links =</span> ipcc_d3<span class="sc">$</span>links,</span>
-<span id="cb34-2"><a href="networks.html#cb34-2" tabindex="-1"></a>                  <span class="at">Nodes =</span> ipcc_d3<span class="sc">$</span>nodes,</span>
-<span id="cb34-3"><a href="networks.html#cb34-3" tabindex="-1"></a>                  <span class="at">Group =</span> <span class="st">&quot;group&quot;</span>,</span>
-<span id="cb34-4"><a href="networks.html#cb34-4" tabindex="-1"></a>                  <span class="at">height=</span><span class="st">&quot;400px&quot;</span>, <span class="at">width=</span><span class="st">&quot;800px&quot;</span>,</span>
-<span id="cb34-5"><a href="networks.html#cb34-5" tabindex="-1"></a>                  <span class="at">NodeID =</span> <span class="st">&quot;name&quot;</span>,</span>
-<span id="cb34-6"><a href="networks.html#cb34-6" tabindex="-1"></a>                  <span class="at">fontSize =</span> <span class="dv">14</span>,</span>
-<span id="cb34-7"><a href="networks.html#cb34-7" tabindex="-1"></a>                  <span class="at">colourScale =</span> <span class="fu">JS</span>(ColourScale),</span>
-<span id="cb34-8"><a href="networks.html#cb34-8" tabindex="-1"></a>                  <span class="at">zoom =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="networks.html#cb35-1" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">forceNetwork</span>(<span class="at">Links =</span> ipcc_d3<span class="sc">$</span>links,</span>
+<span id="cb35-2"><a href="networks.html#cb35-2" tabindex="-1"></a>                  <span class="at">Nodes =</span> ipcc_d3<span class="sc">$</span>nodes,</span>
+<span id="cb35-3"><a href="networks.html#cb35-3" tabindex="-1"></a>                  <span class="at">Group =</span> <span class="st">&quot;group&quot;</span>,</span>
+<span id="cb35-4"><a href="networks.html#cb35-4" tabindex="-1"></a>                  <span class="at">height=</span><span class="st">&quot;400px&quot;</span>, <span class="at">width=</span><span class="st">&quot;800px&quot;</span>,</span>
+<span id="cb35-5"><a href="networks.html#cb35-5" tabindex="-1"></a>                  <span class="at">NodeID =</span> <span class="st">&quot;name&quot;</span>,</span>
+<span id="cb35-6"><a href="networks.html#cb35-6" tabindex="-1"></a>                  <span class="at">fontSize =</span> <span class="dv">14</span>,</span>
+<span id="cb35-7"><a href="networks.html#cb35-7" tabindex="-1"></a>                  <span class="at">colourScale =</span> <span class="fu">JS</span>(ColourScale),</span>
+<span id="cb35-8"><a href="networks.html#cb35-8" tabindex="-1"></a>                  <span class="at">zoom =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <p>And finally, we can plot our network! Try zooming in on different parts, and highlighting the nodes to see their names.</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="networks.html#cb35-1" tabindex="-1"></a><span class="co"># plot</span></span>
-<span id="cb35-2"><a href="networks.html#cb35-2" tabindex="-1"></a>p</span></code></pre></div>
-<div id="htmlwidget-73bc183a87bc1e9db2fa" style="width:800px;height:400px;" class="forceNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-73bc183a87bc1e9db2fa">{"x":{"links":{"source":[0,1,10,9,17,10,15,12,20,30,27,19,30,31,14,28,15,10,6,40,25,39,7,12,30,55,52,25,16,15,10,50,30,52,38,32,34,23,31,49,31,67,54,44,20,12,20,31,45,35,30,68,12,57,30,41,15,10,60,50,76,64,43,25,15,10,51,66,30,33,56,30,12,3,17,67,85,73,68,57,83,31,45,96,4,15,10,18,83,33,67,23,94,34,11,80,88,53,7,96,2,63,26,75,13,95,85,83,59,63,96,22,25,5,68,73,31,45,43,20,9,31,107,104,96,45,96,73,107,104,67,18,113,104,106,79,85,53,12,82,115,19,79,104,33,35,103,30,51,104,20,115,116,36,106,107,60,111,45,100,53,39,104,96,73,32,75,115,111,59,120,48,7,96,85,49,113,67,121,95,108,71,53,116,33,62,44,15,66,42,111,122,89,6,104,84,15,10,110,86,96,53,104,111,123,67,99,8,123,96,7,37,116,115,90,73,10,41,15,132,68,33,107,112,96,73,120,101,59,31,25,12,73,115,91,45,10,96,120,76,31,107,53,20,104,116,25,59,115,79,113,104,80,73,29,73,58,117,85,123],"target":[6,15,15,20,24,30,30,30,31,33,33,33,35,36,38,40,41,41,46,46,47,53,53,57,57,59,59,59,60,60,60,60,60,60,61,65,67,67,68,69,70,71,72,72,72,73,73,73,73,73,73,73,74,74,74,77,78,78,79,79,81,83,83,86,86,86,87,89,89,91,91,91,91,92,93,94,95,96,96,96,96,96,96,97,98,98,98,98,101,102,103,103,103,104,104,104,104,104,104,104,104,104,105,106,106,106,106,107,107,107,107,107,107,107,107,107,107,107,109,110,110,110,111,111,111,111,112,112,112,113,113,114,115,115,115,115,115,115,116,116,116,116,116,116,116,116,116,116,118,119,120,120,120,120,120,120,120,120,120,120,120,120,120,120,121,122,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,124,124,125,125,125,126,127,128,128,129,130,131,131,132,132,132,132,133,133,133,133,134,135,135,135,135,135,135,135,135,135,135,136,137,137,137,137,138,138,138,138,138,138,138,138,138,138,138,139,139,139,139,140,140,140,140,141,142,142,142,142,142,143,143,143,143,143,143,143,144,144,145,146,147,147,147,147],"NA.":[2,3,37,2,2,2,2,3,23,2,3,3,2,2,3,3,2,3,5,4,4,10,3,2,15,5,2,21,2,2,2,7,2,2,23,2,4,13,2,3,2,2,9,2,2,2,5,2,3,2,7,2,4,15,7,2,2,6,11,3,8,2,3,2,15,14,3,3,2,2,3,2,2,2,11,4,3,4,5,4,3,6,47,2,12,2,2,4,2,2,7,2,15,2,2,2,2,2,2,3,2,2,4,2,2,2,5,2,2,2,29,2,5,6,9,15,7,17,2,3,12,7,5,4,15,7,4,2,6,5,2,5,5,19,7,2,4,3,3,2,4,2,2,4,2,3,12,2,2,3,2,2,2,2,2,2,5,2,2,3,4,39,3,2,2,2,3,3,2,3,2,2,2,2,2,2,2,2,2,6,3,2,2,2,2,18,4,2,4,2,2,3,4,2,2,5,24,36,2,10,6,2,2,5,2,2,4,2,2,3,2,2,2,3,2,2,3,12,2,2,2,7,28,4,11,2,4,2,2,3,24,2,2,2,2,3,2,8,8,2,4,3,2,5,2,5,2,5,2,2,2,3,6,2,4,2,3,2,2,3],"NA..1":[0,1,10,9,17,10,15,12,20,30,27,19,30,31,14,28,15,10,6,40,25,39,7,12,30,55,52,25,16,15,10,50,30,52,38,32,34,23,31,49,31,67,54,44,20,12,20,31,45,35,30,68,12,57,30,41,15,10,60,50,76,64,43,25,15,10,51,66,30,33,56,30,12,3,17,67,85,73,68,57,83,31,45,96,4,15,10,18,83,33,67,23,94,34,11,80,88,53,7,96,2,63,26,75,13,95,85,83,59,63,96,22,25,5,68,73,31,45,43,20,9,31,107,104,96,45,96,73,107,104,67,18,113,104,106,79,85,53,12,82,115,19,79,104,33,35,103,30,51,104,20,115,116,36,106,107,60,111,45,100,53,39,104,96,73,32,75,115,111,59,120,48,7,96,85,49,113,67,121,95,108,71,53,116,33,62,44,15,66,42,111,122,89,6,104,84,15,10,110,86,96,53,104,111,123,67,99,8,123,96,7,37,116,115,90,73,10,41,15,132,68,33,107,112,96,73,120,101,59,31,25,12,73,115,91,45,10,96,120,76,31,107,53,20,104,116,25,59,115,79,113,104,80,73,29,73,58,117,85,123],"NA..2":[6,15,15,20,24,30,30,30,31,33,33,33,35,36,38,40,41,41,46,46,47,53,53,57,57,59,59,59,60,60,60,60,60,60,61,65,67,67,68,69,70,71,72,72,72,73,73,73,73,73,73,73,74,74,74,77,78,78,79,79,81,83,83,86,86,86,87,89,89,91,91,91,91,92,93,94,95,96,96,96,96,96,96,97,98,98,98,98,101,102,103,103,103,104,104,104,104,104,104,104,104,104,105,106,106,106,106,107,107,107,107,107,107,107,107,107,107,107,109,110,110,110,111,111,111,111,112,112,112,113,113,114,115,115,115,115,115,115,116,116,116,116,116,116,116,116,116,116,118,119,120,120,120,120,120,120,120,120,120,120,120,120,120,120,121,122,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,124,124,125,125,125,126,127,128,128,129,130,131,131,132,132,132,132,133,133,133,133,134,135,135,135,135,135,135,135,135,135,135,136,137,137,137,137,138,138,138,138,138,138,138,138,138,138,138,139,139,139,139,140,140,140,140,141,142,142,142,142,142,143,143,143,143,143,143,143,144,144,145,146,147,147,147,147],"NA..3":[2,3,37,2,2,2,2,3,23,2,3,3,2,2,3,3,2,3,5,4,4,10,3,2,15,5,2,21,2,2,2,7,2,2,23,2,4,13,2,3,2,2,9,2,2,2,5,2,3,2,7,2,4,15,7,2,2,6,11,3,8,2,3,2,15,14,3,3,2,2,3,2,2,2,11,4,3,4,5,4,3,6,47,2,12,2,2,4,2,2,7,2,15,2,2,2,2,2,2,3,2,2,4,2,2,2,5,2,2,2,29,2,5,6,9,15,7,17,2,3,12,7,5,4,15,7,4,2,6,5,2,5,5,19,7,2,4,3,3,2,4,2,2,4,2,3,12,2,2,3,2,2,2,2,2,2,5,2,2,3,4,39,3,2,2,2,3,3,2,3,2,2,2,2,2,2,2,2,2,6,3,2,2,2,2,18,4,2,4,2,2,3,4,2,2,5,24,36,2,10,6,2,2,5,2,2,4,2,2,3,2,2,2,3,2,2,3,12,2,2,2,7,28,4,11,2,4,2,2,3,24,2,2,2,2,3,2,8,8,2,4,3,2,5,2,5,2,5,2,2,2,3,6,2,4,2,3,2,2,3],"colour":["#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666"]},"nodes":{"name":["Acquaye","Agrawala","Akbari","Allwood","Babiker","Barreto-Gomez","Barrett","Bashmakov","Bertoldi","Blanford","Bosetti","Brown","Bruckner","Bustamante","Carino-Olvera","Carraro","Ceron","Cervero","Chen_Ying","Chum","Clarke","Corbera","Dadhich","DAgosto","Deakin","Den-Elzen","Dhakal","Diaz-Morejon","Dong","Dutt","Edenhofer","Edmonds","Eyre","Faaij","Figueroa-Meza","Fischedick","Fisher-Vanden","Gadgil","Gamez-Vazquez","Garg","Geng","Gerlagh","Gollier","Gomes","Goulder","Gruebler","Guan","Gupta_Joyeeta","Gupta_Shreekant","Gupta_Sujata","Ha-Duong","Haberl","Haites","Halsnaes","Hanemann","Harnisch","Harper","Held","Hertwich","Hoehne","Hourcade","Ivanova-Boncheva","Jaffe","Jiang_Kejun","Jiang_Leiwen","Jiang_Yi","Jotzo","Kahn-Ribeiro","Kainuma","Kansal","Kheshgi","Kobayashi","Kopp","Krey","Kriegler","Krug","Kunreuther","Kverndokk","Lanza","Lecocq","Lewis","Linnerooth-Bayer","Lucon","Lutz","Managi","Masera-Cerutti","Massetti","Mbow","McMahon","Michaelowa","Mirasgedis","Mitchell","Mueller","Murakami_Jin","Muylaert-de-Araujo","Nabuurs","Nakicenovic","Norgaard","Paltsev","Palvolgy","Pathak","Patt","Pichs-Madruga","Pinguelli-Rosa","Price","Ramaswami","Ravindranath","Riahi","Rice_Charles","Rice_Jake","Richels","Rogner","Rose","Roy","Ruth","Sathaye","Schaeffer","Schauer","Seto","Sheinbaum","Shukla","Sims","Skea","Smith","Sokona","Stavins","Stern","Sterner","Strachan","Sugiyama","Suh","Tanaka","Tavoni","Toth","Tubiello","Uerge-Vorsatz","Urama","Van-der-Zwaan","Van-Vuuren","Verbruggen","Victor","Weber","Weyant","Winkler","Wiser","Yamaguchi","Yamba","Zhang"],"group":["green4","green4","tomato","green4","gold","green4","green4","steelblue","green4","tomato","green4","tomato","green4","steelblue","tomato","green4","green4","tomato","steelblue","tomato","tomato","green4","steelblue","steelblue","green4","green4","gold","gold","steelblue","steelblue","green4","tomato","green4","green4","green4","green4","tomato","tomato","tomato","steelblue","steelblue","green4","green4","steelblue","tomato","green4","green4","green4","steelblue","steelblue","green4","green4","tomato","green4","tomato","green4","gold","green4","green4","green4","green4","tomato","green4","steelblue","tomato","steelblue","gold","steelblue","gold","steelblue","tomato","gold","tomato","green4","green4","steelblue","tomato","green4","green4","green4","tomato","green4","steelblue","green4","gold","tomato","green4","gold","tomato","green4","green4","green4","green4","steelblue","steelblue","green4","green4","tomato","tomato","green4","steelblue","green4","gold","steelblue","tomato","tomato","steelblue","green4","tomato","tomato","tomato","green4","tomato","steelblue","tomato","tomato","steelblue","tomato","tomato","tomato","steelblue","gold","green4","green4","gold","tomato","gold","green4","green4","gold","tomato","gold","green4","green4","green4","gold","green4","green4","green4","green4","tomato","tomato","tomato","gold","tomato","gold","gold","steelblue"]},"options":{"NodeID":"name","Group":"group","colourScale":"d3.scaleOrdinal()\n            .domain([\"Europe\", \"North America\", \"BRICS\", \"Other\"])\n           .range([\"#07C343\", \"#D2140C\", \"#0C4AD2\", \"#C7D20C\"]);","fontSize":14,"fontFamily":"serif","clickTextSize":35,"linkDistance":50,"linkWidth":"function(d) { return Math.sqrt(d.value); }","charge":-30,"opacity":0.6,"zoom":true,"legend":false,"arrows":false,"nodesize":false,"radiusCalculation":" Math.sqrt(d.nodesize)+6","bounded":false,"opacityNoHover":0,"clickAction":null}},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="networks.html#cb36-1" tabindex="-1"></a><span class="co"># plot</span></span>
+<span id="cb36-2"><a href="networks.html#cb36-2" tabindex="-1"></a>p</span></code></pre></div>
+<div id="htmlwidget-6cb7e44ff3d0d8a10868" style="width:800px;height:400px;" class="forceNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6cb7e44ff3d0d8a10868">{"x":{"links":{"source":[0,1,10,9,17,10,15,12,20,30,27,19,30,31,14,28,15,10,6,40,25,39,7,12,30,55,52,25,16,15,10,50,30,52,38,32,34,23,31,49,31,67,54,44,20,12,20,31,45,35,30,68,12,57,30,41,15,10,60,50,76,64,43,25,15,10,51,66,30,33,56,30,12,3,17,67,85,73,68,57,83,31,45,96,4,15,10,18,83,33,67,23,94,34,11,80,88,53,7,96,2,63,26,75,13,95,85,83,59,63,96,22,25,5,68,73,31,45,43,20,9,31,107,104,96,45,96,73,107,104,67,18,113,104,106,79,85,53,12,82,115,19,79,104,33,35,103,30,51,104,20,115,116,36,106,107,60,111,45,100,53,39,104,96,73,32,75,115,111,59,120,48,7,96,85,49,113,67,121,95,108,71,53,116,33,62,44,15,66,42,111,122,89,6,104,84,15,10,110,86,96,53,104,111,123,67,99,8,123,96,7,37,116,115,90,73,10,41,15,132,68,33,107,112,96,73,120,101,59,31,25,12,73,115,91,45,10,96,120,76,31,107,53,20,104,116,25,59,115,79,113,104,80,73,29,73,58,117,85,123],"target":[6,15,15,20,24,30,30,30,31,33,33,33,35,36,38,40,41,41,46,46,47,53,53,57,57,59,59,59,60,60,60,60,60,60,61,65,67,67,68,69,70,71,72,72,72,73,73,73,73,73,73,73,74,74,74,77,78,78,79,79,81,83,83,86,86,86,87,89,89,91,91,91,91,92,93,94,95,96,96,96,96,96,96,97,98,98,98,98,101,102,103,103,103,104,104,104,104,104,104,104,104,104,105,106,106,106,106,107,107,107,107,107,107,107,107,107,107,107,109,110,110,110,111,111,111,111,112,112,112,113,113,114,115,115,115,115,115,115,116,116,116,116,116,116,116,116,116,116,118,119,120,120,120,120,120,120,120,120,120,120,120,120,120,120,121,122,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,124,124,125,125,125,126,127,128,128,129,130,131,131,132,132,132,132,133,133,133,133,134,135,135,135,135,135,135,135,135,135,135,136,137,137,137,137,138,138,138,138,138,138,138,138,138,138,138,139,139,139,139,140,140,140,140,141,142,142,142,142,142,143,143,143,143,143,143,143,144,144,145,146,147,147,147,147],"NA.":[2,3,37,2,2,2,2,3,23,2,3,3,2,2,3,3,2,3,5,4,4,10,3,2,15,5,2,21,2,2,2,7,2,2,23,2,4,13,2,3,2,2,9,2,2,2,5,2,3,2,7,2,4,15,7,2,2,6,11,3,8,2,3,2,15,14,3,3,2,2,3,2,2,2,11,4,3,4,5,4,3,6,47,2,12,2,2,4,2,2,7,2,15,2,2,2,2,2,2,3,2,2,4,2,2,2,5,2,2,2,29,2,5,6,9,15,7,17,2,3,12,7,5,4,15,7,4,2,6,5,2,5,5,19,7,2,4,3,3,2,4,2,2,4,2,3,12,2,2,3,2,2,2,2,2,2,5,2,2,3,4,39,3,2,2,2,3,3,2,3,2,2,2,2,2,2,2,2,2,6,3,2,2,2,2,18,4,2,4,2,2,3,4,2,2,5,24,36,2,10,6,2,2,5,2,2,4,2,2,3,2,2,2,3,2,2,3,12,2,2,2,7,28,4,11,2,4,2,2,3,24,2,2,2,2,3,2,8,8,2,4,3,2,5,2,5,2,5,2,2,2,3,6,2,4,2,3,2,2,3],"NA..1":[0,1,10,9,17,10,15,12,20,30,27,19,30,31,14,28,15,10,6,40,25,39,7,12,30,55,52,25,16,15,10,50,30,52,38,32,34,23,31,49,31,67,54,44,20,12,20,31,45,35,30,68,12,57,30,41,15,10,60,50,76,64,43,25,15,10,51,66,30,33,56,30,12,3,17,67,85,73,68,57,83,31,45,96,4,15,10,18,83,33,67,23,94,34,11,80,88,53,7,96,2,63,26,75,13,95,85,83,59,63,96,22,25,5,68,73,31,45,43,20,9,31,107,104,96,45,96,73,107,104,67,18,113,104,106,79,85,53,12,82,115,19,79,104,33,35,103,30,51,104,20,115,116,36,106,107,60,111,45,100,53,39,104,96,73,32,75,115,111,59,120,48,7,96,85,49,113,67,121,95,108,71,53,116,33,62,44,15,66,42,111,122,89,6,104,84,15,10,110,86,96,53,104,111,123,67,99,8,123,96,7,37,116,115,90,73,10,41,15,132,68,33,107,112,96,73,120,101,59,31,25,12,73,115,91,45,10,96,120,76,31,107,53,20,104,116,25,59,115,79,113,104,80,73,29,73,58,117,85,123],"NA..2":[6,15,15,20,24,30,30,30,31,33,33,33,35,36,38,40,41,41,46,46,47,53,53,57,57,59,59,59,60,60,60,60,60,60,61,65,67,67,68,69,70,71,72,72,72,73,73,73,73,73,73,73,74,74,74,77,78,78,79,79,81,83,83,86,86,86,87,89,89,91,91,91,91,92,93,94,95,96,96,96,96,96,96,97,98,98,98,98,101,102,103,103,103,104,104,104,104,104,104,104,104,104,105,106,106,106,106,107,107,107,107,107,107,107,107,107,107,107,109,110,110,110,111,111,111,111,112,112,112,113,113,114,115,115,115,115,115,115,116,116,116,116,116,116,116,116,116,116,118,119,120,120,120,120,120,120,120,120,120,120,120,120,120,120,121,122,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,123,124,124,125,125,125,126,127,128,128,129,130,131,131,132,132,132,132,133,133,133,133,134,135,135,135,135,135,135,135,135,135,135,136,137,137,137,137,138,138,138,138,138,138,138,138,138,138,138,139,139,139,139,140,140,140,140,141,142,142,142,142,142,143,143,143,143,143,143,143,144,144,145,146,147,147,147,147],"NA..3":[2,3,37,2,2,2,2,3,23,2,3,3,2,2,3,3,2,3,5,4,4,10,3,2,15,5,2,21,2,2,2,7,2,2,23,2,4,13,2,3,2,2,9,2,2,2,5,2,3,2,7,2,4,15,7,2,2,6,11,3,8,2,3,2,15,14,3,3,2,2,3,2,2,2,11,4,3,4,5,4,3,6,47,2,12,2,2,4,2,2,7,2,15,2,2,2,2,2,2,3,2,2,4,2,2,2,5,2,2,2,29,2,5,6,9,15,7,17,2,3,12,7,5,4,15,7,4,2,6,5,2,5,5,19,7,2,4,3,3,2,4,2,2,4,2,3,12,2,2,3,2,2,2,2,2,2,5,2,2,3,4,39,3,2,2,2,3,3,2,3,2,2,2,2,2,2,2,2,2,6,3,2,2,2,2,18,4,2,4,2,2,3,4,2,2,5,24,36,2,10,6,2,2,5,2,2,4,2,2,3,2,2,2,3,2,2,3,12,2,2,2,7,28,4,11,2,4,2,2,3,24,2,2,2,2,3,2,8,8,2,4,3,2,5,2,5,2,5,2,2,2,3,6,2,4,2,3,2,2,3],"colour":["#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666","#666"]},"nodes":{"name":["Acquaye","Agrawala","Akbari","Allwood","Babiker","Barreto-Gomez","Barrett","Bashmakov","Bertoldi","Blanford","Bosetti","Brown","Bruckner","Bustamante","Carino-Olvera","Carraro","Ceron","Cervero","Chen_Ying","Chum","Clarke","Corbera","Dadhich","DAgosto","Deakin","Den-Elzen","Dhakal","Diaz-Morejon","Dong","Dutt","Edenhofer","Edmonds","Eyre","Faaij","Figueroa-Meza","Fischedick","Fisher-Vanden","Gadgil","Gamez-Vazquez","Garg","Geng","Gerlagh","Gollier","Gomes","Goulder","Gruebler","Guan","Gupta_Joyeeta","Gupta_Shreekant","Gupta_Sujata","Ha-Duong","Haberl","Haites","Halsnaes","Hanemann","Harnisch","Harper","Held","Hertwich","Hoehne","Hourcade","Ivanova-Boncheva","Jaffe","Jiang_Kejun","Jiang_Leiwen","Jiang_Yi","Jotzo","Kahn-Ribeiro","Kainuma","Kansal","Kheshgi","Kobayashi","Kopp","Krey","Kriegler","Krug","Kunreuther","Kverndokk","Lanza","Lecocq","Lewis","Linnerooth-Bayer","Lucon","Lutz","Managi","Masera-Cerutti","Massetti","Mbow","McMahon","Michaelowa","Mirasgedis","Mitchell","Mueller","Murakami_Jin","Muylaert-de-Araujo","Nabuurs","Nakicenovic","Norgaard","Paltsev","Palvolgy","Pathak","Patt","Pichs-Madruga","Pinguelli-Rosa","Price","Ramaswami","Ravindranath","Riahi","Rice_Charles","Rice_Jake","Richels","Rogner","Rose","Roy","Ruth","Sathaye","Schaeffer","Schauer","Seto","Sheinbaum","Shukla","Sims","Skea","Smith","Sokona","Stavins","Stern","Sterner","Strachan","Sugiyama","Suh","Tanaka","Tavoni","Toth","Tubiello","Uerge-Vorsatz","Urama","Van-der-Zwaan","Van-Vuuren","Verbruggen","Victor","Weber","Weyant","Winkler","Wiser","Yamaguchi","Yamba","Zhang"],"group":["green4","green4","tomato","green4","gold","green4","green4","steelblue","green4","tomato","green4","tomato","green4","steelblue","tomato","green4","green4","tomato","steelblue","tomato","tomato","green4","steelblue","steelblue","green4","green4","gold","gold","steelblue","steelblue","green4","tomato","green4","green4","green4","green4","tomato","tomato","tomato","steelblue","steelblue","green4","green4","steelblue","tomato","green4","green4","green4","steelblue","steelblue","green4","green4","tomato","green4","tomato","green4","gold","green4","green4","green4","green4","tomato","green4","steelblue","tomato","steelblue","gold","steelblue","gold","steelblue","tomato","gold","tomato","green4","green4","steelblue","tomato","green4","green4","green4","tomato","green4","steelblue","green4","gold","tomato","green4","gold","tomato","green4","green4","green4","green4","steelblue","steelblue","green4","green4","tomato","tomato","green4","steelblue","green4","gold","steelblue","tomato","tomato","steelblue","green4","tomato","tomato","tomato","green4","tomato","steelblue","tomato","tomato","steelblue","tomato","tomato","tomato","steelblue","gold","green4","green4","gold","tomato","gold","green4","green4","gold","tomato","gold","green4","green4","green4","gold","green4","green4","green4","green4","tomato","tomato","tomato","gold","tomato","gold","gold","steelblue"]},"options":{"NodeID":"name","Group":"group","colourScale":"d3.scaleOrdinal()\n            .domain([\"Europe\", \"North America\", \"BRICS\", \"Other\"])\n           .range([\"#07C343\", \"#D2140C\", \"#0C4AD2\", \"#C7D20C\"]);","fontSize":14,"fontFamily":"serif","clickTextSize":35,"linkDistance":50,"linkWidth":"function(d) { return Math.sqrt(d.value); }","charge":-30,"opacity":0.6,"zoom":true,"legend":false,"arrows":false,"nodesize":false,"radiusCalculation":" Math.sqrt(d.nodesize)+6","bounded":false,"opacityNoHover":0,"clickAction":null}},"evals":[],"jsHooks":[]}</script>
 </div>
-<div id="migration-flows" class="section level2 hasAnchor" number="6.6">
-<h2><span class="header-section-number">6.6</span> Migration Flows<a href="networks.html#migration-flows" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="migration-flows" class="section level2 hasAnchor" number="10.6">
+<h2><span class="header-section-number">10.6</span> Migration Flows<a href="networks.html#migration-flows" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We can also display networks in other forms. For example, we might want to show reciprocal (or non-reciprocal) migration flows between counties. Here, we’ll select Butte County, which experienced the 2018 Camp Fire, as well as the surrounding counties of Colusa, Glenn, Plumas, Sierra, Tehama, and Yuba.</p>
 <p>The <code>ca_migration</code> data below represents migration patterns between these counties, as measured by the U.S. Census’ American Community Survey. The full data can be downloaded <a href="https://www.census.gov/topics/population/migration/guidance/county-to-county-migration-flows.html">here</a>. I use migration flows between 2016 and 2020.</p>
 <p>We can create a chord diagram using the code below. The <a href="https://r-graph-gallery.com">R Graph Gallery</a> has similar examples of chord diagrams.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="networks.html#cb36-1" tabindex="-1"></a><span class="fu">library</span>(circlize)</span>
-<span id="cb36-2"><a href="networks.html#cb36-2" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
-<span id="cb36-3"><a href="networks.html#cb36-3" tabindex="-1"></a><span class="fu">library</span>(viridis)</span>
-<span id="cb36-4"><a href="networks.html#cb36-4" tabindex="-1"></a></span>
-<span id="cb36-5"><a href="networks.html#cb36-5" tabindex="-1"></a><span class="co"># create chord diagram</span></span>
-<span id="cb36-6"><a href="networks.html#cb36-6" tabindex="-1"></a><span class="fu">chordDiagram</span>(ca_migration,</span>
-<span id="cb36-7"><a href="networks.html#cb36-7" tabindex="-1"></a>             <span class="at">transparency =</span> <span class="fl">0.25</span>,</span>
-<span id="cb36-8"><a href="networks.html#cb36-8" tabindex="-1"></a>              <span class="at">grid.col =</span> <span class="fu">inferno</span>(<span class="dv">7</span>),</span>
-<span id="cb36-9"><a href="networks.html#cb36-9" tabindex="-1"></a>  <span class="at">directional =</span> <span class="dv">1</span>,</span>
-<span id="cb36-10"><a href="networks.html#cb36-10" tabindex="-1"></a>  <span class="at">direction.type =</span> <span class="fu">c</span>(<span class="st">&quot;arrows&quot;</span>, <span class="st">&quot;diffHeight&quot;</span>), </span>
-<span id="cb36-11"><a href="networks.html#cb36-11" tabindex="-1"></a>  <span class="at">diffHeight  =</span> <span class="sc">-</span><span class="fl">0.04</span>,</span>
-<span id="cb36-12"><a href="networks.html#cb36-12" tabindex="-1"></a>  <span class="at">annotationTrack =</span> <span class="st">&quot;grid&quot;</span>, </span>
-<span id="cb36-13"><a href="networks.html#cb36-13" tabindex="-1"></a>  <span class="at">annotationTrackHeight =</span> <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.1</span>),</span>
-<span id="cb36-14"><a href="networks.html#cb36-14" tabindex="-1"></a>  <span class="at">link.arr.type =</span> <span class="st">&quot;big.arrow&quot;</span>, </span>
-<span id="cb36-15"><a href="networks.html#cb36-15" tabindex="-1"></a>  <span class="at">link.sort =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb36-16"><a href="networks.html#cb36-16" tabindex="-1"></a>  <span class="at">link.largest.ontop =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb36-17"><a href="networks.html#cb36-17" tabindex="-1"></a></span>
-<span id="cb36-18"><a href="networks.html#cb36-18" tabindex="-1"></a></span>
-<span id="cb36-19"><a href="networks.html#cb36-19" tabindex="-1"></a><span class="co"># Add text and axis</span></span>
-<span id="cb36-20"><a href="networks.html#cb36-20" tabindex="-1"></a><span class="fu">circos.trackPlotRegion</span>(</span>
-<span id="cb36-21"><a href="networks.html#cb36-21" tabindex="-1"></a>  <span class="at">track.index =</span> <span class="dv">1</span>, </span>
-<span id="cb36-22"><a href="networks.html#cb36-22" tabindex="-1"></a>  <span class="at">bg.border =</span> <span class="cn">NA</span>, </span>
-<span id="cb36-23"><a href="networks.html#cb36-23" tabindex="-1"></a>  <span class="at">panel.fun =</span> <span class="cf">function</span>(x, y) {</span>
-<span id="cb36-24"><a href="networks.html#cb36-24" tabindex="-1"></a>    </span>
-<span id="cb36-25"><a href="networks.html#cb36-25" tabindex="-1"></a>    xlim <span class="ot">=</span> <span class="fu">get.cell.meta.data</span>(<span class="st">&quot;xlim&quot;</span>)</span>
-<span id="cb36-26"><a href="networks.html#cb36-26" tabindex="-1"></a>    sector.index <span class="ot">=</span> <span class="fu">get.cell.meta.data</span>(<span class="st">&quot;sector.index&quot;</span>)</span>
-<span id="cb36-27"><a href="networks.html#cb36-27" tabindex="-1"></a>    </span>
-<span id="cb36-28"><a href="networks.html#cb36-28" tabindex="-1"></a>    <span class="co"># Add names to the sector. </span></span>
-<span id="cb36-29"><a href="networks.html#cb36-29" tabindex="-1"></a>    <span class="fu">circos.text</span>(</span>
-<span id="cb36-30"><a href="networks.html#cb36-30" tabindex="-1"></a>      <span class="at">x =</span> <span class="fu">mean</span>(xlim), </span>
-<span id="cb36-31"><a href="networks.html#cb36-31" tabindex="-1"></a>      <span class="at">y =</span> <span class="fl">2.2</span>, </span>
-<span id="cb36-32"><a href="networks.html#cb36-32" tabindex="-1"></a>      <span class="at">labels =</span> sector.index, </span>
-<span id="cb36-33"><a href="networks.html#cb36-33" tabindex="-1"></a>      <span class="at">facing =</span> <span class="st">&quot;bending&quot;</span>, </span>
-<span id="cb36-34"><a href="networks.html#cb36-34" tabindex="-1"></a>      <span class="at">cex =</span> <span class="fl">0.8</span></span>
-<span id="cb36-35"><a href="networks.html#cb36-35" tabindex="-1"></a>      )</span>
-<span id="cb36-36"><a href="networks.html#cb36-36" tabindex="-1"></a></span>
-<span id="cb36-37"><a href="networks.html#cb36-37" tabindex="-1"></a>  }</span>
-<span id="cb36-38"><a href="networks.html#cb36-38" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="networks.html#cb37-1" tabindex="-1"></a><span class="fu">library</span>(circlize)</span>
+<span id="cb37-2"><a href="networks.html#cb37-2" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb37-3"><a href="networks.html#cb37-3" tabindex="-1"></a><span class="fu">library</span>(viridis)</span>
+<span id="cb37-4"><a href="networks.html#cb37-4" tabindex="-1"></a></span>
+<span id="cb37-5"><a href="networks.html#cb37-5" tabindex="-1"></a><span class="co"># create chord diagram</span></span>
+<span id="cb37-6"><a href="networks.html#cb37-6" tabindex="-1"></a><span class="fu">chordDiagram</span>(ca_migration,</span>
+<span id="cb37-7"><a href="networks.html#cb37-7" tabindex="-1"></a>             <span class="at">transparency =</span> <span class="fl">0.25</span>,</span>
+<span id="cb37-8"><a href="networks.html#cb37-8" tabindex="-1"></a>              <span class="at">grid.col =</span> <span class="fu">inferno</span>(<span class="dv">7</span>),</span>
+<span id="cb37-9"><a href="networks.html#cb37-9" tabindex="-1"></a>  <span class="at">directional =</span> <span class="dv">1</span>,</span>
+<span id="cb37-10"><a href="networks.html#cb37-10" tabindex="-1"></a>  <span class="at">direction.type =</span> <span class="fu">c</span>(<span class="st">&quot;arrows&quot;</span>, <span class="st">&quot;diffHeight&quot;</span>), </span>
+<span id="cb37-11"><a href="networks.html#cb37-11" tabindex="-1"></a>  <span class="at">diffHeight  =</span> <span class="sc">-</span><span class="fl">0.04</span>,</span>
+<span id="cb37-12"><a href="networks.html#cb37-12" tabindex="-1"></a>  <span class="at">annotationTrack =</span> <span class="st">&quot;grid&quot;</span>, </span>
+<span id="cb37-13"><a href="networks.html#cb37-13" tabindex="-1"></a>  <span class="at">annotationTrackHeight =</span> <span class="fu">c</span>(<span class="fl">0.05</span>, <span class="fl">0.1</span>),</span>
+<span id="cb37-14"><a href="networks.html#cb37-14" tabindex="-1"></a>  <span class="at">link.arr.type =</span> <span class="st">&quot;big.arrow&quot;</span>, </span>
+<span id="cb37-15"><a href="networks.html#cb37-15" tabindex="-1"></a>  <span class="at">link.sort =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb37-16"><a href="networks.html#cb37-16" tabindex="-1"></a>  <span class="at">link.largest.ontop =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb37-17"><a href="networks.html#cb37-17" tabindex="-1"></a></span>
+<span id="cb37-18"><a href="networks.html#cb37-18" tabindex="-1"></a></span>
+<span id="cb37-19"><a href="networks.html#cb37-19" tabindex="-1"></a><span class="co"># Add text and axis</span></span>
+<span id="cb37-20"><a href="networks.html#cb37-20" tabindex="-1"></a><span class="fu">circos.trackPlotRegion</span>(</span>
+<span id="cb37-21"><a href="networks.html#cb37-21" tabindex="-1"></a>  <span class="at">track.index =</span> <span class="dv">1</span>, </span>
+<span id="cb37-22"><a href="networks.html#cb37-22" tabindex="-1"></a>  <span class="at">bg.border =</span> <span class="cn">NA</span>, </span>
+<span id="cb37-23"><a href="networks.html#cb37-23" tabindex="-1"></a>  <span class="at">panel.fun =</span> <span class="cf">function</span>(x, y) {</span>
+<span id="cb37-24"><a href="networks.html#cb37-24" tabindex="-1"></a>    </span>
+<span id="cb37-25"><a href="networks.html#cb37-25" tabindex="-1"></a>    xlim <span class="ot">=</span> <span class="fu">get.cell.meta.data</span>(<span class="st">&quot;xlim&quot;</span>)</span>
+<span id="cb37-26"><a href="networks.html#cb37-26" tabindex="-1"></a>    sector.index <span class="ot">=</span> <span class="fu">get.cell.meta.data</span>(<span class="st">&quot;sector.index&quot;</span>)</span>
+<span id="cb37-27"><a href="networks.html#cb37-27" tabindex="-1"></a>    </span>
+<span id="cb37-28"><a href="networks.html#cb37-28" tabindex="-1"></a>    <span class="co"># Add names to the sector. </span></span>
+<span id="cb37-29"><a href="networks.html#cb37-29" tabindex="-1"></a>    <span class="fu">circos.text</span>(</span>
+<span id="cb37-30"><a href="networks.html#cb37-30" tabindex="-1"></a>      <span class="at">x =</span> <span class="fu">mean</span>(xlim), </span>
+<span id="cb37-31"><a href="networks.html#cb37-31" tabindex="-1"></a>      <span class="at">y =</span> <span class="fl">2.2</span>, </span>
+<span id="cb37-32"><a href="networks.html#cb37-32" tabindex="-1"></a>      <span class="at">labels =</span> sector.index, </span>
+<span id="cb37-33"><a href="networks.html#cb37-33" tabindex="-1"></a>      <span class="at">facing =</span> <span class="st">&quot;bending&quot;</span>, </span>
+<span id="cb37-34"><a href="networks.html#cb37-34" tabindex="-1"></a>      <span class="at">cex =</span> <span class="fl">0.8</span></span>
+<span id="cb37-35"><a href="networks.html#cb37-35" tabindex="-1"></a>      )</span>
+<span id="cb37-36"><a href="networks.html#cb37-36" tabindex="-1"></a></span>
+<span id="cb37-37"><a href="networks.html#cb37-37" tabindex="-1"></a>  }</span>
+<span id="cb37-38"><a href="networks.html#cb37-38" tabindex="-1"></a>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/chorddiagram-1.png" width="672" /></p>
 <p>We notice that the flows in and out of Butte County are fairly even, and similar to other counties in the region. Sierra County is smaller and more peripheral than the others, and therefore only has migration flows with Plumas County.</p>
 <p>While we might expect to see large out-migration of Butte County, this is not visible, at least in these data. Many evacuees <a href="https://theintercept.com/2021/05/07/california-fires-chico-housing-real-estate/">fled to nearby Chico within Butte County</a>, and others <a href="https://today.csuchico.edu/mapping-a-displaced-population/">traveled much farther</a>. While we know that the Camp Fire disrupted migration patterns on various scales, we don’t see strong evidence of this at the county level during the 2016-2020 period.</p>
 </div>
-<div id="problem-set-6" class="section level2 hasAnchor" number="6.7">
-<h2><span class="header-section-number">6.7</span> Problem Set 6<a href="networks.html#problem-set-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="problem-set-6" class="section level2 hasAnchor" number="10.7">
+<h2><span class="header-section-number">10.7</span> Problem Set 6<a href="networks.html#problem-set-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Recommended Resources:</p>
 <p><a href="https://r.igraph.org/articles/igraph.html">igraph</a></p>
 <p><a href="https://bookdown.org/markhoff/social_network_analysis/">Methods for Network Analysis</a></p>
 <ol style="list-style-type: decimal">
 <li><p>Start a new document, problemset6.Rmd, in your soc10problemsets repository. (You can download a template <a href="https://github.com/Soc10Spring2026/soc10problemsets_templates">here</a>, but be sure to save it in your own soc10problemsets repo). Create a network based on 5 people in our class! (You can use the “class_activities.csv” file from Canvas if helpful or use the code in the template). Using <code>igraph</code>, create a network diagram based on who has worked with who in our class activities this quarter (you may want to use <code>graph_from_data_frame()</code> if you read in the csv). Then plot the network. (Note: a network with only 5 people, excluding ties to everyone outside of these 5, is sufficient). <strong>Commit</strong> your changes.</p></li>
 <li><p>Choose a centrality measure, and explain how you would interpret this in the context of the class activities data. Who is/are the most central actor(s) according to this measure? <strong>Commit</strong> your changes.</p></li>
-<li><p>Now download the IPCC co-authorship data (you can use the code included in the template). Using the IPCC co-authorship data, create a network graph of all co-authors who share at least 2 publications together, excluding those with no network ties, similar to what we do in section <a href="networks.html#co-authorship-patterns">6.4</a>. Graph the data using eigenvector scores, rather than betweenness scores, to plot the vertex sizes. Does this make a difference in our interpretation of the network? <strong>Commit</strong> your changes.</p></li>
+<li><p>Now download the IPCC co-authorship data (you can use the code included in the template). Using the IPCC co-authorship data, create a network graph of all co-authors who share at least 2 publications together, excluding those with no network ties, similar to what we do in section <a href="networks.html#co-authorship-patterns">10.4</a>. Graph the data using eigenvector scores, rather than betweenness scores, to plot the vertex sizes. Does this make a difference in our interpretation of the network? <strong>Commit</strong> your changes.</p></li>
 <li><p>Let’s say you want to give one of the IPCC authors a memo to disseminate to the others. Who would you choose? Which measure of centrality would help you arrive at your answer? <strong>Commit</strong> your changes.</p></li>
 <li><p>Finally, plot the IPCC co-authorship data, but change the color/shape of the vertices so that these correspond to authors’ gender. Describe what you see. What conclusions can you make about authorship and gender? (Note that you will need the IPCC_cv.csv dataset. The code in the template has combined these datasets). <strong>Commit</strong> your changes.</p></li>
 </ol>
@@ -226525,7 +226607,7 @@ Zycliz
         </div>
       </div>
 <a href="maps-and-spatial-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="prediction-and-machine-learning.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="text-mining.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

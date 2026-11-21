@@ -4,23 +4,23 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Gathering and Modeling Data | Introduction to Computational Social Science</title>
-  <meta name="description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  <title>7 Gathering and Modeling Data | Introduction to Data Science with R</title>
+  <meta name="description" content="This will serve as a course reader for DS002R, Spring 2027." />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Gathering and Modeling Data | Introduction to Computational Social Science" />
+  <meta property="og:title" content="7 Gathering and Modeling Data | Introduction to Data Science with R" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This will serve as a course reader for SOC 10, Spring 2026." />
-  <meta name="github-repo" content="rstudio/soc10" />
+  <meta property="og:description" content="This will serve as a course reader for DS002R, Spring 2027." />
+  <meta name="github-repo" content="DS002R-Spr26_website" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Gathering and Modeling Data | Introduction to Computational Social Science" />
+  <meta name="twitter:title" content="7 Gathering and Modeling Data | Introduction to Data Science with R" />
   
-  <meta name="twitter:description" content="This will serve as a course reader for SOC 10, Spring 2026." />
+  <meta name="twitter:description" content="This will serve as a course reader for DS002R, Spring 2027." />
   
 
-<meta name="author" content="Instructor: Tyler McDaniel, PhD Candidate, Sociology | TA: Yao Xu, PhD Candidate, Sociology" />
+<meta name="author" content="Instructor: Tyler McDaniel, Environmental Analysis" />
 
 
 
@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="data-visualization-techniques.html"/>
-<link rel="next" href="maps-and-spatial-data.html"/>
+<link rel="next" href="prediction-and-machine-learning.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -141,111 +141,188 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Syllabus</a></li>
-<li class="chapter" data-level="1" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html"><i class="fa fa-check"></i><b>1</b> What is Computational Social Science?</a>
+<li class="chapter" data-level="1" data-path="what-is-data-science-what-is-computational-social-science.html"><a href="what-is-data-science-what-is-computational-social-science.html"><i class="fa fa-check"></i><b>1</b> What is Data Science? What is Computational Social Science?</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#some-definitions"><i class="fa fa-check"></i><b>1.1</b> Some Definitions</a></li>
-<li class="chapter" data-level="1.2" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#getting-started-with-r-or-python"><i class="fa fa-check"></i><b>1.2</b> Getting Started with R (or Python)</a></li>
-<li class="chapter" data-level="1.3" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#working-in-base-r"><i class="fa fa-check"></i><b>1.3</b> Working in Base R</a></li>
-<li class="chapter" data-level="1.4" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#opening-rstudio"><i class="fa fa-check"></i><b>1.4</b> Opening RStudio</a></li>
-<li class="chapter" data-level="1.5" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#packages"><i class="fa fa-check"></i><b>1.5</b> Packages</a></li>
-<li class="chapter" data-level="1.6" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#r-markdown"><i class="fa fa-check"></i><b>1.6</b> R Markdown</a></li>
-<li class="chapter" data-level="1.7" data-path="what-is-computational-social-science.html"><a href="what-is-computational-social-science.html#problem-set-1"><i class="fa fa-check"></i><b>1.7</b> Problem Set 1</a></li>
+<li class="chapter" data-level="1.1" data-path="what-is-data-science-what-is-computational-social-science.html"><a href="what-is-data-science-what-is-computational-social-science.html#some-definitions"><i class="fa fa-check"></i><b>1.1</b> Some Definitions</a></li>
+<li class="chapter" data-level="1.2" data-path="what-is-data-science-what-is-computational-social-science.html"><a href="what-is-data-science-what-is-computational-social-science.html#getting-started-with-r-or-python"><i class="fa fa-check"></i><b>1.2</b> Getting Started with R (or Python)</a></li>
+<li class="chapter" data-level="1.3" data-path="what-is-data-science-what-is-computational-social-science.html"><a href="what-is-data-science-what-is-computational-social-science.html#working-in-base-r"><i class="fa fa-check"></i><b>1.3</b> Working in Base R</a></li>
+<li class="chapter" data-level="1.4" data-path="what-is-data-science-what-is-computational-social-science.html"><a href="what-is-data-science-what-is-computational-social-science.html#opening-rstudio"><i class="fa fa-check"></i><b>1.4</b> Opening RStudio</a></li>
+<li class="chapter" data-level="1.5" data-path="what-is-data-science-what-is-computational-social-science.html"><a href="what-is-data-science-what-is-computational-social-science.html#packages"><i class="fa fa-check"></i><b>1.5</b> Packages</a></li>
+<li class="chapter" data-level="1.6" data-path="what-is-data-science-what-is-computational-social-science.html"><a href="what-is-data-science-what-is-computational-social-science.html#r-markdown"><i class="fa fa-check"></i><b>1.6</b> R Markdown</a></li>
+<li class="chapter" data-level="1.7" data-path="what-is-data-science-what-is-computational-social-science.html"><a href="what-is-data-science-what-is-computational-social-science.html#problem-set-1"><i class="fa fa-check"></i><b>1.7</b> Problem Set 1</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html"><i class="fa fa-check"></i><b>2</b> Let’s “Git” Going: Code, Collaboration, and Version Controls</a>
+<li class="chapter" data-level="2" data-path="gitting-started-code-version-controls-and-reproducibility.html"><a href="gitting-started-code-version-controls-and-reproducibility.html"><i class="fa fa-check"></i><b>2</b> “Gitting” Started: Code, Version Controls, and Reproducibility</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#collecting-social-science-data"><i class="fa fa-check"></i><b>2.1</b> Collecting Social Science Data</a></li>
-<li class="chapter" data-level="2.2" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#collaborative-social-science"><i class="fa fa-check"></i><b>2.2</b> Collaborative Social Science</a></li>
-<li class="chapter" data-level="2.3" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#version-controls"><i class="fa fa-check"></i><b>2.3</b> Version Controls</a></li>
-<li class="chapter" data-level="2.4" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#in-class-exercise"><i class="fa fa-check"></i><b>2.4</b> In Class Exercise</a></li>
-<li class="chapter" data-level="2.5" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#gitting-started"><i class="fa fa-check"></i><b>2.5</b> Gitting Started</a></li>
-<li class="chapter" data-level="2.6" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#gathering-online-data"><i class="fa fa-check"></i><b>2.6</b> Gathering Online Data</a></li>
-<li class="chapter" data-level="2.7" data-path="lets-git-going-code-collaboration-and-version-controls.html"><a href="lets-git-going-code-collaboration-and-version-controls.html#problem-set-2"><i class="fa fa-check"></i><b>2.7</b> Problem Set 2</a></li>
+<li class="chapter" data-level="2.1" data-path="gitting-started-code-version-controls-and-reproducibility.html"><a href="gitting-started-code-version-controls-and-reproducibility.html#collecting-social-science-data"><i class="fa fa-check"></i><b>2.1</b> Collecting Social Science Data</a></li>
+<li class="chapter" data-level="2.2" data-path="gitting-started-code-version-controls-and-reproducibility.html"><a href="gitting-started-code-version-controls-and-reproducibility.html#collaborative-social-science"><i class="fa fa-check"></i><b>2.2</b> Collaborative Social Science</a></li>
+<li class="chapter" data-level="2.3" data-path="gitting-started-code-version-controls-and-reproducibility.html"><a href="gitting-started-code-version-controls-and-reproducibility.html#version-controls"><i class="fa fa-check"></i><b>2.3</b> Version Controls</a></li>
+<li class="chapter" data-level="2.4" data-path="gitting-started-code-version-controls-and-reproducibility.html"><a href="gitting-started-code-version-controls-and-reproducibility.html#in-class-exercise"><i class="fa fa-check"></i><b>2.4</b> In Class Exercise</a></li>
+<li class="chapter" data-level="2.5" data-path="gitting-started-code-version-controls-and-reproducibility.html"><a href="gitting-started-code-version-controls-and-reproducibility.html#gitting-started"><i class="fa fa-check"></i><b>2.5</b> Gitting Started</a></li>
+<li class="chapter" data-level="2.6" data-path="gitting-started-code-version-controls-and-reproducibility.html"><a href="gitting-started-code-version-controls-and-reproducibility.html#gathering-online-data"><i class="fa fa-check"></i><b>2.6</b> Gathering Online Data</a></li>
+<li class="chapter" data-level="2.7" data-path="gitting-started-code-version-controls-and-reproducibility.html"><a href="gitting-started-code-version-controls-and-reproducibility.html#problem-set-2"><i class="fa fa-check"></i><b>2.7</b> Problem Set 2</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html"><i class="fa fa-check"></i><b>3</b> Data Visualization Techniques</a>
+<li class="chapter" data-level="3" data-path="gathering-data.html"><a href="gathering-data.html"><i class="fa fa-check"></i><b>3</b> Gathering Data</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#why-visualization"><i class="fa fa-check"></i><b>3.1</b> Why Visualization?</a></li>
-<li class="chapter" data-level="3.2" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#data-science-by-hand"><i class="fa fa-check"></i><b>3.2</b> Data Science By Hand?</a></li>
-<li class="chapter" data-level="3.3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#elements-of-visualization"><i class="fa fa-check"></i><b>3.3</b> Elements of Visualization</a>
+<li class="chapter" data-level="3.1" data-path="gathering-data.html"><a href="gathering-data.html#why-visualization"><i class="fa fa-check"></i><b>3.1</b> Why Visualization?</a></li>
+<li class="chapter" data-level="3.2" data-path="gathering-data.html"><a href="gathering-data.html#data-science-by-hand"><i class="fa fa-check"></i><b>3.2</b> Data Science By Hand?</a></li>
+<li class="chapter" data-level="3.3" data-path="gathering-data.html"><a href="gathering-data.html#elements-of-visualization"><i class="fa fa-check"></i><b>3.3</b> Elements of Visualization</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#color"><i class="fa fa-check"></i><b>3.3.1</b> Color</a></li>
-<li class="chapter" data-level="3.3.2" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#scale"><i class="fa fa-check"></i><b>3.3.2</b> Scale</a></li>
-<li class="chapter" data-level="3.3.3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#labels"><i class="fa fa-check"></i><b>3.3.3</b> Labels</a></li>
-<li class="chapter" data-level="3.3.4" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#comparisons"><i class="fa fa-check"></i><b>3.3.4</b> Comparisons</a></li>
+<li class="chapter" data-level="3.3.1" data-path="gathering-data.html"><a href="gathering-data.html#color"><i class="fa fa-check"></i><b>3.3.1</b> Color</a></li>
+<li class="chapter" data-level="3.3.2" data-path="gathering-data.html"><a href="gathering-data.html#scale"><i class="fa fa-check"></i><b>3.3.2</b> Scale</a></li>
+<li class="chapter" data-level="3.3.3" data-path="gathering-data.html"><a href="gathering-data.html#labels"><i class="fa fa-check"></i><b>3.3.3</b> Labels</a></li>
+<li class="chapter" data-level="3.3.4" data-path="gathering-data.html"><a href="gathering-data.html#comparisons"><i class="fa fa-check"></i><b>3.3.4</b> Comparisons</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#the-grammar-of-graphics"><i class="fa fa-check"></i><b>3.4</b> The Grammar of Graphics</a></li>
-<li class="chapter" data-level="3.5" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#preparing-data-for-visualization"><i class="fa fa-check"></i><b>3.5</b> Preparing Data for Visualization</a></li>
-<li class="chapter" data-level="3.6" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#plotting-exercise"><i class="fa fa-check"></i><b>3.6</b> Plotting Exercise</a></li>
-<li class="chapter" data-level="3.7" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#problem-set-3"><i class="fa fa-check"></i><b>3.7</b> Problem Set 3</a></li>
+<li class="chapter" data-level="3.4" data-path="gathering-data.html"><a href="gathering-data.html#the-grammar-of-graphics"><i class="fa fa-check"></i><b>3.4</b> The Grammar of Graphics</a></li>
+<li class="chapter" data-level="3.5" data-path="gathering-data.html"><a href="gathering-data.html#preparing-data-for-visualization"><i class="fa fa-check"></i><b>3.5</b> Preparing Data for Visualization</a></li>
+<li class="chapter" data-level="3.6" data-path="gathering-data.html"><a href="gathering-data.html#plotting-exercise"><i class="fa fa-check"></i><b>3.6</b> Plotting Exercise</a></li>
+<li class="chapter" data-level="3.7" data-path="gathering-data.html"><a href="gathering-data.html#problem-set-3"><i class="fa fa-check"></i><b>3.7</b> Problem Set 3</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html"><i class="fa fa-check"></i><b>4</b> Gathering and Modeling Data</a>
+<li class="chapter" data-level="4" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html"><i class="fa fa-check"></i><b>4</b> Gathering (Big) Data (wth SQL)</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#new-ways-of-gathering-data"><i class="fa fa-check"></i><b>4.1</b> New Ways of Gathering Data</a></li>
-<li class="chapter" data-level="4.2" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#application-programming-interfaces-apis"><i class="fa fa-check"></i><b>4.2</b> Application Programming Interfaces (APIs)</a></li>
-<li class="chapter" data-level="4.3" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#web-scraping"><i class="fa fa-check"></i><b>4.3</b> Web Scraping</a></li>
-<li class="chapter" data-level="4.4" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#models"><i class="fa fa-check"></i><b>4.4</b> Models</a></li>
-<li class="chapter" data-level="4.5" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#building-a-model"><i class="fa fa-check"></i><b>4.5</b> Building a Model</a>
+<li class="chapter" data-level="4.1" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#why-visualization-1"><i class="fa fa-check"></i><b>4.1</b> Why Visualization?</a></li>
+<li class="chapter" data-level="4.2" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#data-science-by-hand-1"><i class="fa fa-check"></i><b>4.2</b> Data Science By Hand?</a></li>
+<li class="chapter" data-level="4.3" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#elements-of-visualization-1"><i class="fa fa-check"></i><b>4.3</b> Elements of Visualization</a>
 <ul>
-<li class="chapter" data-level="4.5.1" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#splitting-the-data"><i class="fa fa-check"></i><b>4.5.1</b> Splitting the Data</a></li>
-<li class="chapter" data-level="4.5.2" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#fitting-a-model"><i class="fa fa-check"></i><b>4.5.2</b> Fitting a Model</a></li>
-<li class="chapter" data-level="4.5.3" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#making-predictions"><i class="fa fa-check"></i><b>4.5.3</b> Making Predictions</a></li>
+<li class="chapter" data-level="4.3.1" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#color-1"><i class="fa fa-check"></i><b>4.3.1</b> Color</a></li>
+<li class="chapter" data-level="4.3.2" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#scale-1"><i class="fa fa-check"></i><b>4.3.2</b> Scale</a></li>
+<li class="chapter" data-level="4.3.3" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#labels-1"><i class="fa fa-check"></i><b>4.3.3</b> Labels</a></li>
+<li class="chapter" data-level="4.3.4" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#comparisons-1"><i class="fa fa-check"></i><b>4.3.4</b> Comparisons</a></li>
 </ul></li>
-<li class="chapter" data-level="4.6" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#final-project-proposal"><i class="fa fa-check"></i><b>4.6</b> Final Project Proposal</a></li>
-<li class="chapter" data-level="4.7" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#problem-set-4"><i class="fa fa-check"></i><b>4.7</b> Problem Set 4</a></li>
+<li class="chapter" data-level="4.4" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#the-grammar-of-graphics-1"><i class="fa fa-check"></i><b>4.4</b> The Grammar of Graphics</a></li>
+<li class="chapter" data-level="4.5" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#preparing-data-for-visualization-1"><i class="fa fa-check"></i><b>4.5</b> Preparing Data for Visualization</a></li>
+<li class="chapter" data-level="4.6" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#plotting-exercise-1"><i class="fa fa-check"></i><b>4.6</b> Plotting Exercise</a></li>
+<li class="chapter" data-level="4.7" data-path="gathering-big-data-wth-sql.html"><a href="gathering-big-data-wth-sql.html#problem-set-3-1"><i class="fa fa-check"></i><b>4.7</b> Problem Set 3</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html"><i class="fa fa-check"></i><b>5</b> Maps and Spatial Data</a>
+<li class="chapter" data-level="5" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html"><i class="fa fa-check"></i><b>5</b> Looking at and Restructuring Data</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#what-is-spatial-data"><i class="fa fa-check"></i><b>5.1</b> What is Spatial Data?</a>
+<li class="chapter" data-level="5.1" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#why-visualization-2"><i class="fa fa-check"></i><b>5.1</b> Why Visualization?</a></li>
+<li class="chapter" data-level="5.2" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#data-science-by-hand-2"><i class="fa fa-check"></i><b>5.2</b> Data Science By Hand?</a></li>
+<li class="chapter" data-level="5.3" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#elements-of-visualization-2"><i class="fa fa-check"></i><b>5.3</b> Elements of Visualization</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#the-modifiable-areal-unit-problem"><i class="fa fa-check"></i><b>5.1.1</b> The Modifiable Areal Unit Problem</a></li>
-<li class="chapter" data-level="5.1.2" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#environmental-hazards-and-spatial-data"><i class="fa fa-check"></i><b>5.1.2</b> Environmental Hazards and Spatial Data</a></li>
+<li class="chapter" data-level="5.3.1" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#color-2"><i class="fa fa-check"></i><b>5.3.1</b> Color</a></li>
+<li class="chapter" data-level="5.3.2" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#scale-2"><i class="fa fa-check"></i><b>5.3.2</b> Scale</a></li>
+<li class="chapter" data-level="5.3.3" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#labels-2"><i class="fa fa-check"></i><b>5.3.3</b> Labels</a></li>
+<li class="chapter" data-level="5.3.4" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#comparisons-2"><i class="fa fa-check"></i><b>5.3.4</b> Comparisons</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-simple-features-in-r"><i class="fa fa-check"></i><b>5.2</b> Using Simple Features in R</a></li>
-<li class="chapter" data-level="5.3" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#mapping-polygons-with-tidycensus"><i class="fa fa-check"></i><b>5.3</b> Mapping Polygons with tidycensus</a></li>
-<li class="chapter" data-level="5.4" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-tigris-to-gather-shapefiles"><i class="fa fa-check"></i><b>5.4</b> Using Tigris to Gather Shapefiles</a></li>
-<li class="chapter" data-level="5.5" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#spatially-joining-data"><i class="fa fa-check"></i><b>5.5</b> Spatially Joining Data</a></li>
-<li class="chapter" data-level="5.6" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-leaflet-and-r-shiny-for-interactive-maps"><i class="fa fa-check"></i><b>5.6</b> Using Leaflet and R Shiny for Interactive Maps</a></li>
-<li class="chapter" data-level="5.7" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#problem-set-5"><i class="fa fa-check"></i><b>5.7</b> Problem Set 5</a></li>
+<li class="chapter" data-level="5.4" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#the-grammar-of-graphics-2"><i class="fa fa-check"></i><b>5.4</b> The Grammar of Graphics</a></li>
+<li class="chapter" data-level="5.5" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#preparing-data-for-visualization-2"><i class="fa fa-check"></i><b>5.5</b> Preparing Data for Visualization</a></li>
+<li class="chapter" data-level="5.6" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#plotting-exercise-2"><i class="fa fa-check"></i><b>5.6</b> Plotting Exercise</a></li>
+<li class="chapter" data-level="5.7" data-path="looking-at-and-restructuring-data.html"><a href="looking-at-and-restructuring-data.html#problem-set-3-2"><i class="fa fa-check"></i><b>5.7</b> Problem Set 3</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="networks.html"><a href="networks.html"><i class="fa fa-check"></i><b>6</b> Networks</a>
+<li class="chapter" data-level="6" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html"><i class="fa fa-check"></i><b>6</b> Data Visualization Techniques</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="networks.html"><a href="networks.html#what-are-networks"><i class="fa fa-check"></i><b>6.1</b> What Are Networks?</a></li>
-<li class="chapter" data-level="6.2" data-path="networks.html"><a href="networks.html#building-and-visualizing-networks"><i class="fa fa-check"></i><b>6.2</b> Building And Visualizing Networks</a></li>
-<li class="chapter" data-level="6.3" data-path="networks.html"><a href="networks.html#measures-of-centrality"><i class="fa fa-check"></i><b>6.3</b> Measures of Centrality</a></li>
-<li class="chapter" data-level="6.4" data-path="networks.html"><a href="networks.html#co-authorship-patterns"><i class="fa fa-check"></i><b>6.4</b> Co-Authorship Patterns</a></li>
-<li class="chapter" data-level="6.5" data-path="networks.html"><a href="networks.html#interactive-network-visualizations"><i class="fa fa-check"></i><b>6.5</b> Interactive Network Visualizations</a></li>
-<li class="chapter" data-level="6.6" data-path="networks.html"><a href="networks.html#migration-flows"><i class="fa fa-check"></i><b>6.6</b> Migration Flows</a></li>
-<li class="chapter" data-level="6.7" data-path="networks.html"><a href="networks.html#problem-set-6"><i class="fa fa-check"></i><b>6.7</b> Problem Set 6</a></li>
+<li class="chapter" data-level="6.1" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#why-visualization-3"><i class="fa fa-check"></i><b>6.1</b> Why Visualization?</a></li>
+<li class="chapter" data-level="6.2" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#data-science-by-hand-3"><i class="fa fa-check"></i><b>6.2</b> Data Science By Hand?</a></li>
+<li class="chapter" data-level="6.3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#elements-of-visualization-3"><i class="fa fa-check"></i><b>6.3</b> Elements of Visualization</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#color-3"><i class="fa fa-check"></i><b>6.3.1</b> Color</a></li>
+<li class="chapter" data-level="6.3.2" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#scale-3"><i class="fa fa-check"></i><b>6.3.2</b> Scale</a></li>
+<li class="chapter" data-level="6.3.3" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#labels-3"><i class="fa fa-check"></i><b>6.3.3</b> Labels</a></li>
+<li class="chapter" data-level="6.3.4" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#comparisons-3"><i class="fa fa-check"></i><b>6.3.4</b> Comparisons</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html"><i class="fa fa-check"></i><b>7</b> Prediction and Machine Learning</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#data-models-and-algorithmic-models"><i class="fa fa-check"></i><b>7.1</b> Data Models and Algorithmic Models</a></li>
-<li class="chapter" data-level="7.2" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#splitting-your-data-setting-up-your-models"><i class="fa fa-check"></i><b>7.2</b> Splitting Your Data, Setting Up Your Models</a></li>
-<li class="chapter" data-level="7.3" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#unsupervised-machine-learning-with-k-means-clustering"><i class="fa fa-check"></i><b>7.3</b> Unsupervised Machine Learning with K-Means Clustering</a></li>
-<li class="chapter" data-level="7.4" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#supervised-machine-learning-with-random-forests"><i class="fa fa-check"></i><b>7.4</b> Supervised Machine Learning with Random Forests</a></li>
-<li class="chapter" data-level="7.5" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#re-sample-your-data-with-cross-validation"><i class="fa fa-check"></i><b>7.5</b> Re-Sample Your Data with Cross Validation</a></li>
-<li class="chapter" data-level="7.6" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#predictions-bias-and-social-implications"><i class="fa fa-check"></i><b>7.6</b> Predictions, Bias, and Social Implications</a></li>
-<li class="chapter" data-level="7.7" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#problem-set-7"><i class="fa fa-check"></i><b>7.7</b> Problem Set 7</a></li>
+<li class="chapter" data-level="6.4" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#the-grammar-of-graphics-3"><i class="fa fa-check"></i><b>6.4</b> The Grammar of Graphics</a></li>
+<li class="chapter" data-level="6.5" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#preparing-data-for-visualization-3"><i class="fa fa-check"></i><b>6.5</b> Preparing Data for Visualization</a></li>
+<li class="chapter" data-level="6.6" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#plotting-exercise-3"><i class="fa fa-check"></i><b>6.6</b> Plotting Exercise</a></li>
+<li class="chapter" data-level="6.7" data-path="data-visualization-techniques.html"><a href="data-visualization-techniques.html#problem-set-3-3"><i class="fa fa-check"></i><b>6.7</b> Problem Set 3</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><i class="fa fa-check"></i><b>8</b> Text Analysis Tools, Part I: Text Mining, Sentiment Analysis</a>
+<li class="chapter" data-level="7" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html"><i class="fa fa-check"></i><b>7</b> Gathering and Modeling Data</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#text-as-data"><i class="fa fa-check"></i><b>8.1</b> Text As Data</a>
+<li class="chapter" data-level="7.1" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#new-ways-of-gathering-data"><i class="fa fa-check"></i><b>7.1</b> New Ways of Gathering Data</a></li>
+<li class="chapter" data-level="7.2" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#application-programming-interfaces-apis"><i class="fa fa-check"></i><b>7.2</b> Application Programming Interfaces (APIs)</a></li>
+<li class="chapter" data-level="7.3" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#web-scraping"><i class="fa fa-check"></i><b>7.3</b> Web Scraping</a></li>
+<li class="chapter" data-level="7.4" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#models"><i class="fa fa-check"></i><b>7.4</b> Models</a></li>
+<li class="chapter" data-level="7.5" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#building-a-model"><i class="fa fa-check"></i><b>7.5</b> Building a Model</a>
 <ul>
-<li class="chapter" data-level="8.1.1" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#families-of-text-analysis"><i class="fa fa-check"></i><b>8.1.1</b> “Families” of Text Analysis</a></li>
+<li class="chapter" data-level="7.5.1" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#splitting-the-data"><i class="fa fa-check"></i><b>7.5.1</b> Splitting the Data</a></li>
+<li class="chapter" data-level="7.5.2" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#fitting-a-model"><i class="fa fa-check"></i><b>7.5.2</b> Fitting a Model</a></li>
+<li class="chapter" data-level="7.5.3" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#making-predictions"><i class="fa fa-check"></i><b>7.5.3</b> Making Predictions</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#newspapers-books"><i class="fa fa-check"></i><b>8.2</b> Newspapers &amp; Books</a></li>
-<li class="chapter" data-level="8.3" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#using-apis-to-gather-text-data"><i class="fa fa-check"></i><b>8.3</b> Using APIs to Gather Text Data</a></li>
-<li class="chapter" data-level="8.4" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#working-with-text-data-in-r"><i class="fa fa-check"></i><b>8.4</b> Working with Text Data in R</a></li>
-<li class="chapter" data-level="8.5" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#comparing-word-and-document-frequencies"><i class="fa fa-check"></i><b>8.5</b> Comparing Word and Document Frequencies</a></li>
-<li class="chapter" data-level="8.6" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#sentiment-analysis"><i class="fa fa-check"></i><b>8.6</b> Sentiment Analysis</a></li>
-<li class="chapter" data-level="8.7" data-path="text-analysis-tools-part-i-text-mining-sentiment-analysis.html"><a href="text-analysis-tools-part-i-text-mining-sentiment-analysis.html#problem-set-8"><i class="fa fa-check"></i><b>8.7</b> Problem Set 8</a></li>
+<li class="chapter" data-level="7.6" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#final-project-proposal"><i class="fa fa-check"></i><b>7.6</b> Final Project Proposal</a></li>
+<li class="chapter" data-level="7.7" data-path="gathering-and-modeling-data.html"><a href="gathering-and-modeling-data.html#problem-set-4"><i class="fa fa-check"></i><b>7.7</b> Problem Set 4</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><i class="fa fa-check"></i><b>9</b> Text Analysis Tools, Part 2: Topic Models, Large Language Models, and AI</a>
+<li class="chapter" data-level="8" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html"><i class="fa fa-check"></i><b>8</b> Prediction and Machine Learning</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#topic-models"><i class="fa fa-check"></i><b>9.1</b> Topic Models</a></li>
-<li class="chapter" data-level="9.2" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#documents-as-mixtures-of-topics"><i class="fa fa-check"></i><b>9.2</b> Documents as Mixtures of Topics</a></li>
-<li class="chapter" data-level="9.3" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#choosing-k-values"><i class="fa fa-check"></i><b>9.3</b> Choosing <span class="math inline">\(k\)</span> Values</a></li>
-<li class="chapter" data-level="9.4" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#large-language-models"><i class="fa fa-check"></i><b>9.4</b> Large Language Models</a></li>
-<li class="chapter" data-level="9.5" data-path="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html"><a href="text-analysis-tools-part-2-topic-models-large-language-models-and-ai.html#problem-set-9"><i class="fa fa-check"></i><b>9.5</b> Problem Set 9</a></li>
+<li class="chapter" data-level="8.1" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#data-models-and-algorithmic-models"><i class="fa fa-check"></i><b>8.1</b> Data Models and Algorithmic Models</a></li>
+<li class="chapter" data-level="8.2" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#splitting-your-data-setting-up-your-models"><i class="fa fa-check"></i><b>8.2</b> Splitting Your Data, Setting Up Your Models</a></li>
+<li class="chapter" data-level="8.3" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#unsupervised-machine-learning-with-k-means-clustering"><i class="fa fa-check"></i><b>8.3</b> Unsupervised Machine Learning with K-Means Clustering</a></li>
+<li class="chapter" data-level="8.4" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#supervised-machine-learning-with-random-forests"><i class="fa fa-check"></i><b>8.4</b> Supervised Machine Learning with Random Forests</a></li>
+<li class="chapter" data-level="8.5" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#re-sample-your-data-with-cross-validation"><i class="fa fa-check"></i><b>8.5</b> Re-Sample Your Data with Cross Validation</a></li>
+<li class="chapter" data-level="8.6" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#predictions-bias-and-social-implications"><i class="fa fa-check"></i><b>8.6</b> Predictions, Bias, and Social Implications</a></li>
+<li class="chapter" data-level="8.7" data-path="prediction-and-machine-learning.html"><a href="prediction-and-machine-learning.html#problem-set-7"><i class="fa fa-check"></i><b>8.7</b> Problem Set 7</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html"><i class="fa fa-check"></i><b>9</b> Maps and Spatial Data</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#what-is-spatial-data"><i class="fa fa-check"></i><b>9.1</b> What is Spatial Data?</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#the-modifiable-areal-unit-problem"><i class="fa fa-check"></i><b>9.1.1</b> The Modifiable Areal Unit Problem</a></li>
+<li class="chapter" data-level="9.1.2" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#environmental-hazards-and-spatial-data"><i class="fa fa-check"></i><b>9.1.2</b> Environmental Hazards and Spatial Data</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-simple-features-in-r"><i class="fa fa-check"></i><b>9.2</b> Using Simple Features in R</a></li>
+<li class="chapter" data-level="9.3" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#mapping-polygons-with-tidycensus"><i class="fa fa-check"></i><b>9.3</b> Mapping Polygons with tidycensus</a></li>
+<li class="chapter" data-level="9.4" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-tigris-to-gather-shapefiles"><i class="fa fa-check"></i><b>9.4</b> Using Tigris to Gather Shapefiles</a></li>
+<li class="chapter" data-level="9.5" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#spatially-joining-data"><i class="fa fa-check"></i><b>9.5</b> Spatially Joining Data</a></li>
+<li class="chapter" data-level="9.6" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#using-leaflet-and-r-shiny-for-interactive-maps"><i class="fa fa-check"></i><b>9.6</b> Using Leaflet and R Shiny for Interactive Maps</a></li>
+<li class="chapter" data-level="9.7" data-path="maps-and-spatial-data.html"><a href="maps-and-spatial-data.html#problem-set-5"><i class="fa fa-check"></i><b>9.7</b> Problem Set 5</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="networks.html"><a href="networks.html"><i class="fa fa-check"></i><b>10</b> Networks</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="networks.html"><a href="networks.html#what-are-networks"><i class="fa fa-check"></i><b>10.1</b> What Are Networks?</a></li>
+<li class="chapter" data-level="10.2" data-path="networks.html"><a href="networks.html#building-and-visualizing-networks"><i class="fa fa-check"></i><b>10.2</b> Building And Visualizing Networks</a></li>
+<li class="chapter" data-level="10.3" data-path="networks.html"><a href="networks.html#measures-of-centrality"><i class="fa fa-check"></i><b>10.3</b> Measures of Centrality</a></li>
+<li class="chapter" data-level="10.4" data-path="networks.html"><a href="networks.html#co-authorship-patterns"><i class="fa fa-check"></i><b>10.4</b> Co-Authorship Patterns</a></li>
+<li class="chapter" data-level="10.5" data-path="networks.html"><a href="networks.html#interactive-network-visualizations"><i class="fa fa-check"></i><b>10.5</b> Interactive Network Visualizations</a></li>
+<li class="chapter" data-level="10.6" data-path="networks.html"><a href="networks.html#migration-flows"><i class="fa fa-check"></i><b>10.6</b> Migration Flows</a></li>
+<li class="chapter" data-level="10.7" data-path="networks.html"><a href="networks.html#problem-set-6"><i class="fa fa-check"></i><b>10.7</b> Problem Set 6</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="text-mining.html"><a href="text-mining.html"><i class="fa fa-check"></i><b>11</b> Text Mining</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="text-mining.html"><a href="text-mining.html#text-as-data"><i class="fa fa-check"></i><b>11.1</b> Text As Data</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="text-mining.html"><a href="text-mining.html#families-of-text-analysis"><i class="fa fa-check"></i><b>11.1.1</b> “Families” of Text Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="text-mining.html"><a href="text-mining.html#newspapers-books"><i class="fa fa-check"></i><b>11.2</b> Newspapers &amp; Books</a></li>
+<li class="chapter" data-level="11.3" data-path="text-mining.html"><a href="text-mining.html#using-apis-to-gather-text-data"><i class="fa fa-check"></i><b>11.3</b> Using APIs to Gather Text Data</a></li>
+<li class="chapter" data-level="11.4" data-path="text-mining.html"><a href="text-mining.html#working-with-text-data-in-r"><i class="fa fa-check"></i><b>11.4</b> Working with Text Data in R</a></li>
+<li class="chapter" data-level="11.5" data-path="text-mining.html"><a href="text-mining.html#comparing-word-and-document-frequencies"><i class="fa fa-check"></i><b>11.5</b> Comparing Word and Document Frequencies</a></li>
+<li class="chapter" data-level="11.6" data-path="text-mining.html"><a href="text-mining.html#sentiment-analysis"><i class="fa fa-check"></i><b>11.6</b> Sentiment Analysis</a></li>
+<li class="chapter" data-level="11.7" data-path="text-mining.html"><a href="text-mining.html#problem-set-8"><i class="fa fa-check"></i><b>11.7</b> Problem Set 8</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="sentiment-analysis-1.html"><a href="sentiment-analysis-1.html"><i class="fa fa-check"></i><b>12</b> Sentiment Analysis</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="sentiment-analysis-1.html"><a href="sentiment-analysis-1.html#text-as-data-1"><i class="fa fa-check"></i><b>12.1</b> Text As Data</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="sentiment-analysis-1.html"><a href="sentiment-analysis-1.html#families-of-text-analysis-1"><i class="fa fa-check"></i><b>12.1.1</b> “Families” of Text Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="sentiment-analysis-1.html"><a href="sentiment-analysis-1.html#newspapers-books-1"><i class="fa fa-check"></i><b>12.2</b> Newspapers &amp; Books</a></li>
+<li class="chapter" data-level="12.3" data-path="sentiment-analysis-1.html"><a href="sentiment-analysis-1.html#using-apis-to-gather-text-data-1"><i class="fa fa-check"></i><b>12.3</b> Using APIs to Gather Text Data</a></li>
+<li class="chapter" data-level="12.4" data-path="sentiment-analysis-1.html"><a href="sentiment-analysis-1.html#working-with-text-data-in-r-1"><i class="fa fa-check"></i><b>12.4</b> Working with Text Data in R</a></li>
+<li class="chapter" data-level="12.5" data-path="sentiment-analysis-1.html"><a href="sentiment-analysis-1.html#comparing-word-and-document-frequencies-1"><i class="fa fa-check"></i><b>12.5</b> Comparing Word and Document Frequencies</a></li>
+<li class="chapter" data-level="12.6" data-path="sentiment-analysis-1.html"><a href="sentiment-analysis-1.html#sentiment-analysis-2"><i class="fa fa-check"></i><b>12.6</b> Sentiment Analysis</a></li>
+<li class="chapter" data-level="12.7" data-path="sentiment-analysis-1.html"><a href="sentiment-analysis-1.html#problem-set-8-1"><i class="fa fa-check"></i><b>12.7</b> Problem Set 8</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="topic-models.html"><a href="topic-models.html"><i class="fa fa-check"></i><b>13</b> Topic Models</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="topic-models.html"><a href="topic-models.html#topic-models-1"><i class="fa fa-check"></i><b>13.1</b> Topic Models</a></li>
+<li class="chapter" data-level="13.2" data-path="topic-models.html"><a href="topic-models.html#documents-as-mixtures-of-topics"><i class="fa fa-check"></i><b>13.2</b> Documents as Mixtures of Topics</a></li>
+<li class="chapter" data-level="13.3" data-path="topic-models.html"><a href="topic-models.html#choosing-k-values"><i class="fa fa-check"></i><b>13.3</b> Choosing <span class="math inline">\(k\)</span> Values</a></li>
+<li class="chapter" data-level="13.4" data-path="topic-models.html"><a href="topic-models.html#large-language-models"><i class="fa fa-check"></i><b>13.4</b> Large Language Models</a></li>
+<li class="chapter" data-level="13.5" data-path="topic-models.html"><a href="topic-models.html#problem-set-9"><i class="fa fa-check"></i><b>13.5</b> Problem Set 9</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="ai-in-social-and-environmental-data-science.html"><a href="ai-in-social-and-environmental-data-science.html"><i class="fa fa-check"></i><b>14</b> AI in Social and Environmental Data Science</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="ai-in-social-and-environmental-data-science.html"><a href="ai-in-social-and-environmental-data-science.html#topic-models-2"><i class="fa fa-check"></i><b>14.1</b> Topic Models</a></li>
+<li class="chapter" data-level="14.2" data-path="ai-in-social-and-environmental-data-science.html"><a href="ai-in-social-and-environmental-data-science.html#documents-as-mixtures-of-topics-1"><i class="fa fa-check"></i><b>14.2</b> Documents as Mixtures of Topics</a></li>
+<li class="chapter" data-level="14.3" data-path="ai-in-social-and-environmental-data-science.html"><a href="ai-in-social-and-environmental-data-science.html#choosing-k-values-1"><i class="fa fa-check"></i><b>14.3</b> Choosing <span class="math inline">\(k\)</span> Values</a></li>
+<li class="chapter" data-level="14.4" data-path="ai-in-social-and-environmental-data-science.html"><a href="ai-in-social-and-environmental-data-science.html#large-language-models-1"><i class="fa fa-check"></i><b>14.4</b> Large Language Models</a></li>
+<li class="chapter" data-level="14.5" data-path="ai-in-social-and-environmental-data-science.html"><a href="ai-in-social-and-environmental-data-science.html#problem-set-9-1"><i class="fa fa-check"></i><b>14.5</b> Problem Set 9</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="ethics-and-interpretations.html"><a href="ethics-and-interpretations.html"><i class="fa fa-check"></i><b>15</b> Ethics and Interpretations</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="ethics-and-interpretations.html"><a href="ethics-and-interpretations.html#topic-models-3"><i class="fa fa-check"></i><b>15.1</b> Topic Models</a></li>
+<li class="chapter" data-level="15.2" data-path="ethics-and-interpretations.html"><a href="ethics-and-interpretations.html#documents-as-mixtures-of-topics-2"><i class="fa fa-check"></i><b>15.2</b> Documents as Mixtures of Topics</a></li>
+<li class="chapter" data-level="15.3" data-path="ethics-and-interpretations.html"><a href="ethics-and-interpretations.html#choosing-k-values-2"><i class="fa fa-check"></i><b>15.3</b> Choosing <span class="math inline">\(k\)</span> Values</a></li>
+<li class="chapter" data-level="15.4" data-path="ethics-and-interpretations.html"><a href="ethics-and-interpretations.html#large-language-models-2"><i class="fa fa-check"></i><b>15.4</b> Large Language Models</a></li>
+<li class="chapter" data-level="15.5" data-path="ethics-and-interpretations.html"><a href="ethics-and-interpretations.html#problem-set-9-2"><i class="fa fa-check"></i><b>15.5</b> Problem Set 9</a></li>
 </ul></li>
 </ul>
 
@@ -256,7 +333,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Computational Social Science</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Data Science with R</a>
           </h1>
         </div>
 
@@ -264,29 +341,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="gathering-and-modeling-data" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">4</span> Gathering and Modeling Data<a href="gathering-and-modeling-data.html#gathering-and-modeling-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="gathering-and-modeling-data" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">7</span> Gathering and Modeling Data<a href="gathering-and-modeling-data.html#gathering-and-modeling-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Up to this point, we have mostly focused on <em>describing</em> our data. What if we want to say more about the <em>processes</em> unfolding? In this week, we look at data gathering and modelling. We will first examine some data collection methods such as web scraping and APIs. We will then examine linear and non-linear models, their benefits, and some potential drawbacks.</p>
-<p><strong>Monday Readings:</strong></p>
+<p><strong>Tuesday Readings:</strong></p>
 <ul>
-<li><p><a href="https://www.bitbybitbook.com/en/1st-ed/asking-questions/">Bit by Bit: Social Research in the Digital Age. Asking Questions</a></p></li>
-<li><p><em>Optional:</em> <a href="https://journals.sagepub.com/doi/abs/10.1177/0003122414535774">Hwang, Jackelyn; Sampson, Robert. 2014. American Sociological Review. Divergent Pathways of Gentrification: Racial Inequality and the Social Order of Renewal in Chicago Neighborhoods.</a></p></li>
-<li><p><em>Optional:</em> <a href="https://journals.sagepub.com/doi/full/10.1177/0049124115626176">Sugie, Naomie. 2016. Sociological Research &amp; Methods. Utilizing Smartphones to Study Disadvantaged and Hard-to-Reach Groups.</a></p></li>
+<li><a href="https://socviz.co/06-modeling.html">Data Visualization: A Practical Introduction. 6: Work With Models.</a></li>
 </ul>
-<p><strong>Wednesday Readings:</strong></p>
+<p><strong>Thursday Readings:</strong></p>
 <ul>
-<li><p><a href="https://socviz.co/06-modeling.html">Data Visualization: A Practical Introduction. 6: Work With Models.</a></p></li>
 <li><p><em>Optional:</em> <a href="https://users.aalto.fi/~ave/ROS.pdf">Gelman, Andrew; Hill, Jennifer; Vehtari, Aki. 2020. Regression and Other Stories.</a></p></li>
 <li><p><em>Optional:</em> <a href="https://sites.stat.columbia.edu/gelman/research/published/causalreview4.pdf">Gelman, Andrew. 2011. American Journal of Sociology. Causality and Statistical Learning.</a></p></li>
 </ul>
-<div id="new-ways-of-gathering-data" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> New Ways of Gathering Data<a href="gathering-and-modeling-data.html#new-ways-of-gathering-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="new-ways-of-gathering-data" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> New Ways of Gathering Data<a href="gathering-and-modeling-data.html#new-ways-of-gathering-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Gathering data will always be important, but the tools that we use to gather data change. Here, we will look at some new ways of gathering data. We will look at new ways of <strong>surveying people</strong> and new <strong>types of data</strong>.</p>
 <p>First, smartphones and digital surveys offer new possibilities for asking people questions. For example, <a href="https://journals.sagepub.com/doi/full/10.1177/0049124115626176">Sugie</a> used a probability sample to provide 133 incarcerated men cell phones upon release from prison. She was then able to administer daily surveys to these men and ask real-time questions about well-being and employment searches. From these data, she was able to describe <em>how</em> formerly incarcerated people look for work at a scale and in details that had not been possible before. These descriptions then could inform questions and policies around post-prison transitions in our society.</p>
 <div class="figure"><span style="display:block;" id="fig:sugie"></span>
 <img src="sugie_fig1.jpg" alt="Source: Sugie, 2016." width="405" />
 <p class="caption">
-Figure 4.1: Source: Sugie, 2016.
+Figure 7.1: Source: Sugie, 2016.
 </p>
 </div>
 <p>In the plot above (from Sugie, 2016), we observe response rates for traditional interviews and cell phone interviews over a 12 week period. Notice the decline in responses for each, but how cell phone interviews elicit higher responses throughout the study period than traditional methods.</p>
@@ -294,13 +368,13 @@ Figure 4.1: Source: Sugie, 2016.
 <div class="figure"><span style="display:block;" id="fig:hwang"></span>
 <img src="hwang_fig2.jpg" alt="Source: Hwang, 2014" width="1066" />
 <p class="caption">
-Figure 4.2: Source: Hwang, 2014
+Figure 7.2: Source: Hwang, 2014
 </p>
 </div>
 <p>In the above plot (from Hwang, 2014), estimated gentrification levels in Chicago are plotted from an older study (Hammel and Wyly, 1996, who used field surveys and census data) and for 2007-09 using the GSV data. Notice the similarities and differences. What types of changes do you think the GSV data would pick up on (or omit)?</p>
 </div>
-<div id="application-programming-interfaces-apis" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Application Programming Interfaces (APIs)<a href="gathering-and-modeling-data.html#application-programming-interfaces-apis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="application-programming-interfaces-apis" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Application Programming Interfaces (APIs)<a href="gathering-and-modeling-data.html#application-programming-interfaces-apis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Application Programming Interfaces, or APIs, are a novel and common way to gather data in the age of big data. We’ve actually already used an API in this class: <code>gtrends</code>!</p>
 <p>Some APIs allow us to gather data that has already been collected via traditional survey or census methods. For instance, the <strong>tidycensus</strong> API allows us to easily pull data from the Decennial Census, American Community Survey, and more into R for analysis. This is not a new source of data - researchers have long studied the census to understand social issues. However, the API allows us to streamline data gathering, analysis, and even writing our manuscript (if we use markdown).</p>
 <p>One critical first step in working with <code>tidycensus</code> is <strong>obtaining a Census Data API Key</strong>. <a href="https://api.census.gov/data/key_signup.html">You can get one here</a>. Once you have a key, you can library <code>tidycensus</code> and <code>tidyverse</code> (this is just a collection of <code>tidy</code> packages, some of which we’ve worked with already like <code>tidyr</code> and <code>dplyr</code>).</p>
@@ -371,24 +445,29 @@ Figure 4.2: Source: Hwang, 2014
 <span id="cb9-7"><a href="gathering-and-modeling-data.html#cb9-7" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;2017-2021 American Community Survey&quot;</span>,</span>
 <span id="cb9-8"><a href="gathering-and-modeling-data.html#cb9-8" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;&quot;</span>,</span>
 <span id="cb9-9"><a href="gathering-and-modeling-data.html#cb9-9" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;ACS estimate (bars represent margin of error)&quot;</span>)</span></code></pre></div>
+<pre><code>## Warning: `geom_errorbarh()` was deprecated in ggplot2 4.0.0.
+## ℹ Please use the `orientation` argument of `geom_errorbar()` instead.
+## This warning is displayed once per session.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
 <p><img src="_main_files/figure-html/acsplot-1.png" width="672" /></p>
 </div>
-<div id="web-scraping" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> Web Scraping<a href="gathering-and-modeling-data.html#web-scraping" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="web-scraping" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Web Scraping<a href="gathering-and-modeling-data.html#web-scraping" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Last class, we looked at demographic data on California’s ethnic/racial compositions from <a href="https://en.wikipedia.org/wiki/Demographics_of_California">Wikipedia</a>. However, we didn’t discuss how this data was actually gathered.</p>
 <p>One method for gathering such data is web scraping. In the “wild west” days of the internet, sites were fairly disconnected and scraping was an acceptable way to gather information from sites. In the modern day, many sites disallow web scraping, and offer APIs as alternatives. Therefore, it is important to check that you are not violating terms of agreement in scraping websites. You can check a site’s regulations by typing the website and adding “robots.txt” to the end of the url. For example, if we go to <a href="https://en.wikipedia.org/robots.txt" class="uri">https://en.wikipedia.org/robots.txt</a> we see that some crawlers and bots have been banned for going to fast or for other actions, but they do not list any total restrictions on scraping.</p>
 <p>To try scraping a Wikipedia page, we will first download and library the <code>rvest</code> package.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="gathering-and-modeling-data.html#cb10-1" tabindex="-1"></a><span class="fu">library</span>(rvest)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="gathering-and-modeling-data.html#cb11-1" tabindex="-1"></a><span class="fu">library</span>(rvest)</span></code></pre></div>
 <p>Great! Now we can try reading an HTML file (the language behind a website, which tells your browser the meaning and structure of the site) into R. It will work best for us to read in a Wikipedia page with a table. Let’s try a different Wikipedia page, this time on US incarceration over time.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="gathering-and-modeling-data.html#cb11-1" tabindex="-1"></a><span class="co"># read in html</span></span>
-<span id="cb11-2"><a href="gathering-and-modeling-data.html#cb11-2" tabindex="-1"></a>us_inc <span class="ot">&lt;-</span> <span class="fu">read_html</span>(<span class="st">&quot;https://en.wikipedia.org/wiki/Incarceration_in_the_United_States&quot;</span>)</span>
-<span id="cb11-3"><a href="gathering-and-modeling-data.html#cb11-3" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="gathering-and-modeling-data.html#cb11-4" tabindex="-1"></a><span class="co"># take a look</span></span>
-<span id="cb11-5"><a href="gathering-and-modeling-data.html#cb11-5" tabindex="-1"></a>us_inc</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="gathering-and-modeling-data.html#cb12-1" tabindex="-1"></a><span class="co"># read in html</span></span>
+<span id="cb12-2"><a href="gathering-and-modeling-data.html#cb12-2" tabindex="-1"></a>us_inc <span class="ot">&lt;-</span> <span class="fu">read_html</span>(<span class="st">&quot;https://en.wikipedia.org/wiki/Incarceration_in_the_United_States&quot;</span>)</span>
+<span id="cb12-3"><a href="gathering-and-modeling-data.html#cb12-3" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="gathering-and-modeling-data.html#cb12-4" tabindex="-1"></a><span class="co"># take a look</span></span>
+<span id="cb12-5"><a href="gathering-and-modeling-data.html#cb12-5" tabindex="-1"></a>us_inc</span></code></pre></div>
 <pre><code>## {html_document}
-## &lt;html class=&quot;client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-menu-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-1 vector-feature-appearance-pinned-clientpref-1 skin-theme-clientpref-day vector-sticky-header-enabled vector-toc-available skin-thumbsize-clientpref-standard&quot; lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;
+## &lt;html class=&quot;client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-menu-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-1 vector-feature-appearance-pinned-clientpref-1 skin-theme-clientpref-day vector-sticky-header-enabled vector-toc-available skin-thumbsize-clientpref-standard skin-underline-clientpref-browser&quot; lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;
 ## [1] &lt;head&gt;\n&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8 ...
-## [2] &lt;body class=&quot;skin--responsive skin-vector skin-vector-search-vue mediawik ...</code></pre>
+## [2] &lt;body class=&quot;mediawiki ltr sitedir-ltr mw-hide-empty-elt action-view skin ...</code></pre>
 <p>Hmmmm, it’s not really in a readable format. But that’s ok! In order to extract our table of interest, we just need to gather a little more information:</p>
 <ol style="list-style-type: decimal">
 <li>Go to the <a href="https://en.wikipedia.org/wiki/Incarceration_in_the_United_States">page of interest</a> and find the table that we want to extract</li>
@@ -397,20 +476,20 @@ Figure 4.2: Source: Hwang, 2014
 <li>Right-click the table element, Copy -&gt; Copy Xpath</li>
 </ol>
 <p>Great, now that we have the Xpath copied we can use <code>rvest</code>’s <code>html_nodes()</code> function to extract just the html of interest.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="gathering-and-modeling-data.html#cb13-1" tabindex="-1"></a><span class="co"># extract nodes of interest</span></span>
-<span id="cb13-2"><a href="gathering-and-modeling-data.html#cb13-2" tabindex="-1"></a>us_inc_table <span class="ot">&lt;-</span> <span class="fu">html_nodes</span>(us_inc,</span>
-<span id="cb13-3"><a href="gathering-and-modeling-data.html#cb13-3" tabindex="-1"></a>                            <span class="at">xpath =</span> <span class="st">&#39;//*[@id=&quot;mw-content-text&quot;]/div[2]/div[5]/table&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="gathering-and-modeling-data.html#cb14-1" tabindex="-1"></a><span class="co"># extract nodes of interest</span></span>
+<span id="cb14-2"><a href="gathering-and-modeling-data.html#cb14-2" tabindex="-1"></a>us_inc_table <span class="ot">&lt;-</span> <span class="fu">html_nodes</span>(us_inc,</span>
+<span id="cb14-3"><a href="gathering-and-modeling-data.html#cb14-3" tabindex="-1"></a>                            <span class="at">xpath =</span> <span class="st">&#39;//*[@id=&quot;mw3A&quot;]&#39;</span>)</span></code></pre></div>
 <p>It is still in html format, but there is another function, <code>html_table()</code>, which will convert this to a dataframe. Let’s try it!</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="gathering-and-modeling-data.html#cb14-1" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb14-2"><a href="gathering-and-modeling-data.html#cb14-2" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
-<span id="cb14-3"><a href="gathering-and-modeling-data.html#cb14-3" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="gathering-and-modeling-data.html#cb14-4" tabindex="-1"></a><span class="co"># convert object to table</span></span>
-<span id="cb14-5"><a href="gathering-and-modeling-data.html#cb14-5" tabindex="-1"></a>us_inc_table <span class="sc">%&lt;&gt;%</span></span>
-<span id="cb14-6"><a href="gathering-and-modeling-data.html#cb14-6" tabindex="-1"></a>  <span class="fu">html_table</span>()</span>
-<span id="cb14-7"><a href="gathering-and-modeling-data.html#cb14-7" tabindex="-1"></a></span>
-<span id="cb14-8"><a href="gathering-and-modeling-data.html#cb14-8" tabindex="-1"></a><span class="co">#take another look</span></span>
-<span id="cb14-9"><a href="gathering-and-modeling-data.html#cb14-9" tabindex="-1"></a>us_inc_table <span class="sc">%&gt;%</span></span>
-<span id="cb14-10"><a href="gathering-and-modeling-data.html#cb14-10" tabindex="-1"></a>  <span class="fu">head</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="gathering-and-modeling-data.html#cb15-1" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb15-2"><a href="gathering-and-modeling-data.html#cb15-2" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb15-3"><a href="gathering-and-modeling-data.html#cb15-3" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="gathering-and-modeling-data.html#cb15-4" tabindex="-1"></a><span class="co"># convert object to table</span></span>
+<span id="cb15-5"><a href="gathering-and-modeling-data.html#cb15-5" tabindex="-1"></a>us_inc_table <span class="sc">%&lt;&gt;%</span></span>
+<span id="cb15-6"><a href="gathering-and-modeling-data.html#cb15-6" tabindex="-1"></a>  <span class="fu">html_table</span>()</span>
+<span id="cb15-7"><a href="gathering-and-modeling-data.html#cb15-7" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="gathering-and-modeling-data.html#cb15-8" tabindex="-1"></a><span class="co">#take another look</span></span>
+<span id="cb15-9"><a href="gathering-and-modeling-data.html#cb15-9" tabindex="-1"></a>us_inc_table <span class="sc">%&gt;%</span></span>
+<span id="cb15-10"><a href="gathering-and-modeling-data.html#cb15-10" tabindex="-1"></a>  <span class="fu">head</span>()</span></code></pre></div>
 <pre><code>## [[1]]
 ## # A tibble: 20 × 3
 ##     Year Count      Rate
@@ -437,13 +516,13 @@ Figure 4.2: Source: Hwang, 2014
 ## 20  2021 1,767,200   531</code></pre>
 <p>This looks better. But notice the <code>[[1]]</code>? This means that our table is still technically in list format, and that this is the first element of a list. We will change that below with the <code>as.data.frame()</code> function.</p>
 <p>Also, you might be wondering, what is a tibble? According to <a href="https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html#:~:text=There%20are%20three%20key%20differences,%2C%20subsetting%2C%20and%20recycling%20rules.">CRAN</a>, “Tibbles are a modern take on data frames. They keep the features that have stood the test of time, and drop the features that used to be convenient but are now frustrating.” For our purposes, we can treat them just like dataframes.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="gathering-and-modeling-data.html#cb16-1" tabindex="-1"></a><span class="co"># convert list to dataframe</span></span>
-<span id="cb16-2"><a href="gathering-and-modeling-data.html#cb16-2" tabindex="-1"></a>us_inc_table <span class="sc">%&lt;&gt;%</span></span>
-<span id="cb16-3"><a href="gathering-and-modeling-data.html#cb16-3" tabindex="-1"></a>  <span class="fu">as.data.frame</span>()</span>
-<span id="cb16-4"><a href="gathering-and-modeling-data.html#cb16-4" tabindex="-1"></a></span>
-<span id="cb16-5"><a href="gathering-and-modeling-data.html#cb16-5" tabindex="-1"></a><span class="co"># take another look</span></span>
-<span id="cb16-6"><a href="gathering-and-modeling-data.html#cb16-6" tabindex="-1"></a>us_inc_table <span class="sc">%&gt;%</span> </span>
-<span id="cb16-7"><a href="gathering-and-modeling-data.html#cb16-7" tabindex="-1"></a>  <span class="fu">head</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="gathering-and-modeling-data.html#cb17-1" tabindex="-1"></a><span class="co"># convert list to dataframe</span></span>
+<span id="cb17-2"><a href="gathering-and-modeling-data.html#cb17-2" tabindex="-1"></a>us_inc_table <span class="sc">%&lt;&gt;%</span></span>
+<span id="cb17-3"><a href="gathering-and-modeling-data.html#cb17-3" tabindex="-1"></a>  <span class="fu">as.data.frame</span>()</span>
+<span id="cb17-4"><a href="gathering-and-modeling-data.html#cb17-4" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="gathering-and-modeling-data.html#cb17-5" tabindex="-1"></a><span class="co"># take another look</span></span>
+<span id="cb17-6"><a href="gathering-and-modeling-data.html#cb17-6" tabindex="-1"></a>us_inc_table <span class="sc">%&gt;%</span> </span>
+<span id="cb17-7"><a href="gathering-and-modeling-data.html#cb17-7" tabindex="-1"></a>  <span class="fu">head</span>()</span></code></pre></div>
 <pre><code>##   Year   Count Rate
 ## 1 1940 264,834  201
 ## 2 1950 264,620  176
@@ -453,31 +532,31 @@ Figure 4.2: Source: Hwang, 2014
 ## 6 1985 744,208  311</code></pre>
 <p>Ok perfect, now we have a true dataframe. In order to look at our data, we might want to clean it up using functions like <code>filter()</code> or <code>slice()</code>. If we had additional data, we could add these with <code>bind_rows()</code>!</p>
 <p>The first thing we want to do when we gather new data is <em>look at it</em>. We can do this either by visually inspecting the data (using the <code>View()</code> function) or by plotting it (using some of the methods from section 3). We can start by plotting the data with <code>ggplot()</code> and <code>geom_point()</code>.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="gathering-and-modeling-data.html#cb18-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb18-2"><a href="gathering-and-modeling-data.html#cb18-2" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="gathering-and-modeling-data.html#cb18-3" tabindex="-1"></a><span class="co"># plot incarceration data</span></span>
-<span id="cb18-4"><a href="gathering-and-modeling-data.html#cb18-4" tabindex="-1"></a><span class="fu">ggplot</span>(us_inc_table, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Count))<span class="sc">+</span></span>
-<span id="cb18-5"><a href="gathering-and-modeling-data.html#cb18-5" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="gathering-and-modeling-data.html#cb19-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb19-2"><a href="gathering-and-modeling-data.html#cb19-2" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="gathering-and-modeling-data.html#cb19-3" tabindex="-1"></a><span class="co"># plot incarceration data</span></span>
+<span id="cb19-4"><a href="gathering-and-modeling-data.html#cb19-4" tabindex="-1"></a><span class="fu">ggplot</span>(us_inc_table, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Count))<span class="sc">+</span></span>
+<span id="cb19-5"><a href="gathering-and-modeling-data.html#cb19-5" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
 <p><img src="_main_files/figure-html/incarcerationplot0-1.png" width="672" /></p>
 <p>Hmmm, something doesn’t seem quite right … Any guesses? If we inspect our data further, we notice that each variable has a different <code>class()</code>.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="gathering-and-modeling-data.html#cb19-1" tabindex="-1"></a><span class="co"># examine class of variables</span></span>
-<span id="cb19-2"><a href="gathering-and-modeling-data.html#cb19-2" tabindex="-1"></a><span class="fu">class</span>(us_inc_table<span class="sc">$</span>Year)</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="gathering-and-modeling-data.html#cb20-1" tabindex="-1"></a><span class="co"># examine class of variables</span></span>
+<span id="cb20-2"><a href="gathering-and-modeling-data.html#cb20-2" tabindex="-1"></a><span class="fu">class</span>(us_inc_table<span class="sc">$</span>Year)</span></code></pre></div>
 <pre><code>## [1] &quot;integer&quot;</code></pre>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="gathering-and-modeling-data.html#cb21-1" tabindex="-1"></a><span class="fu">class</span>(us_inc_table<span class="sc">$</span>Count)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="gathering-and-modeling-data.html#cb22-1" tabindex="-1"></a><span class="fu">class</span>(us_inc_table<span class="sc">$</span>Count)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="gathering-and-modeling-data.html#cb23-1" tabindex="-1"></a><span class="fu">class</span>(us_inc_table<span class="sc">$</span>Rate)</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="gathering-and-modeling-data.html#cb24-1" tabindex="-1"></a><span class="fu">class</span>(us_inc_table<span class="sc">$</span>Rate)</span></code></pre></div>
 <pre><code>## [1] &quot;integer&quot;</code></pre>
 <p>In the problem set, you will use <code>mutate()</code> and <code>parse_number()</code> to solve this problem! For now, let’s look at a different variable: <code>Rate</code>. We can look at the relationship between year and incarceration rate.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="gathering-and-modeling-data.html#cb25-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb25-2"><a href="gathering-and-modeling-data.html#cb25-2" tabindex="-1"></a></span>
-<span id="cb25-3"><a href="gathering-and-modeling-data.html#cb25-3" tabindex="-1"></a><span class="co"># plot incarceration data</span></span>
-<span id="cb25-4"><a href="gathering-and-modeling-data.html#cb25-4" tabindex="-1"></a><span class="fu">ggplot</span>(us_inc_table, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Rate))<span class="sc">+</span></span>
-<span id="cb25-5"><a href="gathering-and-modeling-data.html#cb25-5" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="gathering-and-modeling-data.html#cb26-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb26-2"><a href="gathering-and-modeling-data.html#cb26-2" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="gathering-and-modeling-data.html#cb26-3" tabindex="-1"></a><span class="co"># plot incarceration data</span></span>
+<span id="cb26-4"><a href="gathering-and-modeling-data.html#cb26-4" tabindex="-1"></a><span class="fu">ggplot</span>(us_inc_table, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Rate))<span class="sc">+</span></span>
+<span id="cb26-5"><a href="gathering-and-modeling-data.html#cb26-5" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
 <p><img src="_main_files/figure-html/incarcerationplot-1.png" width="672" /></p>
 <p>This looks a bit better (at least, in the data sense). Now that we have a plot, what can we say about it?</p>
 </div>
-<div id="models" class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> Models<a href="gathering-and-modeling-data.html#models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="models" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Models<a href="gathering-and-modeling-data.html#models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>From what we have seen so far, we can answer <strong>descriptive</strong> questions about mass incarceration. But we may also want to <strong>explain</strong> or <strong>predict</strong> changes. In other words, an initial question as we look at our data might be “what direction is the trend?” Are incarceration rates going up, down, or remaining stable? We don’t need to do much analysis here to see that the trend is positive (i.e. rates are going up over time). But if we quantify this, we can answer questions like “if the trend keeps going at this rate, where will we be in 10 years?”</p>
 <p>As social scientists, we tend to make three types of claims about our data. Here are examples of each:</p>
 <ol style="list-style-type: decimal">
@@ -486,11 +565,11 @@ Figure 4.2: Source: Hwang, 2014
 <li><strong>Predict</strong>: In 2030, the U.S. incarceration rate will reach 1,000 (persons per 100,000).</li>
 </ol>
 <p>For the latter two items, we are going to need a <em>model</em> of how our data works. Let’s start with a simple example: in our incarceration data, we have just one data point per year. We can start by just running a line through our points. We can do so with <code>geom_line()</code>:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="gathering-and-modeling-data.html#cb26-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb26-2"><a href="gathering-and-modeling-data.html#cb26-2" tabindex="-1"></a></span>
-<span id="cb26-3"><a href="gathering-and-modeling-data.html#cb26-3" tabindex="-1"></a><span class="fu">ggplot</span>(us_inc_table, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Rate))<span class="sc">+</span></span>
-<span id="cb26-4"><a href="gathering-and-modeling-data.html#cb26-4" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb26-5"><a href="gathering-and-modeling-data.html#cb26-5" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="gathering-and-modeling-data.html#cb27-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb27-2"><a href="gathering-and-modeling-data.html#cb27-2" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="gathering-and-modeling-data.html#cb27-3" tabindex="-1"></a><span class="fu">ggplot</span>(us_inc_table, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Rate))<span class="sc">+</span></span>
+<span id="cb27-4"><a href="gathering-and-modeling-data.html#cb27-4" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb27-5"><a href="gathering-and-modeling-data.html#cb27-5" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
 <p><img src="_main_files/figure-html/incarcerationplot4-1.png" width="672" /></p>
 <p>But is this useful? Well, <em>yes and no</em>. It is useful in describing the data. But it doesn’t really simplify what is going on in any way. We might want a model that gives a single value for the slope (i.e. the amount that our points are increasing or decreasing over time).</p>
 <p>We can quantify the trend using <strong>linear regression</strong>. If we just had two data points, we would run a line through them. However, we have a lot more than two data points. So what do we do?</p>
@@ -498,48 +577,48 @@ Figure 4.2: Source: Hwang, 2014
 <p><img src="linear_regression.webp" width="75%" /></p>
 <p>Most data points will not fall directly on this line. <strong>The distance between each data point and the line is called its residual. When choosing values for <code>m</code> and <code>b</code>, we choose values that minimize the sum of the squared residuals.</strong> The line that does this is called the line of “best fit.” The R Squared value tells us how well our line actually fits our data (i.e. the proportion of variation that is explained by our model).</p>
 <p>Returning to our incarceration data, we can add a linear model to our plot with the following code:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="gathering-and-modeling-data.html#cb27-1" tabindex="-1"></a><span class="co"># add linear model</span></span>
-<span id="cb27-2"><a href="gathering-and-modeling-data.html#cb27-2" tabindex="-1"></a><span class="fu">ggplot</span>(us_inc_table, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Rate))<span class="sc">+</span></span>
-<span id="cb27-3"><a href="gathering-and-modeling-data.html#cb27-3" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb27-4"><a href="gathering-and-modeling-data.html#cb27-4" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="gathering-and-modeling-data.html#cb28-1" tabindex="-1"></a><span class="co"># add linear model</span></span>
+<span id="cb28-2"><a href="gathering-and-modeling-data.html#cb28-2" tabindex="-1"></a><span class="fu">ggplot</span>(us_inc_table, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Rate))<span class="sc">+</span></span>
+<span id="cb28-3"><a href="gathering-and-modeling-data.html#cb28-3" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb28-4"><a href="gathering-and-modeling-data.html#cb28-4" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="_main_files/figure-html/incarcerationplot2-1.png" width="672" /></p>
 <p>Notice we used <code>method = "lm"</code> for “linear model.” If we remove this, the default option is a non-linear model, in this case, a “loess” model or local polynomial model. You might recall polynomials like quadratic and cubic models, which use squared terms or cubed terms to estimate curves. For more information on this method, you can run <code>?loess</code>. What do you notice about the fit of this model, compared to the linear model?</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="gathering-and-modeling-data.html#cb29-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb29-2"><a href="gathering-and-modeling-data.html#cb29-2" tabindex="-1"></a></span>
-<span id="cb29-3"><a href="gathering-and-modeling-data.html#cb29-3" tabindex="-1"></a><span class="fu">ggplot</span>(us_inc_table, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Rate))<span class="sc">+</span></span>
-<span id="cb29-4"><a href="gathering-and-modeling-data.html#cb29-4" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb29-5"><a href="gathering-and-modeling-data.html#cb29-5" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="gathering-and-modeling-data.html#cb30-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb30-2"><a href="gathering-and-modeling-data.html#cb30-2" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="gathering-and-modeling-data.html#cb30-3" tabindex="-1"></a><span class="fu">ggplot</span>(us_inc_table, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Rate))<span class="sc">+</span></span>
+<span id="cb30-4"><a href="gathering-and-modeling-data.html#cb30-4" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb30-5"><a href="gathering-and-modeling-data.html#cb30-5" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="_main_files/figure-html/incarcerationplot3-1.png" width="672" /></p>
 <p>Our linear and non-linear models will give us different predictions for the future. For example, we can look at how the linear and polynomial models estimate incarceration trends will change over the next 15 years:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="gathering-and-modeling-data.html#cb31-1" tabindex="-1"></a><span class="co"># linear model</span></span>
-<span id="cb31-2"><a href="gathering-and-modeling-data.html#cb31-2" tabindex="-1"></a><span class="fu">ggplot</span>(us_inc_table, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Rate))<span class="sc">+</span></span>
-<span id="cb31-3"><a href="gathering-and-modeling-data.html#cb31-3" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb31-4"><a href="gathering-and-modeling-data.html#cb31-4" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">fullrange =</span> <span class="cn">TRUE</span>)<span class="sc">+</span></span>
-<span id="cb31-5"><a href="gathering-and-modeling-data.html#cb31-5" tabindex="-1"></a>  <span class="fu">lims</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1940</span>, <span class="dv">2040</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="gathering-and-modeling-data.html#cb32-1" tabindex="-1"></a><span class="co"># linear model</span></span>
+<span id="cb32-2"><a href="gathering-and-modeling-data.html#cb32-2" tabindex="-1"></a><span class="fu">ggplot</span>(us_inc_table, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Rate))<span class="sc">+</span></span>
+<span id="cb32-3"><a href="gathering-and-modeling-data.html#cb32-3" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb32-4"><a href="gathering-and-modeling-data.html#cb32-4" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">fullrange =</span> <span class="cn">TRUE</span>)<span class="sc">+</span></span>
+<span id="cb32-5"><a href="gathering-and-modeling-data.html#cb32-5" tabindex="-1"></a>  <span class="fu">lims</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1940</span>, <span class="dv">2040</span>))</span></code></pre></div>
 <p><img src="_main_files/figure-html/incarcerationplot5-1.png" width="672" /></p>
 <p>How well do you think this estimates future trends?</p>
 </div>
-<div id="building-a-model" class="section level2 hasAnchor" number="4.5">
-<h2><span class="header-section-number">4.5</span> Building a Model<a href="gathering-and-modeling-data.html#building-a-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="building-a-model" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Building a Model<a href="gathering-and-modeling-data.html#building-a-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To understand our data, we often want to <em>build</em> a model. As with many things in R, there are multiple ways to build a model. We will build models with <code>tidymodels</code>, which offer a succinct way to split data, fit models, and make predictions. We will try these with the linear example from above.</p>
-<div id="splitting-the-data" class="section level3 hasAnchor" number="4.5.1">
-<h3><span class="header-section-number">4.5.1</span> Splitting the Data<a href="gathering-and-modeling-data.html#splitting-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="splitting-the-data" class="section level3 hasAnchor" number="7.5.1">
+<h3><span class="header-section-number">7.5.1</span> Splitting the Data<a href="gathering-and-modeling-data.html#splitting-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Historically, social scientists have focused more on <em>explaining</em> trends than <em>predicting</em> them. For this reason, they have mostly used all of their data to build models.</p>
 <p>Data scientists, on the other hand, take a different approach to building models and predicting the future. The data scientist begins by dividing their data into <strong>training</strong> and <strong>test</strong> data. It is important that this division is random. We can do this with the <code>tidymodels</code> R package (you may have to install <code>GPfits</code> or another package as well, R will tell you if this is the case).</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="gathering-and-modeling-data.html#cb32-1" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb32-2"><a href="gathering-and-modeling-data.html#cb32-2" tabindex="-1"></a></span>
-<span id="cb32-3"><a href="gathering-and-modeling-data.html#cb32-3" tabindex="-1"></a><span class="co"># split data</span></span>
-<span id="cb32-4"><a href="gathering-and-modeling-data.html#cb32-4" tabindex="-1"></a>splits <span class="ot">&lt;-</span> <span class="fu">initial_split</span>(us_inc_table)</span></code></pre></div>
-<p>Now we can create “training” and “test” datasets.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="gathering-and-modeling-data.html#cb33-1" tabindex="-1"></a>df_train <span class="ot">&lt;-</span> <span class="fu">training</span>(splits)</span>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="gathering-and-modeling-data.html#cb33-1" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
 <span id="cb33-2"><a href="gathering-and-modeling-data.html#cb33-2" tabindex="-1"></a></span>
-<span id="cb33-3"><a href="gathering-and-modeling-data.html#cb33-3" tabindex="-1"></a>df_test <span class="ot">&lt;-</span> <span class="fu">testing</span>(splits)</span></code></pre></div>
+<span id="cb33-3"><a href="gathering-and-modeling-data.html#cb33-3" tabindex="-1"></a><span class="co"># split data</span></span>
+<span id="cb33-4"><a href="gathering-and-modeling-data.html#cb33-4" tabindex="-1"></a>splits <span class="ot">&lt;-</span> <span class="fu">initial_split</span>(us_inc_table)</span></code></pre></div>
+<p>Now we can create “training” and “test” datasets.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="gathering-and-modeling-data.html#cb34-1" tabindex="-1"></a>df_train <span class="ot">&lt;-</span> <span class="fu">training</span>(splits)</span>
+<span id="cb34-2"><a href="gathering-and-modeling-data.html#cb34-2" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="gathering-and-modeling-data.html#cb34-3" tabindex="-1"></a>df_test <span class="ot">&lt;-</span> <span class="fu">testing</span>(splits)</span></code></pre></div>
 <p>For our purposes, we will fit our model with these training and test sets. But depending on your goals, you may not need to split your data if you are not interested in prediction!</p>
 </div>
-<div id="fitting-a-model" class="section level3 hasAnchor" number="4.5.2">
-<h3><span class="header-section-number">4.5.2</span> Fitting a Model<a href="gathering-and-modeling-data.html#fitting-a-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="fitting-a-model" class="section level3 hasAnchor" number="7.5.2">
+<h3><span class="header-section-number">7.5.2</span> Fitting a Model<a href="gathering-and-modeling-data.html#fitting-a-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In our linear model above, we represent incarceration trends with something like the following:</p>
 <p><span class="math inline">\(Y_i = \beta_0 + \beta_1X_i\)</span></p>
 <p>Where <span class="math inline">\(Y_i\)</span> is our outcome variable (for example, the incarceration rate) at year <span class="math inline">\(i\)</span>, <span class="math inline">\(\beta_0\)</span> is the value of our intercept, and <span class="math inline">\(\beta_1\)</span> is the value of our slope.</p>
@@ -560,18 +639,18 @@ Figure 4.2: Source: Hwang, 2014
 </ol>
 </blockquote>
 <p>We can specify the model and the engine as follows:</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="gathering-and-modeling-data.html#cb34-1" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb34-2"><a href="gathering-and-modeling-data.html#cb34-2" tabindex="-1"></a></span>
-<span id="cb34-3"><a href="gathering-and-modeling-data.html#cb34-3" tabindex="-1"></a><span class="co"># specify the model engine</span></span>
-<span id="cb34-4"><a href="gathering-and-modeling-data.html#cb34-4" tabindex="-1"></a>lm_model <span class="ot">&lt;-</span> </span>
-<span id="cb34-5"><a href="gathering-and-modeling-data.html#cb34-5" tabindex="-1"></a>  <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb34-6"><a href="gathering-and-modeling-data.html#cb34-6" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">&quot;lm&quot;</span>)</span>
-<span id="cb34-7"><a href="gathering-and-modeling-data.html#cb34-7" tabindex="-1"></a></span>
-<span id="cb34-8"><a href="gathering-and-modeling-data.html#cb34-8" tabindex="-1"></a>lm_form_fit <span class="ot">&lt;-</span> lm_model <span class="sc">%&gt;%</span> </span>
-<span id="cb34-9"><a href="gathering-and-modeling-data.html#cb34-9" tabindex="-1"></a>  <span class="fu">fit</span>(Rate <span class="sc">~</span> Year, <span class="at">data =</span> df_train)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="gathering-and-modeling-data.html#cb35-1" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb35-2"><a href="gathering-and-modeling-data.html#cb35-2" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="gathering-and-modeling-data.html#cb35-3" tabindex="-1"></a><span class="co"># specify the model engine</span></span>
+<span id="cb35-4"><a href="gathering-and-modeling-data.html#cb35-4" tabindex="-1"></a>lm_model <span class="ot">&lt;-</span> </span>
+<span id="cb35-5"><a href="gathering-and-modeling-data.html#cb35-5" tabindex="-1"></a>  <span class="fu">linear_reg</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb35-6"><a href="gathering-and-modeling-data.html#cb35-6" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">&quot;lm&quot;</span>)</span>
+<span id="cb35-7"><a href="gathering-and-modeling-data.html#cb35-7" tabindex="-1"></a></span>
+<span id="cb35-8"><a href="gathering-and-modeling-data.html#cb35-8" tabindex="-1"></a>lm_form_fit <span class="ot">&lt;-</span> lm_model <span class="sc">%&gt;%</span> </span>
+<span id="cb35-9"><a href="gathering-and-modeling-data.html#cb35-9" tabindex="-1"></a>  <span class="fu">fit</span>(Rate <span class="sc">~</span> Year, <span class="at">data =</span> df_train)</span></code></pre></div>
 <p>Try running <code>lm_form_fit</code>! What do you make of the results?</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="gathering-and-modeling-data.html#cb35-1" tabindex="-1"></a><span class="co"># look at results</span></span>
-<span id="cb35-2"><a href="gathering-and-modeling-data.html#cb35-2" tabindex="-1"></a>lm_form_fit</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="gathering-and-modeling-data.html#cb36-1" tabindex="-1"></a><span class="co"># look at results</span></span>
+<span id="cb36-2"><a href="gathering-and-modeling-data.html#cb36-2" tabindex="-1"></a>lm_form_fit</span></code></pre></div>
 <pre><code>## parsnip model object
 ## 
 ## 
@@ -580,54 +659,54 @@ Figure 4.2: Source: Hwang, 2014
 ## 
 ## Coefficients:
 ## (Intercept)         Year  
-##  -13543.266        7.057</code></pre>
+##   -13535.29         7.07</code></pre>
 </div>
-<div id="making-predictions" class="section level3 hasAnchor" number="4.5.3">
-<h3><span class="header-section-number">4.5.3</span> Making Predictions<a href="gathering-and-modeling-data.html#making-predictions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="making-predictions" class="section level3 hasAnchor" number="7.5.3">
+<h3><span class="header-section-number">7.5.3</span> Making Predictions<a href="gathering-and-modeling-data.html#making-predictions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We might be interested in making predictions from our data. The good news is that doing so is easy with <code>tidymodels</code>:</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="gathering-and-modeling-data.html#cb37-1" tabindex="-1"></a><span class="co"># examine predictions</span></span>
-<span id="cb37-2"><a href="gathering-and-modeling-data.html#cb37-2" tabindex="-1"></a><span class="fu">predict</span>(lm_form_fit, <span class="at">new_data =</span> df_test)</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="gathering-and-modeling-data.html#cb38-1" tabindex="-1"></a><span class="co"># examine predictions</span></span>
+<span id="cb38-2"><a href="gathering-and-modeling-data.html#cb38-2" tabindex="-1"></a><span class="fu">predict</span>(lm_form_fit, <span class="at">new_data =</span> df_test)</span></code></pre></div>
 <pre><code>## # A tibble: 5 × 1
 ##   .pred
 ##   &lt;dbl&gt;
-## 1  358.
-## 2  429.
-## 3  612.
-## 4  669.
-## 5  697.</code></pre>
+## 1  250.
+## 2  392.
+## 3  463.
+## 4  498.
+## 5  745.</code></pre>
 <p>Notice that we used <code>df_test</code> here to make predictions on our test dataset (not the data that we trained the model with). We could compare these to the true values for these points:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="gathering-and-modeling-data.html#cb39-1" tabindex="-1"></a><span class="co"># look at true values</span></span>
-<span id="cb39-2"><a href="gathering-and-modeling-data.html#cb39-2" tabindex="-1"></a>df_test</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="gathering-and-modeling-data.html#cb40-1" tabindex="-1"></a><span class="co"># look at true values</span></span>
+<span id="cb40-2"><a href="gathering-and-modeling-data.html#cb40-2" tabindex="-1"></a>df_test</span></code></pre></div>
 <pre><code>##   Year     Count Rate
-## 1 1970   328,020  161
-## 2 1980   503,586  220
-## 3 2006 2,258,792  752
-## 4 2014 2,217,947  693
-## 5 2018 2,102,400  642</code></pre>
+## 1 1950   264,620  176
+## 2 1970   328,020  161
+## 3 1980   503,586  220
+## 4 1985   744,208  311
+## 5 2020 1,675,400  505</code></pre>
 <p>However, we might want to predict <em>beyond</em> the years in our data. We could create a new dataframe of out of sample points of future years! Let’s try this for 2022-2030.</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="gathering-and-modeling-data.html#cb41-1" tabindex="-1"></a><span class="co"># create evaluation dataset</span></span>
-<span id="cb41-2"><a href="gathering-and-modeling-data.html#cb41-2" tabindex="-1"></a>df_eval <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Year =</span> <span class="fu">c</span>(<span class="dv">2022</span><span class="sc">:</span><span class="dv">2030</span>),</span>
-<span id="cb41-3"><a href="gathering-and-modeling-data.html#cb41-3" tabindex="-1"></a>                      <span class="at">Count =</span> <span class="cn">NA</span>,</span>
-<span id="cb41-4"><a href="gathering-and-modeling-data.html#cb41-4" tabindex="-1"></a>                      <span class="at">Rate =</span> <span class="cn">NA</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="gathering-and-modeling-data.html#cb42-1" tabindex="-1"></a><span class="co"># create evaluation dataset</span></span>
+<span id="cb42-2"><a href="gathering-and-modeling-data.html#cb42-2" tabindex="-1"></a>df_eval <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Year =</span> <span class="fu">c</span>(<span class="dv">2022</span><span class="sc">:</span><span class="dv">2030</span>),</span>
+<span id="cb42-3"><a href="gathering-and-modeling-data.html#cb42-3" tabindex="-1"></a>                      <span class="at">Count =</span> <span class="cn">NA</span>,</span>
+<span id="cb42-4"><a href="gathering-and-modeling-data.html#cb42-4" tabindex="-1"></a>                      <span class="at">Rate =</span> <span class="cn">NA</span>)</span></code></pre></div>
 <p>Now, we can make predictions for this new period. Do they seem plausible to you? Why or why not?</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="gathering-and-modeling-data.html#cb42-1" tabindex="-1"></a><span class="co"># examine predictions</span></span>
-<span id="cb42-2"><a href="gathering-and-modeling-data.html#cb42-2" tabindex="-1"></a><span class="fu">predict</span>(lm_form_fit, <span class="at">new_data =</span> df_eval)</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="gathering-and-modeling-data.html#cb43-1" tabindex="-1"></a><span class="co"># examine predictions</span></span>
+<span id="cb43-2"><a href="gathering-and-modeling-data.html#cb43-2" tabindex="-1"></a><span class="fu">predict</span>(lm_form_fit, <span class="at">new_data =</span> df_eval)</span></code></pre></div>
 <pre><code>## # A tibble: 9 × 1
 ##   .pred
 ##   &lt;dbl&gt;
-## 1  725.
-## 2  732.
-## 3  739.
-## 4  746.
-## 5  753.
-## 6  761.
-## 7  768.
-## 8  775.
-## 9  782.</code></pre>
+## 1  759.
+## 2  767.
+## 3  774.
+## 4  781.
+## 5  788.
+## 6  795.
+## 7  802.
+## 8  809.
+## 9  816.</code></pre>
 </div>
 </div>
-<div id="final-project-proposal" class="section level2 hasAnchor" number="4.6">
-<h2><span class="header-section-number">4.6</span> Final Project Proposal<a href="gathering-and-modeling-data.html#final-project-proposal" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="final-project-proposal" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> Final Project Proposal<a href="gathering-and-modeling-data.html#final-project-proposal" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Final projects can be completed in groups of up to four students. The proposals can also be collaborative, but each student should turn in one.</p>
 <p>Proposals should answer the following questions:</p>
 <ol style="list-style-type: decimal">
@@ -906,8 +985,8 @@ Google Trends provides data on search behavior over time, allowing researchers t
 </table>
 </div>
 </div>
-<div id="problem-set-4" class="section level2 hasAnchor" number="4.7">
-<h2><span class="header-section-number">4.7</span> Problem Set 4<a href="gathering-and-modeling-data.html#problem-set-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="problem-set-4" class="section level2 hasAnchor" number="7.7">
+<h2><span class="header-section-number">7.7</span> Problem Set 4<a href="gathering-and-modeling-data.html#problem-set-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Recommended Resources: <a href="https://www.tmwr.org/">Tidy Modeling With R</a></p>
 <ol style="list-style-type: decimal">
 <li><p>Start a new document, problemset4.Rmd, in your soc10problemsets repository. (You can download a template <a href="https://github.com/Soc10Spring2026/soc10problemsets_templates">here</a>, but be sure to save it in your own soc10problemsets repo). In the chunk below, show how you would gather data on California’s ethnoracial demographics for 2020 using <code>tidycensus</code>. (Note: in the chunk below, <code>eval</code> is set to false, so you won’t see any results. That is ok! Just show the code. And remove your personal key). <strong>Commit</strong> your changes.</p></li>
@@ -925,7 +1004,7 @@ Google Trends provides data on search behavior over time, allowing researchers t
         </div>
       </div>
 <a href="data-visualization-techniques.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="maps-and-spatial-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="prediction-and-machine-learning.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

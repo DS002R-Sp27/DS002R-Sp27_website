@@ -119,7 +119,7 @@ We begin by exploring the meaning of "Computational Social Science," and how it 
 
 Reading:
 
-* [Bit By Bit. 1: Introduction.](https://www.bitbybitbook.com/en/1st-ed/introduction/)
+* [Bit By Bit. Introduction.](https://www.bitbybitbook.com/en/1st-ed/introduction/)
 
 * [Lazer, David; Pentland, Alex; Adamic, Lada; et al. 2009. Science. Computational Social Science.](https://www.science.org/doi/10.1126/science.1167742)
 
@@ -256,6 +256,8 @@ Reading:
 
 * _Optional:_ [Network Structure in Small Groups and Survival in Disasters](https://doi.org/10.1093/sf/soab036)
 
+
+
 [Week 11: Text Mining]{.underline}
 
 Text data contains multitudes of information, and can be leveraged to do some powerful things in these times. To gear up for an expedition into text analysis, we will start by learning about text mining. 
@@ -269,6 +271,8 @@ Reading:
 
 [Week 12: Sentiment Analysis]{.underline}
 
+We now dive into sentiment analysis. 
+
 Reading:
 
 * [Want to Survive Climate Change? You'll Need a Good Community](https://www.wired.com/2016/10/klinenberg-transforming-communities-to-survive-climate-change/)
@@ -278,6 +282,8 @@ Reading:
 * [Wetts, Rachel. 2022. PNAS. In climate news, statements from large businesses and opponents of climate action receive heightened visibility](https://www.pnas.org/doi/10.1073/pnas.1921526117)
 
 [Week 13: Topic Modelling]{.underline}
+
+In this week, we look at topic modelling. 
 
 Reading:
 
