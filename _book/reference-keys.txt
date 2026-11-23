@@ -231,3 +231,5 @@ documents-as-mixtures-of-topics-2
 choosing-k-values-2
 large-language-models-2
 problem-set-9-2
+what-is-the-goal
+what-is-the-pipeline

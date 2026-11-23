@@ -29,7 +29,65 @@ For our purposes, [computational social science](https://sicss.io/overview/intro
 
 One difference between computational social scientists and social scientists (or data scientists) is that computational social scientists often use a combination of many types of data. __Custom made data__ refers to traditional sources of information on populations: surveys, censuses, interviews, and so on. __Ready made data__ refers to information that exists for non-research purposes: company or government records, text from public websites, metrics from an app, and so on. By combining these types of data, the computational social scientist can do research at speeds, scales, and on populations that previously would have been impossible. 
 
-This course provides an introduction to computational sociology, for a few reasons. First, there are massive challenges for societies everywhere, and it is important that we understand them. Second, data science skills are increasingly needed to communicate across fields and domains. Third, the tools from data science may actually help us to understand and communicate the variegated influences of changing societies across the globe. 
+This course provides an introduction to data science with a focus on computational sociology for a few reasons. First, there are massive challenges for societies everywhere, and it is important that we understand them. Second, data science skills are increasingly needed to communicate across fields and domains. Third, the tools from data science may actually help us to understand and communicate the variegated influences of changing societies across the globe. 
+
+## What is the Pipeline?
+
+So we want to use data to understand the world. How will we do this? Our goal is to recreate the process below (from [R for Data Science (2e)](https://r4ds.hadley.nz/whole-game.html)). We want to move from importing data to _tidying_, _transforming_, _visualizing_, _modeling_, and ultimately, _communicating_ our results. 
+
+```{r wholegame, echo = FALSE}
+
+knitr::include_graphics("whole-game.png")
+
+```
+
+A similar "pipeline" can be seen in [Thinking Like a Data Scientist](https://runestone.academy/ns/books/published/httlads/Introduction/introduction.html): 
+
+
+```{r dspipeline, echo = FALSE}
+
+knitr::include_graphics("DSpipeline.svg")
+
+```
+
+But before we even import data, we should probably have an idea of what we want to study. So our pipeline will look something like the following:
+
+```{css, echo=FALSE}
+.html-widget {
+  margin-left: auto;
+  margin-right: auto;
+}
+```
+
+```{r diagram, echo=FALSE, out.height="200%", fig.align='center'}
+library(DiagrammeR)
+
+mermaid("
+graph TB
+  A{Motivate research area} --> B[Choose question]
+  B[Choose question]  --> A{Motivate research area} 
+  B[Choose question] --> C[Create hypotheses]
+  C[Create hypotheses] -->  B[Choose question] 
+  C[Create hypotheses] --> D[Explore potential data sources]
+  D[Explore potential data sources] --> C[Create hypotheses] 
+  D[Explore potential data sources] --> E[Gather data]
+  E[Gather data] --> D[Explore potential data sources] 
+  E[Gather data] --> F[Tidy and clean data]
+  F[Tidy and clean data] -->  E[Gather data] 
+  F[Tidy and clean data] --> G[Visualize data]
+  G[Visualize data] -->  F[Tidy and clean data] 
+  G[Visualize data] --> H[Create and tune models]
+  H[Create and tune models] --> G[Visualize data] 
+  H[Create and tune models] --> I[Summarize results]
+  I[Summarize results] -->  H[Create and tune models] 
+  I[Summarize results] --> J{Interpret and communicate}
+  J{Interpret and communicate} -->  I[Summarize results] 
+", width = 300)
+```
+
+
+
+As you can see, one does not move linearly through these steps, there is a lot of recursive looping. We will keep this pipeline in mind as we move forward!
 
 
 ## Getting Started with R (or Python)
