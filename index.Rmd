@@ -92,7 +92,7 @@ Final grades will be determined as follows:
 
 Participation
 
-Coming to class prepared (having done any readings or assignments) is vital for participation. In class, students can participate in many ways. First, students will complete in-class coding exercises during each class (each submission will be worth 2 points, for a total of 32 during the semester). Second, students can participate in classroom discussions and activities. Engaging in class activities, working well with peers and in groups, and asking relevant questions during class are all valid forms of participation. At some point in the semester, everyone will be required to share a brief visualization from their final project work (all of these forms of participation total to 8 points). 
+In class, students can participate in many ways. First, students will complete in-class coding exercises during each class (each submission will be worth 2 points, for a total of 32 during the semester). Second, students can participate in classroom discussions and activities. Engaging in class activities, working well with peers and in groups, and asking relevant questions during class are all valid forms of participation. At some point in the semester, everyone will be required to share a brief visualization from their final project work (all of these forms of participation total to 8 points). 
 
 Problem Sets
 
